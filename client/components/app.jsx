@@ -10,20 +10,22 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25711,//reveiws testing.
+      targetId: 25711//reveiws testing.
     };
     // this.fetchGET = this.fetchGET.bind(this);
     // this.getProductInfo = this.getProductInfo.bind(this);
     // this.getProductStyles = this.getProductStyles.bind(this);
     // this.getRelatedProducts = this.getRelatedProducts.bind(this);
+    this.fetchEverything = this.fetchEverything.bind(this);
+    this.fetchGET = this.fetchGET.bind(this);
   }
 
-  fetchGET(){
-    fetch('/getproducts')
-      .then(res=>res.json())
+  fetchGET(string, id){
+    axios.get('/get', {endpoint:`${string}/${id}`})
       .then((data) =>{
+        console.log('successful get request');
         this.setState({
-          list: data,
+          list: data
           //has to set state for data.[whatever key we need from data]
         })
       })
@@ -61,12 +63,17 @@ class App extends React.Component{
   //   })
   // }
 
+  fetchEverything() {
+  //might be running async
+    this.fetchGET('products', this.state.targetId);
+    //await this.fetchGET('relatedItems');
+    //await this.fetchGET('QA');
+    //await this.fetchGET('reviews');
+  }
+
   componentDidMount(){
-    this.fetchGET();
-  };
-
-
-
+    this.fetchEverything();
+  }
 
   render(){
     //probably have to refactor this to just have the jsx components. what does everyone think?
@@ -77,7 +84,6 @@ class App extends React.Component{
         // <QA /> */}
         <Reviews id ={this.state.targetId}/>
         <Overview view = {this.state.list}/>
-        <RelatedItems />
 
       </div>
     )

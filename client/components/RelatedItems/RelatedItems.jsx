@@ -1,13 +1,22 @@
-import React from 'react';
+// import React from 'react';
 
-class RelatedItems extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+// class RelatedItems extends React.Component {
+//   // constructor(props) {
+//   //   super(props);
+//   //   this.state = {
+//   //     relatedItems:
+//   //   }
+//   // }
 
-  render() {
-    
-  }
-}
+//   // componentDidMount() {
+//   //   this.setState({
+//   //     relatedItems: this.props.list
+//   //   })
+//   // }
 
-export default RelatedItems;
+//   // render() {
+
+//   // }
+// }
+
+// export default RelatedItems;
