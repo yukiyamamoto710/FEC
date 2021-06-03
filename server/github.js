@@ -8,7 +8,7 @@ let hrapi = (callback) => {
         'Authorization': `${TOKEN}`,
       },
   };
-  const url =
+
   axios(option)
     .then(data=>{
       let datas = data.data
