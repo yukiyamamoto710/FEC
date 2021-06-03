@@ -28,6 +28,7 @@ class App extends React.Component{
   };
 
   render(){
+    //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
         {this.state.list.map((i,index)=>{
