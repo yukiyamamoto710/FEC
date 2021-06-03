@@ -6,18 +6,18 @@ class Reviews extends React.Component{
     this.state = {
       id: '',
       list: [],
+      target:'',
     };
     this.fetchGET = this.fetchGET.bind(this);
   }
 
   componentDidMount(){
     let targetId = this.props.id;
-        this.setState({
-          id: targetId,
-        })
-    this.fetchGET('/getreviews','list');
-    console.log(this.state)
-  };
+    this.fetchGET('/getreviews','target','list');
+    this.setState({
+      id: targetId,
+    })
+  }
 
   componentDidUpdate(prevProps){
     if(prevProps.id !== this.props.id){
@@ -28,12 +28,13 @@ class Reviews extends React.Component{
     }
   };
 
-  fetchGET(url,state){
-    fetch(url)
+  fetchGET(url){
+    fetch('/getreviews')
       .then(res=>res.json())
       .then((data) =>{
         this.setState({
-          [state]: data,
+          [arguments[1]]: data,
+          [arguments[2]]: data.results,
         })
       })
       .catch(err=>{
@@ -44,7 +45,10 @@ class Reviews extends React.Component{
   render(){
     return (
       <div>
-        fe
+        {/* {this.state.list.map((i, index)=>{
+          return <div key = {index}>{i.body}</div>
+        })} */}
+        <button onClick={()=>console.log(this.state)}></button>
       </div>
     )
   }

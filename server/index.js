@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3000 || process.env.PORT;
 const api = require('./github.js')
 
-//app.use(express.json());
+app.use(express.json());
 app.use(express.static('./public'));
 
 app.listen(PORT, ()=>{
@@ -21,11 +21,12 @@ app.get('/getproducts', (req, res)=>{
 });
 
 app.get('/getreviews', (req, res)=>{
-  api.hrapi('reviews',(err, data)=>{
+  api.hrapi('reviews/?product_id=25712',(err, data)=>{
     if (err) {
-      res.send(err)
+      res.status(404).send(err)
     } else {
-      res.send(data)
+      console.log(data);
+      res.status(200).send(data)
     }
   })
 })

@@ -10,14 +10,20 @@ let hrapi = (input, callback) => {
   };
 
   axios(option)
-    .then(data=>{
+    .then((data) => {
+      console.log(data,'adssa');
       let datas = data.data
       callback(null, datas)
     })
-    .catch(err=>{
+    .catch((err) => {
+      console.log(err,'err')
       callback(err)
     })
 }
+
+
 module.exports = {
   hrapi: hrapi,
 }
+
+//module.exports.hrapi(console.log);
