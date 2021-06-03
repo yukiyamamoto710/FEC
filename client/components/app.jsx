@@ -43,9 +43,29 @@ class App extends React.Component{
         // <RelatedItems />
         // <QA /> */}
         <Reviews id ={this.state.targetId}/>
+        {this.state.list.map((i,index)=>{
+          return (
+            <div key = {i.id}>
+              {i.name}
+            </div>
+          )
+        })}
+        <Overview view = {this.state.list}/>
+
       </div>
     )
   }
 }
 
 export default App;
+
+
+/*
+put the individual components here. they are not exported yet so throwing an error
+<RelatedItems />
+<QA />
+<Reviews />
+
+
+
+*/
