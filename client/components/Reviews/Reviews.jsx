@@ -17,7 +17,7 @@ class Reviews extends React.Component{
     let targetId = this.props.id;
     this.fetchGET(`/getreviews/${targetId}`,'target','list');
     this.setState({
-      id: targetId,
+      llst: targetId,
     })
   };
 
@@ -51,6 +51,7 @@ class Reviews extends React.Component{
       <div style = { base }>
         <Rating />
         <Rbase list = { list }/>
+
       </div>
     )
   }

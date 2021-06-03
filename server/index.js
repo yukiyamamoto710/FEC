@@ -10,8 +10,8 @@ app.listen(PORT, ()=>{
   console.log('connect')
 });
 
-app.get('/getproducts', (req, res)=>{
-  api.hrapi('products',(err, data)=>{
+app.get('/get', (req, res)=>{
+  api.hrapi(`${req.body.endpoint}`,(err, data)=>{
     if (err) {
       res.status(404).send(err)
     } else {
@@ -31,3 +31,4 @@ app.use('/getreviews', (req, res)=>{
     }
   })
 })
+
