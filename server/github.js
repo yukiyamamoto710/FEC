@@ -1,4 +1,4 @@
-const TOKEN = require('./api.js');
+const TOKEN = require('./config.js');
 const axios = require('axios');
 let hrapi = (callback) => {
   let option = {
