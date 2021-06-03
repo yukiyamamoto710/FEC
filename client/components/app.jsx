@@ -39,13 +39,36 @@ class App extends React.Component{
     //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
+<<<<<<< HEAD
         {/* // <Overview />
         // <RelatedItems />
         // <QA /> */}
         <Reviews id ={this.state.targetId}/>
+=======
+        {this.state.list.map((i,index)=>{
+          return (
+            <div key = {i.id}>
+              {i.name}
+            </div>
+          )
+        })}
+        <Overview view = {this.state.list}/>
+
+>>>>>>> eeb518c0fe3f1dd44047dc43b39abb44d7b7d1b0
       </div>
     )
   }
 }
 
 export default App;
+
+
+/*
+put the individual components here. they are not exported yet so throwing an error
+<RelatedItems />
+<QA />
+<Reviews />
+
+
+
+*/
