@@ -10,12 +10,14 @@ app.listen(PORT, ()=>{
   console.log('connect')
 });
 
+
 app.get('/getdata', (req, res)=>{
   api.hrapi((err, data)=>{
     if (err) {
-      res.send(err)
+      res.status(404).send(err)
     } else {
-      res.send(data)
+      console.log(data);
+      res.status(200).send(data)
     }
   })
 })

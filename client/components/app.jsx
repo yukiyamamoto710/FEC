@@ -15,6 +15,7 @@ class App extends React.Component{
       .then((data) =>{
         this.setState({
           list: data,
+          //has to set state for data.[whatever key we need from data]
         })
       })
       .catch(err=>{
@@ -31,7 +32,7 @@ class App extends React.Component{
       <div>
         {this.state.list.map((i,index)=>{
           return (
-            <div key = {index}>
+            <div key = {i.id}>
               {i.name}
             </div>
           )

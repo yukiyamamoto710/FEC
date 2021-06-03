@@ -1,4 +1,4 @@
-const TOKEN = require('./api.js');
+const TOKEN = require('./config.js');
 const axios = require('axios');
 let hrapi = (callback) => {
   let option = {
@@ -10,14 +10,19 @@ let hrapi = (callback) => {
   };
 
   axios(option)
-    .then(data=>{
+    .then((data) => {
+      //console.log(data);
       let datas = data.data
       callback(null, datas)
     })
-    .catch(err=>{
+    .catch((err) => {
       callback(err)
     })
 }
+
+
 module.exports = {
   hrapi: hrapi,
 }
+
+//module.exports.hrapi(console.log);
