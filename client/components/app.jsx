@@ -42,13 +42,22 @@ class App extends React.Component{
             </div>
           )
         })}
-        <Overview />
-        <RelatedItems />
-        <QA />
-        <Reviews />
+        <Overview view = {this.state.list}/>
+
       </div>
     )
   }
 }
 
 export default App;
+
+
+/*
+put the individual components here. they are not exported yet so throwing an error
+<RelatedItems />
+<QA />
+<Reviews />
+
+
+
+*/
