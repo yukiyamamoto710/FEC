@@ -1,8 +1,8 @@
 const TOKEN = require('./config.js');
 const axios = require('axios');
-let hrapi = (callback) => {
+let hrapi = (input, callback) => {
   let option = {
-      url: 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/products',
+      url: `https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/${input}`,
       headers:{
         'User-Agent': 'request',
         'Authorization': `${TOKEN}`,
@@ -11,11 +11,11 @@ let hrapi = (callback) => {
 
   axios(option)
     .then((data) => {
-      //console.log(data);
       let datas = data.data
       callback(null, datas)
     })
     .catch((err) => {
+      console.log(err,'err')
       callback(err)
     })
 }
