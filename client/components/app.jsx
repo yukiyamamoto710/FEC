@@ -39,7 +39,7 @@ class App extends React.Component{
       .then((response) =>{
         console.log('successful get request');
         this.setState({
-          list: response.data
+          [string]: response.data
           //has to set state for data.[whatever key we need from data]
         })
       })
@@ -78,11 +78,7 @@ class App extends React.Component{
   // }
 
   fetchEverything() {
-  //might be running async
     this.fetchGET('products', this.state.targetId);
-    //await this.fetchGET('relatedItems');
-    //await this.fetchGET('QA');
-    //await this.fetchGET('reviews');
   }
 
   componentDidMount(){
