@@ -18,4 +18,14 @@ app.get('/getproducts', (req, res)=>{
       res.send(data)
     }
   })
+});
+
+app.get('/getreviews', (req, res)=>{
+  api.hrapi('reviews',(err, data)=>{
+    if (err) {
+      res.send(err)
+    } else {
+      res.send(data)
+    }
+  })
 })
