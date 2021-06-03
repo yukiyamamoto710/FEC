@@ -13,19 +13,20 @@ app.listen(PORT, ()=>{
 app.get('/getproducts', (req, res)=>{
   api.hrapi('products',(err, data)=>{
     if (err) {
-      res.send(err)
+      res.status(404).send(err)
     } else {
-      res.send(data)
+      res.status(200).send(data)
     }
   })
 });
 
-app.get('/getreviews', (req, res)=>{
-  api.hrapi('reviews/?product_id=25712',(err, data)=>{
+app.use('/getreviews', (req, res)=>{
+  var a = req.originalUrl.lastIndexOf('/');
+  let id = req.originalUrl.slice(a+1);
+  api.hrapi(`reviews/?product_id=${id}`,(err, data)=>{
     if (err) {
       res.status(404).send(err)
     } else {
-      console.log(data);
       res.status(200).send(data)
     }
   })

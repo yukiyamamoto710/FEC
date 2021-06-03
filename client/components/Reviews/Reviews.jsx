@@ -1,4 +1,6 @@
 import React from 'react';
+import Rbase from './rbase.jsx';
+import Rating from './rating.jsx';
 
 class Reviews extends React.Component{
   constructor(props){
@@ -13,11 +15,11 @@ class Reviews extends React.Component{
 
   componentDidMount(){
     let targetId = this.props.id;
-    this.fetchGET('/getreviews','target','list');
+    this.fetchGET(`/getreviews/${targetId}`,'target','list');
     this.setState({
       id: targetId,
     })
-  }
+  };
 
   componentDidUpdate(prevProps){
     if(prevProps.id !== this.props.id){
@@ -29,7 +31,7 @@ class Reviews extends React.Component{
   };
 
   fetchGET(url){
-    fetch('/getreviews')
+    fetch(url)
       .then(res=>res.json())
       .then((data) =>{
         this.setState({
@@ -43,15 +45,21 @@ class Reviews extends React.Component{
   };
 
   render(){
+    const { list } = this.state
+    console.log(list)
     return (
-      <div>
-        {/* {this.state.list.map((i, index)=>{
-          return <div key = {index}>{i.body}</div>
-        })} */}
-        <button onClick={()=>console.log(this.state)}></button>
+      <div style = { base }>
+        <Rating />
+        <Rbase list = { list }/>
       </div>
     )
   }
 }
 
 export default Reviews
+
+const base = {
+  display: 'flex',
+  size: 'auto',
+  justifyContent:'center'
+}

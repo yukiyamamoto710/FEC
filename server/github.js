@@ -1,4 +1,4 @@
-const TOKEN = require('./api.js');
+const TOKEN = require('./config.js');
 const axios = require('axios');
 let hrapi = (input, callback) => {
   let option = {
@@ -11,7 +11,6 @@ let hrapi = (input, callback) => {
 
   axios(option)
     .then((data) => {
-      console.log(data,'adssa');
       let datas = data.data
       callback(null, datas)
     })

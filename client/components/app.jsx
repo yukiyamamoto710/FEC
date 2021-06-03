@@ -9,7 +9,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 2,
+      targetId: 25711,//reveiws testing.
     };
     this.fetchGET = this.fetchGET.bind(this);
   }
@@ -39,13 +39,6 @@ class App extends React.Component{
     //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
-        {this.state.list.map((i,index)=>{
-          return (
-            <div key = {i.id}>
-              {i.name}
-            </div>
-          )
-         })}
         {/* // <Overview />
         // <RelatedItems />
         // <QA /> */}
