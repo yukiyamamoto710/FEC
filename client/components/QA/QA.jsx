@@ -7,6 +7,7 @@ const QA = (props)=> {
     return (
       <div>
         <Searchbar/>
+        <QAItem/>
       </div>
     );
   }
