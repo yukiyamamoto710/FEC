@@ -11,7 +11,8 @@ let hrapi = (callback) => {
   const url =
   axios(option)
     .then(data=>{
-      callback(null, data)
+      let datas = data.data
+      callback(null, datas)
     })
     .catch(err=>{
       callback(err)

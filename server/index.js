@@ -13,9 +13,9 @@ app.listen(PORT, ()=>{
 app.get('/getdata', (req, res)=>{
   api.hrapi((err, data)=>{
     if (err) {
+      res.send(err)
     } else {
-      console.log(data.data)
-      res.send(data.data)
+      res.send(data)
     }
   })
 })
