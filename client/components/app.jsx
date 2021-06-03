@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import QA from './QA/QA.jsx';
@@ -10,7 +11,10 @@ class App extends React.Component{
     this.state = {
       list:[],
     };
-    this.fetchGET = this.fetchGET.bind(this);
+    // this.fetchGET = this.fetchGET.bind(this);
+    // this.getProductInfo = this.getProductInfo.bind(this);
+    // this.getProductStyles = this.getProductStyles.bind(this);
+    // this.getRelatedProducts = this.getRelatedProducts.bind(this);
   }
 
   fetchGET(){
@@ -26,6 +30,35 @@ class App extends React.Component{
         console.log(err)
       });
   };
+
+  // // get one specific product information
+  // getProductInfo(id) {
+  //   axios.get(`/products/${id}`)
+  //     .then((response) => {
+  //       this.setState({
+  //         curProduct: response.data
+  //       })
+  //     })
+  // }
+
+  // // get one specific product's styles
+  // getProductStyles(id) {
+  //   axios.get(`/products/${id}/styles`)
+  //   .then((response) => {
+  //     this.setState({
+  //       curStyles: response.data
+  //     })
+  //   })
+  // }
+
+  // getRelatedProducts() {
+  //   axios.get(`/products/${id}/related`)
+  //   .then((response) => {
+  //     this.setState({
+  //       relatedProducts: response.data
+  //     })
+  //   })
+  // }
 
   componentDidMount(){
    this.fetchGET();
@@ -43,6 +76,7 @@ class App extends React.Component{
           )
         })}
         <Overview view = {this.state.list}/>
+        <RelatedItems />
 
       </div>
     )
