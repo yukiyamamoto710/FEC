@@ -20,12 +20,26 @@ class App extends React.Component{
     this.fetchGET = this.fetchGET.bind(this);
   }
 
+  // fetchGET(string, id){
+  //   axios.get('/get', {endpoint:`${string}/${id}`})
+  //     .then((data) =>{
+  //       console.log('successful get request');
+  //       this.setState({
+  //         list: data
+  //         //has to set state for data.[whatever key we need from data]
+  //       })
+  //     })
+  //     .catch(err=>{
+  //       console.log(err)
+  //     });
+  // };
+
   fetchGET(string, id){
-    axios.get('/get', {endpoint:`${string}/${id}`})
-      .then((data) =>{
+    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
+      .then((response) =>{
         console.log('successful get request');
         this.setState({
-          list: data
+          list: response.data
           //has to set state for data.[whatever key we need from data]
         })
       })
