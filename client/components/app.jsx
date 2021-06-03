@@ -43,13 +43,6 @@ class App extends React.Component{
         // <RelatedItems />
         // <QA /> */}
         <Reviews id ={this.state.targetId}/>
-        {this.state.list.map((i,index)=>{
-          return (
-            <div key = {i.id}>
-              {i.name}
-            </div>
-          )
-        })}
         <Overview view = {this.state.list}/>
 
       </div>
