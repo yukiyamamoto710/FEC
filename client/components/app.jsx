@@ -10,6 +10,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
+      targetId: 25711,//reveiws testing.
     };
     // this.fetchGET = this.fetchGET.bind(this);
     // this.getProductInfo = this.getProductInfo.bind(this);
@@ -18,7 +19,7 @@ class App extends React.Component{
   }
 
   fetchGET(){
-    fetch('/getdata')
+    fetch('/getproducts')
       .then(res=>res.json())
       .then((data) =>{
         this.setState({
@@ -61,20 +62,20 @@ class App extends React.Component{
   // }
 
   componentDidMount(){
-   this.fetchGET();
+    this.fetchGET();
   };
+
+
+
 
   render(){
     //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
-        {this.state.list.map((i,index)=>{
-          return (
-            <div key = {i.id}>
-              {i.name}
-            </div>
-          )
-        })}
+        {/* // <Overview />
+        // <RelatedItems />
+        // <QA /> */}
+        <Reviews id ={this.state.targetId}/>
         <Overview view = {this.state.list}/>
         <RelatedItems />
 
