@@ -18,14 +18,14 @@ class Overview extends React.Component {
   }
 
   componentDidMount() {
-    console.log('this is props id', this.props.info);
-    this.fetchGET('products', this.props.info, 'description');
+    console.log('this is props id', this.props.id);
+    this.fetchGET('products', this.props.id, 'description');
   }
 
 
 
   componentDidUpdate(prevProps) {
-    var id = this.props.info;
+    var id = this.props.id;
     if(this.state.list.length === 0) {
       this.getStyles(id)
       .then((response) => {
