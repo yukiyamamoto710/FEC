@@ -12,32 +12,21 @@ class App extends React.Component{
       list:[],
       targetId: 25711//reveiws testing. we can initialize with a particular ID
     };
-
     this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
     this.productInfo = this.productInfo.bind(this);
   }
 
-  // fetchGET(string, id){
-  //   axios.get('/get', {endpoint:`${string}/${id}`})
-  //     .then((data) =>{
-  //       console.log('successful get request');
-  //       this.setState({
-  //         list: data
-  //         //has to set state for data.[whatever key we need from data]
-  //       })
-  //     })
-  //     .catch(err=>{
-  //       console.log(err)
-  //     });
-  // };
+  componentDidMount(){
+    this.fetchEverything();
+  }
 
   fetchGET(string, id){
     axios.get('/get', {params: {endpoint: `${string}/${id}`}})
       .then((response) =>{
         console.log('successful get request');
         this.setState({
-          list: response.data
+          [string]: response.data
           //has to set state for data.[whatever key we need from data]
         })
       })
@@ -46,45 +35,8 @@ class App extends React.Component{
       });
   };
 
-  // // get one specific product information
-  // getProductInfo(id) {
-  //   axios.get(`/products/${id}`)
-  //     .then((response) => {
-  //       this.setState({
-  //         curProduct: response.data
-  //       })
-  //     })
-  // }
-
-  // // get one specific product's styles
-  // getProductStyles(id) {
-  //   axios.get(`/products/${id}/styles`)
-  //   .then((response) => {
-  //     this.setState({
-  //       curStyles: response.data
-  //     })
-  //   })
-  // }
-
-  // getRelatedProducts() {
-  //   axios.get(`/products/${id}/related`)
-  //   .then((response) => {
-  //     this.setState({
-  //       relatedProducts: response.data
-  //     })
-  //   })
-  // }
-
   fetchEverything() {
-  //might be running async
     this.fetchGET('products', this.state.targetId);
-    //await this.fetchGET('relatedItems');
-    //await this.fetchGET('QA');
-    //await this.fetchGET('reviews');
-  }
-
-  componentDidMount(){
-    this.fetchEverything();
   }
 
   productInfo(string, id) {
@@ -92,7 +44,6 @@ class App extends React.Component{
   }
 
   render(){
-    //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
         <Reviews id ={this.state.targetId}/>
