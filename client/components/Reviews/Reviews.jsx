@@ -61,7 +61,7 @@ class Reviews extends React.Component{
   }
 }
 
-export default Reviews
+export default Reviews;
 
 const base = {
   display: 'flex',

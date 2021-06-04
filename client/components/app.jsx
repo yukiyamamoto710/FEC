@@ -2,8 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
-import QA from './QA/QA.jsx';
 import Reviews from './Reviews/Reviews.jsx';
+import QA from './QA/QA.jsx';
 
 class App extends React.Component{
   constructor(props){
@@ -18,11 +18,13 @@ class App extends React.Component{
     this.renderPage = this.renderPage.bind(this);
     this.fetchEverything = this.fetchEverything.bind(this);
 
+
   }
 
   componentDidMount(){
     this.fetchEverything();
   }
+
 
   fetchGET(string, endpoint, stateName){
     return (
@@ -39,6 +41,7 @@ class App extends React.Component{
   };
 
   fetchEverything() {
+
     this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
     //this.fetchGET('products', this.state.targetId, 'list');
   }
@@ -48,10 +51,10 @@ class App extends React.Component{
     if(this.state.loaded) {
       return (
         <div>
-          <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+          <Overview id = {this.state.targetId}/>
           <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
-          <Reviews id ={this.state.targetId}/>
           <QA questions={this.state.questions}/>
+          <Reviews id ={this.state.targetId}/>
         </div>
       )
     } else {
