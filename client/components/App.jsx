@@ -20,11 +20,13 @@ class App extends React.Component{
     this.renderPage = this.renderPage.bind(this);
     this.fetchEverything = this.fetchEverything.bind(this);
 
+
   }
 
   componentDidMount(){
     this.fetchEverything();
   }
+
 
   fetchGET(string, endpoint, stateName){
     return (
@@ -41,6 +43,7 @@ class App extends React.Component{
   };
 
   fetchEverything() {
+
     this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
     //this.fetchGET('products', this.state.targetId, 'list');
   }
