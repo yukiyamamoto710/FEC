@@ -27,12 +27,12 @@ class Overview extends React.Component {
     var id = this.props.id;
     if(this.state.list.length === 0) {
       this.getStyles(id)
-       .then((response) => {
+      .then((response) => {
         this.setState({list: response.data});
-        })
-       .catch((error) => {
+      })
+      .catch((error) => {
         console.log(error);
-        })
+      })
       }
 
   }
@@ -55,12 +55,6 @@ class Overview extends React.Component {
 
   getStyles(id) {
     return axios('/get', {params: {endpoint: `products/${id}/styles`}});
-    // .then((response) => {
-    //   this.setState({list: response.data});
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // })
   }
 
 
