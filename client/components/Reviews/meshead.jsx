@@ -1,11 +1,12 @@
 import React from 'react';
+import Stars from './star.jsx';
 
 const Head = (props)=> {
   const { user, date, rate }  = props;
   let datestr = date.slice(0, 10)
   return (
     <div style={ base }>
-      <div>STARS!!!!!</div>
+      <Stars rate = {rate}/>
       <div>{user}, {datestr}</div>
     </div>
   )

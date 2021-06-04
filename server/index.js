@@ -26,7 +26,7 @@ app.get('/get', (req, res)=>{
 app.use('/getreviews', (req, res)=>{
   var a = req.originalUrl.lastIndexOf('/');
   let id = req.originalUrl.slice(a+1);
-  api.hrapi(`reviews/?product_id=${id}`,(err, data)=>{
+  api.hrapi(`reviews/product_id=${id}`, (err, data)=>{
     if (err) {
       res.status(404).send(err)
     } else {

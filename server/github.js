@@ -16,7 +16,7 @@ let hrapi = (input, callback) => {
       callback(null, datas)
     })
     .catch((err) => {
-     console.log(err,'err')
+      console.log(err,'err')
       callback(err)
     })
 }
