@@ -25,9 +25,11 @@ class App extends React.Component{
   }
 
   fetchGET(string, id){
-    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
-      .then((response) =>{
-        console.log('successful get request', `${string}/${id}`);
+    axios.get('/get', {
+      params: {
+        endpoint:`${string}/${id}`
+      }},)
+      .then((data) =>{
         this.setState({
           list: response.data,
           //has to set state for data.[whatever key we need from data]

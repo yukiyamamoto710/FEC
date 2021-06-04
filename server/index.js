@@ -11,26 +11,11 @@ app.listen(PORT, ()=>{
 });
 
 app.get('/get', (req, res)=>{
-  api.hrapi(`${req.query.endpoint}`,(err, data)=>{
+  api.hrapi(`${req.query.endpoint}`, (err, data)=>{
     if (err) {
       res.status(404).send(err)
     } else {
-      console.log('this is data', data);
       res.status(200).send(data)
     }
   })
 });
-
-
-app.use('/getreviews', (req, res)=>{
-  var a = req.originalUrl.lastIndexOf('/');
-  let id = req.originalUrl.slice(a+1);
-  api.hrapi(`reviews/?product_id=${id}`,(err, data)=>{
-    if (err) {
-      res.status(404).send(err)
-    } else {
-      res.status(200).send(data)
-    }
-  })
-})
-
