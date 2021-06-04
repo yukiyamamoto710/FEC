@@ -3,7 +3,7 @@ import axios from 'axios';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import QA from './QA/QA.jsx';
-import Reviews from './Reviews/Reviews.jsx';
+
 
 
 class App extends React.Component{
@@ -12,11 +12,12 @@ class App extends React.Component{
     this.state = {
       list:[],
       targetId: 25711,//reveiws testing. we can initialize with a particular ID
-      styles: []
+      styles: [],
+      loaded: false
     };
-    this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
-    this.getStyles = this.getStyles.bind(this);
+    this.renderPage = this.renderPage.bind(this);
+    this.fetchEverything = this.fetchEverything.bind(this);
 
   }
 
@@ -24,56 +25,53 @@ class App extends React.Component{
     this.fetchEverything();
   }
 
-  fetchGET(string, id){
-    axios.get('/get', {
-      params: {
-        endpoint:`${string}/${id}`
-      }},)
-      .then((data) =>{
-        this.setState({
-          list: response.data,
-          //has to set state for data.[whatever key we need from data]
-        })
-      })
-      .catch(err=>{
-        console.log(err)
-      });
-  };
-
-
-  //refactor later
-  getStyles(string, id){
-    axios.get('/getstyle', {params: {endpoint: `${string}/${id}`}})
+  fetchGET(string, endpoint, stateName){
+    return (
+      axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
       .then((response) =>{
-        console.log('successful get request', `${string}/${id}`);
+        console.log('successful get request', `${string}/${endpoint}`);
         this.setState({
-          styles: response.data,
-        })
+          [stateName]: response.data,
+          //has to set state for data.[whatever key we need from data]
+        }, () =>this.setState({loaded: true}))
       })
-      .catch(err=>{
-        console.log(err)
-      });
+      .catch(err=> console.error(err))
+    );
   };
 
   fetchEverything() {
-    this.fetchGET('products', this.state.targetId);
-    //this.getStyles('products', `${this.state.targetId}/styles`);
-    //await this.fetchGET('relatedItems');
-    //await this.fetchGET('QA');
-    //await this.fetchGET('reviews');
+    this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
+    //this.fetchGET('products', this.state.targetId, 'list');
   }
 
-  componentDidMount(){
-    this.fetchEverything();
-  }
 
+  renderPage() {
+    if(this.state.loaded) {
+      return (
+        <div>
+          <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+          <QA questions={this.state.questions}/>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          Page Loading ...
+        </div>
+      )
+    }
+  }
 
   render(){
     return (
       <div>
+<<<<<<< HEAD
+        {this.renderPage()}
+=======
         <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
         <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
         <Reviews id ={this.state.targetId}/>
+>>>>>>> df2e5669701d30b72be8745f5a3a17fb50328acb
       </div>
     )
   }
