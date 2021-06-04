@@ -15,12 +15,12 @@ class RelatedItems extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount')
     // get an array of ids that are related products
     this.fetchGET('relatedItems', 'products', `${this.props.id}/related`);
   }
 
   componentDidUpdate() {
+    // there's a better comparison?
     if (this.state.relatedItemsList.length === 0) {
       var promises = [];
       for (var i = 0; i < this.state.relatedItems.length; i++) {
@@ -28,7 +28,6 @@ class RelatedItems extends React.Component {
       }
       Promise.all(promises)
         .then((response) => {
-          console.log(response[0].data.results)
           var list = [];
           for (var i = 0; i < response[0].data.results.length; i++) {
             var product = {name: response[0].data.results[i].name, originalPrice: response[0].data.results[i].original_price, image: response[0].data.results[i].photos[0].url}
@@ -58,7 +57,6 @@ class RelatedItems extends React.Component {
   };
 
   render() {
-    console.log('render')
     return (
       <div>
         <RelatedProducts relatedItemsList={this.state.relatedItemsList}/>

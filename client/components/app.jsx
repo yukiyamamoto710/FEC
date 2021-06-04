@@ -10,7 +10,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25711//reveiws testing. we can initialize with a particular ID
+      targetId: 25711 //reveiws testing. we can initialize with a particular ID
     };
     this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
@@ -46,8 +46,9 @@ class App extends React.Component{
   render(){
     return (
       <div>
-        <Reviews id ={this.state.targetId}/>
         <Overview info = {this.state.list} callback = {this.productInfo}/>
+        <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
+        <Reviews id ={this.state.targetId}/>
       </div>
     )
   }
@@ -55,13 +56,3 @@ class App extends React.Component{
 
 export default App;
 
-
-/*
-put the individual components here. they are not exported yet so throwing an error
-<RelatedItems />
-<QA />
-<Reviews />
-
-
-
-*/

@@ -5,10 +5,10 @@ const Outfit = (props) => {
   return (
     <div className="container">
       <h3 className="related-products">Outfit</h3>
-      <div className="carousel" data-orientation="horizontal" data-scrollable="true">
+      <div className="carousel">
         <ul className="slider">
           {props.selectedItemsList.map(product=>
-            <CardTemplate product={product} />
+            <CardTemplate key={product.name} product={product} />
             )}
         </ul>
       </div>

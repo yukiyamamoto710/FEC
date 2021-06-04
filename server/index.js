@@ -11,11 +11,11 @@ app.listen(PORT, ()=>{
 });
 
 app.get('/get', (req, res)=>{
+  console.log(req.query.endpoint)
   api.hrapi(`${req.query.endpoint}`,(err, data)=>{
     if (err) {
       res.status(404).send(err)
     } else {
-      console.log(data);
       res.status(200).send(data)
     }
   })
