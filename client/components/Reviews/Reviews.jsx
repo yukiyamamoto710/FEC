@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Rbase from './rbase.jsx';
 import Rating from './rating.jsx';
 
@@ -10,33 +11,35 @@ class Reviews extends React.Component{
       list: [],
       target:'',
     };
-    this.fetchGET = this.fetchGET.bind(this);
+    this.reviewsGET = this.reviewsGET.bind(this);
   }
 
   componentDidMount(){
     let targetId = this.props.id;
-    this.fetchGET(`/getreviews/${targetId}`,'target','list');
-    this.setState({
-      llst: targetId,
-    })
+    this.reviewsGET(`reviews`,targetId, 2, 'newest');
+
   };
 
   componentDidUpdate(prevProps){
     if(prevProps.id !== this.props.id){
-      let targetid = this.props.id;
+      let targetId = this.props.id;
         this.setState({
-          id : targetid,
+          id : targetId,
         })
+    this.reviewsGET('reviews', targetId, 2, 'newest')
     }
   };
 
-  fetchGET(url){
-    fetch(url)
-      .then(res=>res.json())
-      .then((data) =>{
+  reviewsGET(string, id, count, sort){
+    axios.get('/get', {
+      params: {
+        endpoint: `${string}/?product_id=${id}&count=${count}&sort=${sort}`
+      }})
+      .then((res) =>{
+        console.log(res.data,'sa');
+
         this.setState({
-          [arguments[1]]: data,
-          [arguments[2]]: data.results,
+          list: res.data.results
         })
       })
       .catch(err=>{
@@ -46,12 +49,13 @@ class Reviews extends React.Component{
 
   render(){
     const { list } = this.state
-    //console.log(list)
     return (
-      <div style = { base }>
-        <Rating />
-        <Rbase list = { list }/>
-
+      <div>
+        <div>RATINGS REVIEWS</div>
+        <div style = { base }>
+          <Rating />
+          <Rbase list = { list }/>
+        </div>
       </div>
     )
   }
@@ -62,5 +66,5 @@ export default Reviews
 const base = {
   display: 'flex',
   size: 'auto',
-  justifyContent:'center'
+  justifyContent:'center',
 }
