@@ -5,9 +5,9 @@ const QAItem = (props) => {
   //if it only has question
   //if it has question and answer
   //if it has questions, answer, and images
-  return (
+  // return (
 
-  );
+  // )
 }
 
 export default QAItem;
