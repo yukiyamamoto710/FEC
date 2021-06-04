@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
+import Reviews from './Reviews/Reviews.jsx';
 import QA from './QA/QA.jsx';
 
 
@@ -52,7 +53,7 @@ class App extends React.Component{
     if(this.state.loaded) {
       return (
         <div>
-          <Overview info = {this.state.list}/>
+          <Overview info = {this.state.targetId}/>
           <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
           <QA questions={this.state.questions}/>
           <Reviews id ={this.state.targetId}/>
