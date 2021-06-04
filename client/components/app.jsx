@@ -10,10 +10,11 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25711//reveiws testing.
+      targetId: 25711//reveiws testing. we can initialize with a particular ID
     };
-    this.fetchGET = this.fetchGET.bind(this);
     this.fetchEverything = this.fetchEverything.bind(this);
+    this.fetchGET = this.fetchGET.bind(this);
+    this.productInfo = this.productInfo.bind(this);
   }
 
   componentDidMount(){
@@ -34,20 +35,19 @@ class App extends React.Component{
       });
   };
 
-
   fetchEverything() {
     this.fetchGET('products', this.state.targetId);
+  }
+
+  productInfo(string, id) {
+    this.fetchGet(string, id);
   }
 
   render(){
     return (
       <div>
-        {/* // <Overview />
-        // <RelatedItems />
-        // <QA /> */}
-        <Overview view = {this.state.list}/>
-        <RelatedIems id={this.state.targetId}/>
         <Reviews id ={this.state.targetId}/>
+        <Overview info = {this.state.list} callback = {this.productInfo}/>
       </div>
     )
   }
