@@ -5,6 +5,7 @@ import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import QA from './QA/QA.jsx';
 import Reviews from './Reviews/Reviews.jsx';
 
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -28,7 +29,7 @@ class App extends React.Component{
       .then((response) =>{
         console.log('successful get request', `${string}/${id}`);
         this.setState({
-          [string]: response.data,
+          list: response.data,
           //has to set state for data.[whatever key we need from data]
         })
       })
@@ -40,7 +41,7 @@ class App extends React.Component{
 
   //refactor later
   getStyles(string, id){
-    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
+    axios.get('/getstyle', {params: {endpoint: `${string}/${id}`}})
       .then((response) =>{
         console.log('successful get request', `${string}/${id}`);
         this.setState({
@@ -54,7 +55,7 @@ class App extends React.Component{
 
   fetchEverything() {
     this.fetchGET('products', this.state.targetId);
-    this.getStyles('products', `${this.state.targetId}/styles`);
+    //this.getStyles('products', `${this.state.targetId}/styles`);
     //await this.fetchGET('relatedItems');
     //await this.fetchGET('QA');
     //await this.fetchGET('reviews');

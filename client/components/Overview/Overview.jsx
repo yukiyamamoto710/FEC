@@ -9,7 +9,8 @@ class Overview extends React.Component {
     super(props);
     this.state = {
       list: [],
-      mounted: false
+      mounted: false,
+      index: 0
     }
     // this.makeStyle = this.makeStyle.bind(this);
     // this.getStyle = this.getStyle.bind(this);
@@ -18,51 +19,50 @@ class Overview extends React.Component {
 
 
 
-  componentDidMount() {
+  componentDidUpdate(prevProps) {
     // console.log('prev props', prevProps.info);
     // console.log('current props', this.props.info);
-    if(this.state.mounted === false) {
-      //console.log('this props info', this.props.info);
-      //this.makeStyle(this.props.info.id);
-      console.log('mounted');
-      this.setState({mounted: true});
+
+    var id = this.props.info.id;
+    console.log(prevProps);
+    if(id !== prevProps.info.id) {
+      console.log(id);
+      this.getStyles(id);
+      this.setState({
+        index: id
+    })
     }
+
 
   }
 
 
-  // getStyle(id) {
-  //   axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
-  //   .then((response) => {
-  //     this.setState({list: response.results});
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
-  // }
-
-  // makeStyle(params) {
-  //   //we need to set up the styles when this component is mounted
-  //   this.props.callback(`${params}/styles`);
-  // }
+  getStyles(id) {
+    axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
+    .then((response) => {
+      this.setState({list: response.data});
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
 
 
   render() {
     //have to to map through the styles array we get back
-    console.log('this is styles', this.props.styles);
-    if(this.props.styles === undefined || this.props.styles.length === 0) {
-      return(
-        <>
-         <div>{this.props.info.category}</div>
-         <div>{this.props.info.name}</div>
-         <div>{this.props.info.id}</div>
-        </>
-       );
+    console.log('this is STATE', this.state.list);
+    if(this.state.list.length === 0) {
+      return (
+       <>
+        <div>{this.props.info.category}</div>
+        <div>{this.props.info.name}</div>
+        <div>{this.props.info.id}</div>
+       </>
+      );
     } else {
-      //console.log(this.props.styles.results);
       return(
         <>
-         {this.props.styles.results.map((item) => {
+         {this.state.list.results.map((item) => {
            return <ProductImage image = {item.photos[0]} key = {item.style_id} price = {item}/>
          })}
          <div>{this.props.info.category}</div>
@@ -70,9 +70,8 @@ class Overview extends React.Component {
          <div>{this.props.info.id}</div>
         </>
        );
-    }
-
-   }
+     }
+  }
 }
 
 

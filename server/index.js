@@ -21,6 +21,7 @@ app.get('/get', (req, res)=>{
   })
 });
 
+
 app.use('/getreviews', (req, res)=>{
   var a = req.originalUrl.lastIndexOf('/');
   let id = req.originalUrl.slice(a+1);
