@@ -2,15 +2,17 @@ import React from 'react';
 
 const CardTemplate = (props) => {
   return (
-    <div className="product-card">
-      <figure>
-        <div>img</div>
-        <div>
-          <div>{props.product.category}</div>
-          <div>{props.product.name}</div>
-        </div>
-      </figure>
-    </div>
+    <li className="slide">
+      <div className="product-card">
+        <figure>
+          <img src="" />
+          <div className="product-info">
+            <div>{props.product.category}</div>
+            <div>{props.product.name}</div>
+          </div>
+        </figure>
+      </div>
+    </li>
   )
 }
 

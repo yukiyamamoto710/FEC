@@ -5,20 +5,16 @@ const RelatedProducts = (props) => {
   console.log(props);
 
   return (
-    <ul>
-      <div className="container">
-        <h3>Related Products</h3>
-        <div>
-          <ul className="slider">
-            <li className="slide">
-              {props.relatedItemsList.map(product=>
-                <CardTemplate product={product} />
-              )}
-            </li>
-          </ul>
-        </div>
+    <div className="container">
+      <h3 className="related-products">Related Products</h3>
+      <div className="carousel" data-orientation="horizontal" data-scrollable="true">
+        <ul className="slider">
+          {props.relatedItemsList.map(product=>
+            <CardTemplate product={product} />
+            )}
+        </ul>
       </div>
-    </ul>
+    </div>
   )
 }
 
