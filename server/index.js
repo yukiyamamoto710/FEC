@@ -10,20 +10,22 @@ app.listen(PORT, ()=>{
   console.log('connect')
 });
 
-// app.get('/get', (req, res)=>{
-//   api.hrapi(`${req.query.endpoint}`,(err, data)=>{
-//     if (err) {
-//       res.status(404).send(err)
-//     } else {
-//       console.log('this is data', data);
-//       res.status(200).send(data)
-//     }
-//   })
-// });
+app.get('/get', (req, res)=>{
+  api.hrapi(`${req.query.endpoint}`,(err, data)=>{
+    if (err) {
+      res.status(404).send(err)
+    } else {
+      console.log('this is data', data);
+      res.status(200).send(data)
+    }
+  })
+});
 
 app.get('/qa', (req, res)=>{
   console.log('this is req query', req.query);
   api.hrapi(`qa/questions/?product_id=${req.query.id}`,(err, data)=>{
+app.get('/get', (req, res)=>{
+  api.hrapi(`${req.query.endpoint}`,(err, data)=>{
     if (err) {
       res.status(404).send(err)
     } else {
