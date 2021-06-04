@@ -33,21 +33,16 @@ app.get('/qa', (req, res)=>{
   })
 });
 
-// app.get('/qa', (req, res)=>{
-//   api.hrapi(`qa/questions`)
-//     .then(res.status(200).send(data))
-//     .catch(res.status(404).send(err));
-// });
 
-// app.use('/getreviews', (req, res)=>{
-//   var a = req.originalUrl.lastIndexOf('/');
-//   let id = req.originalUrl.slice(a+1);
-//   api.hrapi(`reviews/?product_id=${id}`,(err, data)=>{
-//     if (err) {
-//       res.status(404).send(err)
-//     } else {
-//       res.status(200).send(data)
-//     }
-//   })
-// })
+app.use('/getreviews', (req, res)=>{
+  var a = req.originalUrl.lastIndexOf('/');
+  let id = req.originalUrl.slice(a+1);
+  api.hrapi(`reviews/?product_id=${id}`,(err, data)=>{
+    if (err) {
+      res.status(404).send(err)
+    } else {
+      res.status(200).send(data)
+    }
+  })
+})
 

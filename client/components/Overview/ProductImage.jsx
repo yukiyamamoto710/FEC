@@ -1,12 +1,29 @@
 import React from 'react';
 
-function ProductImage(props) {
-  return(
-    <div>
-    <img className = 'picture' src= {props.image.url} alt="Picture of Clothing"></img>
-    <div>Price: {props.price.original_price}</div>
-    </div>
-  );
+class ProductImage extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: 0
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+
+  handleClick() {
+    this.props.callback(this.props.order);
+  }
+
+
+  render() {
+    return(
+      <div>
+      <img onClick = {this.handleClick} className = 'picture' src= {this.props.image.url} alt="Picture of Clothing"></img>
+      </div>
+    );
+  }
+
 }
 
 
