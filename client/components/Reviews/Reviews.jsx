@@ -48,10 +48,12 @@ class Reviews extends React.Component{
     const { list } = this.state
     console.log(list)
     return (
-      <div style = { base }>
-        <Rating />
-        <Rbase list = { list }/>
-
+      <div>
+        <div>RATINGS REVIEWS</div>
+        <div style = { base }>
+          <Rating />
+          <Rbase list = { list }/>
+        </div>
       </div>
     )
   }
@@ -62,5 +64,5 @@ export default Reviews
 const base = {
   display: 'flex',
   size: 'auto',
-  justifyContent:'center'
+  justifyContent:'center',
 }

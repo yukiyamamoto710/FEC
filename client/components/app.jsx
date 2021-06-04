@@ -21,7 +21,10 @@ class App extends React.Component{
   }
 
   fetchGET(string, id){
-    axios.get('/get', {endpoint:`${string}/${id}`})
+    axios.get('/get', {
+      params: {
+        endpoint:`${string}/${id}`
+      }},)
       .then((data) =>{
         console.log('successful get request');
         this.setState({

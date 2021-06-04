@@ -11,7 +11,9 @@ app.listen(PORT, ()=>{
 });
 
 app.get('/get', (req, res)=>{
-  api.hrapi(`${req.body.endpoint}`,(err, data)=>{
+  // /console.log(re,'asdsa')
+  api.hrapi(`${req.query.endpoint}`, (err, data)=>{
+    console.log(data)
     if (err) {
       res.status(404).send(err)
     } else {
