@@ -1,3 +1,13 @@
+.picture {
+  border-radius:100px;
+  width: 100px;
+  height: 100px;
+}
+
+.bigPicture {
+  width: 200px;
+  height: 200px;
+}
 .related-product-img {
   width: 250px;
   height: auto;

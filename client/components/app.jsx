@@ -3,8 +3,7 @@ import axios from 'axios';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import QA from './QA/QA.jsx';
-
-
+import Reviews from './Reviews/Reviews.jsx';
 
 class App extends React.Component{
   constructor(props){
@@ -50,6 +49,8 @@ class App extends React.Component{
       return (
         <div>
           <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+          <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
+          <Reviews id ={this.state.targetId}/>
           <QA questions={this.state.questions}/>
         </div>
       )
@@ -65,13 +66,7 @@ class App extends React.Component{
   render(){
     return (
       <div>
-<<<<<<< HEAD
         {this.renderPage()}
-=======
-        <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
-        <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
-        <Reviews id ={this.state.targetId}/>
->>>>>>> df2e5669701d30b72be8745f5a3a17fb50328acb
       </div>
     )
   }
