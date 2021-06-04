@@ -12,27 +12,13 @@ class App extends React.Component{
       list:[],
       targetId: 25711//reveiws testing.
     };
-    // this.fetchGET = this.fetchGET.bind(this);
-    // this.getProductInfo = this.getProductInfo.bind(this);
-    // this.getProductStyles = this.getProductStyles.bind(this);
-    // this.getRelatedProducts = this.getRelatedProducts.bind(this);
-    this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
+    this.fetchEverything = this.fetchEverything.bind(this);
   }
 
-  // fetchGET(string, id){
-  //   axios.get('/get', {endpoint:`${string}/${id}`})
-  //     .then((data) =>{
-  //       console.log('successful get request');
-  //       this.setState({
-  //         list: data
-  //         //has to set state for data.[whatever key we need from data]
-  //       })
-  //     })
-  //     .catch(err=>{
-  //       console.log(err)
-  //     });
-  // };
+  componentDidMount(){
+    this.fetchEverything();
+  }
 
   fetchGET(string, id){
     axios.get('/get', {params: {endpoint: `${string}/${id}`}})
@@ -48,53 +34,20 @@ class App extends React.Component{
       });
   };
 
-  // // get one specific product information
-  // getProductInfo(id) {
-  //   axios.get(`/products/${id}`)
-  //     .then((response) => {
-  //       this.setState({
-  //         curProduct: response.data
-  //       })
-  //     })
-  // }
-
-  // // get one specific product's styles
-  // getProductStyles(id) {
-  //   axios.get(`/products/${id}/styles`)
-  //   .then((response) => {
-  //     this.setState({
-  //       curStyles: response.data
-  //     })
-  //   })
-  // }
-
-  // getRelatedProducts() {
-  //   axios.get(`/products/${id}/related`)
-  //   .then((response) => {
-  //     this.setState({
-  //       relatedProducts: response.data
-  //     })
-  //   })
-  // }
 
   fetchEverything() {
     this.fetchGET('products', this.state.targetId);
   }
 
-  componentDidMount(){
-    this.fetchEverything();
-  }
-
   render(){
-    //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
         {/* // <Overview />
         // <RelatedItems />
         // <QA /> */}
-        <Reviews id ={this.state.targetId}/>
         <Overview view = {this.state.list}/>
-
+        <RelatedIems id={this.state.targetId}/>
+        <Reviews id ={this.state.targetId}/>
       </div>
     )
   }
