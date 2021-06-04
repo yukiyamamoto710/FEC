@@ -10,14 +10,12 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25711//reveiws testing.
+      targetId: 25711//reveiws testing. we can initialize with a particular ID
     };
-    // this.fetchGET = this.fetchGET.bind(this);
-    // this.getProductInfo = this.getProductInfo.bind(this);
-    // this.getProductStyles = this.getProductStyles.bind(this);
-    // this.getRelatedProducts = this.getRelatedProducts.bind(this);
+
     this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
+    this.productInfo = this.productInfo.bind(this);
   }
 
   // fetchGET(string, id){
@@ -89,16 +87,16 @@ class App extends React.Component{
     this.fetchEverything();
   }
 
+  productInfo(string, id) {
+    this.fetchGet(string, id);
+  }
+
   render(){
     //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
-        {/* // <Overview />
-        // <RelatedItems />
-        // <QA /> */}
         <Reviews id ={this.state.targetId}/>
-        <Overview view = {this.state.list}/>
-
+        <Overview info = {this.state.list} callback = {this.productInfo}/>
       </div>
     )
   }
