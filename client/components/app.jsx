@@ -16,7 +16,7 @@ class App extends React.Component{
     this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
     this.getStyles = this.getStyles.bind(this);
-    this.productInfo = this.productInfo.bind(this);
+
   }
 
   componentDidMount(){
