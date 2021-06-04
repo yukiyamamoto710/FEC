@@ -16,57 +16,34 @@ class App extends React.Component{
       loaded: false
     };
     this.fetchGET = this.fetchGET.bind(this);
-    this.getStyles = this.getStyles.bind(this);
-    this.getQA = this.getQA.bind(this);
     this.renderPage = this.renderPage.bind(this);
+    this.fetchEverything = this.fetchEverything.bind(this);
 
   }
 
   componentDidMount(){
-    this.getQA();
+    this.fetchEverything();
   }
 
-  fetchGET(string, id){
-    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
+  fetchGET(string, endpoint, stateName){
+    return (
+      axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
       .then((response) =>{
-        console.log('successful get request', `${string}/${id}`);
+        console.log('successful get request', `${string}/${endpoint}`);
         this.setState({
-          list: response.data,
+          [stateName]: response.data,
           //has to set state for data.[whatever key we need from data]
-        })
+        }, () =>this.setState({loaded: true}))
       })
-      .catch(err=>{
-        console.log(err)
-      });
+      .catch(err=> console.error(err))
+    );
   };
 
+  fetchEverything() {
+    this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
+    //this.fetchGET('products', this.state.targetId, 'list');
+  }
 
-  //refactor later
-  getStyles(string, id){
-    axios.get('/getstyle', {params: {endpoint: `${string}/${id}`}})
-      .then((response) =>{
-        console.log('successful get request', `${string}/${id}`);
-        this.setState({
-          styles: response.data,
-        })
-      })
-      .catch(err=>{
-        console.error(err)
-      });
-  };
-
-  getQA(){
-    axios.get('/qa', {params: {id: this.state.targetId}})
-      .then((response) =>{
-        console.log('successful get request');
-        this.setState({
-          questions: response.data,
-        }, () => this.setState({loaded: true}))
-      })
-      .catch(err=>{
-        console.error(err)
-      });
-  };
 
   renderPage() {
     if(this.state.loaded) {

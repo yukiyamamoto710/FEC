@@ -11,7 +11,7 @@ let hrapi = (input, callback) => {
   };
 
   //refactor this to return axios instead of using the callback
-  axios(option)
+  return axios(option)
     .then((data) => {
       let datas = data.data
       callback(null, datas)
