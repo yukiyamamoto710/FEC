@@ -10,14 +10,17 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25711//reveiws testing.
+      targetId: 25711,//reveiws testing. we can initialize with a particular ID
+      styles: []
     };
-    // this.fetchGET = this.fetchGET.bind(this);
-    // this.getProductInfo = this.getProductInfo.bind(this);
-    // this.getProductStyles = this.getProductStyles.bind(this);
-    // this.getRelatedProducts = this.getRelatedProducts.bind(this);
     this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
+    this.getStyles = this.getStyles.bind(this);
+
+  }
+
+  componentDidMount(){
+    this.fetchEverything();
   }
 
   fetchGET(string, id){
@@ -26,9 +29,8 @@ class App extends React.Component{
         endpoint:`${string}/${id}`
       }},)
       .then((data) =>{
-        console.log('successful get request');
         this.setState({
-          list: data
+          [string]: response.data,
           //has to set state for data.[whatever key we need from data]
         })
       })
@@ -37,38 +39,24 @@ class App extends React.Component{
       });
   };
 
-  // // get one specific product information
-  // getProductInfo(id) {
-  //   axios.get(`/products/${id}`)
-  //     .then((response) => {
-  //       this.setState({
-  //         curProduct: response.data
-  //       })
-  //     })
-  // }
 
-  // // get one specific product's styles
-  // getProductStyles(id) {
-  //   axios.get(`/products/${id}/styles`)
-  //   .then((response) => {
-  //     this.setState({
-  //       curStyles: response.data
-  //     })
-  //   })
-  // }
-
-  // getRelatedProducts() {
-  //   axios.get(`/products/${id}/related`)
-  //   .then((response) => {
-  //     this.setState({
-  //       relatedProducts: response.data
-  //     })
-  //   })
-  // }
+  //refactor later
+  getStyles(string, id){
+    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
+      .then((response) =>{
+        console.log('successful get request', `${string}/${id}`);
+        this.setState({
+          styles: response.data,
+        })
+      })
+      .catch(err=>{
+        console.log(err)
+      });
+  };
 
   fetchEverything() {
-  //might be running async
     this.fetchGET('products', this.state.targetId);
+    this.getStyles('products', `${this.state.targetId}/styles`);
     //await this.fetchGET('relatedItems');
     //await this.fetchGET('QA');
     //await this.fetchGET('reviews');
@@ -78,16 +66,12 @@ class App extends React.Component{
     this.fetchEverything();
   }
 
+
   render(){
-    //probably have to refactor this to just have the jsx components. what does everyone think?
     return (
       <div>
-        {/* // <Overview />
-        // <RelatedItems />
-        // <QA /> */}
         <Reviews id ={this.state.targetId}/>
-        <Overview view = {this.state.list}/>
-
+        <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
       </div>
     )
   }
