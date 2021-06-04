@@ -46,7 +46,7 @@ class Reviews extends React.Component{
 
   render(){
     const { list } = this.state
-    console.log(list)
+    //console.log(list)
     return (
       <div style = { base }>
         <Rating />
