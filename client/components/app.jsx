@@ -53,7 +53,7 @@ class App extends React.Component{
     if(this.state.loaded) {
       return (
         <div>
-          <Overview info = {this.state.targetId}/>
+          <Overview id = {this.state.targetId}/>
           <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
           <QA questions={this.state.questions}/>
           <Reviews id ={this.state.targetId}/>
