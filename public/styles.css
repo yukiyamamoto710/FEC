@@ -11,3 +11,8 @@ ul.slider li {
   display: block;
   box-sizing: border-box;
 }
+
+.product-card {
+  width: 100px;
+  height: 50px;
+}

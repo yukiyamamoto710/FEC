@@ -5,10 +5,10 @@ const CardTemplate = (props) => {
     <li className="slide">
       <div className="product-card">
         <figure>
-          <img src="" />
+          <img src={props.product.image} />
           <div className="product-info">
-            <div>{props.product.category}</div>
             <div>{props.product.name}</div>
+            <div>{props.product.originalPrice}</div>
           </div>
         </figure>
       </div>

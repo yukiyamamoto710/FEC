@@ -24,14 +24,14 @@ class RelatedItems extends React.Component {
     if (this.state.relatedItemsList.length === 0) {
       var promises = [];
       for (var i = 0; i < this.state.relatedItems.length; i++) {
-        promises.push(axios.get('/get', {params: {endpoint: `products/${this.state.relatedItems[i]}`}}));
+        promises.push(axios.get('/get', {params: {endpoint: `products/${this.state.relatedItems[i]}/styles`}}));
       }
-
       Promise.all(promises)
         .then((response) => {
+          console.log(response[0].data.results)
           var list = [];
-          for (var i = 0; i < response.length; i++) {
-            var product = {name: response[i].data.name, category: response[i].data.category}
+          for (var i = 0; i < response[0].data.results.length; i++) {
+            var product = {name: response[0].data.results[i].name, originalPrice: response[0].data.results[i].original_price, image: response[0].data.results[i].photos[0].url}
             list.push(product);
           }
           this.setState({
