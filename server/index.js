@@ -15,7 +15,7 @@ app.get('/get', (req, res)=>{
     if (err) {
       res.status(404).send(err)
     } else {
-      console.log(data);
+      console.log('this is data', data);
       res.status(200).send(data)
     }
   })

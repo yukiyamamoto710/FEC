@@ -10,11 +10,13 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25711//reveiws testing. we can initialize with a particular ID
+      targetId: 25711,//reveiws testing. we can initialize with a particular ID
+      styles: []
     };
     this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
-    this.productInfo = this.productInfo.bind(this);
+    this.getStyles = this.getStyles.bind(this);
+
   }
 
   componentDidMount(){
@@ -24,10 +26,25 @@ class App extends React.Component{
   fetchGET(string, id){
     axios.get('/get', {params: {endpoint: `${string}/${id}`}})
       .then((response) =>{
-        console.log('successful get request');
+        console.log('successful get request', `${string}/${id}`);
         this.setState({
-          [string]: response.data
+          [string]: response.data,
           //has to set state for data.[whatever key we need from data]
+        })
+      })
+      .catch(err=>{
+        console.log(err)
+      });
+  };
+
+
+  //refactor later
+  getStyles(string, id){
+    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
+      .then((response) =>{
+        console.log('successful get request', `${string}/${id}`);
+        this.setState({
+          styles: response.data,
         })
       })
       .catch(err=>{
@@ -37,17 +54,22 @@ class App extends React.Component{
 
   fetchEverything() {
     this.fetchGET('products', this.state.targetId);
+    this.getStyles('products', `${this.state.targetId}/styles`);
+    //await this.fetchGET('relatedItems');
+    //await this.fetchGET('QA');
+    //await this.fetchGET('reviews');
   }
 
-  productInfo(string, id) {
-    this.fetchGet(string, id);
+  componentDidMount(){
+    this.fetchEverything();
   }
+
 
   render(){
     return (
       <div>
         <Reviews id ={this.state.targetId}/>
-        <Overview info = {this.state.list} callback = {this.productInfo}/>
+        <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
       </div>
     )
   }
