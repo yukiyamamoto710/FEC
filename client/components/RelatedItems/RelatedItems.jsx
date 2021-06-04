@@ -12,6 +12,7 @@ class RelatedItems extends React.Component {
       selectedItemsList: []
     }
     this.fetchGET = this.fetchGET.bind(this);
+    this.getAllProductInfo = this.getAllProductInfo.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +24,7 @@ class RelatedItems extends React.Component {
     // there's a better comparison?
     if (this.state.relatedItemsList.length === 0) {
       var promises = [];
+      console.log('function' + this.getAllProductInfo(25711))
       for (var i = 0; i < this.state.relatedItems.length; i++) {
         promises.push(axios.get('/get', {params: {endpoint: `products/${this.state.relatedItems[i]}/styles`}}));
       }
@@ -43,7 +45,29 @@ class RelatedItems extends React.Component {
     }
   }
 
-  fetchGET(key, string, id){
+  getAllProductInfo(id) {
+    const productInfo = axios.get('/get', {params: {endpoint: `products/${id}`}})
+    const productStyle = axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
+    Promise.all([productInfo, productStyle])
+      .then(()=> {
+        console.log(productInfo)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    // axios.get('/get', {params: {endpoint: `products/${id}`}})
+    //   .then((response) => {
+    //     axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
+    //       .then((response2) => {
+    //         return {name: response.data.name, category: response.data.category, price: response.data.default_price, image: response2.data.results[0].photos[0].url}
+    //       })
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   })
+  }
+
+  fetchGET(key, string, id) {
     axios.get('/get', {params: {endpoint: `${string}/${id}`}})
       .then((response) =>{
         console.log('successful get request');

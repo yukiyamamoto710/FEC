@@ -9,7 +9,7 @@ const RelatedProducts = (props) => {
       <div className="carousel">
         <ul className="slider">
           {props.relatedItemsList.map(product=>
-            <CardTemplate key={product.name} product={product} />
+            <CardTemplate key={product.id} product={product} />
             )}
         </ul>
       </div>

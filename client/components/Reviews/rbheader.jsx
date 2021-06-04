@@ -1,5 +1,9 @@
 import React from 'react';
 
+/// need func
+
+
+
 const Rbheader = (props)=>{
   const { length, func } = props;
   return (

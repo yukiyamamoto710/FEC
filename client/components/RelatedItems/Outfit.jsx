@@ -8,7 +8,7 @@ const Outfit = (props) => {
       <div className="carousel">
         <ul className="slider">
           {props.selectedItemsList.map(product=>
-            <CardTemplate key={product.name} product={product} />
+            <CardTemplate key={product.id} product={product} />
             )}
         </ul>
       </div>
