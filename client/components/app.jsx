@@ -16,7 +16,7 @@ class App extends React.Component{
     };
     this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
-    this.getStyles = this.getStyles.bind(this);
+
 
   }
 
@@ -24,12 +24,12 @@ class App extends React.Component{
     this.fetchEverything();
   }
 
-  fetchGET(string, id){
+  fetchGET(string, id, name){
     axios.get('/get', {params: {endpoint: `${string}/${id}`}})
       .then((response) =>{
         console.log('successful get request', `${string}/${id}`);
         this.setState({
-          list: response.data,
+          [name]: response.data,
           //has to set state for data.[whatever key we need from data]
         })
       })
@@ -54,15 +54,16 @@ class App extends React.Component{
   };
 
   fetchEverything() {
-    this.fetchGET('products', this.state.targetId);
-    //this.getStyles('products', `${this.state.targetId}/styles`);
+    this.getStyles('products', `${this.state.targetId}/styles`);
+    this.fetchGET('products', this.state.targetId, 'list');
+
     //await this.fetchGET('relatedItems');
     //await this.fetchGET('QA');
     //await this.fetchGET('reviews');
   }
 
   componentDidMount(){
-    this.fetchEverything();
+    //this.fetchEverything();
   }
 
 
@@ -70,7 +71,7 @@ class App extends React.Component{
     return (
       <div>
         <Reviews id ={this.state.targetId}/>
-        <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+        <Overview info = {this.state.list} styles = {this.state.styles} id = {this.state.targetId}/>
       </div>
     )
   }
