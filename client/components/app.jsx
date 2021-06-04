@@ -3,7 +3,7 @@ import axios from 'axios';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import QA from './QA/QA.jsx';
-import Reviews from './Reviews/Reviews.jsx';
+
 
 class App extends React.Component{
   constructor(props){
@@ -11,16 +11,18 @@ class App extends React.Component{
     this.state = {
       list:[],
       targetId: 25711,//reveiws testing. we can initialize with a particular ID
-      styles: []
+      styles: [],
+      loaded: false
     };
-    this.fetchEverything = this.fetchEverything.bind(this);
     this.fetchGET = this.fetchGET.bind(this);
     this.getStyles = this.getStyles.bind(this);
+    this.getQA = this.getQA.bind(this);
+    this.renderPage = this.renderPage.bind(this);
 
   }
 
   componentDidMount(){
-    this.fetchEverything();
+    this.getQA();
   }
 
   fetchGET(string, id){
@@ -48,28 +50,44 @@ class App extends React.Component{
         })
       })
       .catch(err=>{
-        console.log(err)
+        console.error(err)
       });
   };
 
-  fetchEverything() {
-    this.fetchGET('products', this.state.targetId);
-    this.getStyles('products', `${this.state.targetId}/styles`);
-    //await this.fetchGET('relatedItems');
-    //await this.fetchGET('QA');
-    //await this.fetchGET('reviews');
-  }
+  getQA(){
+    axios.get('/qa', {params: {id: this.state.targetId}})
+      .then((response) =>{
+        console.log('successful get request');
+        this.setState({
+          questions: response.data,
+        }, () => this.setState({loaded: true}))
+      })
+      .catch(err=>{
+        console.error(err)
+      });
+  };
 
-  componentDidMount(){
-    this.fetchEverything();
+  renderPage() {
+    if(this.state.loaded) {
+      return (
+        <div>
+          <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+          <QA questions={this.state.questions}/>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          Page Loading ...
+        </div>
+      )
+    }
   }
-
 
   render(){
     return (
       <div>
-        <Reviews id ={this.state.targetId}/>
-        <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+        {this.renderPage()}
       </div>
     )
   }
