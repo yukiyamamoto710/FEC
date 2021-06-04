@@ -12,9 +12,8 @@ class Overview extends React.Component {
       mounted: false,
       index: 0
     }
-    // this.makeStyle = this.makeStyle.bind(this);
-    // this.getStyle = this.getStyle.bind(this);
-    //for styles, we need to send our name into a fetch function
+    this.handleClick = this.handleClick.bind(this);
+    this.changePic = this.changePic.bind(this);
   }
 
 
@@ -28,12 +27,10 @@ class Overview extends React.Component {
     if(id !== prevProps.info.id) {
       console.log(id);
       this.getStyles(id);
-      this.setState({
-        index: id
-    })
+      // this.setState({
+      //   index: id
+      // })
     }
-
-
   }
 
 
@@ -47,13 +44,21 @@ class Overview extends React.Component {
     })
   }
 
+  handleClick() {
+    this.setState({index: this.state.index + 1});
+  }
+
+  changePic(number) {
+    this.setState({index: number})
+  }
+
 
   render() {
     //have to to map through the styles array we get back
     console.log('this is STATE', this.state.list);
     if(this.state.list.length === 0) {
       return (
-       <>
+       <>LOADING
         <div>{this.props.info.category}</div>
         <div>{this.props.info.name}</div>
         <div>{this.props.info.id}</div>
@@ -62,8 +67,10 @@ class Overview extends React.Component {
     } else {
       return(
         <>
-         {this.state.list.results.map((item) => {
-           return <ProductImage image = {item.photos[0]} key = {item.style_id} price = {item}/>
+         <img className = 'bigPicture' src= {this.state.list.results[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
+         <div>Price: {this.state.list.results[this.state.index].original_price}</div>
+         {this.state.list.results.map((item, index) => {
+           return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
          })}
          <div>{this.props.info.category}</div>
          <div>{this.props.info.name}</div>
