@@ -65,7 +65,13 @@ class App extends React.Component{
   render(){
     return (
       <div>
+<<<<<<< HEAD
         {this.renderPage()}
+=======
+        <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+        <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
+        <Reviews id ={this.state.targetId}/>
+>>>>>>> df2e5669701d30b72be8745f5a3a17fb50328acb
       </div>
     )
   }
@@ -73,13 +79,3 @@ class App extends React.Component{
 
 export default App;
 
-
-/*
-put the individual components here. they are not exported yet so throwing an error
-<RelatedItems />
-<QA />
-<Reviews />
-
-
-
-*/
