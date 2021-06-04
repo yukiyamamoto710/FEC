@@ -16,6 +16,9 @@ class Overview extends React.Component {
     this.changePic = this.changePic.bind(this);
   }
 
+  componentDidMount(){
+    this.setState({list: this.props.styles});
+  }
 
 
   componentDidUpdate(prevProps) {
