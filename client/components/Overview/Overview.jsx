@@ -18,6 +18,7 @@ class Overview extends React.Component {
   }
 
   componentDidMount() {
+    console.log('this is props id', this.props.id);
     this.fetchGET('products', this.props.id, 'description');
   }
 
