@@ -5,10 +5,11 @@ const CardTemplate = (props) => {
     <li className="slide">
       <div className="product-card">
         <figure>
-          <img className="related-product-img" src={props.product.image} />
+          <img className="related-product-img" src={props.product.image}/>
           <div className="product-info">
+            <div>{props.product.category}</div>
             <div>{props.product.name}</div>
-            <div>${Math.abs(Number(props.product.originalPrice))}</div>
+            <div>${Math.abs(Number(props.product.price))}</div>
           </div>
         </figure>
       </div>

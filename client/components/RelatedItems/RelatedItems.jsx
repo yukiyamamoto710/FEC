@@ -9,35 +9,29 @@ class RelatedItems extends React.Component {
     this.state = {
       relatedItems: [],
       relatedItemsList: [],
-      selectedItemsList: []
+      selectedItemsList: [],
+      listLoaded: false
     }
     this.fetchGET = this.fetchGET.bind(this);
     this.getAllProductInfo = this.getAllProductInfo.bind(this);
   }
 
   componentDidMount() {
-    // get an array of ids that are related products
-    this.fetchGET('relatedItems', 'products', `${this.props.id}/related`);
+    this.fetchGET('relatedItems', 'products', `${this.props.id}/related`)
   }
 
   componentDidUpdate() {
     // there's a better comparison?
-    if (this.state.relatedItemsList.length === 0) {
+    if (!this.state.listLoaded) {
       var promises = [];
-      console.log('function' + this.getAllProductInfo(25711))
       for (var i = 0; i < this.state.relatedItems.length; i++) {
-        promises.push(axios.get('/get', {params: {endpoint: `products/${this.state.relatedItems[i]}/styles`}}));
+        promises.push(this.getAllProductInfo(this.state.relatedItems[i]));
       }
       Promise.all(promises)
         .then((response) => {
-          var list = [];
-          for (var i = 0; i < response[0].data.results.length; i++) {
-            var product = {name: response[0].data.results[i].name, originalPrice: response[0].data.results[i].original_price, image: response[0].data.results[i].photos[0].url}
-            list.push(product);
-          }
           this.setState({
-            relatedItemsList: list
-          })
+            relatedItemsList: response
+          }, ()=> {this.setState({listLoaded: true})})
         })
         .catch((err) => {
           console.log(err);
@@ -46,25 +40,19 @@ class RelatedItems extends React.Component {
   }
 
   getAllProductInfo(id) {
-    const productInfo = axios.get('/get', {params: {endpoint: `products/${id}`}})
-    const productStyle = axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
-    Promise.all([productInfo, productStyle])
-      .then(()=> {
-        console.log(productInfo)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-    // axios.get('/get', {params: {endpoint: `products/${id}`}})
-    //   .then((response) => {
-    //     axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
-    //       .then((response2) => {
-    //         return {name: response.data.name, category: response.data.category, price: response.data.default_price, image: response2.data.results[0].photos[0].url}
-    //       })
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   })
+    return new Promise((resolve, reject) => {
+      axios.get('/get', {params: {endpoint: `products/${id}`}})
+        .then((product) => {
+          axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
+            .then((styles) => {
+              var list = {id: product.data.id, name: product.data.name, category: product.data.category, price: product.data.default_price, image: styles.data.results[0].photos[0].url}
+              resolve(list)
+            })
+        })
+        .catch((err) => {
+          reject(err);
+        })
+    })
   }
 
   fetchGET(key, string, id) {
