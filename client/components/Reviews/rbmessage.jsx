@@ -23,7 +23,7 @@ const MessageList = (props) => {
             <br></br>
             <Photo photo = { i.photos } />
             <br></br>
-            <Message res = { 'asdsadsad'} style = { response }/>
+            {(i.response !== null)? <Message res = { i.response } style = { response }/>:null}
             <br></br>
             <HR helpful = { i.helpfulness } func1 = { func1 } func2 = { func2 } index ={ index }/>
             <br></br>

@@ -3,6 +3,7 @@ import Rbheader from './rbheader.jsx';
 import MessageList from './rbmessage.jsx';
 import Form from './form.jsx';
 import Button from './button.jsx';
+
 const Rbase = (props) =>{
   const { list, func, func1, func2, add, func3, func4, func5, func6 } = props;
   return (

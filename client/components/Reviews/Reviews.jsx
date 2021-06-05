@@ -118,23 +118,30 @@ class Reviews extends React.Component{
     this.setState({
       add: true,
     })
-  }
+  };
 
   more(){
     let num = this.state.list.length + 3;
     let targetId = this.state.id;
     this.reviewsGET('reviews', targetId, num, 'newest');
-  }
+  };
 
   getTarget(event){
     let key = event.target.id;
     let value = event.target.value;
     let obj = {...this.state.newReview};
+    if (key === 'recommend'){
+      if(value === 'YES'){
+        value = true;
+      } else {
+        value = false;
+      }
+    }
     obj[key] = value;
     this.setState({
       newReview: obj,
     })
-  }
+  };
 
   addReview(event){
     let obj = {...this.state.newReview};
@@ -158,7 +165,8 @@ class Reviews extends React.Component{
       },
       add:false,
     })
-  }
+  };
+
   render(){
     const { list } = this.state
     return (
