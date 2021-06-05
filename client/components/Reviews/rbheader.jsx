@@ -1,18 +1,19 @@
 import React from 'react';
+import Sorted from './sorted.jsx'
 
-/// need func
+const Rbheader = ({ length, func })=>{
 
-
-
-const Rbheader = (props)=>{
-  const { length, func } = props;
   return (
-    <div style={style}>{`${length} reviews, sorted by ${func}`}</div>
+    <div style={style}>
+      {`${length} reviews, sorted by`}
+      <Sorted func={ func }/>
+    </div>
   )
 }
 
 export default Rbheader;
 
 const style = {
-  fontSize:'10px'
+  display:'flex',
+  fontSize:'10px',
 }

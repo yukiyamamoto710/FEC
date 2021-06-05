@@ -13,13 +13,16 @@ class Reviews extends React.Component{
     };
     this.reviewsGET = this.reviewsGET.bind(this);
     this.ratingGET = this.ratingGET.bind(this);
+    this.sort = this.sort.bind(this);
   }
 
   componentDidMount(){
     let targetId = this.props.id;
-
+    this.setState({
+      id: targetId,
+    })
     this.ratingGET('reviews/meta',targetId);
-    this.reviewsGET(`reviews`,targetId, 2, 'newest');
+    this.reviewsGET(`reviews`,targetId, 10, 'newest');
   };
 
   componentDidUpdate(prevProps){
@@ -64,6 +67,14 @@ class Reviews extends React.Component{
         console.log(err)
       });
   };
+
+  sort(target){
+    let id = this.state.id;
+    let num = this.state.list.length;
+    console.log(id, num, 'asd')
+    this.reviewsGET('reviews', id, num, target)
+  }
+
   render(){
     const { list } = this.state
     return (
@@ -71,7 +82,7 @@ class Reviews extends React.Component{
         <div>RATINGS REVIEWS</div>
         <div style = { base }>
           <Rating />
-          <Rbase list = { list }/>
+          <Rbase list = { list } func = {this.sort}/>
         </div>
       </div>
     )

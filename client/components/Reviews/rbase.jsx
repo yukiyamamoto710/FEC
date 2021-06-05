@@ -2,11 +2,10 @@ import React from 'react';
 import Rbheader from './rbheader.jsx';
 import MessageList from './rbmessage.jsx';
 
-const Rbase = (props) =>{
-  const { list } = props;
+const Rbase = ({ list, func }) =>{
   return (
     <div style={ style }>
-      <Rbheader length = { list.length }/>
+      <Rbheader length = { list.length } func = { func }/>
       <MessageList list = { list }/>
     </div>
   )
