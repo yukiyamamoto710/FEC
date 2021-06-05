@@ -82,6 +82,7 @@ class Reviews extends React.Component{
         endpoint: `${string}/?product_id=${id}`
       }})
       .then((res) =>{
+        console.log(res.data)
         this.setState({
           rating: res.data,
           rtGet: true,
