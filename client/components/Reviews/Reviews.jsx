@@ -9,15 +9,17 @@ class Reviews extends React.Component{
     this.state = {
       id: '',
       list: [],
-      target:'',
+      rating:'',
     };
     this.reviewsGET = this.reviewsGET.bind(this);
+    this.ratingGET = this.ratingGET.bind(this);
   }
 
   componentDidMount(){
     let targetId = this.props.id;
-    this.reviewsGET(`reviews`,targetId, 2, 'newest');
 
+    this.ratingGET('reviews/meta',targetId);
+    this.reviewsGET(`reviews`,targetId, 2, 'newest');
   };
 
   componentDidUpdate(prevProps){
@@ -26,7 +28,8 @@ class Reviews extends React.Component{
         this.setState({
           id : targetId,
         })
-    this.reviewsGET('reviews', targetId, 2, 'newest')
+    this.ratingGET('reviews/meta',targetId);
+    this.reviewsGET('reviews', targetId, 2, 'newest');
     }
   };
 
@@ -46,6 +49,21 @@ class Reviews extends React.Component{
       });
   };
 
+  ratingGET(string, id){
+    axios.get('/get', {
+      params: {
+        endpoint: `${string}/?product_id=${id}`
+      }})
+      .then((res) =>{
+        console.log(res.data,'sad');
+        this.setState({
+          rating: res.data.results
+        })
+      })
+      .catch(err=>{
+        console.log(err)
+      });
+  };
   render(){
     const { list } = this.state
     return (
