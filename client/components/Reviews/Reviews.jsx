@@ -76,9 +76,8 @@ class Reviews extends React.Component{
         endpoint: `${string}/?product_id=${id}`
       }})
       .then((res) =>{
-        console.log(res.data,'sad');
         this.setState({
-          rating: res.data.results
+          rating: res.data
         })
       })
       .catch(err=>{
@@ -168,12 +167,12 @@ class Reviews extends React.Component{
   };
 
   render(){
-    const { list } = this.state
+    const { list, rating } = this.state;
     return (
       <div style ={bas}>
         <div>RATINGS REVIEWS</div>
         <div style = { base }>
-          <Rating />
+          <Rating rating = {rating}/>
           <Rbase
             list = { list }
             func = {this.sort}
