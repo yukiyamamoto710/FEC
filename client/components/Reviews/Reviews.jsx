@@ -14,6 +14,8 @@ class Reviews extends React.Component{
     this.reviewsGET = this.reviewsGET.bind(this);
     this.ratingGET = this.ratingGET.bind(this);
     this.sort = this.sort.bind(this);
+    this.helpful = this.helpful.bind(this);
+    this.report = this.report.bind(this);
   }
 
   componentDidMount(){
@@ -71,9 +73,32 @@ class Reviews extends React.Component{
   sort(target){
     let id = this.state.id;
     let num = this.state.list.length;
-    console.log(id, num, 'asd')
     this.reviewsGET('reviews', id, num, target)
+  };
+
+  helpful(target){
+    let arr = this.state.list.slice();
+    arr[target].helpfulness++;
+    //shoudl limit report time with user system
+    //should have a put req
+    //but not databse to change.
+    //use arr[target].proudce_id and PUT /reviews/:review_id/helpful
+    this.setState({
+      list: arr,
+      help: false,
+    });
+  };
+
+  report(target){
+    let arr = this.state.list.slice();
+    //shoudl limit report time with user system
+    //should have a put req
+    //but not databse to change.
+    //use arr[target].proudce_id and PUT /reviews/:review_id/helpful
+    //no setState
   }
+
+
 
   render(){
     const { list } = this.state
@@ -82,7 +107,11 @@ class Reviews extends React.Component{
         <div>RATINGS REVIEWS</div>
         <div style = { base }>
           <Rating />
-          <Rbase list = { list } func = {this.sort}/>
+          <Rbase
+            list = { list }
+            func = {this.sort}
+            func1 ={this.helpful}
+            func2 ={this.report}/>
         </div>
       </div>
     )

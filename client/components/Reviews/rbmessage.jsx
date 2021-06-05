@@ -5,10 +5,10 @@ import Head from './meshead.jsx';
 import HR from './helpful.jsx'
 ///// need head with stars
 const MessageList = (props) => {
-  const { list } = props;
+  const { list, func1, func2 } = props;
   return (
     <div style ={ style }>
-      { list.map((i)=>{
+      { list.map((i, index)=>{
         return (
           <div key = { i.review_id } style ={container}>
             <br></br>
@@ -23,7 +23,7 @@ const MessageList = (props) => {
             <br></br>
             <Message res = { 'asdsadsad'} style = { response }/>
             <br></br>
-            <HR />
+            <HR helpful = { i.helpfulness } func1 = { func1 } func2 = { func2 } index ={ index }/>
             <br></br>
           </div>
         )
