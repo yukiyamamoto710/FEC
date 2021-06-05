@@ -71,7 +71,9 @@ class App extends React.Component{
   render(){
     return (
       <div>
-        {this.renderPage()}
+        {/* {this.renderPage()} */}
+
+        <Reviews id ={this.state.targetId}/>
       </div>
     )
   }

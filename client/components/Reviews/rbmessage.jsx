@@ -7,7 +7,7 @@ import HR from './helpful.jsx'
 /// since cant post and cant get the review_id
 /// use index
 const MessageList = (props) => {
-  const { list, func1, func2 } = props;
+  const { list, helpful, report } = props;
   return (
     <div style ={ style }>
       { list.map((i, index)=>{
@@ -25,7 +25,7 @@ const MessageList = (props) => {
             <br></br>
             {(i.response !== null)? <Message res = { i.response } style = { response }/>:null}
             <br></br>
-            <HR helpful = { i.helpfulness } func1 = { func1 } func2 = { func2 } index ={ index }/>
+            <HR helpful = { i.helpfulness } add = { helpful } report = { report } index ={ index }/>
             <br></br>
           </div>
         )

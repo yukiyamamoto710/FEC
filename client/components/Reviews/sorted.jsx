@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Sorted = ({ func }) => {
-
+const Sorted = (props) => {
+  const { sort } = props;
   const a = (event) => {
     let str = String(event.target.value)
-    func(str);
+    sort(str);
   }
   return (
     <select style ={ style } onChange ={a}>

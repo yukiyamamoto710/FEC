@@ -1,32 +1,32 @@
 import React from 'react';
 
 const Form = (props)=>{
-  const { func, submit } = props;
+  const { getTarget, submit } = props;
   return (
     <div>
       <div style ={div1}>
         <div style ={div}>
           Name:
         </div>
-        <input type='text' id ='reviewer_name' onChange={func}></input>
+        <input type='text' id ='reviewer_name' onChange={ getTarget }></input>
       </div>
       <div style ={div1}>
         <div style ={div}>
           Title:
         </div>
-        <input type='text' id ='summary' onChange={func}></input>
+        <input type='text' id ='summary' onChange={ getTarget }></input>
       </div>
       <div style ={div1}>
         <div style ={div}>
           Description:
         </div>
-        <textarea id ='body' onChange={func}></textarea>
+        <textarea id ='body' onChange={ getTarget }></textarea>
       </div>
       <div style ={div1}>
         <div style ={div}>
           Recommend:
         </div>
-        <select id ='recommend' onChange={func}>
+        <select id ='recommend' onChange={ getTarget }>
           <option>YES</option>
           <option>NO</option>
         </select>
@@ -35,7 +35,7 @@ const Form = (props)=>{
         <div style ={div}>
           Rating:
         </div>
-        <select id ='rating' onChange={func}>
+        <select id ='rating' onChange={ getTarget }>
           <option>1</option>
           <option>2</option>
           <option>3</option>

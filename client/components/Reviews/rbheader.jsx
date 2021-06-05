@@ -2,11 +2,11 @@ import React from 'react';
 import Sorted from './sorted.jsx'
 
 const Rbheader = (props)=>{
-  const { length, func } = props;
+  const { length, sort } = props;
   return (
     <div style={style}>
       {`${length} reviews, sorted by`}
-      <Sorted func={ func }/>
+      <Sorted sort={ sort }/>
     </div>
   )
 }

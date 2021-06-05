@@ -7,9 +7,9 @@ class Reviews extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      id: '',
-      list: [],
-      rating:'',
+      productId: '',
+      reviewsList: [],
+      productRating:'',
       add: false,
       newReview: {
           body: '',
@@ -40,7 +40,7 @@ class Reviews extends React.Component{
   componentDidMount(){
     let targetId = this.props.id;
     this.setState({
-      id: targetId,
+      productId: targetId,
     })
     this.ratingGET('reviews/meta',targetId);
     this.reviewsGET(`reviews`,targetId, 2, 'newest');
@@ -50,7 +50,7 @@ class Reviews extends React.Component{
     if(prevProps.id !== this.props.id){
       let targetId = this.props.id;
         this.setState({
-          id : targetId,
+          productId : targetId,
           rvGet: false,
           rtGet: false,
         })
@@ -66,7 +66,7 @@ class Reviews extends React.Component{
       }})
       .then((res) =>{
         this.setState({
-          list: res.data.results,
+          reviewsList: res.data.results,
           rvGet: true,
         })
       })
@@ -82,7 +82,7 @@ class Reviews extends React.Component{
       }})
       .then((res) =>{
         this.setState({
-          rating: res.data,
+          productRating: res.data,
           rtGet: true,
         })
       })
@@ -92,26 +92,26 @@ class Reviews extends React.Component{
   };
 
   sort(target){
-    let id = this.state.id;
-    let num = this.state.list.length;
+    let id = this.state.productId;
+    let num = this.state.reviewsList.length;
     this.reviewsGET('reviews', id, num, target)
   };
 
   helpful(target){
-    let arr = this.state.list.slice();
+    let arr = this.state.reviewsList.slice();
     arr[target].helpfulness++;
     //shoudl limit report time with user system
     //should have a put req
     //but not databse to change.
     //use arr[target].proudce_id and PUT /reviews/:review_id/helpful
     this.setState({
-      list: arr,
+      reviewsList: arr,
       help: false,
     });
   };
 
   report(target){
-    let arr = this.state.list.slice();
+    let arr = this.state.reviewsList.slice();
     //shoudl limit report time with user system
     //should have a put req
     //but not databse to change.
@@ -126,8 +126,8 @@ class Reviews extends React.Component{
   };
 
   more(){
-    let num = this.state.list.length + 3;
-    let targetId = this.state.id;
+    let num = this.state.reviewsList.length + 3;
+    let targetId = this.state.productId;
     this.reviewsGET('reviews', targetId, num, 'newest');
   };
 
@@ -153,10 +153,10 @@ class Reviews extends React.Component{
     let a = new Date();
     let b = a.toISOString()
     obj.date = b;
-    let arr = [...this.state.list];
+    let arr = [...this.state.reviewsList];
     arr.unshift(obj);
     this.setState({
-      list:arr,
+      reviewsList:arr,
       newReview: {
         body: '',
         date: '',
@@ -175,22 +175,23 @@ class Reviews extends React.Component{
   loading(){
     const { rvGet, rtGet } = this.state;
     if (rvGet === true && rtGet === true) {
-      const { list, rating } = this.state;
+      const { reviewsList, productRating } = this.state;
       return (
         <div style ={bas}>
           <div>RATINGS REVIEWS</div>
           <div style = { base }>
-            <Rating rating = {rating}/>
+            <Rating
+              rating = { productRating }/>
             <Rbase
-              list = { list }
-              func = {this.sort}
-              func1 ={this.helpful}
-              func2 ={this.report}
-              add = {this.state.add}
-              func3 = {this.more}
-              func4 ={this.add}
-              func5 = {this.getTarget}
-              func6 = {this.addReview}/>
+              list = { reviewsList }
+              sort = { this.sort }
+              helpful ={ this.helpful }
+              report ={ this.report }
+              add = { this.state.add }
+              more = { this.more }
+              addfunc ={ this.add }
+              getTarget = { this.getTarget }
+              addReview = { this.addReview }/>
           </div>
         </div>
       )

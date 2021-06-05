@@ -1,14 +1,14 @@
 import React from 'react';
 /////////need funcs
 const HR =(props)=>{
-  const { helpful, func1, func2, index } =props;
+  const { helpful, add, report, index } =props;
   const a = `Helpful? Yes (${helpful}) `;
   const b = ` | report`;
   const c = (event)=>{
-    func1(index)
+    add(index)
   }
   const d = (event) =>{
-    func2(index)
+    report(index)
   }
   return (
     <div style= {style}>
