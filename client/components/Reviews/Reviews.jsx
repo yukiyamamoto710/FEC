@@ -22,6 +22,8 @@ class Reviews extends React.Component{
           reviewer_name: '',
           summary: '',
         },
+      rvGet: false,
+      rtGet: false,
     };
     this.reviewsGET = this.reviewsGET.bind(this);
     this.ratingGET = this.ratingGET.bind(this);
@@ -32,6 +34,7 @@ class Reviews extends React.Component{
     this.more = this.more.bind(this);
     this.getTarget = this.getTarget.bind(this);
     this.addReview = this.addReview.bind(this);
+    this.loading = this.loading.bind(this);
   }
 
   componentDidMount(){
@@ -48,6 +51,8 @@ class Reviews extends React.Component{
       let targetId = this.props.id;
         this.setState({
           id : targetId,
+          rvGet: false,
+          rtGet: false,
         })
     this.ratingGET('reviews/meta',targetId);
     this.reviewsGET('reviews', targetId, 2, 'newest');
@@ -62,7 +67,8 @@ class Reviews extends React.Component{
       .then((res) =>{
         console.log(res.data,'sa');
         this.setState({
-          list: res.data.results
+          list: res.data.results,
+          rvGet: true,
         })
       })
       .catch(err=>{
@@ -77,7 +83,8 @@ class Reviews extends React.Component{
       }})
       .then((res) =>{
         this.setState({
-          rating: res.data
+          rating: res.data,
+          rtGet: true,
         })
       })
       .catch(err=>{
@@ -166,24 +173,36 @@ class Reviews extends React.Component{
     })
   };
 
-  render(){
-    const { list, rating } = this.state;
-    return (
-      <div style ={bas}>
-        <div>RATINGS REVIEWS</div>
-        <div style = { base }>
-          <Rating rating = {rating}/>
-          <Rbase
-            list = { list }
-            func = {this.sort}
-            func1 ={this.helpful}
-            func2 ={this.report}
-            add = {this.state.add}
-            func3 = {this.more}
-            func4 ={this.add}
-            func5 = {this.getTarget}
-            func6 = {this.addReview}/>
+  loading(){
+    const { rvGet, rtGet } = this.state;
+    if (rvGet === true && rtGet === true) {
+      const { list, rating } = this.state;
+      return (
+        <div style ={bas}>
+          <div>RATINGS REVIEWS</div>
+          <div style = { base }>
+            <Rating rating = {rating}/>
+            <Rbase
+              list = { list }
+              func = {this.sort}
+              func1 ={this.helpful}
+              func2 ={this.report}
+              add = {this.state.add}
+              func3 = {this.more}
+              func4 ={this.add}
+              func5 = {this.getTarget}
+              func6 = {this.addReview}/>
+          </div>
         </div>
+      )
+    } else {
+      return <div>Loading...</div>
+    }
+  }
+  render(){
+    return (
+      <div>
+        { this.loading() }
       </div>
     )
   }
