@@ -1,16 +1,6 @@
-.picture {
-  border-radius:100px;
-  width: 100px;
-  height: 100px;
-}
-
-.bigPicture {
+.related-product-img {
   width: 200px;
   height: 200px;
-}
-.related-product-img {
-  width: 250px;
-  height: auto;
 }
 
 ul.slider {
@@ -20,14 +10,27 @@ ul.slider {
   align-items: center;
   list-style: none;
   padding-top: 20px;
+  vertical-align: baseline;
 }
 
 ul.slider li {
-  display: block;
+  display: inline-block;
+  border: 1px solid;
+  margin: 0 10px;
   box-sizing: border-box;
 }
 
 .product-card {
-  width: 300px;
+  width: 200px;
   height: 300px;
+}
+
+.product-infor {
+  vertical-align: baseline;
+}
+
+figure {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
