@@ -37,7 +37,6 @@ class Reviews extends React.Component{
       }})
       .then((res) =>{
         console.log(res.data,'sa');
-
         this.setState({
           list: res.data.results
         })
