@@ -3,13 +3,11 @@ import React from 'react';
 const Comfort =(props)=>{
   const { value } = props;
   let perce = Math.floor(value / 5 * 100)
-  console.log(perce)
   const point={
     position:'absolute',
     top:'0px',
     right:`${perce}%`
   };
-
   return (
     <div style={ container }>
       Comfort

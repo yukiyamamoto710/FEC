@@ -4,7 +4,6 @@ import SmallBar from './smallBar.jsx'
 const Size =(props)=>{
   const { value } = props;
   let perce = Math.floor(value / 5 * 100)
-  console.log(perce)
   const point={
     position:'absolute',
     top:'0px',

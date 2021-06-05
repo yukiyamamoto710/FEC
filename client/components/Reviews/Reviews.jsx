@@ -65,7 +65,6 @@ class Reviews extends React.Component{
         endpoint: `${string}/?product_id=${id}&count=${count}&sort=${sort}`
       }})
       .then((res) =>{
-        console.log(res.data,'sa');
         this.setState({
           list: res.data.results,
           rvGet: true,
@@ -82,7 +81,6 @@ class Reviews extends React.Component{
         endpoint: `${string}/?product_id=${id}`
       }})
       .then((res) =>{
-        console.log(res.data)
         this.setState({
           rating: res.data,
           rtGet: true,
