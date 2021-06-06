@@ -15,7 +15,7 @@
   margin: 0 10px;
   box-sizing: border-box;
   width: 250px;
-  height: 400px;
+  height: 350px;
 }
 
 .related-product-img {
@@ -45,4 +45,8 @@
 
 .product-name {
   font-weight: bold;
+}
+
+.empty-card {
+  text-align: center;
 }

@@ -14,6 +14,7 @@ class RelatedItems extends React.Component {
     }
     this.fetchGET = this.fetchGET.bind(this);
     this.getAllProductInfo = this.getAllProductInfo.bind(this);
+    this.addToOutfit = this.addToOutfit.bind(this);
   }
 
   componentDidMount() {
@@ -55,10 +56,23 @@ class RelatedItems extends React.Component {
     })
   }
 
+  addToOutfit() {
+    this.getAllProductInfo(this.props.id)
+      .then((results) => {
+        var list = [];
+        list.push(results)
+        this.setState({
+          selectedItemsList: list
+        })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
   fetchGET(key, string, id) {
     axios.get('/get', {params: {endpoint: `${string}/${id}`}})
       .then((response) =>{
-        console.log('successful get request');
         this.setState({
           [key]: response.data
         })
@@ -72,7 +86,7 @@ class RelatedItems extends React.Component {
     return (
       <div>
         <RelatedProducts relatedItemsList={this.state.relatedItemsList}/>
-        <Outfit selectedItemsList={this.state.relatedItemsList}/>
+        <Outfit selectedItemsList={this.state.selectedItemsList} addToOutfit={this.addToOutfit}/>
       </div>
     )
   }
