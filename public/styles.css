@@ -1,7 +1,7 @@
 .carousel {
   position: relative;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: left;
   list-style: none;
   max-width: 800px;
@@ -52,13 +52,13 @@
 }
 
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.25);
 }
 
 .modal_content {
-  background-color: white;
-  position: absolute;
+  background-color: black;
+  /* position: absolute; */
 }

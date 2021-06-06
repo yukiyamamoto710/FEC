@@ -21,6 +21,7 @@ class RelatedProducts extends React.Component {
     return (
       <div className="container">
         <h3 className="related-products">RELATED PRODUCTS</h3>
+        <button className="slideLeft">Left</button>
         <ul className="carousel">
           {this.state.seen ? <Comparison toggle={this.togglePop} />: null}
           {this.props.relatedItemsList.map(product=>
