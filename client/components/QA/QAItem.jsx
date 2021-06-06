@@ -1,18 +1,80 @@
 import React from 'react';
-import Answer from './QAItem.jsx';
+import Answer from './Answer.jsx';
 
-const QAItem = ({question}) => {
+class QAItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: false
+    };
+    this.renderPage = this.renderPage.bind(this);
+    this.renderQuestion = this.renderQuestion.bind(this);
+    this.renderAnswers = this.renderAnswers.bind(this);
+  }
 
-  return (
-    <div>
-      Question: {question.question_body} <br/>
-      {/* {Object.entries(question.answers).map(([key, value]) => {
+  componentDidMount() {
+    this.setState({question: this.props.question}, () => {
+      this.setState({loaded: true})
+    })
+  }
+
+  renderAnswers() {
+    //console.log('this is the question answers', Object.entries(this.state.question.answers))
+    if(this.state.question.answers) {
+      Object.entries(this.state.question.answers).map(([key, value]) => {
+        //console.log(value.body);
         return(
-          <Answer answer={value} key={key}/>
+          <div>
+            Answer: <Answer answer={value.body} key={key}/>
+          </div>
         )
-      })} */}
-    </div>
-  );
+      })
+    } else {
+      console.log('there are no answers');
+    }
+  }
+
+  renderQuestion () {
+    return (
+      <div>
+        Question: {this.state.question.question_body !== undefined ? this.state.question.question_body : console.log('no question body')}
+        <br/>
+        Answer:
+        {this.state.question.answers !== undefined ?
+          Object.entries(this.state.question.answers).map(([key, value]) => {
+            //console.log(value.body);
+            return(
+              <div>
+               <Answer answer={value.body} key={key}/>
+              </div>
+            )
+          }) : console.log('there are no answers')
+        }
+      </div>
+    )
+  }
+
+  renderPage() {
+    if(this.state.loaded) {
+      return (
+        <div>
+          {this.renderQuestion()}
+          <br/>
+          {this.renderAnswers()}
+        </div>
+      )
+    } else {
+      console.log('something went wrong with conditional render');
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderPage()}
+      </div>
+    )
+  }
 }
 
 export default QAItem;
