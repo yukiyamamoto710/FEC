@@ -1,4 +1,5 @@
 import React from 'react';
+import Answer from './Answer.jsx';
 
 
 class QAItem extends React.Component {
@@ -9,29 +10,13 @@ class QAItem extends React.Component {
     };
     this.renderPage = this.renderPage.bind(this);
     this.renderQuestion = this.renderQuestion.bind(this);
-    this.renderAnswers = this.renderAnswers.bind(this);
+    //this.renderAnswers = this.renderAnswers.bind(this);
   }
 
   componentDidMount() {
     this.setState({question: this.props.question}, () => {
       this.setState({loaded: true})
     })
-  }
-
-  renderAnswers() {
-    //console.log('this is the question answers', Object.entries(this.state.question.answers))
-    if(this.state.question.answers) {
-      Object.entries(this.state.question.answers).map(([key, value]) => {
-        //console.log(value.body);
-        return(
-          <div>
-            Answer: {value.body}
-          </div>
-        )
-      })
-    } else {
-      console.log('there are no answers');
-    }
   }
 
   renderQuestion () {
@@ -45,11 +30,12 @@ class QAItem extends React.Component {
             //console.log(value.body);
             return(
               <div>
-                {value.body}
+                <Answer answer={value.body}/>
               </div>
             )
           }) : console.log('there are no answers')
         }
+        <br/>
       </div>
     )
   }
@@ -59,8 +45,6 @@ class QAItem extends React.Component {
       return (
         <div>
           {this.renderQuestion()}
-          <br/>
-          {this.renderAnswers()}
         </div>
       )
     } else {
