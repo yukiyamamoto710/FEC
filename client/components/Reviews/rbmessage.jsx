@@ -7,9 +7,10 @@ import HR from './helpful.jsx'
 /// since cant post and cant get the review_id
 /// use index
 const MessageList = (props) => {
-  const { list, helpful, report, notHelpful } = props;
+  const { list, helpful, report, notHelpful, msgClick } = props;
+
   return (
-    <div style ={ style }>
+    <div style ={ style } >
       { list.map((i, index)=>{
         return (
           <div
@@ -24,9 +25,18 @@ const MessageList = (props) => {
               text = { i.summary }
               style ={ summery }/>
             <br></br>
-            <Message
-              text = { i.body }
-              style ={ body }/>
+            { i.click === undefined ?
+              <Message
+                id = { index }
+                msgClick = { msgClick }
+                text = { i.body }/>
+              :
+              <Message
+                id = { index }
+                style = { body }
+                msgClick = { msgClick }
+                text = { i.body }/>
+            }
             <br></br>
             <Message
               text = { i.recommend }

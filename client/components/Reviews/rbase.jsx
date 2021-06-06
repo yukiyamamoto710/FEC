@@ -6,7 +6,7 @@ import Button from './button.jsx';
 
 const Rbase = (props) =>{
   const { list, sort, helpful, notHelpful, report, add,
-    more, addfunc, getTarget, addReview, moreBTN } = props;
+    more, addfunc, getTarget, addReview, moreBTN, msgClick } = props;
   return (
     <div
       style = { style }>
@@ -14,6 +14,7 @@ const Rbase = (props) =>{
         length = { list.length }
         sort = { sort }/>
       <MessageList
+        msgClick = { msgClick }
         list = { list }
         helpful = { helpful }
         report = { report }

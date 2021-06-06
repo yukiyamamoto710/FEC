@@ -3,7 +3,7 @@ import React from 'react';
 const HR = ( props ) =>{
   const { helpful, yes, no, report, index, notHelpful } = props;
   const a = `Helpful? Yes (${ helpful }) `;
-  const e = ` No (${ notHelpful }) |`;
+  const e = ` No (${ notHelpful }) `;
   const b = ` | report`;
 
   const c = (event) =>{

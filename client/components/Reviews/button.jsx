@@ -25,7 +25,7 @@ const Button = (props) =>{
 export default Button;
 
 const style = {
-  display:'flex',
+  display: 'flex',
   justifyContent: 'left',
   height: '50px',
   padding: '10px',
@@ -37,5 +37,5 @@ const button = {
   padding: '5px',
   fontSize: '10px',
   margin: '5px',
-  fontWeight:'bold'
+  fontWeight: 'bold'
 }

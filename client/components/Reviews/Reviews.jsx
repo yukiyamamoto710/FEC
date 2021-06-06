@@ -40,6 +40,7 @@ class Reviews extends React.Component{
     this.addReview = this.addReview.bind(this);
     this.loading = this.loading.bind(this);
     this.ratingstar = this.ratingstar.bind(this);
+    this.msgClick = this.msgClick.bind(this);
   };
 
   componentDidMount(){
@@ -113,7 +114,7 @@ class Reviews extends React.Component{
     let arr = this.state.reviewsList.slice();
     if ( arr[ target ][ 'help' ] !== true ) {
       arr[ target ].helpfulness++;
-      arr[ targe ][ 'help' ] = true;
+      arr[ target ][ 'help' ] = true;
     };
     //shoudl limit report time with user system
     //should have a put req
@@ -227,7 +228,8 @@ class Reviews extends React.Component{
               report ={ this.report }
               add = { this.state.add }
               more = { this.more }
-              addfunc ={ this.add }
+              addfunc = { this.add }
+              msgClick = { this.msgClick }
               getTarget = { this.getTarget }
               addReview = { this.addReview }
               moreBTN = { moreBTNshowed }/>
@@ -262,6 +264,19 @@ class Reviews extends React.Component{
       })
     }
   };
+
+  msgClick(event){
+    let arr = [ ...this.state.reviewsList ];
+    let index = event.target.id;
+    if (arr[index]['click'] === undefined) {
+      arr[index]['click'] = true;
+    } else {
+      arr[index]['click'] = undefined;
+    }
+    this.setState({
+      reviewsList: arr,
+    })
+  }
 
   render(){
     return (

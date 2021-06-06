@@ -10,7 +10,7 @@ const Stars = (props) =>{
     num2 = 0;
   } else if (rate < num1 + 0.5) {
     num2 = 1;
-  } else if (rate < num1 +.075) {
+  } else if (rate < num1 + .075) {
     num3 = 1;
   } else if ( rate < num1 + 1){
     num4 = 1;
@@ -19,13 +19,13 @@ const Stars = (props) =>{
   return (
     <div>
       {num1 !== 0?[...Array(num1)].map((i, index)=>{
-        return <img src={'star3.svg'} key= {index} ></img>
+        return <img src={ 'star3.svg' } key= {index} ></img>
       }):null}
-      {(num2 ===1)?<img src={'star5.svg'}></img>:null}
-      {(num3 ===1)?<img src={'star4.svg'}></img>:null}
-      {(num4 ===1)?<img src={'star3.svg'}></img>:null}
+      {(num2 ===1)?<img src={ 'star5.svg' }></img>:null}
+      {(num3 ===1)?<img src={ 'star4.svg' }></img>:null}
+      {(num4 ===1)?<img src={ 'star3.svg' }></img>:null}
       {num !== 0?[...Array(num)].map((i, index)=>{
-        return <img src={'star5.svg'} key= {index}></img>
+        return <img src={ 'star5.svg' } key= {index}></img>
       }):null}
     </div>
 

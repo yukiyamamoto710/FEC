@@ -5,18 +5,21 @@ const Photo = (props) =>{
   if (photo.length !== 0) {
     return (
       <div>
-        {photo.map((i) => {
+        {photo.map( i =>{
           return (
-            <img src={ i.url } key = {i.id} style = {img}></img>
+            <img
+              src = { i.url }
+              key = { i.id }
+              style = { img }>
+            </img>
           )
         })}
       </div>
     )
   } else {
     return <></>
-  }
-
-}
+  };
+};
 
 export default Photo
 
