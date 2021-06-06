@@ -1,5 +1,5 @@
 import React from 'react';
-import Answer from './Answer.jsx';
+
 
 class QAItem extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class QAItem extends React.Component {
         //console.log(value.body);
         return(
           <div>
-            Answer: <Answer answer={value.body} key={key}/>
+            Answer: {value.body}
           </div>
         )
       })
@@ -45,7 +45,7 @@ class QAItem extends React.Component {
             //console.log(value.body);
             return(
               <div>
-               <Answer answer={value.body} key={key}/>
+                {value.body}
               </div>
             )
           }) : console.log('there are no answers')
