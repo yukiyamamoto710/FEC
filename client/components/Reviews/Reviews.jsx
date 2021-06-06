@@ -43,7 +43,7 @@ class Reviews extends React.Component{
       productId: targetId,
     })
     this.ratingGET('reviews/meta',targetId);
-    this.reviewsGET(`reviews`,targetId, 2, 'newest');
+    this.reviewsGET(`reviews`,targetId, 2, 'relevant');
   };
 
   componentDidUpdate(prevProps){
@@ -55,7 +55,7 @@ class Reviews extends React.Component{
           rtGet: false,
         })
     this.ratingGET('reviews/meta',targetId);
-    this.reviewsGET('reviews', targetId, 2, 'newest');
+    this.reviewsGET('reviews', targetId, 2, 'relevant');
     }
   };
 

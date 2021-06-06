@@ -8,9 +8,9 @@ const Sorted = (props) => {
   }
   return (
     <select style ={ style } onChange ={a}>
+      <option>relevant</option>
       <option>newest</option>
       <option>helpful</option>
-      <option>relevant</option>
     </select>
   )
 }
