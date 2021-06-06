@@ -2,8 +2,8 @@ import React from 'react';
 import Top from './rttop.jsx';
 import Message from './message.jsx';
 import SRList from './srList.jsx';
-import Size from './size.jsx';
-import Comfort from './comfort.jsx';
+import Characteristics from './characteristics.jsx';
+import { Data } from './data'
 
 const Rating = (props) =>{
   const { rating, ratingstar } = props;
@@ -28,6 +28,9 @@ const Rating = (props) =>{
   let fNum = Number( rating.recommended.false );
   let rAve = Math.floor( tNum / ( tNum + fNum ) * 100 );
   let text = `${ rAve }% of reviews recommend this product`;
+  const c = 'characteristics';
+  let cKey = Object.keys( rating[ c ] );
+
   return (
     <div
       style = { style }>
@@ -40,10 +43,15 @@ const Rating = (props) =>{
         star = { keyArray.reverse() }
         ratingstar = { ratingstar }
         per = { perArray.reverse() }/>
-      <Size
-        value = { rating.characteristics.Size.value }/>
-      <Comfort
-        value = { rating.characteristics.Comfort.value }/>
+      { cKey.map(( i, index ) =>{
+        return (
+          <Characteristics
+            key = { index }
+            array =  { Data[i] }
+            name = { i }
+            value = { rating[c][i].value }/>
+        )
+      })}
     </div>
   )
 }
@@ -51,11 +59,14 @@ const Rating = (props) =>{
 export default Rating;
 
 const style = {
-  width:'30%',
+  width:'40%',
   marginTop:'20px'
 }
 
 const msg = {
   fontSize:'10px',
-  marginTop:'10px'
+  marginTop:'10px',
+  justifyContent: 'left',
+  margin: '10px',
 }
+

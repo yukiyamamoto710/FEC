@@ -7,7 +7,8 @@ const SRList = (props) =>{
     ratingstar(event.target.id)
   }
   return (
-    <div>
+    <div
+      style = { container }>
       { star.map( i =>{
         return(
           <div
@@ -42,4 +43,8 @@ const text = {
   backgroundColor:'white',
   marginRight:'10px',
   padding: '1px',
+}
+
+const container = {
+  margin: '10px',
 }

@@ -8,6 +8,7 @@ import HR from './helpful.jsx'
 /// use index
 const MessageList = (props) => {
   const { list, helpful, report, notHelpful } = props;
+  let arr1 = [ i.summary, i.body, i.recommend ]
   return (
     <div style ={ style }>
       { list.map((i, index)=>{

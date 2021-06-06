@@ -14,6 +14,8 @@ export default Top;
 
 const base = {
   display:'flex',
+  justifyContent: 'left',
+  margin: '10px',
 }
 
 const text = {

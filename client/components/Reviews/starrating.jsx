@@ -29,7 +29,7 @@ export default StarRating;
 
 const container = {
   border: '1px solid rgb(240,240,240)',
-  width: '130px',
+  width: '80%',
   height: '10px',
   maring: '2px',
   backgroundColor:' rgb(240,240,240)',
