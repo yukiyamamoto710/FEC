@@ -53,4 +53,5 @@ const button = {
   borderStyle: 'none',
   backgroundColor: 'white',
   fontSize: '10px',
+  margin:'2px',
 }

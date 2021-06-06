@@ -16,7 +16,6 @@ const MessageList = (props) => {
           <div
             key = { index }
             style ={container}>
-            <br></br>
             <Head
               user = { i.reviewer_name }
               date={ i.date }
@@ -24,7 +23,6 @@ const MessageList = (props) => {
             <Message
               text = { i.summary }
               style ={ summery }/>
-            <br></br>
             { i.click === undefined ?
               <Message
                 id = { index }
@@ -37,21 +35,17 @@ const MessageList = (props) => {
                 msgClick = { msgClick }
                 text = { i.body }/>
             }
-            <br></br>
             <Message
               text = { i.recommend }
               style ={ body }/>
-            <br></br>
             <Photo
               photo = { i.photos } />
-            <br></br>
             {(i.response !== null)?
               <Message
                 res = { i.response }
                 style = { response }/>
               :
                 null}
-            <br></br>
             <HR
               helpful = { i.helpfulness }
               notHelpful = { 0 } //  shoudl get the key from i
@@ -59,7 +53,6 @@ const MessageList = (props) => {
               yes = { helpful }
               report = { report }
               index ={ index }/>
-            <br></br>
           </div>
         )
       })}
@@ -73,22 +66,28 @@ const style = {
   display: 'flex',
   flexDirection:'column',
   width: '100%',
+  height: '450px',
+  overflow: 'auto',
 }
 
 const container = {
-  borderBottom:'1px solid rgb(192,192,192)'
+  borderBottom:'1px solid rgb(192,192,192)',
 }
+
 const summery = {
   fontSize: '12px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  marginBottom:'5px',
 }
 
 const body = {
-  fontSize: '10px'
+  fontSize: '10px',
+  margin:'5px',
 }
 
 const response = {
   border:'1px solid rgb(192,192,192)',
   backgroundColor: 'rgb(192,192,192)',
-  fontSize: '10px'
+  fontSize: '10px',
+  margin:'5px',
 }

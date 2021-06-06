@@ -20,7 +20,7 @@ const Message = (props) => {
 
 export default Message
 
-const space ={
+const space = {
   marginLeft: '10px'
 }
 const body = {
