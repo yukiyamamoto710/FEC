@@ -19,7 +19,7 @@ class App extends React.Component{
     this.fetchGET = this.fetchGET.bind(this);
     this.renderPage = this.renderPage.bind(this);
     this.fetchEverything = this.fetchEverything.bind(this);
-
+    this.testing = this.testing.bind(this);
 
   }
 
@@ -48,7 +48,22 @@ class App extends React.Component{
     //this.fetchGET('products', this.state.targetId, 'list');
   }
 
+  testing(){
+    if(this.state.targetId === 25821){
+      this.setState({
+        targetId:25711,
+      },() =>{
+        this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
+      })
+    }else{
+      this.setState({
+        targetId:25821,
+      },() =>{
+        this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
+      })
+    }
 
+  }
   renderPage() {
     if(this.state.loaded) {
       return (
@@ -72,7 +87,7 @@ class App extends React.Component{
     return (
       <div>
         {/* {this.renderPage()} */}
-
+        <button onClick = {this.testing}> TESTING </button>
         <Reviews id ={this.state.targetId}/>
       </div>
     )

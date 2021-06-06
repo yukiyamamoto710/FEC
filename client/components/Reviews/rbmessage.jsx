@@ -68,26 +68,26 @@ const style = {
   width: '100%',
   height: '450px',
   overflow: 'auto',
-}
+};
 
 const container = {
   borderBottom:'1px solid rgb(192,192,192)',
-}
+};
 
 const summery = {
   fontSize: '12px',
   fontWeight: 'bold',
   marginBottom:'5px',
-}
+};
 
 const body = {
   fontSize: '10px',
   margin:'5px',
-}
+};
 
 const response = {
   border:'1px solid rgb(192,192,192)',
   backgroundColor: 'rgb(192,192,192)',
   fontSize: '10px',
   margin:'5px',
-}
+};

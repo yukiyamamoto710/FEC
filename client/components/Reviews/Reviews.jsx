@@ -55,11 +55,11 @@ class Reviews extends React.Component{
   componentDidUpdate(prevProps){
     if ( prevProps.id !== this.props.id ) {
       let targetId = this.props.id;
-        this.setState({
-          productId : targetId,
-          rvGet: false,
-          rtGet: false,
-        });
+      this.setState({
+        productId : targetId,
+        rvGet: false,
+        rtGet: false,
+      });
     this.ratingGET( 'reviews/meta', targetId );
     this.reviewsGET( 'reviews', targetId, 2, 'relevant' );
     };
@@ -72,14 +72,14 @@ class Reviews extends React.Component{
       }})
       .then( res =>{
         let arr =  res.data.results;
-        let oldlen = this.state.reviewsList.length;
+        const { reviewsList } = this.state;
         let show;
-        if ( arr.length === oldlen ) {
+        if ( JSON.stringify(arr) === JSON.stringify(reviewsList) ) {
           show = false;
         } else {
           show = true;
         }
-        console.log(arr)
+        console.log(arr, 'reviews')
         this.setState({
           reviewsList: arr,
           rvGet: true,
@@ -95,7 +95,7 @@ class Reviews extends React.Component{
         endpoint: `${ string }/?product_id=${ id }`
       }})
       .then( res =>{
-        console.log(res.data)
+        console.log(res.data,'rating')
         this.setState({
           productRating: res.data,
           rtGet: true,
@@ -279,6 +279,7 @@ class Reviews extends React.Component{
   }
 
   render(){
+    console.log('hi',this.state)
     return (
       <div>
         { this.loading() }
