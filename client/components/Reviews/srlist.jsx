@@ -1,18 +1,26 @@
 import React from 'react';
 import StarRating from './starrating.jsx';
 
-const SRList = (props)=>{
-  const { star, per } = props;
+const SRList = (props) =>{
+  const { star, per, ratingstar } = props;
   const click = (event) =>{
-    console.log(event.target.id)
+    ratingstar(event.target.id)
   }
   return (
     <div>
-      {star.map(i=>{
+      { star.map( i =>{
         return(
-          <div key = {i} style ={base}>
-            <button style = {text} id={i} onClick={ click }>{i} Stars</button>
-            <StarRating per = {per[i-1]}/>
+          <div
+            key = { i }
+            style = { base }>
+            <button
+              style = { text }
+              id = { i }
+              onClick = { click }>
+                { i } Stars
+            </button>
+            <StarRating
+              per = { per[ i - 1 ] }/>
           </div>
         )
       })}
@@ -21,11 +29,13 @@ const SRList = (props)=>{
 }
 
 export default SRList;
+
 const base = {
   display:'flex',
-  marginTop:'10px'
+  marginTop:'10px',
 }
-const text ={
+
+const text = {
   fontSize:'7px',
   borderStyle:'none',
   borderBottom:'1px solid black',
