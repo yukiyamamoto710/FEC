@@ -3,12 +3,15 @@ import StarRating from './starrating.jsx';
 
 const SRList = (props)=>{
   const { star, per } = props;
+  const click = (event) =>{
+    console.log(event.target.id)
+  }
   return (
     <div>
       {star.map(i=>{
         return(
           <div key = {i} style ={base}>
-            <div style = {text}>{i} Stars</div>
+            <button style = {text} id={i} onClick={ click }>{i} Stars</button>
             <StarRating per = {per[i-1]}/>
           </div>
         )
@@ -23,7 +26,10 @@ const base = {
   marginTop:'10px'
 }
 const text ={
-  fontSize:'10px',
+  fontSize:'7px',
+  borderStyle:'none',
   borderBottom:'1px solid black',
-  marginRight:'10px'
+  backgroundColor:'white',
+  marginRight:'10px',
+  padding: '1px',
 }

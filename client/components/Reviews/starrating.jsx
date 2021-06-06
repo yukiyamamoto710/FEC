@@ -3,11 +3,11 @@ import React from 'react';
 const StarRating = (props)=>{
   const { per } = props;
   const bar = {
-    border: '1px solid black',
+    border: '1px solid green',
     width:`${per}%`,
     height:'9px',
     margin:'1px',
-    backgroundColor:'black'
+    backgroundColor:'green'
   }
   return (
     <div style ={ container }>
