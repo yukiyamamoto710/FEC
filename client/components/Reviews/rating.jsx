@@ -22,7 +22,7 @@ const Rating = (props) =>{
   let size = key.reduce((sum, i)=>(sum + Number(obj[i])),0);
   let perArray = valueArray.map(i=>(Math.floor(i / size * 100)));
   let total = key.reduce((sum, i)=>(sum + Number(i) * Number(obj[i])), 0);
-  let ave  = total/size;
+  let ave  = Math.round(total/size*10)/10;
   let tNum = Number(rating.recommended.true);
   let fNum = Number(rating.recommended.false);
   let rAve = Math.floor(tNum / ( tNum + fNum ) * 100);
