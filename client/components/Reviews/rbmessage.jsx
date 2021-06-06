@@ -7,25 +7,48 @@ import HR from './helpful.jsx'
 /// since cant post and cant get the review_id
 /// use index
 const MessageList = (props) => {
-  const { list, helpful, report } = props;
+  const { list, helpful, report, notHelpful } = props;
   return (
     <div style ={ style }>
       { list.map((i, index)=>{
         return (
-          <div key = { index } style ={container}>
+          <div
+            key = { index }
+            style ={container}>
             <br></br>
-            <Head user = { i.reviewer_name } date={ i.date } rate={ i.rating }/>
-            <Message text = { i.summary } style ={ summery }/>
+            <Head
+              user = { i.reviewer_name }
+              date={ i.date }
+              rate={ i.rating }/>
+            <Message
+              text = { i.summary }
+              style ={ summery }/>
             <br></br>
-            <Message text = { i.body } style ={ body }/>
+            <Message
+              text = { i.body }
+              style ={ body }/>
             <br></br>
-            <Message text = { i.recommend } style ={ body }/>
+            <Message
+              text = { i.recommend }
+              style ={ body }/>
             <br></br>
-            <Photo photo = { i.photos } />
+            <Photo
+              photo = { i.photos } />
             <br></br>
-            {(i.response !== null)? <Message res = { i.response } style = { response }/>:null}
+            {(i.response !== null)?
+              <Message
+                res = { i.response }
+                style = { response }/>
+              :
+                null}
             <br></br>
-            <HR helpful = { i.helpfulness } add = { helpful } report = { report } index ={ index }/>
+            <HR
+              helpful = { i.helpfulness }
+              notHelpful = { 0 } //  shoudl get the key from i
+              no = { notHelpful }
+              yes = { helpful }
+              report = { report }
+              index ={ index }/>
             <br></br>
           </div>
         )

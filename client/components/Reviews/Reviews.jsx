@@ -29,6 +29,7 @@ class Reviews extends React.Component{
     this.ratingGET = this.ratingGET.bind(this);
     this.sort = this.sort.bind(this);
     this.helpful = this.helpful.bind(this);
+    this.notHelpful = this.notHelpful.bind(this);
     this.report = this.report.bind(this);
     this.add = this.add.bind(this);
     this.more = this.more.bind(this);
@@ -65,6 +66,7 @@ class Reviews extends React.Component{
         endpoint: `${string}/?product_id=${id}&count=${count}&sort=${sort}`
       }})
       .then((res) =>{
+        console.log(res.data.results)
         this.setState({
           reviewsList: res.data.results,
           rvGet: true,
@@ -99,24 +101,45 @@ class Reviews extends React.Component{
 
   helpful(target){
     let arr = this.state.reviewsList.slice();
-    arr[target].helpfulness++;
+    if(arr[target]['help'] !== true){
+      arr[target].helpfulness++;
+      arr[target]['help'] = true;
+    }
     //shoudl limit report time with user system
     //should have a put req
     //but not databse to change.
     //use arr[target].proudce_id and PUT /reviews/:review_id/helpful
     this.setState({
       reviewsList: arr,
-      help: false,
+    });
+  };
+
+  notHelpful(target){
+    let arr = this.state.reviewsList.slice();
+    if(arr[target]['help'] !== true){
+      // need to find out which key for not helpful;
+      //arr[target].helpfulness++;
+      arr[target]['help'] = true;
+    }
+    //shoudl limit report time with user system
+    //should have a put req
+    //but not databse to change.
+    //use arr[target].proudce_id and PUT /reviews/:review_id/helpful
+    this.setState({
+      reviewsList: arr,
     });
   };
 
   report(target){
     let arr = this.state.reviewsList.slice();
-    //shoudl limit report time with user system
+    arr.splice(target,1);
+    this.setState({
+      reviewsList: arr,
+    })
     //should have a put req
-    //but not databse to change.
+    //but no databse to change.
     //use arr[target].proudce_id and PUT /reviews/:review_id/helpful
-    //no setState
+    //temple change to State take out first to test function working or not
   };
 
   add(){
@@ -186,6 +209,7 @@ class Reviews extends React.Component{
               list = { reviewsList }
               sort = { this.sort }
               helpful ={ this.helpful }
+              notHelpful ={ this.notHelpful }
               report ={ this.report }
               add = { this.state.add }
               more = { this.more }
