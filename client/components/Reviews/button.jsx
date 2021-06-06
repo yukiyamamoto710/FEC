@@ -1,11 +1,23 @@
 import React from 'react';
 
 const Button = (props) =>{
-  const { more, add } = props;
+  const { more, add, moreBTN } = props;
   return (
-    <div style= {style}>
-      <button style={button} onClick = {more}>MORE REVIEWS</button>
-      <button style={button} onClick = {add}>ADD A REVIEWS +</button>
+    <div
+      style = { style }>
+      { (moreBTN === true)?
+        <button
+          style = { button }
+          onClick = { more }>
+            MORE REVIEWS
+        </button>
+      :
+        null }
+      <button
+        style = { button }
+        onClick = { add }>
+          ADD A REVIEWS +
+        </button>
     </div>
   )
 }

@@ -5,26 +5,28 @@ import Form from './form.jsx';
 import Button from './button.jsx';
 
 const Rbase = (props) =>{
-  const { list, sort, helpful, notHelpful, report, add, more, addfunc, getTarget, addReview } = props;
+  const { list, sort, helpful, notHelpful, report, add,
+    more, addfunc, getTarget, addReview, moreBTN } = props;
   return (
     <div
-      style={ style }>
+      style = { style }>
       <Rbheader
         length = { list.length }
         sort = { sort }/>
       <MessageList
         list = { list }
-        helpful ={ helpful }
-        report ={ report }
-        notHelpful ={ notHelpful }/>
+        helpful = { helpful }
+        report = { report }
+        notHelpful = { notHelpful }/>
       <br></br>
-      {add === true?
+      { add === true?
         <Form
           getTarget = { getTarget }
-          submit = {addReview}/>
-          :
-          null}
+          submit = { addReview }/>
+        :
+          null }
       <Button
+        moreBTN = { moreBTN }
         more = { more }
         add ={ addfunc } />
     </div>
@@ -33,7 +35,7 @@ const Rbase = (props) =>{
 
 export default Rbase;
 
-const style ={
+const style = {
   display:'flex',
   flexDirection: 'column',
   width:'100%'

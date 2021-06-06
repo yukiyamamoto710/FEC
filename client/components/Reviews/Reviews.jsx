@@ -24,6 +24,7 @@ class Reviews extends React.Component{
         },
       rvGet: false,
       rtGet: false,
+      moreBTNshowed: true,
     };
     this.reviewsGET = this.reviewsGET.bind(this);
     this.ratingGET = this.ratingGET.bind(this);
@@ -66,10 +67,19 @@ class Reviews extends React.Component{
         endpoint: `${string}/?product_id=${id}&count=${count}&sort=${sort}`
       }})
       .then((res) =>{
-        console.log(res.data.results)
+        let arr =  res.data.results;
+        let oldlen = this.state.reviewsList.length;
+        let show;
+        if (arr.length === oldlen) {
+          show = false;
+        } else {
+          show = true;
+        }
+        console.log(this.state.moreBTNshowed, arr.length, oldlen)
         this.setState({
-          reviewsList: res.data.results,
+          reviewsList: arr,
           rvGet: true,
+          moreBTNshowed: show,
         })
       })
       .catch(err=>{
@@ -149,7 +159,8 @@ class Reviews extends React.Component{
   };
 
   more(){
-    let num = this.state.reviewsList.length + 3;
+    let oldlen = this.state.reviewsList.length;
+    let num = oldlen + 2;
     let targetId = this.state.productId;
     this.reviewsGET('reviews', targetId, num, 'newest');
   };
@@ -198,7 +209,7 @@ class Reviews extends React.Component{
   loading(){
     const { rvGet, rtGet } = this.state;
     if (rvGet === true && rtGet === true) {
-      const { reviewsList, productRating } = this.state;
+      const { reviewsList, productRating, moreBTNshowed } = this.state;
       return (
         <div style ={bas}>
           <div>RATINGS REVIEWS</div>
@@ -215,7 +226,8 @@ class Reviews extends React.Component{
               more = { this.more }
               addfunc ={ this.add }
               getTarget = { this.getTarget }
-              addReview = { this.addReview }/>
+              addReview = { this.addReview }
+              moreBTN = { moreBTNshowed }/>
           </div>
         </div>
       )
