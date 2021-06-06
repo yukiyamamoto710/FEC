@@ -46,8 +46,13 @@ class RelatedItems extends React.Component {
         .then((product) => {
           axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
             .then((styles) => {
-              var mergedList = Object.assign(product.data, styles.data)
-              resolve(mergedList)
+              axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
+                .then((rating) => {
+                  var mergedList = Object.assign(product.data, styles.data)
+                  mergedList['rating'] = rating.data
+                  console.log(mergedList)
+                  resolve(mergedList)
+                })
             })
         })
         .catch((err) => {

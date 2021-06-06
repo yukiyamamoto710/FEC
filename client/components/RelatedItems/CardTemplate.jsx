@@ -1,4 +1,5 @@
 import React from 'react';
+import Rating from './Rating.jsx';
 
 const CardTemplate = (props) => {
   return (
@@ -9,6 +10,7 @@ const CardTemplate = (props) => {
         <div className="product-name">{props.product.name}</div>
         <div className="product-price">${Math.abs(Number(props.product.default_price))}</div>
       </div>
+      <Rating rating={props.product.rating.ratings} />
     </li>
   )
 }
