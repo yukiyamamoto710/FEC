@@ -39,7 +39,7 @@ class QAItem extends React.Component {
       <div>
         Question: {this.state.question.question_body !== undefined ? this.state.question.question_body : console.log('no question body')}
         <br/>
-        Answer:
+        Answers:
         {this.state.question.answers !== undefined ?
           Object.entries(this.state.question.answers).map(([key, value]) => {
             //console.log(value.body);
