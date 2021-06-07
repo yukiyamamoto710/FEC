@@ -1,6 +1,7 @@
 import React from 'react';
 import Rating from './Rating.jsx';
 import Comparison from './Comparison.jsx';
+import Price from './Price.jsx';
 
 class CardTemplate extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class CardTemplate extends React.Component {
             <div className="product-info">
               <div>{this.props.product.category}</div>
               <div className="product-name">{this.props.product.name}</div>
-              <div className="product-price">${Math.abs(Number(this.props.product.default_price))}</div>
+              <Price product={this.props.product}/>
               <Rating rating={this.props.product.rating.ratings} />
             </div>
           </div>
@@ -54,7 +55,7 @@ class CardTemplate extends React.Component {
             <div className="product-info">
               <div>{this.props.product.category}</div>
               <div className="product-name">{this.props.product.name}</div>
-              <div className="product-price">${Math.abs(Number(this.props.product.default_price))}</div>
+              <Price product={this.props.product}/>
               <Rating rating={this.props.product.rating.ratings} />
             </div>
           </div>
