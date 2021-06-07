@@ -10,7 +10,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25907,//reveiws testing. we can initialize with a particular ID
+      targetId: 25748,//reveiws testing. we can initialize with a particular ID
       styles: [],
       loaded: false
     };

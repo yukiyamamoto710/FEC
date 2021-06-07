@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import ProductImage from './ProductImage.jsx';
 import axios from 'axios';
+import Description from './Description.jsx';
 
 //stateful component
 //what do i need from the API? product name, product style, review
@@ -15,6 +17,7 @@ class Overview extends React.Component {
     }
 
     this.changePic = this.changePic.bind(this);
+    this.renderItems = this.renderItems.bind(this);
   }
 
   componentDidMount() {
@@ -63,6 +66,31 @@ class Overview extends React.Component {
     this.setState({index: number})
   }
 
+  renderItems() {
+      //const { category, name, id, slogan, description, features } = this.state.description;
+      const currentItem = this.state.stylesList.results;
+      var price;
+      var salePrice;
+      if(currentItem[this.state.index].sale_price !== null) {
+        salePrice = <div>Sale Price: {currentItem[this.state.index].sale_price}</div>;
+        price = <div style = {crossed}>Current Price: {currentItem[this.state.index].original_price}</div>
+      } else {
+        salePrice = <div></div>
+        price = <div>Current Price: {currentItem[this.state.index].original_price}</div>
+      }
+      return(
+        <>
+        <Description descriptions = {this.state.description}/>
+         <img className = 'bigPicture' src= {this.state.stylesList.results[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
+         <div>{price}</div>
+         <div>{salePrice}</div>
+         {this.state.stylesList.results.map((item, index) => {
+           return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
+         })}
+        </>
+       );
+  }
+
 
   render() {
     //have to to map through the styles array we get back
@@ -73,32 +101,9 @@ class Overview extends React.Component {
        <>LOADING</>
       );
     } else {
-      //console.log(this.state.description);
-      const { category, name, id } = this.state.description;
-      const currentItem = this.state.stylesList.results;
-      var price;
-      var salePrice;
-      if(currentItem[this.state.index].sale_price !== null) {
-        salePrice = <div>Sale Price: {currentItem[this.state.index].sale_price}</div>;
-        price = <div style = {crossed}>Current Price: {currentItem[this.state.index].original_price}</div>
-      } else {
-        salePrice = <div></div>
-        price = <div>Current Price: {currentItem[this.state.index].original_price}</div>
-
-      }
-      return(
-        <>
-         <div>{category}</div>
-         <div>{name}</div>
-         <div>{id}</div>
-         <img className = 'bigPicture' src= {this.state.stylesList.results[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
-         <div>{price}</div>
-         <div>{salePrice}</div>
-         {this.state.stylesList.results.map((item, index) => {
-           return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
-         })}
-        </>
-       );
+      return (
+        this.renderItems()
+      );
      }
   }
 }
@@ -108,6 +113,6 @@ class Overview extends React.Component {
 export default Overview;
 
 const crossed = {
-  'text-decoration': 'line-through',
+  textDecoration: 'line-through',
   color: 'red'
 }
