@@ -46,4 +46,12 @@ export const Data = {
     'Runs slightly long',
     'Runs long',
   ],
+
+  Stars: [
+    'Poor',
+	  'Fair',
+	  'Average',
+    'Good',
+	  'Great',
+  ]
 }

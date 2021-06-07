@@ -1,7 +1,7 @@
 import React from 'react';
 ////////////need to find 1/4 star 3/4 star icons
 const Stars = (props) =>{
-  const { rate } = props;
+  const { rate, starCK, name } = props;
   let num1 = Math.floor(rate) || 0;
   let num2 = 0;
   let num3 = 0;
@@ -18,17 +18,35 @@ const Stars = (props) =>{
   let num = 5 - num2 - num3 - num4 - num1;
   return (
     <div>
-      {num1 !== 0?[...Array(num1)].map((i, index)=>{
-        return <img src={ 'star3.svg' } key= {index} ></img>
-      }):null}
-      {(num2 ===1)?<img src={ 'star5.svg' }></img>:null}
-      {(num3 ===1)?<img src={ 'star4.svg' }></img>:null}
-      {(num4 ===1)?<img src={ 'star3.svg' }></img>:null}
-      {num !== 0?[...Array(num)].map((i, index)=>{
-        return <img src={ 'star5.svg' } key= {index}></img>
-      }):null}
+      { num1 !== 0?
+        [ ...Array(num1) ].map(( i, index ) =>{
+        return (
+          <img
+            src = { 'star3.svg' }
+            key = { index }
+            id = { index - num1 + 1 }
+            onClick = { starCK }
+            name = { name } />
+        )})
+      : null }
+      { (num2 === 1)?
+        <img src = { 'star5.svg' } />:null }
+      { (num3 === 1)?
+        <img src = { 'star4.svg' } /> : null }
+      { (num4 === 1)?
+        <img src={ 'star3.svg' } /> : null }
+      { num !== 0?
+        [ ...Array(num) ].map(( i, index ) =>{
+        return (
+          <img
+            src = { 'star5.svg' }
+            key = { index }
+            id = { index + 1 }
+            onClick = { starCK }
+            name = { name } />
+        )})
+      : null }
     </div>
-
   )
 }
 

@@ -7,7 +7,7 @@ import PopOut from './popout.jsx';
 
 const Rbase = (props) =>{
   const { list, sort, helpful, notHelpful, report, more,
-    addfunc, getTarget, addReview, moreBTN, msgClick } = props;
+    addfunc, moreBTN, msgClick } = props;
   return (
     <div
       style = { style }>
