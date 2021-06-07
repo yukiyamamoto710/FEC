@@ -28,7 +28,7 @@ class AddQ extends React.Component {
           <input placeholder='Add A Question' name='question' value={this.state.question} onChange={this.handleChange}/>
           <button>Add</button>
           <br/>
-          <text>For privacy reasons, do not use your full name or email address</text>
+          <a>For privacy reasons, do not use your full name or email address</a>
         </form>
       </div>
     );
