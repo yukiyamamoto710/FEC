@@ -34,7 +34,7 @@ class Outfit extends React.Component {
   render() {
     return (
       <div className="container">
-        <h3 className="related-products">YOUR OUTFIT</h3>
+        <h3 className="outfit">YOUR OUTFIT</h3>
         <ul className="carousel">
           <button className="slideLeft"
             onClick={this.prevProduct}
@@ -42,12 +42,12 @@ class Outfit extends React.Component {
             hidden={this.props.selectedItemsList.length < 4}>
               &lt;
           </button>
-          <li className="card empty-card">
+          <li className="card empty">
               <button className="add-button" onClick={this.handleClick}>+</button>
               Add to Outfit
           </li>
           {this.props.selectedItemsList.map(product=>
-            <CardTemplate key={product.id} product={product} />
+            <CardTemplate id={"outfit"} key={product.id} product={product} />
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
