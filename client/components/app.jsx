@@ -16,37 +16,37 @@ class App extends React.Component{
       styles: [],
       loaded: false
     };
-    this.fetchGET = this.fetchGET.bind(this);
-    this.renderPage = this.renderPage.bind(this);
-    this.fetchEverything = this.fetchEverything.bind(this);
+    // this.fetchGET = this.fetchGET.bind(this);
+    // this.renderPage = this.renderPage.bind(this);
+    // this.fetchEverything = this.fetchEverything.bind(this);
     this.testing = this.testing.bind(this);
 
   }
 
-  componentDidMount(){
-    this.fetchEverything();
-  }
+  // componentDidMount(){
+  //   this.fetchEverything();
+  // }
 
 
-  fetchGET(string, endpoint, stateName){
-    return (
-      axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
-      .then((response) =>{
-        console.log('successful get request', `${string}/${endpoint}`);
-        this.setState({
-          [stateName]: response.data,
-          //has to set state for data.[whatever key we need from data]
-        }, () =>this.setState({loaded: true}))
-      })
-      .catch(err=> console.error(err))
-    );
-  };
+  // fetchGET(string, endpoint, stateName){
+  //   return (
+  //     axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
+  //     .then((response) =>{
+  //       console.log('successful get request', `${string}/${endpoint}`);
+  //       this.setState({
+  //         [stateName]: response.data,
+  //         //has to set state for data.[whatever key we need from data]
+  //       }, () =>this.setState({loaded: true}))
+  //     })
+  //     .catch(err=> console.error(err))
+  //   );
+  // };
 
-  fetchEverything() {
+  // fetchEverything() {
 
-    this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-    //this.fetchGET('products', this.state.targetId, 'list');
-  }
+  //   this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
+  //   //this.fetchGET('products', this.state.targetId, 'list');
+  // }
 
   testing(){
     if(this.state.targetId === 25821){
@@ -62,26 +62,26 @@ class App extends React.Component{
         this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
       })
     }
-
   }
-  renderPage() {
-    if(this.state.loaded) {
-      return (
-        <div>
-          <Overview id = {this.state.targetId}/>
-          <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
-          <QA questions={this.state.questions}/>
-          <Reviews id ={this.state.targetId}/>
-        </div>
-      )
-    } else {
-      return (
-        <div>
-          Page Loading ...
-        </div>
-      )
-    }
-  }
+  // }
+  // renderPage() {
+  //   if(this.state.loaded) {
+  //     return (
+  //       <div>
+  //         <Overview id = {this.state.targetId}/>
+  //         <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
+  //         <QA questions={this.state.questions}/>
+  //         <Reviews id ={this.state.targetId}/>
+  //       </div>
+  //     )
+  //   } else {
+  //     return (
+  //       <div>
+  //         Page Loading ...
+  //       </div>
+  //     )
+  //   }
+  // }
 
   render(){
     return (
