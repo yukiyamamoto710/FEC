@@ -1,19 +1,26 @@
 import React from 'react';
 import Rating from './Rating.jsx';
+import Comparison from './Comparison.jsx';
 
 class CardTemplate extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      seen: false
+    }
+    this.togglePop = this.togglePop.bind(this);
   }
 
-  handleClick() {
-    this.props.toggle();
+  togglePop() {
+    this.setState({
+      seen: !this.state.seen
+    })
   }
 
   render() {
     return (
-      <li className="card" onClick={this.handleClick}>
+      <li className="card" onClick={this.togglePop}>
+        {this.state.seen ? <Comparison /> : null}
         <img className="related-product-img" src={this.props.product.results[0].photos[0].url}/>
         <div className="product-info">
           <div>{this.props.product.category}</div>
