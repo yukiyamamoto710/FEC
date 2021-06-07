@@ -41,15 +41,37 @@
 .modal {
   display: block;
   position: absolute;
-  top: -50%;
-  left: 20%;
+  top: -75%;
+  left: 50%;
   width: 350px;
   height: 250px;
+  margin: 10px;
+  padding: 10px;
   z-index: 1;
-  background-color: rgba(0, 0, 0);
+  border: 1px solid black;
+  background-color: white;
 }
 
 .modal_content {
-  background-color: black;
   position: absolute;
+  width: 340px;
+  height: 240px;
+}
+
+.close {
+  float: right;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.col1 {
+  text-align: left;
+}
+
+.col3 {
+  text-align: right;
 }

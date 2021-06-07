@@ -44,7 +44,7 @@ class RelatedProducts extends React.Component {
               &lt;
           </button>
           {this.state.displayed.map(product=>
-            <CardTemplate key={product.id} product={product}/>
+            <CardTemplate key={product.id} product={product} id={this.props.id}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}

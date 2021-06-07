@@ -90,7 +90,7 @@ class RelatedItems extends React.Component {
       <div>
         {this.state.relatedItemsList.length !== 0 ?
         <>
-          <RelatedProducts relatedItemsList={this.state.relatedItemsList}/>
+          <RelatedProducts relatedItemsList={this.state.relatedItemsList} id={this.props.id}/>
           <Outfit selectedItemsList={this.state.selectedItemsList} addToOutfit={this.addToOutfit}/>
         </>:null}
       </div>
