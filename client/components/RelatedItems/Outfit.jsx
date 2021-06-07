@@ -28,10 +28,6 @@ class Outfit extends React.Component {
               Add to Outfit
             </li>
           </ul>
-          <div className="button-wrapper">
-            <button className="slideLeft">Left</button>
-            <button className="slideRight">Right</button>
-          </div>
         </div>
       )
     } else {
@@ -47,10 +43,6 @@ class Outfit extends React.Component {
               <CardTemplate key={product.id} product={product} />
               )}
           </ul>
-          <div className="button-wrapper">
-            <button className="slideLeft">Left</button>
-            <button className="slideRight">Right</button>
-          </div>
         </div>
       )
     }

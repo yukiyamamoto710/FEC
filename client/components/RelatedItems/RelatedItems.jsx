@@ -22,7 +22,6 @@ class RelatedItems extends React.Component {
   }
 
   componentDidUpdate() {
-    // there's a better comparison?
     if (!this.state.listLoaded) {
       var promises = [];
       for (var i = 0; i < this.state.relatedItems.length; i++) {
@@ -50,7 +49,6 @@ class RelatedItems extends React.Component {
                 .then((rating) => {
                   var mergedList = Object.assign(product.data, styles.data)
                   mergedList['rating'] = rating.data
-                  console.log(mergedList)
                   resolve(mergedList)
                 })
             })
@@ -90,8 +88,11 @@ class RelatedItems extends React.Component {
   render() {
     return (
       <div>
-        <RelatedProducts relatedItemsList={this.state.relatedItemsList}/>
-        <Outfit selectedItemsList={this.state.selectedItemsList} addToOutfit={this.addToOutfit}/>
+        {this.state.relatedItemsList.length !== 0 ?
+        <>
+          <RelatedProducts relatedItemsList={this.state.relatedItemsList}/>
+          <Outfit selectedItemsList={this.state.selectedItemsList} addToOutfit={this.addToOutfit}/>
+        </>:null}
       </div>
     )
   }

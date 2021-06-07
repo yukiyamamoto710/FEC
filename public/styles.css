@@ -4,8 +4,7 @@
   justify-content: flex-start;
   align-items: left;
   list-style: none;
-  max-width: 800px;
-  overflow-y: auto;
+  max-width: 700px;
   vertical-align: baseline;
 }
 
@@ -14,13 +13,13 @@
   border: 1px solid;
   margin: 0 10px;
   box-sizing: border-box;
-  width: 250px;
-  height: 350px;
+  width: 150px;
+  height: 250px;
 }
 
 .related-product-img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   margin: 0;
   border: 0;
   padding: 0;

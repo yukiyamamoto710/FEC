@@ -6,9 +6,19 @@ class RelatedProducts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      seen: false
+      seen: false,
+      idx: 0,
+      displayed: []
     };
     this.togglePop = this.togglePop.bind(this);
+    this.nextProduct = this.nextProduct.bind(this);
+    this.prevProduct = this.prevProduct.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      displayed: [...this.props.relatedItemsList].slice(0, 4)
+    })
   }
 
   togglePop() {
@@ -17,21 +27,40 @@ class RelatedProducts extends React.Component {
     })
   }
 
+  nextProduct() {
+    this.setState({
+      idx: this.state.idx+1,
+      displayed: [...this.props.relatedItemsList].slice(this.state.idx+1, this.state.idx+5)
+    })
+  }
+
+  prevProduct() {
+    this.setState({
+      idx: this.state.idx-1,
+      displayed: [...this.props.relatedItemsList].slice(this.state.idx-1, this.state.idx+3)
+    })
+  }
+
   render() {
     return (
       <div className="container">
         <h3 className="related-products">RELATED PRODUCTS</h3>
-        <button className="slideLeft">Left</button>
         <ul className="carousel">
-          {this.state.seen ? <Comparison toggle={this.togglePop} />: null}
-          {this.props.relatedItemsList.map(product=>
+          <button className="slideLeft"
+            onClick={this.prevProduct}
+            disabled={this.state.idx === 0}>
+              &lt;
+          </button>
+          {/* {this.state.seen ? <Comparison toggle={this.togglePop} />: null} */}
+          {this.state.displayed.map(product=>
             <CardTemplate key={product.id} product={product} toggle={this.togglePop}/>
             )}
+          <button className="slideRight"
+            onClick={this.nextProduct}
+            disabled={this.state.idx === this.props.relatedItemsList.length-4}>
+              &gt;
+          </button>
         </ul>
-        <div className="button-wrapper">
-          <button className="slideLeft">Left</button>
-          <button className="slideRight">Right</button>
-        </div>
       </div>
     )
   }
