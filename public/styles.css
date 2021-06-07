@@ -39,11 +39,26 @@
   font-weight: bold;
 }
 
+.slideLeft,
+.slideRight {
+  border: none;
+  width: 75px;
+}
+
+.slideLeft:hover,
+.slideRight:hover {
+  background-color: rgb(177, 174, 174, 0.5);
+}
+
 /* Outfit component */
 .add-button {
   border: 1px solid rgb(177, 174, 174, 0.5);
   font-size: 24px;
   padding: 10px 30px;
+}
+
+.add-button:hover {
+  background-color: rgb(177, 174, 174, 0.5);
 }
 
 .add-button,
