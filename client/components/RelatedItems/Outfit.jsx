@@ -6,11 +6,13 @@ class Outfit extends React.Component {
     super(props);
     this.state = {
       idx: 0,
-      displayed: []
+      displayed: [],
+      deselect: false
     }
     this.handleClick = this.handleClick.bind(this);
     this.nextProduct = this.nextProduct.bind(this);
     this.prevProduct = this.prevProduct.bind(this);
+    this.deselectOutfit = this.deselectOutfit.bind(this);
   }
 
   handleClick() {
@@ -31,6 +33,12 @@ class Outfit extends React.Component {
     })
   }
 
+  deselectOutfit() {
+    this.setState({
+      deselect: true
+    })
+  }
+
   render() {
     return (
       <div className="container">
@@ -44,10 +52,10 @@ class Outfit extends React.Component {
           </button>
           <li className="card empty">
               <button className="add-button" onClick={this.handleClick}>+</button>
-              Add to Outfit
+              <p>Add to Outfit</p>
           </li>
-          {this.props.selectedItemsList.map(product=>
-            <CardTemplate id={"outfit"} key={product.id} product={product} />
+          {this.state.deselect ? null: this.props.selectedItemsList.map(product=>
+            <CardTemplate id={"outfit"} key={product.id} product={product} deselect={this.deselectOutfit}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
