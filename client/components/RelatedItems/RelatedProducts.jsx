@@ -6,11 +6,9 @@ class RelatedProducts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      seen: false,
       idx: 0,
       displayed: []
     };
-    this.togglePop = this.togglePop.bind(this);
     this.nextProduct = this.nextProduct.bind(this);
     this.prevProduct = this.prevProduct.bind(this);
   }
@@ -18,12 +16,6 @@ class RelatedProducts extends React.Component {
   componentDidMount() {
     this.setState({
       displayed: [...this.props.relatedItemsList].slice(0, 4)
-    })
-  }
-
-  togglePop() {
-    this.setState({
-      seen: !this.state.seen
     })
   }
 
@@ -51,9 +43,8 @@ class RelatedProducts extends React.Component {
             hidden={this.state.idx === 0}>
               &lt;
           </button>
-          {/* {this.state.seen ? <Comparison toggle={this.togglePop} />: null} */}
           {this.state.displayed.map(product=>
-            <CardTemplate key={product.id} product={product} toggle={this.togglePop}/>
+            <CardTemplate key={product.id} product={product} id={this.props.id}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}

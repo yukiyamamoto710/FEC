@@ -2,62 +2,96 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
-  align-items: left;
   list-style: none;
-  max-width: 700px;
-  vertical-align: baseline;
+  max-width: 100%;
 }
 
+/* CardTemplate component */
 .card {
   display: inline-block;
   border: 1px solid;
   margin: 0 10px;
   box-sizing: border-box;
-  width: 150px;
+  width: 100%;
   height: 250px;
 }
 
 .related-product-img {
-  width: 150px;
+  width: 100%;
   height: 150px;
   margin: 0;
   border: 0;
   padding: 0;
 }
 
-.product-info {
-  vertical-align: baseline;
-}
-
-.button-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-}
-
-.product-price {
-  font-weight: 100;
-}
-
 .product-name {
   font-weight: bold;
 }
 
-.empty-card {
+.empty,
+.outfit {
+  width: 21.5%;
+}
+
+/* Outfit component */
+
+.card.empty {
   text-align: center;
+}
+
+.add-button {
+  background-color: rgb(177, 174, 174, 0.5);
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Comparison component */
+.parent {
+  position: relative;
 }
 
 .modal {
   display: block;
-  position: fixed;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: -75%;
+  left: 50%;
+  width: 350px;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  z-index: 2;
+  border: 1px solid black;
+  background-color: white;
 }
 
 .modal_content {
-  background-color: black;
-  /* position: absolute; */
+  position: absolute;
+  width: 340px;
+  height: 240px;
+}
+
+.close,
+.star {
+  position: absolute;
+  right: 2%;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.col1 {
+  text-align: left;
+}
+
+.col3 {
+  text-align: right;
 }
