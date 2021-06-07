@@ -48,7 +48,7 @@ class RelatedProducts extends React.Component {
         <ul className="carousel">
           <button className="slideLeft"
             onClick={this.prevProduct}
-            disabled={this.state.idx === 0}>
+            hidden={this.state.idx === 0}>
               &lt;
           </button>
           {/* {this.state.seen ? <Comparison toggle={this.togglePop} />: null} */}

@@ -5,16 +5,30 @@ class Outfit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      outfitAdded: false
+      idx: 0,
+      displayed: []
     }
     this.handleClick = this.handleClick.bind(this);
+    this.nextProduct = this.nextProduct.bind(this);
+    this.prevProduct = this.prevProduct.bind(this);
   }
 
   handleClick() {
-    this.setState({
-      outfitAdded: true
-    })
     this.props.addToOutfit();
+  }
+
+  nextProduct() {
+    this.setState({
+      idx: this.state.idx+1,
+      displayed: [...this.props.selectedItemsList].slice(this.state.idx+1, this.state.idx+5)
+    })
+  }
+
+  prevProduct() {
+    this.setState({
+      idx: this.state.idx-1,
+      displayed: [...this.props.selectedItemsList].slice(this.state.idx-1, this.state.idx+3)
+    })
   }
 
   render() {
