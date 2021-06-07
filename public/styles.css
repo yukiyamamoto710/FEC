@@ -1,13 +1,12 @@
 .container {
-  position: relative;
-  justify-content: center;
-  max-width: 800px;
+  position: relative; /* relative to a normal position */
+  margin: auto; /* when displaying a block, setting margin auto will center */
+  max-width: 1200px;
 }
 
 .carousel {
-  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* use with flex. horizontal */
   list-style: none;
   max-width: 100%;
 }
@@ -15,45 +14,45 @@
 /* CardTemplate component */
 .card {
   display: inline-block;
-  border: 1px solid;
+  border: 1px solid rgb(177, 174, 174, 0.5);
   margin: 0 10px;
   box-sizing: border-box;
   width: 100%;
-  max-width: 200px;
-  height: 300px;
+  max-width: 250px;
+  height: 350px;
 }
 
 .related-product-img {
   width: 100%;
-  height: 150px;
+  height: 250px; /* discuss what to do with various sizes of images*/
+  object-fit: cover; /* crop an image without changing original ratio */
   margin: 0;
   border: 0;
   padding: 0;
+}
+
+.product-info {
+  margin: 5px;
 }
 
 .product-name {
   font-weight: bold;
 }
 
-.empty,
-.outfit {
-  width: 21.5%;
-}
-
 /* Outfit component */
-
-.card.empty {
-  text-align: center;
+.add-button {
+  border: 1px solid rgb(177, 174, 174, 0.5);
+  font-size: 24px;
+  padding: 10px 30px;
 }
 
-.add-button {
-  background-color: rgb(177, 174, 174, 0.5);
-  border: none;
-  padding: 15px 32px;
+.add-button,
+.add-message {
+  display: block;
+  position: relative;
+  top: 35%;
   text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  margin: auto;
   cursor: pointer;
 }
 

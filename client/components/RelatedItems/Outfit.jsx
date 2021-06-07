@@ -6,17 +6,12 @@ class Outfit extends React.Component {
     super(props);
     this.state = {
       idx: 0,
-      displayed: [],
+      displayed: [], // currently displayed outfit products
       deselect: false
     }
-    this.handleClick = this.handleClick.bind(this);
     this.nextProduct = this.nextProduct.bind(this);
     this.prevProduct = this.prevProduct.bind(this);
-    this.deselectOutfit = this.deselectOutfit.bind(this);
-  }
-
-  handleClick() {
-    this.props.addToOutfit();
+    this.deselectCurrentOutfit = this.deselectCurrentOutfit.bind(this);
   }
 
   nextProduct() {
@@ -33,7 +28,7 @@ class Outfit extends React.Component {
     })
   }
 
-  deselectOutfit() {
+  deselectCurrentOutfit() {
     this.setState({
       deselect: true
     })
@@ -46,21 +41,20 @@ class Outfit extends React.Component {
         <ul className="carousel">
           <button className="slideLeft"
             onClick={this.prevProduct}
-            disabled={this.state.idx === 0}
-            hidden={this.props.selectedItemsList.length < 4}>
+            hidden={this.state.idx === 0}>
               &lt;
           </button>
           <li className="card empty">
-              <button className="add-button" onClick={this.handleClick}>+</button>
-              <p>Add to Outfit</p>
+              <button className="add-button" onClick={()=>this.props.addToOutfit()}>+</button>
+              <p className="add-message">Add to Outfit</p>
           </li>
           {this.state.deselect ? null: this.props.selectedItemsList.map(product=>
-            <CardTemplate id={"outfit"} key={product.id} product={product} deselect={this.deselectOutfit}/>
+            <CardTemplate id={"outfit"} key={product.id} product={product} deselect={this.deselectCurrentOutfit}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
-            disabled={this.state.idx === this.props.selectedItemsList.length-4}
-            hidden={this.props.selectedItemsList.length < 4}>
+            hidden={this.props.selectedItemsList.length < 4}
+            disabled={this.state.idx === this.props.selectedItemsList.length-4}>
               &gt;
           </button>
         </ul>
@@ -69,9 +63,9 @@ class Outfit extends React.Component {
   }
 }
 
-Outfit.propTypes = {
-  selectedItemsList: [],
-  addToOutfit: 'func'
-}
+// Outfit.propTypes = {
+//   selectedItemsList: [],
+//   addToOutfit: 'func'
+// }
 
 export default Outfit;

@@ -5,8 +5,8 @@ class RelatedProducts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      idx: 0,
-      displayed: []
+      idx: 0, // keep track of which products are currently displaying
+      displayed: [] // display only four at a time
     };
     this.nextProduct = this.nextProduct.bind(this);
     this.prevProduct = this.prevProduct.bind(this);
@@ -19,13 +19,13 @@ class RelatedProducts extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    // does JSON.stringify affect performance?
     if (JSON.stringify(prevProps.relatedItemsList) !== JSON.stringify(this.props.relatedItemsList)) {
       this.setState({
         displayed: [...this.props.relatedItemsList].slice(0, 4)
       })
     }
   }
-
 
   nextProduct() {
     this.setState({
@@ -56,7 +56,7 @@ class RelatedProducts extends React.Component {
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
-            disabled={this.state.idx === this.props.relatedItemsList.length-4}>
+            disabled={this.props.relatedItemsList.length < 4 || this.state.idx === this.props.relatedItemsList.length-4}>
               &gt;
           </button>
         </ul>
@@ -65,9 +65,9 @@ class RelatedProducts extends React.Component {
   }
 }
 
-RelatedProducts.propTypes = {
-  id: 'number',
-  relatedItemsList: []
-}
+// RelatedProducts.propTypes = {
+//   id: 'number',
+//   relatedItemsList: []
+// }
 
 export default RelatedProducts;

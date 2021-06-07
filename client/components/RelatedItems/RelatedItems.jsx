@@ -89,7 +89,6 @@ class RelatedItems extends React.Component {
   }
 
   render() {
-    console.log('render' + this.state.relatedItemsList)
     return (
       <div>
         {this.state.relatedItemsList.length !== 0 ?
@@ -102,8 +101,8 @@ class RelatedItems extends React.Component {
   }
 }
 
-RelatedItems.propTypes = {
-  id: 'number'
-}
+// RelatedItems.propTypes = {
+//   id: 'number'
+// }
 
 export default RelatedItems;
