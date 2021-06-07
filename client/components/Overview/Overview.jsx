@@ -9,7 +9,7 @@ class Overview extends React.Component {
     super(props);
     this.state = {
       description: [],
-      list: [],
+      stylesList: [],
       mounted: false,
       index: 0
     }
@@ -24,12 +24,12 @@ class Overview extends React.Component {
 
 
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     var id = this.props.id;
-    if(this.state.list.length === 0) {
+    if(this.state.stylesList.length === 0) {
       this.getStyles(id)
       .then((response) => {
-        this.setState({list: response.data});
+        this.setState({stylesList: response.data});
       })
       .catch((error) => {
         console.log(error);
@@ -51,7 +51,7 @@ class Overview extends React.Component {
       .catch(err=>{
         console.log(err)
       });
-  };
+  }
 
 
   getStyles(id) {
@@ -66,22 +66,35 @@ class Overview extends React.Component {
 
   render() {
     //have to to map through the styles array we get back
-    //console.log('this is STATE', this.state.list);
-    if(this.state.list.length === 0) {
+    //console.log('this is STATE', this.state.stylesList);
+    if(this.state.stylesList.length === 0) {
       console.log(this.state.description);
       return (
        <>LOADING</>
       );
     } else {
-      console.log(this.state.description);
+      //console.log(this.state.description);
+      const { category, name, id } = this.state.description;
+      const currentItem = this.state.stylesList.results;
+      var price;
+      var salePrice;
+      if(currentItem[this.state.index].sale_price !== null) {
+        salePrice = <div>Sale Price: {currentItem[this.state.index].sale_price}</div>;
+        price = <div style = {crossed}>Current Price: {currentItem[this.state.index].original_price}</div>
+      } else {
+        salePrice = <div></div>
+        price = <div>Current Price: {currentItem[this.state.index].original_price}</div>
+
+      }
       return(
         <>
-         <div>{this.state.description.category}</div>
-         <div>{this.state.description.name}</div>
-         <div>{this.state.description.id}</div>
-         <img className = 'bigPicture' src= {this.state.list.results[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
-         <div>Price: {this.state.list.results[this.state.index].original_price}</div>
-         {this.state.list.results.map((item, index) => {
+         <div>{category}</div>
+         <div>{name}</div>
+         <div>{id}</div>
+         <img className = 'bigPicture' src= {this.state.stylesList.results[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
+         <div>{price}</div>
+         <div>{salePrice}</div>
+         {this.state.stylesList.results.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
          })}
         </>
@@ -93,3 +106,8 @@ class Overview extends React.Component {
 
 
 export default Overview;
+
+const crossed = {
+  'text-decoration': 'line-through',
+  color: 'red'
+}

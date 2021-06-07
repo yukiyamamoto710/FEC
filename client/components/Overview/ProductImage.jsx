@@ -17,6 +17,7 @@ class ProductImage extends React.Component {
 
 
   render() {
+
     return(
       <div>
       <img onClick = {this.handleClick} className = 'picture' src= {this.props.image.url} alt="Picture of Clothing"></img>
