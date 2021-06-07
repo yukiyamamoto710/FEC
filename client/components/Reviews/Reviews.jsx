@@ -178,6 +178,8 @@ class Reviews extends React.Component{
   };
 
   getTarget(event){
+    console.log(event.target.value)
+    console.log(event.target.innerHTML)
     let key = event.target.id;
     let value = event.target.value;
     let HTML = event.target.innerHTML;
@@ -188,8 +190,16 @@ class Reviews extends React.Component{
       } else {
         value = false;
       };
-    };
-    obj[key] = value;
+    }
+
+    if ( key === 'Photo' ){
+      if(value === undefined){
+        value = ''
+      }
+      obj[key].push({ url: String(value) });
+    } else {
+       obj[key] = value;
+    }
     this.setState({
       newReview: obj,
     });

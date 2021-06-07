@@ -95,6 +95,8 @@ const PopOut = (props) =>{
             onClick ={a}>
               Submit
           </button>
+          <input type ='file' key = 'photo1' onChange = { getTarget } id = 'Photo'></input>
+          <input type ='file' key = 'photo2' onChange = { getTarget } id = 'Photo'></input>
         </div>
       </div>
     )
@@ -116,16 +118,19 @@ const pop = {
 const cancelBTN = {
   display: 'flex',
   margin: '10px',
+  overflow: 'auto',
   justifyContent: 'flex-end',
 }
 
 const container = {
   display:'flex',
+  overflow: 'auto',
   flexDirection: 'column',
   marginLeft: '20px'
 }
 const smallcontainer = {
   display:'flex',
+  overflow: 'auto',
   width:'95%',
   border: '1px solid black'
 }
@@ -138,6 +143,7 @@ const name = {
 }
 
 const tagcontainer = {
+  overflow: 'auto',
   margin: '5px',
   width:'20%',
 }
@@ -150,6 +156,7 @@ const tag = {
 }
 
 const textcontainer = {
+  overflow: 'auto',
   margin: '3px',
   width:'80%',
 }
@@ -165,6 +172,7 @@ const textarea = {
 }
 
 const counter = {
+  overflow: 'auto',
   display: 'flex',
   justifyContent: 'flex-end'
 }
