@@ -1,71 +1,40 @@
 import React from 'react';
 
 const Form = (props)=>{
-  const { func, submit } = props;
+  const { getTarget, style, name, info } = props;
+  let a = ck;
+  let b = ck1;
+  if (info === true) {
+    a = ck1;
+    b = ck;
+  }
   return (
-    <div>
-      <div style ={div1}>
-        <div style ={div}>
-          Name:
-        </div>
-        <input type='text' id ='reviewer_name' onChange={func}></input>
+    <div style = {style}>
+      <div>{ name }</div>
+      <div style = { base }>
+        <div onClick = { getTarget } style = { a } id = { name } value ={ 'YES' } >YES</div>
+        <div onClick = { getTarget } style = { b } id = { name } >NO</div>
       </div>
-      <div style ={div1}>
-        <div style ={div}>
-          Title:
-        </div>
-        <input type='text' id ='summary' onChange={func}></input>
-      </div>
-      <div style ={div1}>
-        <div style ={div}>
-          Description:
-        </div>
-        <textarea id ='body' onChange={func}></textarea>
-      </div>
-      <div style ={div1}>
-        <div style ={div}>
-          Recommend:
-        </div>
-        <select id ='recommend' onChange={func}>
-          <option>YES</option>
-          <option>NO</option>
-        </select>
-      </div>
-      <div style ={div1}>
-        <div style ={div}>
-          Rating:
-        </div>
-        <select id ='rating' onChange={func}>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div style ={div1}>
-        <div style ={div}>
-           Photos:
-        </div>
-        <div>
-          Not Availbe
-        </div>
-      </div>
-      <button onClick = {submit}>Submit</button>
+
+      <div></div>
     </div>
   )
 }
 
-// date: "2020-10-10T00:00:00.000Z"
-// helpfulness: 27
-// response: null
-// review_id: 358987
+export default Form;
 
-export default Form
 
-const div = {
-  width :'100px'
+const base = {
+  display: 'flex',
 }
-const div1 = {
-  display:'flex'
+
+const ck = {
+  borderBottom: '1px solid black',
+  margin: '2px',
+}
+
+const ck1 = {
+  borderBottom: '1px solid black',
+  margin: '2px',
+  fontWeight: 'bold',
 }

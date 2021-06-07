@@ -19,5 +19,6 @@ export default Head
 const base = {
   display:'flex',
   justifyContent:'space-between',
-  fontSize: '10px'
+  fontSize: '10px',
+  margin:'5px',
 }

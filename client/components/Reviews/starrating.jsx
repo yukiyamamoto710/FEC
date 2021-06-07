@@ -1,27 +1,36 @@
 import React from 'react';
 
-const StarRating = (props)=>{
+const StarRating = (props) =>{
   const { per } = props;
-  const bar = {
-    border: '1px solid black',
-    width:`${per}%`,
+  let bar = {
+    border: '1px solid green',
+    width:`${ per }%`,
     height:'9px',
     margin:'1px',
-    backgroundColor:'black'
+    backgroundColor:'green'
   }
+  if ( per === 0) {
+    bar = {
+      display: 'none',
+    }
+  }
+
   return (
-    <div style ={ container }>
-      <div style = {bar}></div>
+    <div
+      style ={ container }>
+      <div
+        style = { bar }>
+      </div>
     </div>
   )
 }
 
 export default StarRating;
 
-const container ={
+const container = {
   border: '1px solid rgb(240,240,240)',
-  width:'130px',
-  height:'10px',
+  width: '80%',
+  height: '10px',
   maring: '2px',
-  backgroundColor:'rgb(240,240,240)'
+  backgroundColor:' rgb(240,240,240)',
 }
