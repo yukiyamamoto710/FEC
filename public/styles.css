@@ -35,6 +35,14 @@
   margin: 5px;
 }
 
+.discounted-price {
+  color: red;
+}
+
+.original-price {
+  text-decoration: line-through;
+}
+
 .product-name {
   font-weight: bold;
 }
