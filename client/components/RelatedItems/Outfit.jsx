@@ -18,34 +18,32 @@ class Outfit extends React.Component {
   }
 
   render() {
-    if (!this.state.outfitAdded) {
-      return (
-        <div className="container">
-          <h3 className="related-products">YOUR OUTFIT</h3>
-          <ul className="carousel">
-            <li className="card empty-card">
+    return (
+      <div className="container">
+        <h3 className="related-products">YOUR OUTFIT</h3>
+        <ul className="carousel">
+          <button className="slideLeft"
+            onClick={this.prevProduct}
+            disabled={this.state.idx === 0}
+            hidden={this.props.selectedItemsList.length < 4}>
+              &lt;
+          </button>
+          <li className="card empty-card">
               <button className="add-button" onClick={this.handleClick}>+</button>
               Add to Outfit
-            </li>
-          </ul>
-        </div>
-      )
-    } else {
-      return (
-        <div className="container">
-          <h3 className="related-products">YOUR OUTFIT</h3>
-          <ul className="carousel">
-            <li className="card empty-card">
-                <button className="add-button" onClick={this.handleClick}>+</button>
-                Add to Outfit
-            </li>
-            {this.props.selectedItemsList.map(product=>
-              <CardTemplate key={product.id} product={product} />
-              )}
-          </ul>
-        </div>
-      )
-    }
+          </li>
+          {this.props.selectedItemsList.map(product=>
+            <CardTemplate key={product.id} product={product} />
+            )}
+          <button className="slideRight"
+            onClick={this.nextProduct}
+            disabled={this.state.idx === this.props.selectedItemsList.length-4}
+            hidden={this.props.selectedItemsList.length < 4}>
+              &gt;
+          </button>
+        </ul>
+      </div>
+    )
   }
 }
 
