@@ -61,4 +61,10 @@ class CardTemplate extends React.Component {
   }
 }
 
+CardTemplate.propTypes = {
+  id: 'number',
+  deselect: 'func',
+  product: 'string'
+}
+
 export default CardTemplate;

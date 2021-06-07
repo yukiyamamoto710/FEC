@@ -102,4 +102,8 @@ class RelatedItems extends React.Component {
   }
 }
 
+RelatedItems.propTypes = {
+  id: 'number'
+}
+
 export default RelatedItems;

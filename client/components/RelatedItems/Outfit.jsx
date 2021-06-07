@@ -69,4 +69,9 @@ class Outfit extends React.Component {
   }
 }
 
+Outfit.propTypes = {
+  selectedItemsList: [],
+  addToOutfit: 'func'
+}
+
 export default Outfit;
