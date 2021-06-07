@@ -3,10 +3,11 @@ import Rbheader from './rbheader.jsx';
 import MessageList from './rbmessage.jsx';
 import Form from './form.jsx';
 import Button from './button.jsx';
+import PopOut from './popout.jsx';
 
 const Rbase = (props) =>{
-  const { list, sort, helpful, notHelpful, report, add,
-    more, addfunc, getTarget, addReview, moreBTN, msgClick } = props;
+  const { list, sort, helpful, notHelpful, report, more,
+    addfunc, getTarget, addReview, moreBTN, msgClick } = props;
   return (
     <div
       style = { style }>
@@ -20,12 +21,6 @@ const Rbase = (props) =>{
         report = { report }
         notHelpful = { notHelpful }/>
       <br></br>
-      { add === true?
-        <Form
-          getTarget = { getTarget }
-          submit = { addReview }/>
-        :
-          null }
       <Button
         moreBTN = { moreBTN }
         more = { more }

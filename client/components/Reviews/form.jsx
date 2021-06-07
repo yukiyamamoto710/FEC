@@ -56,15 +56,11 @@ const Form = (props)=>{
   )
 }
 
-// date: "2020-10-10T00:00:00.000Z"
-// helpfulness: 27
-// response: null
-// review_id: 358987
 
 export default Form
 
 const div = {
-  width :'100px'
+  width :'95%',
 }
 const div1 = {
   display:'flex'

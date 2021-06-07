@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Rbase from './rbase.jsx';
 import Rating from './rating.jsx';
+import PopOut from './popout.jsx';
 
 class Reviews extends React.Component{
   constructor(props){
@@ -41,6 +42,7 @@ class Reviews extends React.Component{
     this.loading = this.loading.bind(this);
     this.ratingstar = this.ratingstar.bind(this);
     this.msgClick = this.msgClick.bind(this);
+    this.cancel = this.cancel.bind(this);
   };
 
   componentDidMount(){
@@ -191,7 +193,7 @@ class Reviews extends React.Component{
     let arr = [ ...this.state.reviewsList ];
     arr.unshift( obj );
     this.setState({
-      reviewsList:arr,
+      reviewsList: arr,
       newReview: {
         body: '',
         date: '',
@@ -207,6 +209,12 @@ class Reviews extends React.Component{
     });
   };
 
+  cancel() {
+    this.setState({
+      add: false,
+    })
+  };
+
   loading(){
     const { rvGet, rtGet } = this.state;
     if ( rvGet === true && rtGet === true ) {
@@ -217,6 +225,11 @@ class Reviews extends React.Component{
           <div>RATINGS REVIEWS</div>
           <div
             style = { base }>
+              { this.state.add === true?
+                <PopOut
+                  cancel = {this.cancel}/>
+              :
+                null }
             <Rating
               rating = { productRating }
               ratingstar = { this.ratingstar }/>
@@ -226,7 +239,6 @@ class Reviews extends React.Component{
               helpful ={ this.helpful }
               notHelpful ={ this.notHelpful }
               report ={ this.report }
-              add = { this.state.add }
               more = { this.more }
               addfunc = { this.add }
               msgClick = { this.msgClick }
