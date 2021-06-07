@@ -1,6 +1,5 @@
 import React from 'react';
 import CardTemplate from './CardTemplate.jsx';
-import Comparison from './Comparison.jsx';
 
 class RelatedProducts extends React.Component {
   constructor(props) {
@@ -18,6 +17,15 @@ class RelatedProducts extends React.Component {
       displayed: [...this.props.relatedItemsList].slice(0, 4)
     })
   }
+
+  componentDidUpdate(prevProps) {
+    if (JSON.stringify(prevProps.relatedItemsList) !== JSON.stringify(this.props.relatedItemsList)) {
+      this.setState({
+        displayed: [...this.props.relatedItemsList].slice(0, 4)
+      })
+    }
+  }
+
 
   nextProduct() {
     this.setState({

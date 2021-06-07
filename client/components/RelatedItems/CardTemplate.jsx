@@ -10,7 +10,6 @@ class CardTemplate extends React.Component {
       favorite: false
     }
     this.togglePop = this.togglePop.bind(this);
-    this.deselectOutfit = this.deselectOutfit.bind(this);
     this.addToFavorite = this.addToFavorite.bind(this);
   }
 
@@ -18,10 +17,6 @@ class CardTemplate extends React.Component {
     this.setState({
       seen: !this.state.seen
     })
-  }
-
-  deselectOutfit() {
-    this.props.deselect();
   }
 
   addToFavorite() {
@@ -35,7 +30,7 @@ class CardTemplate extends React.Component {
       return (
         <li className="card outfit" onClick={this.togglePop}>
           <div className="parent">
-            <span className="close" onClick={this.deselectOutfit}>&#9447;</span>
+            <span className="close" onClick={()=>this.props.deselect()}>&#9447;</span>
             <img className="related-product-img" src={this.props.product.results[0].photos[0].url}/>
             <div className="product-info">
               <div>{this.props.product.category}</div>

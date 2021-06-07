@@ -1,3 +1,9 @@
+.container {
+  position: relative;
+  justify-content: center;
+  max-width: 800px;
+}
+
 .carousel {
   position: relative;
   display: flex;
@@ -13,7 +19,8 @@
   margin: 0 10px;
   box-sizing: border-box;
   width: 100%;
-  height: 250px;
+  max-width: 200px;
+  height: 300px;
 }
 
 .related-product-img {
