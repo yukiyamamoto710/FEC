@@ -13,7 +13,7 @@ class DropDownSelection extends React.Component{
     //console.log(this.props.size);
     event.preventDefault();
     //console.log(event.target.value);
-    this.props.callback(this.props.quantity, this.props.size);
+    this.props.callback(this.props.size, this.props.quantity);
   }
 
   render() {

@@ -7,12 +7,14 @@ class DropDown extends React.Component {
     super(props);
     this.state = {
       clicked: false,
-      name: ''
+      name: '',
+      quant: 0
     }
     this.handleClick = this.handleClick.bind(this);
     this.showSize = this.showSize.bind(this);
     this.showQuantity = this.showQuantity.bind(this);
     this.storeSize = this.storeSize.bind(this);
+    this.storeQuantity = this.storeQuantity.bind(this);
   }
 
   componentDidMount() {
@@ -25,9 +27,17 @@ class DropDown extends React.Component {
     });
   }
 
-  storeSize(quantity, size) {
-    this.props.callback(quantity);
+  storeSize(size, quantity) {
+    this.props.callback(size);
     this.setState({name: size});
+  }
+
+  storeQuantity(quantity) {
+    this.props.callback(quantity);
+    this.setState({
+      name: quantity,
+      quant: quantity,
+    });
   }
 
   showSize(name) {
@@ -56,11 +66,11 @@ class DropDown extends React.Component {
     }
     return(
       <div className = 'dropdown'>
-        <button onClick = {this.handleClick} className = 'dropbtn'>{this.props.name}
+        <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
           <div className = {name}>
             {selectArray.map((item, index) => {
               return(
-                <option key = {index}>{item}</option>
+                <DropDownSelection key = {index} size = {item} quantity = {item} callback = {this.storeQuantity}/>
               )
             })}
           </div>
