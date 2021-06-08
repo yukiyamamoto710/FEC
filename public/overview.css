@@ -7,8 +7,9 @@
 
 .bigPicture {
   display: inline;
-  width: 900px;
-  height: 700px;
+  width: 50%;
+  margin-bottom: 25px;
+  max-height: 500px;
 }
 
 /* h3 {
@@ -24,7 +25,7 @@
 
 .stylesBox {
   display: flex;
-  width: 400px;
+  width: 45%;
   flex-wrap: wrap;
   margin-left: auto;
   margin-top: -100px;
@@ -35,18 +36,23 @@
 }
 
 .describe {
-  width: 250px;
-  padding-right: 100px;
+  width: 25%;
   float: right;
-  margin-top: 250px;
-  margin-bottom: -100px;
-  white-space: nowrap;
-
+  padding-right: 10%;
+  padding-top: 10%;
 }
 
 .description {
   display: flex;
   flex-wrap: wrap;
-  width: 700px;
+  width: 30%;
   margin-right: auto;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.show-content {
+  display: block;
 }

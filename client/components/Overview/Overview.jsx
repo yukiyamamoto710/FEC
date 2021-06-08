@@ -80,9 +80,8 @@ class Overview extends React.Component {
       }
       return(
         <>
-         <img className = 'bigPicture' src= {this.state.stylesList.results[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
-         <Description descriptions = {this.state.description} price = {price} salePrice = {salePrice}/>
-
+         <img className = 'bigPicture' src= {currentItem[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
+         <Description descriptions = {this.state.description} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice}/>
          <div className = 'stylesBox'>
          {this.state.stylesList.results.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
