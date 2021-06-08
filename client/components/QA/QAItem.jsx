@@ -31,22 +31,21 @@ class QAItem extends React.Component {
 
   showAnswers(limit = 2) {
     var displayA = this.state.sortedAnswers.slice(0, limit);
-    console.log('this is display A', displayA)
-    this.setState({'displayA': displayA}, () => {console.log('this is display A', this.state.displayA)})
+    //console.log('this is display A', displayA)
+    this.setState({'displayA': displayA})
   }
 
   renderQuestion () {
     return (
       <div>
-        Question: {this.state.question.question_body !== undefined ? this.state.question.question_body : console.log('no question body')}
+        Q: {this.state.question.question_body !== undefined ? this.state.question.question_body : console.log('no question body')}
         <br/>
-        Answers:
         {this.state.displayA.length > 0 ?
           this.state.displayA.map(([key, value]) => {
             //console.log(value.body);
             return(
               <div>
-                <Answer answer={value.body} key={key}/>
+                <Answer answer={value.body} answerer={value.answerer_name} date={value.date} key={key}/>
               </div>
             )
           }) : console.log('there are no answers')

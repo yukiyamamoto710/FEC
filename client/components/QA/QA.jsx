@@ -37,7 +37,7 @@ class QA extends React.Component {
 
   showQuestions (limit = 4) {
     var displayQ = this.state.sortedQuestions.slice(0, limit);
-    console.log('this is display Q', displayQ)
+    //console.log('this is display Q', displayQ)
     this.setState({'displayQ': displayQ}, () => {this.render()})
   }
 
@@ -67,7 +67,9 @@ class QA extends React.Component {
     return (
       <div>
         <h3>Questions and Answers</h3>
+        <br/>
         <AddQ/>
+        <br/>
         {this.renderQA()}
       </div>
     )
