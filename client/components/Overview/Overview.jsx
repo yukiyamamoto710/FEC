@@ -72,21 +72,22 @@ class Overview extends React.Component {
       var price;
       var salePrice;
       if(currentItem[this.state.index].sale_price !== null) {
-        salePrice = <div>Sale Price: {currentItem[this.state.index].sale_price}</div>;
-        price = <div style = {crossed}>Current Price: {currentItem[this.state.index].original_price}</div>
+        salePrice = <div>{currentItem[this.state.index].sale_price}</div>;
+        price = <div style = {crossed}>{currentItem[this.state.index].original_price}</div>
       } else {
         salePrice = <div></div>
-        price = <div>Current Price: {currentItem[this.state.index].original_price}</div>
+        price = <div>{currentItem[this.state.index].original_price}</div>
       }
       return(
         <>
-        <Description descriptions = {this.state.description}/>
          <img className = 'bigPicture' src= {this.state.stylesList.results[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
-         <div>{price}</div>
-         <div>{salePrice}</div>
+         <Description descriptions = {this.state.description} price = {price} salePrice = {salePrice}/>
+
+         <div className = 'stylesBox'>
          {this.state.stylesList.results.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
          })}
+         </div>
         </>
        );
   }

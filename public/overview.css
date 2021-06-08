@@ -1,0 +1,52 @@
+.picture {
+  border-radius:100px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.bigPicture {
+  display: inline;
+  width: 900px;
+  height: 700px;
+}
+
+/* h3 {
+  display: flex;
+  width: 300px;
+  margin-left: auto;
+
+} */
+
+.category {
+
+}
+
+.stylesBox {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-top: -100px;
+
+}
+.price {
+  display: flex;
+}
+
+.describe {
+  width: 250px;
+  padding-right: 100px;
+  float: right;
+  margin-top: 250px;
+  margin-bottom: -100px;
+  white-space: nowrap;
+
+}
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  margin-right: auto;
+}
