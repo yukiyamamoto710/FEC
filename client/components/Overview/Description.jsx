@@ -6,16 +6,18 @@ class Description extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      skuSizeQuant: '',
+      styleSelected: '',
+      skuSizeSelected: '',
       skuQuantSelected: 0
     }
     this.changeSKU = this.changeSKU.bind(this);
     this.changeQuant = this.changeQuant.bind(this);
   }
 
-  changeSKU(size) {
+  changeSKU(size, style) {
     this.setState({
-      skuSizeQuant: size,
+      styleSelected: style,
+      skuSizeSelected: size,
     });
   }
 
@@ -25,8 +27,11 @@ class Description extends React.Component {
     });
   }
 
+
+
   render() {
     const { category, name, slogan, description, features } = this.props.descriptions;
+    //console.log('thispropsstyle in descroption', this.props.style);
     return(
       <>
        <div className = 'describe'>
@@ -34,8 +39,8 @@ class Description extends React.Component {
         <h2>{name}</h2>
         <div className = 'price'>${this.props.price}</div>
         <div>{this.props.salePrice}</div>
-        <DropDown name = 'Select Size v' skus = {this.props.skus} callback = {this.changeSKU}/>
-        <DropDown name = 'Quantity v'  quant = {this.state.skuSizeQuant} callback = {this.changeQuant}/>
+        <DropDown name = 'Select Size v' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/>
+        <DropDown name = 'Quantity v'  quant = {this.state.skuSizeSelected} callback = {this.changeQuant}/>
         <button>Add to Bag +</button>
        </div>
        <div>{slogan}</div>

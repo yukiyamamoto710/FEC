@@ -7,6 +7,8 @@ class DropDown extends React.Component {
     super(props);
     this.state = {
       clicked: false,
+      style: '',
+      price: 0,
       name: '',
       quant: 0
     }
@@ -27,8 +29,9 @@ class DropDown extends React.Component {
     });
   }
 
-  storeSize(size, quantity) {
-    this.props.callback(size);
+  storeSize(size, quantity, style) {
+    console.log('this is style in dropdown', style, quantity);
+    this.props.callback(size, style);
     this.setState({name: size});
   }
 
@@ -40,6 +43,10 @@ class DropDown extends React.Component {
     });
   }
 
+  storeStyle(style, price) {
+    this.props.callback(style, price);
+  }
+
   showSize(name) {
     var objKeys = Object.keys(this.props.skus);
 
@@ -49,7 +56,7 @@ class DropDown extends React.Component {
           <div className = {name}>
             {objKeys.map((item, index) => {
               return(
-                <DropDownSelection key = {index} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
+                <DropDownSelection key = {index} style = {this.props.style} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
               )
             })}
           </div>
