@@ -1,7 +1,7 @@
 import React from 'react';
 import Top from './rttop.jsx';
 import Message from './message.jsx';
-import SRList from './srList.jsx';
+import SRList from './srlist.jsx';
 import Characteristics from './characteristics.jsx';
 import { Data } from './data'
 

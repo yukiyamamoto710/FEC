@@ -68,7 +68,7 @@ class App extends React.Component{
         <div>
           <Overview id = {this.state.targetId}/>
           <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
-          <QA questions={this.state.questions}/>
+          <QA id={this.state.targetId} questions={this.state.questions}/>
           <Reviews id = { this.state.targetId}/>
         </div>
       )
