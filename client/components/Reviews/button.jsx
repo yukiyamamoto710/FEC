@@ -19,8 +19,8 @@ const Button = (props) =>{
           ADD A REVIEWS +
         </button>
     </div>
-  )
-}
+  );
+};
 
 export default Button;
 
@@ -29,7 +29,7 @@ const style = {
   justifyContent: 'left',
   height: '50px',
   padding: '10px',
-}
+};
 
 const button = {
   backgroundColor:'white',
@@ -38,4 +38,4 @@ const button = {
   fontSize: '10px',
   margin: '5px',
   fontWeight: 'bold'
-}
+};
