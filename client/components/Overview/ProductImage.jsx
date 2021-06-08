@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 class ProductImage extends React.Component {
@@ -17,6 +18,7 @@ class ProductImage extends React.Component {
 
 
   render() {
+
     return(
       <div>
       <img onClick = {this.handleClick} className = 'picture' src= {this.props.image.url} alt="Picture of Clothing"></img>
