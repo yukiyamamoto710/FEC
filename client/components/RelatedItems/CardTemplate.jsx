@@ -47,7 +47,7 @@ class CardTemplate extends React.Component {
             <span className="star" onClick={this.togglePop}>&#9734;</span>
             <img className="related-product-img" src={product.results[0].photos[0].url}/>
             <div className="product-info">
-              <div>{product.category}</div>
+              <div className="product-category">{product.category}</div>
               <div className="product-name">{product.name}</div>
               <Price product={product}/>
               <Rating rating={product.rating.ratings} />

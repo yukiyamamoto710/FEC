@@ -35,6 +35,11 @@
   margin: 5px;
 }
 
+.product-category,
+.product-price {
+  font-size: 12px;
+}
+
 .discounted-price {
   color: red;
 }
@@ -50,7 +55,7 @@
 .slideLeft,
 .slideRight {
   border: none;
-  width: 75px;
+  width: 30px;
 }
 
 .slideLeft:hover,
