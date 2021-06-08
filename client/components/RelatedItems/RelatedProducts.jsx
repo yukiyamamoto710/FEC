@@ -43,21 +43,23 @@ class RelatedProducts extends React.Component {
   }
 
   render() {
+    const {relatedItemsList, id} = this.props;
+    const {idx, displayed} = this.state;
     return (
       <div className="container">
         <h3 className="related-products">RELATED PRODUCTS</h3>
         <ul className="carousel">
           <button className="slideLeft"
             onClick={this.prevProduct}
-            hidden={this.state.idx === 0}>
+            hidden={idx === 0}>
               &lt;
           </button>
-          {this.state.displayed.map(product=>
-            <CardTemplate key={product.id} product={product} id={this.props.id}/>
+          {displayed.map(product=>
+            <CardTemplate key={product.id} product={product} id={id}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
-            disabled={this.props.relatedItemsList.length < 4 || this.state.idx === this.props.relatedItemsList.length-4}>
+            disabled={relatedItemsList.length < 4 || this.state.idx === relatedItemsList.length-4}>
               &gt;
           </button>
         </ul>

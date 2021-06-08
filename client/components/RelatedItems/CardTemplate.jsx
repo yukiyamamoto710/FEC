@@ -20,18 +20,19 @@ class CardTemplate extends React.Component {
   }
 
   render() {
-    if (this.props.id === "outfit") {
+    const {id, product, deselect} = this.props;
+    if (id === "outfit") {
       // if it is an outfit card
       return (
         <li className="card outfit">
           <div className="parent">
-            <span className="close" onClick={()=>this.props.deselect()}>&#9447;</span>
-            <img className="related-product-img" src={this.props.product.results[0].photos[0].url}/>
+            <span className="close" onClick={()=>deselect()}>&#9447;</span>
+            <img className="related-product-img" src={product.results[0].photos[0].url}/>
             <div className="product-info">
-              <div>{this.props.product.category}</div>
-              <div className="product-name">{this.props.product.name}</div>
-              <Price product={this.props.product}/>
-              <Rating rating={this.props.product.rating.ratings} />
+              <div>{product.category}</div>
+              <div className="product-name">{product.name}</div>
+              <Price product={product}/>
+              <Rating rating={product.rating.ratings} />
             </div>
           </div>
         </li>
@@ -42,14 +43,14 @@ class CardTemplate extends React.Component {
         <li className="card">
           <div className="parent">
             {this.state.seen ?
-            <Comparison togglePop={this.togglePop} product={this.props.product} id={this.props.id}/> : null}
+            <Comparison togglePop={this.togglePop} product={product} id={id}/> : null}
             <span className="star" onClick={this.togglePop}>&#9734;</span>
-            <img className="related-product-img" src={this.props.product.results[0].photos[0].url}/>
+            <img className="related-product-img" src={product.results[0].photos[0].url}/>
             <div className="product-info">
-              <div>{this.props.product.category}</div>
-              <div className="product-name">{this.props.product.name}</div>
-              <Price product={this.props.product}/>
-              <Rating rating={this.props.product.rating.ratings} />
+              <div>{product.category}</div>
+              <div className="product-name">{product.name}</div>
+              <Price product={product}/>
+              <Rating rating={product.rating.ratings} />
             </div>
           </div>
         </li>

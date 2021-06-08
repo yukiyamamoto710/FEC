@@ -41,6 +41,8 @@ class Comparison extends React.Component {
   }
 
   render() {
+    const{product} = this.props;
+    const {currentProduct, featureList} = this.state;
     return (
       <div className="modal">
         <div className="modal_content">
@@ -49,14 +51,14 @@ class Comparison extends React.Component {
           <table>
             <thead>
               <tr className="column">
-                <th className="col-1">{this.props.product.name}</th>
+                <th className="col-1">{product.name}</th>
                 <th className="col-2"></th>
-                <th className="col-3">{!this.state.currentProduct ? null: this.state.currentProduct.name}</th>
+                <th className="col-3">{!currentProduct ? null: currentProduct.name}</th>
               </tr>
             </thead>
             <tbody className="description-row">
-              {this.state.featureList.map(feature=>
-                <DescirptionRow key={feature} feature={feature} relatedProduct={this.props.product.features} currentProduct={this.state.currentProduct.features}/>
+              {featureList.map(feature=>
+                <DescirptionRow key={feature} feature={feature} relatedProduct={product.features} currentProduct={currentProduct.features}/>
               )}
             </tbody>
           </table>

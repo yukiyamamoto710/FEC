@@ -36,26 +36,28 @@ class Outfit extends React.Component {
   }
 
   render() {
+    const {selectedItemsList, addToOutfit} = this.props;
+    const {idx, deselect} = this.state;
     return (
       <div className="container">
         <h3 className="outfit">YOUR OUTFIT</h3>
         <ul className="carousel">
           <button className="slideLeft"
             onClick={this.prevProduct}
-            hidden={this.state.idx === 0}>
+            hidden={idx === 0}>
               &lt;
           </button>
           <li className="card empty">
-              <button className="add-button" onClick={()=>this.props.addToOutfit()}>+</button>
+              <button className="add-button" onClick={()=>addToOutfit()}>+</button>
               <p className="add-message">Add to Outfit</p>
           </li>
-          {this.state.deselect ? null: this.props.selectedItemsList.map(product=>
+          {deselect ? null: selectedItemsList.map(product=>
             <CardTemplate id={"outfit"} key={product.id} product={product} deselect={this.deselectCurrentOutfit}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
-            hidden={this.props.selectedItemsList.length < 4}
-            disabled={this.state.idx === this.props.selectedItemsList.length-4}>
+            hidden={selectedItemsList.length < 4}
+            disabled={idx === selectedItemsList.length-4}>
               &gt;
           </button>
         </ul>
