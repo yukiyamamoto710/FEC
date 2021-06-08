@@ -38,7 +38,7 @@ class QAList extends React.Component {
   renderQuestion () {
     return (
       <div>
-        <div className="accordion__section">
+        <div className="accordion__section accordian">
           <button className="accordion">
             <p className="accordion__title">Q: {this.state.question.question_body}</p>
           </button>
