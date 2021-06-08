@@ -1,73 +1,82 @@
 import React from 'react';
-import Helpful from './Helpful.jsx';
+import Answer from './Answer.jsx';
 
 
-const QAItem = ({question, answer, answerer, date}) => {
+class QAList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: false,
+      sortedAnswers: [],
+      answers: [],
+      displayA: [],
+    };
+    this.renderPage = this.renderPage.bind(this);
+    this.renderQuestion = this.renderQuestion.bind(this);
+    this.sortAnswers = this.sortAnswers.bind(this);
+    this.showAnswers = this.showAnswers.bind(this);
+  }
 
-  var d = new Date (date);
-  var getMonth = (mo) => {
-    if(mo === 0){
-      return 'January'
-    }
-    if(mo === 1){
-      return 'February'
-    }
-    if(mo === 2){
-      return 'March'
-    }
-    if(mo === 3){
-      return 'April'
-    }
-    if(mo === 4){
-      return 'May'
-    }
-    if(mo === 5){
-      return 'June'
-    }
-    if(mo === 6){
-      return 'July'
-    }
-    if(mo === 7){
-      return 'August'
-    }
-    if(mo === 8){
-      return 'September'
-    }
-    if(mo === 9){
-      return 'October'
-    }
-    if(mo === 10){
-      return 'November'
-    }
-    if(mo === 11){
-      return 'December'
-    }
-  };
+  componentDidMount() {
+    this.setState({question: this.props.question, answers: Object.entries(this.props.question.answers), loaded: true},
+    () => { this.sortAnswers()})
+  }
 
-  // return (
-  //   <div>
-  //     A: {answer} <br/>
-  //     <span>
-  //       by {answerer} <> </>
-  //       {getMonth(d.getUTCMonth())} <> </> {d.getUTCDate()},<> </>{d.getUTCFullYear()}
-  //       <Helpful/>
-  //       <br/>
-  //     </span>
+  sortAnswers() {
+    console.log('got to sortQuestion function');
 
-  //   </div>
-  // );
-  return (
-    <div className="accordion__section">
-      <button className="accordion">
-        <p className="accordion__title">Q: {question}</p>
-      </button>
-      <div className="accordion__content">A: <> </>
-        <span
-          className="accordion__text"
-          dangerouslySetInnerHTML={{ __html: answer }}
-        />
+    var sortedAnswers = this.state.answers.sort((a,b) => a.helpfulness - b.helpfulness)
+    this.setState({'sortedAnswers': sortedAnswers}, () => {this.showAnswers()})
+  }
+
+  showAnswers(limit = 2) {
+    var displayA = this.state.sortedAnswers.slice(0, limit);
+    //console.log('this is display A', displayA)
+    this.setState({'displayA': displayA})
+  }
+
+  renderQuestion () {
+    return (
+      <div>
+        <div className="accordion__section">
+          <button className="accordion">
+            <p className="accordion__title">Q: {this.state.question.question_body}</p>
+          </button>
+          {this.state.displayA.length > 0 ?
+            this.state.displayA.map(([key, value]) => {
+              //console.log(value.body);
+              return(
+                <Answer answer={value.body} answerer={value.answerer_name} date={value.date} key={key}/>
+              )
+            }) : console.log('there are no answers')
+          }
+          <div className="loadmore">
+          Load More Answers {/*create a conditional render function depending on the length of the array */}
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    )
+  }
+
+  renderPage() {
+    if (this.state.loaded) {
+      return (
+        <div>
+          {this.renderQuestion()}
+        </div>
+      )
+    } else {
+      console.log('something went wrong with conditional render');
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderPage()}
+      </div>
+    )
+  }
 }
-export default QAItem;
+
+export default QAList;

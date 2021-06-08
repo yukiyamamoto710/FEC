@@ -1,5 +1,5 @@
 import React from 'react';
-import QAList from './QAList.jsx';
+import QAItem from './QAItem.jsx';
 import AddQ from './AddQ.jsx';
 import _ from 'underscore';
 
@@ -51,7 +51,7 @@ class QA extends React.Component {
       return (
         <div>
           {console.log('sorted questions', this.state.sortedQuestions)}
-          {this.state.displayQ.map(question => <QAList question={question} key={question.question_id}/>)}
+          {this.state.displayQ.map(question => <QAItem question={question} key={question.question_id}/>)}
         </div>
       )
     } else {
