@@ -38,7 +38,7 @@ class App extends React.Component{
       })
       .catch(err=> console.error(err))
     );
-  };
+  }
 
   fetchEverything() {
 
@@ -60,14 +60,14 @@ class App extends React.Component{
         this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
       })
     }
-  };
+  }
 
   renderPage() {
     if(this.state.loaded) {
       return (
         <div>
           <Overview id = {this.state.targetId}/>
-          <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
+          <RelatedItems id={this.state.targetId} />
           <QA id={this.state.targetId} questions={this.state.questions}/>
           <Reviews id = { this.state.targetId}/>
         </div>
