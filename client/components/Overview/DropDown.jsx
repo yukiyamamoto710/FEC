@@ -23,6 +23,12 @@ class DropDown extends React.Component {
     this.setState({name: this.props.name});
   }
 
+  componentDidUpdate (prevProps) {
+    if(this.props.name !== prevProps.name) {
+      this.setState({name: this.props.name});
+    }
+  }
+
   handleClick() {
     this.setState({
       clicked: !this.state.clicked,
@@ -53,13 +59,13 @@ class DropDown extends React.Component {
     return(
       <div className = 'dropdown'>
         <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
-          <div className = {name}>
+          <select className = {name}>
             {objKeys.map((item, index) => {
               return(
                 <DropDownSelection key = {index} style = {this.props.style} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
               )
             })}
-          </div>
+          </select>
         </button>
       </div>
     )

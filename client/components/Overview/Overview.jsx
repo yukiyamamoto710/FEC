@@ -3,6 +3,7 @@ import React from 'react';
 import ProductImage from './ProductImage.jsx';
 import axios from 'axios';
 import Description from './Description.jsx';
+import DefaultView from './DefaultView.jsx';
 
 //stateful component
 //what do i need from the API? product name, product style, review
@@ -69,6 +70,7 @@ class Overview extends React.Component {
   renderItems() {
       //const { category, name, id, slogan, description, features } = this.state.description;
       const currentItem = this.state.stylesList.results;
+      console.log(this.state.stylesList);
       var price;
       var salePrice;
       if(currentItem[this.state.index].sale_price !== null) {
@@ -80,7 +82,7 @@ class Overview extends React.Component {
       }
       return(
         <>
-         <img className = 'bigPicture' src= {currentItem[this.state.index].photos[0].url} alt="Picture of Clothing"></img>
+         <DefaultView picture = {currentItem[this.state.index].photos[0].url} thumbnailArray = {currentItem}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice}/>
          <div className = 'stylesBox'>
          {this.state.stylesList.results.map((item, index) => {
