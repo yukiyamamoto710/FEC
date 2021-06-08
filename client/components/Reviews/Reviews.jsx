@@ -3,7 +3,7 @@ import axios from 'axios';
 import Rbase from './rbase.jsx';
 import Rating from './rating.jsx';
 import PopOut from './popout.jsx';
-import Warning from './warning.jsx'
+import Warning from './Warning/Warning.jsx';
 
 class Reviews extends React.Component{
   constructor(props){
@@ -36,7 +36,7 @@ class Reviews extends React.Component{
       moreBTNshowed: true,
       rtStarCk: false,
       tempList: [],
-      warning: [],
+      warningItems: [],
     };
     this.reviewsGET = this.reviewsGET.bind(this);
     this.ratingGET = this.ratingGET.bind(this);
@@ -53,7 +53,7 @@ class Reviews extends React.Component{
     this.msgClick = this.msgClick.bind(this);
     this.cancel = this.cancel.bind(this);
     this.starCK = this.starCK.bind(this);
-    this.cancelW = this.cancelW.bind(this);
+    this.cancelWarning = this.cancelWarning.bind(this);
   };
 
   componentDidMount(){
@@ -251,7 +251,7 @@ class Reviews extends React.Component{
       });
     } else {
       this.setState({
-        warning: array,
+        warningItems: array,
       })
     }
   };
@@ -262,26 +262,27 @@ class Reviews extends React.Component{
     })
   };
 
-  cancelW() {
+  cancelWarning() {
     this.setState({
-      warning: [],
-    })
-  };
+      warningItems: [],
+    });
+  }
 
   loading(){
     const { rvGet, rtGet } = this.state;
     if ( rvGet === true && rtGet === true ) {
-      const { reviewsList, productRating, moreBTNshowed, newReview, add, warning } = this.state;
+      const { reviewsList, productRating, moreBTNshowed, newReview, add, warningItems } = this.state;
       return (
         <div
           style = { bas }>
           <div>RATINGS REVIEWS</div>
           <div
             style = { base }>
-              { warning.length !== 0?
+              { warningItems.length !== 0?
                 <Warning
-                  arr = { warning }
-                  func = { this.cancelW }/>
+                  warningItems = { warningItems }
+                  show = { this.cancelWarning }
+                />
               :
                 null }
               { add === true?
