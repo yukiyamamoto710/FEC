@@ -2,6 +2,7 @@ import React from 'react';
 import RelatedProducts from './RelatedProducts.jsx';
 import Outfit from './Outfit.jsx';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 class RelatedItems extends React.Component {
   constructor(props) {
@@ -101,8 +102,8 @@ class RelatedItems extends React.Component {
   }
 }
 
-// RelatedItems.propTypes = {
-//   id: 'number'
-// }
+RelatedItems.propTypes = {
+  id: PropTypes.number
+}
 
 export default RelatedItems;

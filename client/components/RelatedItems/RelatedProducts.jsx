@@ -1,5 +1,6 @@
 import React from 'react';
 import CardTemplate from './CardTemplate.jsx';
+import PropTypes from 'prop-types';
 
 class RelatedProducts extends React.Component {
   constructor(props) {
@@ -65,9 +66,9 @@ class RelatedProducts extends React.Component {
   }
 }
 
-// RelatedProducts.propTypes = {
-//   id: 'number',
-//   relatedItemsList: []
-// }
+RelatedProducts.propTypes = {
+  id: PropTypes.number,
+  relatedItemsList: PropTypes.array
+}
 
 export default RelatedProducts;

@@ -2,6 +2,7 @@ import React from 'react';
 import Rating from './Rating.jsx';
 import Comparison from './Comparison.jsx';
 import Price from './Price.jsx';
+import PropTypes from 'prop-types';
 
 class CardTemplate extends React.Component {
   constructor(props) {
@@ -57,10 +58,10 @@ class CardTemplate extends React.Component {
   }
 }
 
-// CardTemplate.propTypes = {
-//   id: 'number',
-//   deselect: 'func',
-//   product: 'string'
-// }
+CardTemplate.propTypes = {
+  id: PropTypes.number,
+  deselect: PropTypes.func,
+  product: PropTypes.string
+}
 
 export default CardTemplate;

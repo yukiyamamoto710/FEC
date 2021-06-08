@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import DescirptionRow from './DescriptionRow.jsx';
+import PropTypes from 'prop-types';
 
 class Comparison extends React.Component {
   constructor(props) {
@@ -65,10 +66,10 @@ class Comparison extends React.Component {
   }
 }
 
-// Comparison.propTypes = {
-//   id: 'number',
-//   togglePop: 'func',
-//   product: 'string'
-// }
+Comparison.propTypes = {
+  id: PropTypes.number,
+  togglePop: PropTypes.func,
+  product: PropTypes.string
+}
 
 export default Comparison;

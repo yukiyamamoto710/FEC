@@ -1,5 +1,6 @@
 import React from 'react';
 import CardTemplate from './CardTemplate.jsx';
+import PropTypes from 'prop-types';
 
 class Outfit extends React.Component {
   constructor(props) {
@@ -63,9 +64,9 @@ class Outfit extends React.Component {
   }
 }
 
-// Outfit.propTypes = {
-//   selectedItemsList: [],
-//   addToOutfit: 'func'
-// }
+Outfit.propTypes = {
+  selectedItemsList: PropTypes.array,
+  addToOutfit: PropTypes.func
+}
 
 export default Outfit;

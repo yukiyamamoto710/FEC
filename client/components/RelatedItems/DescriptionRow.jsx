@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const DescriptionRow = ({feature, relatedProduct, currentProduct}) => {
   // get an array of obj (if it does not contain a particular feature array should be empty)
@@ -30,6 +31,12 @@ const DescriptionRow = ({feature, relatedProduct, currentProduct}) => {
       <td className="col-3">{displayCol3}</td>
     </tr>
   )
+}
+
+DescriptionRow.propTypes = {
+  feature: PropTypes.string,
+  relatedProduct: PropTypes.array,
+  currentProduct: PropTypes.array
 }
 
 export default DescriptionRow;
