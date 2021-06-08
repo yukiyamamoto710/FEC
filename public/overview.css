@@ -36,6 +36,7 @@
 }
 
 .describe {
+  position: relative;
   width: 25%;
   float: right;
   padding-right: 10%;
@@ -55,4 +56,20 @@
 
 .show-content {
   display: block;
+  position: absolute;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  left: 25%;
+
 }
+
+.dropbtn {
+  min-width: 75%;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+
+

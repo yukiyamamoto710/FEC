@@ -6,19 +6,28 @@ class DropDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicked: false
+      clicked: false,
+      name: ''
     }
     this.handleClick = this.handleClick.bind(this);
     this.showSize = this.showSize.bind(this);
     this.showQuantity = this.showQuantity.bind(this);
+    this.storeSize = this.storeSize.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({name: this.props.name});
   }
 
   handleClick() {
-    this.setState({clicked: !this.state.clicked});
+    this.setState({
+      clicked: !this.state.clicked,
+    });
   }
 
-  storeSize(size) {
-    this.props.callback(size);
+  storeSize(quantity, size) {
+    this.props.callback(quantity);
+    this.setState({name: size});
   }
 
   showSize(name) {
@@ -26,11 +35,11 @@ class DropDown extends React.Component {
 
     return(
       <div className = 'dropdown'>
-        <button onClick = {this.handleClick} className = 'dropbtn'>{this.props.name}
+        <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
           <div className = {name}>
             {objKeys.map((item, index) => {
               return(
-                <DropDownSelection key = {index} size = {this.props.skus[item].size} callback = {this.storeSize}/>
+                <DropDownSelection key = {index} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
               )
             })}
           </div>
@@ -40,11 +49,20 @@ class DropDown extends React.Component {
   }
 
   showQuantity(name) {
+    var quantity = this.props.quant <= 16 ? this.props.quant : 16;
+    var selectArray = [];
+    for(var i = 0; i < quantity; i++) {
+      selectArray.push(i);
+    }
     return(
       <div className = 'dropdown'>
         <button onClick = {this.handleClick} className = 'dropbtn'>{this.props.name}
           <div className = {name}>
-            {}
+            {selectArray.map((item, index) => {
+              return(
+                <option key = {index}>{item}</option>
+              )
+            })}
           </div>
         </button>
       </div>
@@ -80,3 +98,21 @@ class DropDown extends React.Component {
 
 
 export default DropDown;
+
+
+/*
+
+return(
+      <form className = 'dropdown'>
+        <label htmlFor = {name}>{this.state.name}</label>
+          <select name = {name} id = {name}>
+            {objKeys.map((item, index) => {
+              return(
+                <DropDownSelection key = {index} size = {this.props.skus[item].size} callback = {this.storeSize}/>
+              )
+            })}
+          </select>
+      </form>
+    )
+
+*/
