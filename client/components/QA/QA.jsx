@@ -9,9 +9,13 @@ class QA extends React.Component {
     super(props);
     this.state = {
       questions: [],
+      sortedQuestions: [],
+      displayQ: [],
     };
     //this.addQuestion = this.addQuestion.bind(this);
     this.sortQuestions = this.sortQuestions.bind(this);
+    this.renderQA = this.renderQA.bind(this);
+    this.showQuestions = this.showQuestions.bind(this);
   }
 
   componentDidMount() {
@@ -19,18 +23,22 @@ class QA extends React.Component {
   }
 
   sortQuestions() {
-    console.log('got to sortQuestion function');
     //_.sortBy(this.state.questions, (question) => {question.question_helfulness})
     // const sortedQuestions = new Promise ((resolve, reject) => {_.sortBy(this.state.questions, (question) => {question.question_helfulness})});
     // console.log(sortedQuestions)
     // sortedQuestions
     //   .then((sortedQuestions) => {this.setState({sortedQuestions: sortedQuestions})})
     //   .then(() => {console.log('this is sorted Questions', this.state.sortedQuestions)})
-
     //   .catch((err) => {console.error(err)});
 
-    let sortedQuestions = this.state.questions.sort((a,b) => a.question_helfulness - b.question_helfulness)
-    this.setState({sortedQuestions: sortedQuestions}, () => {console.log("STATE",this.state.sortedQuestions)})
+    var sortedQuestions = this.state.questions.sort((a,b) => a.question_helpfulness - b.question_helpfulness)
+    this.setState({'sortedQuestions': sortedQuestions}, () => {this.showQuestions()})
+  }
+
+  showQuestions (limit = 4) {
+    var displayQ = this.state.sortedQuestions.slice(0, limit);
+    console.log('this is display Q', displayQ)
+    this.setState({'displayQ': displayQ}, () => {this.render()})
   }
 
   // addQuestion(event, question){
@@ -38,12 +46,29 @@ class QA extends React.Component {
   //     axios.put('/put', uestion)
   //   })
   // }
+  renderQA() {
+    if (this.state.sortedQuestions.length > 0) {
+      return (
+        <div>
+          {console.log('sorted questions', this.state.sortedQuestions)}
+          {this.state.displayQ.map(question => <QAItem question={question} key={question.question_id}/>)}
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          sortedQuestions did not load yet
+        </div>
+      )
+    }
+  }
+
   render() {
     return (
       <div>
         <h3>Questions and Answers</h3>
         <AddQ/>
-        {this.state.questions.map(question => <QAItem question={question} key={question.question_id}/>)}
+        {this.renderQA()}
       </div>
     )
   }

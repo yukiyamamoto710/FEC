@@ -6,17 +6,33 @@ class QAItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false
+      loaded: false,
+      sortedAnswers: [],
+      answers: [],
+      displayA: [],
     };
     this.renderPage = this.renderPage.bind(this);
     this.renderQuestion = this.renderQuestion.bind(this);
-    //this.renderAnswers = this.renderAnswers.bind(this);
+    this.sortAnswers = this.sortAnswers.bind(this);
+    this.showAnswers = this.showAnswers.bind(this);
   }
 
   componentDidMount() {
-    this.setState({question: this.props.question}, () => {
-      this.setState({loaded: true})
-    })
+    this.setState({question: this.props.question, answers: Object.entries(this.props.question.answers), loaded: true},
+    () => { this.sortAnswers()})
+  }
+
+  sortAnswers() {
+    console.log('got to sortQuestion function');
+
+    var sortedAnswers = this.state.answers.sort((a,b) => a.helpfulness - b.helpfulness)
+    this.setState({'sortedAnswers': sortedAnswers}, () => {this.showAnswers()})
+  }
+
+  showAnswers(limit = 2) {
+    var displayA = this.state.sortedAnswers.slice(0, limit);
+    console.log('this is display A', displayA)
+    this.setState({'displayA': displayA}, () => {console.log('this is display A', this.state.displayA)})
   }
 
   renderQuestion () {
@@ -25,12 +41,12 @@ class QAItem extends React.Component {
         Question: {this.state.question.question_body !== undefined ? this.state.question.question_body : console.log('no question body')}
         <br/>
         Answers:
-        {this.state.question.answers !== undefined ?
-          Object.entries(this.state.question.answers).map(([key, value]) => {
+        {this.state.displayA.length > 0 ?
+          this.state.displayA.map(([key, value]) => {
             //console.log(value.body);
             return(
               <div>
-                <Answer answer={value.body}/>
+                <Answer answer={value.body} key={key}/>
               </div>
             )
           }) : console.log('there are no answers')
