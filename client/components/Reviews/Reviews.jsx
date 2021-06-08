@@ -3,7 +3,7 @@ import axios from 'axios';
 import Rbase from './rbase.jsx';
 import Rating from './rating.jsx';
 import PopOut from './popout.jsx';
-import Warning from './warning.jsx'
+import Warning from './Warning/Warning.jsx'
 
 class Reviews extends React.Component{
   constructor(props){
