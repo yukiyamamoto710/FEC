@@ -10,7 +10,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       list:[],
-      targetId: 25821,//reveiws testing. we can initialize with a particular ID
+      targetId: 25748,//reveiws testing. we can initialize with a particular ID
       styles: [],
       loaded: false
     };
@@ -38,7 +38,7 @@ class App extends React.Component{
       })
       .catch(err=> console.error(err))
     );
-  };
+  }
 
   fetchEverything() {
 
@@ -60,15 +60,15 @@ class App extends React.Component{
         this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
       })
     }
-  };
+  }
 
   renderPage() {
     if(this.state.loaded) {
       return (
         <div>
           <Overview id = {this.state.targetId}/>
-          <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
-          <QA questions={this.state.questions}/>
+          <RelatedItems id={this.state.targetId} />
+          <QA id={this.state.targetId} questions={this.state.questions}/>
           <Reviews id = { this.state.targetId}/>
         </div>
       )

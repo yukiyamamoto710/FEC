@@ -2,41 +2,57 @@ import React from 'react';
 import RelatedProducts from './RelatedProducts.jsx';
 import Outfit from './Outfit.jsx';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 class RelatedItems extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      relatedItems: [],
       relatedItemsList: [],
-      selectedItemsList: [],
-      listLoaded: false
+      selectedItemsList: []
     }
-    this.fetchGET = this.fetchGET.bind(this);
+    this.getRelatedItemsIds = this.getRelatedItemsIds.bind(this);
+    this.renderRelatedItems = this.renderRelatedItems.bind(this);
     this.getAllProductInfo = this.getAllProductInfo.bind(this);
     this.addToOutfit = this.addToOutfit.bind(this);
   }
 
   componentDidMount() {
-    this.fetchGET('relatedItems', 'products', `${this.props.id}/related`)
+    this.getRelatedItemsIds(this.props.id);
   }
 
-  componentDidUpdate() {
-    if (!this.state.listLoaded) {
-      var promises = [];
-      for (var i = 0; i < this.state.relatedItems.length; i++) {
-        promises.push(this.getAllProductInfo(this.state.relatedItems[i]));
-      }
-      Promise.all(promises)
-        .then((response) => {
-          this.setState({
-            relatedItemsList: response
-          }, ()=> {this.setState({listLoaded: true})})
-        })
-        .catch((err) => {
-          console.log(err);
-        })
+  componentDidUpdate(prevProps) {
+    if (prevProps.id !== this.props.id) {
+      this.getRelatedItemsIds(this.props.id);
     }
+  }
+
+  getRelatedItemsIds (id) {
+    axios.get('/get', {params: {endpoint: `products/${id}/related`}})
+      .then((response) =>{
+        this.setState({
+          relatedItems: response.data
+        }, this.renderRelatedItems)
+      })
+      .catch(err=>{
+        console.log(err)
+      });
+  }
+
+  renderRelatedItems() {
+    var promises = [];
+    for (var i = 0; i < this.state.relatedItems.length; i++) {
+      promises.push(this.getAllProductInfo(this.state.relatedItems[i]));
+    }
+    Promise.all(promises)
+      .then((response) => {
+        this.setState({
+          relatedItemsList: response
+        })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   getAllProductInfo(id) {
@@ -73,18 +89,6 @@ class RelatedItems extends React.Component {
       })
   }
 
-  fetchGET(key, string, id) {
-    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
-      .then((response) =>{
-        this.setState({
-          [key]: response.data
-        })
-      })
-      .catch(err=>{
-        console.log(err)
-      });
-  };
-
   render() {
     return (
       <div>
@@ -96,6 +100,10 @@ class RelatedItems extends React.Component {
       </div>
     )
   }
+}
+
+RelatedItems.propTypes = {
+  id: PropTypes.number
 }
 
 export default RelatedItems;

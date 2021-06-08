@@ -4,9 +4,7 @@ const Helpful = () => {
   //make a click handler
   //raise the state using hooks
   return (
-    <div>
-      <button>Helpful?</button>
-    </div>
+    <button className="helpful">Helpful?</button>
   )
 }
 
