@@ -1,23 +1,39 @@
 import React from 'react';
 import axios from 'axios';
+import DescirptionRow from './DescriptionRow.jsx';
+import PropTypes from 'prop-types';
 
 class Comparison extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      featureList: []
+    };
     this.handleClick = this.handleClick.bind(this);
+    this.combineAllFeatures = this.combineAllFeatures.bind(this);
   }
 
+  // performance wise - I need to fetch data for currently displayed product at a different place
   componentDidMount() {
     axios.get('/get', {params: {endpoint: `products/${this.props.id}`}})
       .then((results) => {
         this.setState({
-          currentItem: results.data
-        })
+          currentProduct: results.data
+        }, this.combineAllFeatures)
       })
       .catch((err) => {
         console.log(err);
       })
+  }
+
+  combineAllFeatures() {
+    var allFeatureObjs = this.props.product.features.concat(this.state.currentProduct.features);
+    var allFeatures = allFeatureObjs.map(obj=>obj.feature);
+    // filter out the duplicate features
+    var featureList = [...new Set(allFeatures)];
+    this.setState({
+      featureList: featureList
+    })
   }
 
   handleClick() {
@@ -33,27 +49,15 @@ class Comparison extends React.Component {
           <table>
             <thead>
               <tr className="column">
-                <th className="col1">{this.props.product.name}</th>
-                <th colSpan="2" className="column-2">{null}</th>
-                <th className="col3">{!this.state.currentItem ? null: this.state.currentItem.name}</th>
+                <th className="col-1">{this.props.product.name}</th>
+                <th className="col-2"></th>
+                <th className="col-3">{!this.state.currentProduct ? null: this.state.currentProduct.name}</th>
               </tr>
             </thead>
-            <tbody className="comparison">
-              <tr>
-                <td className="col1">&#10003;</td>
-                <td colSpan="2">some description</td>
-                <td className="col3">&#10003;</td>
-              </tr>
-              <tr>
-                <td className="col1">&#10003;</td>
-                <td colSpan="2">some description</td>
-                <td className="col3">{null}</td>
-              </tr>
-              <tr>
-                <td className="col1">{null}</td>
-                <td colSpan="2">some description</td>
-                <td className="col3">&#10003;</td>
-              </tr>
+            <tbody className="description-row">
+              {this.state.featureList.map(feature=>
+                <DescirptionRow key={feature} feature={feature} relatedProduct={this.props.product.features} currentProduct={this.state.currentProduct.features}/>
+              )}
             </tbody>
           </table>
         </div>
@@ -62,18 +66,10 @@ class Comparison extends React.Component {
   }
 }
 
-export default Comparison;
+Comparison.propTypes = {
+  id: PropTypes.number,
+  togglePop: PropTypes.func,
+  product: PropTypes.string
+}
 
-<table>
-    <thead>
-        <tr>
-            <th colSpan="2">The table header</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>The table body</td>
-            <td>with two columns</td>
-        </tr>
-    </tbody>
-</table>
+export default Comparison;

@@ -1,13 +1,13 @@
 import React from 'react';
 import CardTemplate from './CardTemplate.jsx';
-import Comparison from './Comparison.jsx';
+import PropTypes from 'prop-types';
 
 class RelatedProducts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      idx: 0,
-      displayed: []
+      idx: 0, // keep track of which products are currently displaying
+      displayed: [] // display only four at a time
     };
     this.nextProduct = this.nextProduct.bind(this);
     this.prevProduct = this.prevProduct.bind(this);
@@ -17,6 +17,15 @@ class RelatedProducts extends React.Component {
     this.setState({
       displayed: [...this.props.relatedItemsList].slice(0, 4)
     })
+  }
+
+  componentDidUpdate(prevProps) {
+    // does JSON.stringify affect performance?
+    if (JSON.stringify(prevProps.relatedItemsList) !== JSON.stringify(this.props.relatedItemsList)) {
+      this.setState({
+        displayed: [...this.props.relatedItemsList].slice(0, 4)
+      })
+    }
   }
 
   nextProduct() {
@@ -48,13 +57,18 @@ class RelatedProducts extends React.Component {
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
-            disabled={this.state.idx === this.props.relatedItemsList.length-4}>
+            disabled={this.props.relatedItemsList.length < 4 || this.state.idx === this.props.relatedItemsList.length-4}>
               &gt;
           </button>
         </ul>
       </div>
     )
   }
+}
+
+RelatedProducts.propTypes = {
+  id: PropTypes.number,
+  relatedItemsList: PropTypes.array
 }
 
 export default RelatedProducts;

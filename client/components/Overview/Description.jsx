@@ -18,7 +18,7 @@ class Description extends React.Component {
   }
 
   render() {
-    const { category, name, id, slogan, description, features } = this.props.descriptions;
+    const { category, name, slogan, description, features } = this.props.descriptions;
     return(
       <>
        <div className = 'describe'>
