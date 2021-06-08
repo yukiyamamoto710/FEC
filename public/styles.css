@@ -89,7 +89,7 @@
   position: absolute;
   top: -75%;
   left: 50%;
-  width: 350px;
+  width: 400px;
   height: 250px;
   margin: 10px;
   padding: 10px;
@@ -99,28 +99,39 @@
 }
 
 .modal_content {
-  position: absolute;
-  width: 340px;
-  height: 240px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
 }
 
 .close,
 .star {
   position: absolute;
+  padding: 3px;
   right: 2%;
   z-index: 1;
   font-weight: bold;
 }
 
-.close:hover {
-  color: black;
+.close:hover,
+.star:hover {
+  color: white;
   cursor: pointer;
 }
 
-.col1 {
+/* a table styling in Comparison component */
+table {
+  width: 100%;
+}
+.col-1 {
   text-align: left;
 }
 
-.col3 {
+.col-3 {
   text-align: right;
+}
+
+th {
+  max-width: 33%;
 }

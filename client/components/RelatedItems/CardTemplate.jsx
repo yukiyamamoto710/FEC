@@ -7,22 +7,14 @@ class CardTemplate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      seen: false, // whether a modal is displayed or not
-      outfit: false // whether a current item is added to outfit or not
+      seen: false // whether a modal is displayed or not
     }
     this.togglePop = this.togglePop.bind(this);
-    this.addToOutfit = this.addToOutfit.bind(this);
   }
 
   togglePop() {
     this.setState({
       seen: !this.state.seen
-    })
-  }
-
-  addToOutfit() {
-    this.setState({
-      outfit: !this.state.outfit
     })
   }
 
@@ -46,11 +38,11 @@ class CardTemplate extends React.Component {
     } else {
       // else it is an related item card
       return (
-        <li className="card" onClick={this.togglePop}>
+        <li className="card">
           <div className="parent">
             {this.state.seen ?
             <Comparison togglePop={this.togglePop} product={this.props.product} id={this.props.id}/> : null}
-            <span className="star" onClick={this.addToOutfit}>&#9734;</span>
+            <span className="star" onClick={this.togglePop}>&#9734;</span>
             <img className="related-product-img" src={this.props.product.results[0].photos[0].url}/>
             <div className="product-info">
               <div>{this.props.product.category}</div>
