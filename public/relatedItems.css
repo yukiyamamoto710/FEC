@@ -140,3 +140,19 @@ table {
 th {
   max-width: 33%;
 }
+
+/* AdditionalImages component */
+.additional-images {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  width: 100%;
+  min-height: 75px;
+  margin-top: -40%;
+  z-index: 1;
+  position: absolute;
+}
+
+.thumbnail {
+  width: 25%;
+}
