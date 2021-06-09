@@ -38,6 +38,7 @@
 .product-category,
 .product-price {
   font-size: 12px;
+  text-transform: uppercase;
 }
 
 .discounted-price {
@@ -145,7 +146,6 @@ th {
 .additional-images {
   display: flex;
   justify-content: flex-start;
-  overflow-x: auto;
   width: 100%;
   min-height: 75px;
   margin-top: -40%;
@@ -154,5 +154,7 @@ th {
 }
 
 .thumbnail {
-  width: 25%;
+  width: 100%;
+  max-width: 40px;
+  margin: 0 2px;
 }

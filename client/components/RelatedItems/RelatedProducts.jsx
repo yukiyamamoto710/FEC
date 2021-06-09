@@ -59,7 +59,7 @@ class RelatedProducts extends React.Component {
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
-            disabled={relatedItemsList.length < 4 || this.state.idx === relatedItemsList.length-4}>
+            disabled={relatedItemsList.length < 4 || idx === relatedItemsList.length-4}>
               &gt;
           </button>
         </ul>
