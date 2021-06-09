@@ -30,8 +30,6 @@ class DefaultView extends React.Component {
   // }
 
   changeThumbNail(index) {
-    //this.props.callback(event.target.name);
-    //console.log(event.target.name);
     this.props.callback(index);
     this.setState({
       index: index,
@@ -43,19 +41,12 @@ class DefaultView extends React.Component {
 
   render() {
     var currentPic = this.props.picture;
-    // if(!this.state.thumbnail) {
-    //   currentPic = this.props.picture;
-    // } else {
-    //   //console.log(this.props.thumbnailArray[this.state.index].photos[0].thumbnail_url);
-    //   currentPic = this.props.thumbnailArray[this.state.index].photos[0].thumbnail_url
-    // }
-
     return(
       <>
       <div className = 'thumbnails'>
         {this.props.thumbnailArray.map((item, index) => {
           return(
-            <Thumbnail index = {index} thumbnail = {item.photos[0].thumbnail_url} callback = {this.changeThumbNail} oldIndex = {this.state.index}/>
+            <Thumbnail index = {index} thumbnail = {item.photos[0].thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {this.state.index}/>
           );
         })}
       </div>

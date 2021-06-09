@@ -21,6 +21,15 @@
   border-color: grey;
 }
 
+.highlightedThumb {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: yellow;
+}
+
 .bigPicture {
   display: inline;
   width: 55%;
