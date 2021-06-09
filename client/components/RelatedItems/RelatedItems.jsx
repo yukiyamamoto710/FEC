@@ -1,6 +1,6 @@
 import React from 'react';
 import RelatedProducts from './RelatedProducts.jsx';
-import Outfit from './Outfit.jsx';
+import Outfits from './Outfits.jsx';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
@@ -8,13 +8,16 @@ class RelatedItems extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      relatedItems: [], // related products IDs
       relatedItemsList: [],
-      selectedItemsList: []
+      selectedItemsList: [],
+      selected: false // if the current product is added to outfit list
     }
     this.getRelatedItemsIds = this.getRelatedItemsIds.bind(this);
     this.renderRelatedItems = this.renderRelatedItems.bind(this);
     this.getAllProductInfo = this.getAllProductInfo.bind(this);
     this.addToOutfit = this.addToOutfit.bind(this);
+    this.removeFromOutfit = this.removeFromOutfit.bind(this);
   }
 
   componentDidMount() {
@@ -31,7 +34,8 @@ class RelatedItems extends React.Component {
     axios.get('/get', {params: {endpoint: `products/${id}/related`}})
       .then((response) =>{
         this.setState({
-          relatedItems: response.data
+          relatedItems: response.data,
+          selected: false // everytime different product is displayed, change selected back to false
         }, this.renderRelatedItems)
       })
       .catch(err=>{
@@ -76,15 +80,31 @@ class RelatedItems extends React.Component {
   }
 
   addToOutfit() {
-    this.getAllProductInfo(this.props.id)
-      .then((results) => {
-        this.setState({
-          selectedItemsList: [results, ...this.state.selectedItemsList]
+    if (!this.state.selected) {
+      this.getAllProductInfo(this.props.id)
+        .then((results) => {
+          this.setState({
+            selectedItemsList: [results, ...this.state.selectedItemsList],
+            selected: true
+          })
         })
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+        .catch((err) => {
+          console.log(err);
+        })
+    }
+  }
+
+  removeFromOutfit(id) {
+    var updated = [...this.state.selectedItemsList];
+    for (var i = 0; i < updated.length; i++) {
+      if (updated[i].id === id) {
+        updated.splice(i, 1);
+      }
+    }
+    this.setState({
+      selectedItemsList: updated,
+      selected: false
+    })
   }
 
   render() {
@@ -94,8 +114,8 @@ class RelatedItems extends React.Component {
       <div>
         {relatedItemsList.length !== 0 ?
         <>
-          <RelatedProducts relatedItemsList={relatedItemsList} id={id} changeProductId={changeProductId}/>
-          <Outfit selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit}/>
+          <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId}/>
+          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/>
         </>:null}
       </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import CardTemplate from './CardTemplate.jsx';
+import RelatedProductCard from './RelatedProductCard.jsx';
 import PropTypes from 'prop-types';
 
 class RelatedProducts extends React.Component {
@@ -55,7 +55,7 @@ class RelatedProducts extends React.Component {
               &lt;
           </button>
           {displayed.map(product=>
-            <CardTemplate key={product.id} relatedId={product.id} product={product} id={id} changeProductId={changeProductId}/>
+            <RelatedProductCard key={product.id} product={product} id={id} changeProductId={changeProductId}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
