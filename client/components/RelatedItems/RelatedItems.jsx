@@ -78,10 +78,8 @@ class RelatedItems extends React.Component {
   addToOutfit() {
     this.getAllProductInfo(this.props.id)
       .then((results) => {
-        var list = [];
-        list.push(results)
         this.setState({
-          selectedItemsList: list
+          selectedItemsList: [results, ...this.state.selectedItemsList]
         })
       })
       .catch((err) => {
