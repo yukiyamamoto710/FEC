@@ -57,6 +57,17 @@
   font-size: 14px;
 }
 
+.addAnswer {
+  background-color: whitesmoke;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
 .helpful {
   background-color: white;
   font-weight: 600;
@@ -84,6 +95,13 @@
   background-color: white;
   width: 120px;
   padding: 5px;
-  font-size: 10px; margin: 5px;
+  font-size: 10px;
+  margin: 5px;
   font-weight: bold;
+}
+
+.spread {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

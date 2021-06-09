@@ -11,6 +11,7 @@ class QA extends React.Component {
       questions: [],
       sortedQuestions: [],
       displayQ: [],
+      addQuestion: false,
     };
     //this.addQuestion = this.addQuestion.bind(this);
     this.sortQuestions = this.sortQuestions.bind(this);
@@ -18,6 +19,7 @@ class QA extends React.Component {
     this.showQuestions = this.showQuestions.bind(this);
     this.handleLoadMore = this.handleLoadMore.bind(this);
     this.renderLoadMoreQ = this.renderLoadMoreQ.bind(this);
+    this.handleClickAddQ = this.handleClickAddQ.bind(this);
   }
 
   componentDidMount() {
@@ -69,6 +71,11 @@ class QA extends React.Component {
     )
   }
 
+  handleClickAddQ(event) {
+    event.preventDefault();
+    this.setState({addQuestion: true});
+  }
+
   // addQuestion(event, question){
   //   this.setState({addQuestion: question}, () => {
   //     axios.put('/put', uestion)
@@ -81,7 +88,7 @@ class QA extends React.Component {
         <div>
           {console.log('sorted questions', this.state.sortedQuestions)}
           {this.state.displayQ.map(question => <QAItem question={question} key={question.question_id}/>)}
-          {this.renderLoadMoreQ()}
+
         </div>
       )
     } else {
@@ -98,9 +105,11 @@ class QA extends React.Component {
       <div>
         <h3>Questions and Answers</h3>
         <br/>
-        <AddQ/>
         <br/>
         {this.renderQA()}
+        {this.renderLoadMoreQ()}
+        <button className="loadmoreQ" onClick={this.handleClickAddQ}>Add Question</button>
+        {this.state.addQuestion === true ? <AddQ/> : null}
       </div>
     )
   }

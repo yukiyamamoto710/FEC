@@ -21,7 +21,7 @@ class AddQ extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={pop}>
         Add Question:
         <form onSubmit={this.handleSubmit}>
           <input placeholder='Enter Nickname' name='asker_name' value={this.state.asker_name} onChange={this.handleChange}/>
@@ -36,3 +36,12 @@ class AddQ extends React.Component {
 }
 
 export default AddQ;
+
+const pop = {
+  position: 'absolute',
+  overflow: 'visible',
+  border:'1px solid black',
+  backgroundColor:'white',
+  display: 'flex',
+  flexDirection: 'column',
+}

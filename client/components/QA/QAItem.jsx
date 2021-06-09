@@ -1,5 +1,6 @@
 import React from 'react';
 import Answer from './Answer.jsx';
+import AddA from './AddA.jsx';
 
 
 class QAList extends React.Component {
@@ -10,7 +11,8 @@ class QAList extends React.Component {
       sortedAnswers: [],
       answers: [],
       displayA: [],
-      limit: 0
+      limit: 0,
+      addAnswer: false,
     };
     this.renderPage = this.renderPage.bind(this);
     this.renderQuestion = this.renderQuestion.bind(this);
@@ -18,6 +20,7 @@ class QAList extends React.Component {
     this.showAnswers = this.showAnswers.bind(this);
     this.handleLoadMore = this.handleLoadMore.bind(this);
     this.renderLoadMore = this.renderLoadMore.bind(this);
+    this.handleClickAddA = this.handleClickAddA.bind(this);
   }
 
   componentDidMount() {
@@ -52,6 +55,11 @@ class QAList extends React.Component {
       }
   }
 
+  handleClickAddA(event) {
+    event.preventDefault();
+    this.setState({addAnswer: true});
+  }
+
   renderLoadMore() {
     //console.log('this is sorted Answers and Limit', this.state.sortedAnswers.length, ':' , this.state.limit);
     if(this.state.sortedAnswers.length === 0 || this.state.sortedAnswers.length === 2) {
@@ -75,9 +83,11 @@ class QAList extends React.Component {
     return (
       <div>
         <div className="accordion__section accordian">
-          <button className="accordion">
+          <button className="accordion spread">
             <p className="accordion__title">Q: {this.state.question.question_body}</p>
+            <button className="addAnswer" onClick={this.handleClickAddA}>Add Answer +</button>
           </button>
+          {this.state.addAnswer === true ? <AddA/> : null}
           {this.state.displayA.length > 0 ?
             this.state.displayA.map(([key, value]) => {
               //console.log(value.body);
