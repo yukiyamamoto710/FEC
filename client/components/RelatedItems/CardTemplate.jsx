@@ -52,8 +52,8 @@ class CardTemplate extends React.Component {
   }
 
   render() {
-    const {id, product, deselect} = this.props;
-    if (id === "outfit") {
+    const {cardname, product, deselect, relatedId, changeProductId} = this.props;
+    if (cardname === "outfit") {
       // if it is an outfit card
       return (
         <li className="card outfit">
@@ -72,7 +72,7 @@ class CardTemplate extends React.Component {
     } else {
       // else it is an related item card
       return (
-        <li className="card">
+        <li className="card" onClick={()=>changeProductId(relatedId)}>
           <div className="parent">
             {this.state.seen ?
             <Comparison togglePop={this.togglePop} product={product} id={id}/> : null}
@@ -96,9 +96,10 @@ class CardTemplate extends React.Component {
 // onMouseOut={this.hideAdditionalImages}
 
 CardTemplate.propTypes = {
-  id: PropTypes.number,
+  cardname: PropTypes.string,
   deselect: PropTypes.func,
-  product: PropTypes.object
+  product: PropTypes.object,
+  changeProductId: PropTypes.func
 }
 
 export default CardTemplate;

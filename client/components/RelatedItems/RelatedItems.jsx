@@ -90,12 +90,13 @@ class RelatedItems extends React.Component {
   }
 
   render() {
+    const {id, changeProductId} = this.props;
     const {relatedItemsList, selectedItemsList} = this.state;
     return (
       <div>
         {relatedItemsList.length !== 0 ?
         <>
-          <RelatedProducts relatedItemsList={relatedItemsList} id={this.props.id}/>
+          <RelatedProducts relatedItemsList={relatedItemsList} id={id} changeProductId={changeProductId}/>
           <Outfit selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit}/>
         </>:null}
       </div>
@@ -104,7 +105,8 @@ class RelatedItems extends React.Component {
 }
 
 RelatedItems.propTypes = {
-  id: PropTypes.number
+  id: PropTypes.number,
+  changeProductId: PropTypes.func
 }
 
 export default RelatedItems;

@@ -52,7 +52,7 @@ class Outfit extends React.Component {
               <p className="add-message">Add to Outfit</p>
           </li>
           {deselect ? null: selectedItemsList.map(product=>
-            <CardTemplate id={"outfit"} key={product.id} product={product} deselect={this.deselectCurrentOutfit}/>
+            <CardTemplate cardname={"outfit"} key={product.id} product={product} deselect={this.deselectCurrentOutfit}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
