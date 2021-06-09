@@ -14,10 +14,12 @@ class Overview extends React.Component {
       description: [],
       stylesList: [],
       mounted: false,
-      index: 0
+      index: 0,
+      urlName: 'url'
     }
 
     this.changePic = this.changePic.bind(this);
+    this.changeThumbnail = this.changeThumbnail.bind(this);
     this.renderItems = this.renderItems.bind(this);
   }
 
@@ -64,13 +66,23 @@ class Overview extends React.Component {
 
 
   changePic(number) {
-    this.setState({index: number})
+    this.setState({
+      index: number,
+      urlName: 'url'
+    })
+  }
+
+  changeThumbnail(number) {
+    this.setState({
+      index: number,
+      urlName: 'thumbnail_url'
+    })
   }
 
   renderItems() {
       //const { category, name, id, slogan, description, features } = this.state.description;
       const currentItem = this.state.stylesList.results;
-      console.log(this.state.stylesList);
+      //console.log(this.state.stylesList);
       var price;
       var salePrice;
       if(currentItem[this.state.index].sale_price !== null) {
@@ -82,7 +94,7 @@ class Overview extends React.Component {
       }
       return(
         <>
-         <DefaultView picture = {currentItem[this.state.index].photos[0].url} thumbnailArray = {currentItem}/>
+         <DefaultView picture = {currentItem[this.state.index].photos[0][this.state.urlName]} thumbnailArray = {currentItem} index = {this.state.index}callback = {this.changeThumbnail}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice}/>
          <div className = 'stylesBox'>
          {this.state.stylesList.results.map((item, index) => {
@@ -117,4 +129,10 @@ export default Overview;
 const crossed = {
   textDecoration: 'line-through',
   color: 'red'
+}
+
+const highlighted = {
+  borderWidth: '2px',
+  borderStyle: 'solid',
+  borderColor: 'grey'
 }
