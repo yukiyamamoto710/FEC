@@ -1,15 +1,31 @@
 /**
  * @jest-environment jsdom
  */
- import React from 'react';
- import Warning from './Warning.jsx';
- import { render, cleanup } from '@testing-library/react';
- import renderer from 'react-test-renderer';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { render, cleanup, fireEvent } from '@testing-library/react';
+import Warning from './Warning';
 
- it('Waring will render all the warnings', () => {
-  expect(1).toBe(1);
- });
+afterEach(cleanup);
 
- it('Warning will trigger when clicked',()=>{
-  //spy
- });
+const testArray = ['A', 'B', 'C'];
+const testFunc = () => { testArray.push('D'); };
+
+it('Waring will render all the warnings', () => {
+  const { getAllByTestId } = render(<Warning warningItems={testArray} />);
+  const mapArray = getAllByTestId('WarningItems').map((i) => i.innerHTML);
+  expect(JSON.stringify(mapArray.length)).toEqual(JSON.stringify(testArray.length));
+});
+
+it('Warning will trigger when clicked', () => {
+  const { getByTestId } = render(<Warning show={testFunc} />);
+
+  fireEvent.click(getByTestId('WarningButton'));
+
+  expect(testArray.length).toBe(4);
+});
+
+it('matches snapShot', () => {
+  const tree = renderer.create(<Warning warningItems={testArray} show={testFunc} />).toJSON();
+  expect(tree).toMatchSnapshot();
+});

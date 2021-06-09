@@ -4,15 +4,18 @@ const Button = (props) =>{
   const { more, add, moreBTN } = props;
   return (
     <div
-      style = { style }>
-      { (moreBTN === true)?
-        <button
-          style = { button }
-          onClick = { more }>
+      style={style}
+    >
+      {moreBTN === true
+        ? (
+          <button
+            type="button"
+            style={button}
+            onClick={more}
+          >
             MORE REVIEWS
-        </button>
-      :
-        null }
+          </button>
+        ) : null }
       <button
         style = { button }
         onClick = { add }>

@@ -1,16 +1,16 @@
 import React from 'react';
 import axios from 'axios';
-import Overview from './Overview/Overview.jsx';
-import RelatedItems from './RelatedItems/RelatedItems.jsx';
+// import Overview from './Overview/Overview.jsx';
+// import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews.jsx';
-import QA from './QA/QA.jsx';
+// import QA from './QA/QA.jsx';
 
 class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
       list:[],
-      targetId: 25821,//reveiws testing. we can initialize with a particular ID
+      targetId: 25748,//reveiws testing. we can initialize with a particular ID
       styles: [],
       loaded: false
     };
@@ -38,7 +38,7 @@ class App extends React.Component{
       })
       .catch(err=> console.error(err))
     );
-  };
+  }
 
   fetchEverything() {
 
@@ -60,15 +60,15 @@ class App extends React.Component{
         this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
       })
     }
-  };
+  }
 
   renderPage() {
     if(this.state.loaded) {
       return (
         <div>
           <Overview id = {this.state.targetId}/>
-          <RelatedItems id={this.state.targetId} fetchGET={this.fetchGET} />
-          <QA questions={this.state.questions}/>
+          <RelatedItems id={this.state.targetId} />
+          <QA id={this.state.targetId} questions={this.state.questions}/>
           <Reviews id = { this.state.targetId}/>
         </div>
       )
@@ -84,9 +84,9 @@ class App extends React.Component{
   render(){
     return (
       <div>
-        {this.renderPage()}
+        {/* {this.renderPage()} */}
         <button onClick = {this.testing}> TESTING </button>
-        {/* <Reviews id ={this.state.targetId}/> */}
+        <Reviews id ={this.state.targetId}/>
       </div>
     )
   }

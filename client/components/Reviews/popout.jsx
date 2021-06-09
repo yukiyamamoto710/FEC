@@ -110,7 +110,7 @@ const pop = {
   border:'1px solid black',
   position: 'absolute',
   backgroundColor:'white',
-  zIndex:'98',
+  zIndex:'90',
   display: 'flex',
   flexDirection: 'column',
 }

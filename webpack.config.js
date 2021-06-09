@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, `/client/index.js`),
+  entry: path.join(__dirname, '/client/index.js'),
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, '/public')
+    path: path.join(__dirname, '/public'),
   },
   module: {
     rules: [
@@ -23,12 +23,13 @@ module.exports = {
               ["@babel/plugin-transform-runtime",
                 {
                   "regenerator": true
-                }
+                },
               ],
-            ]
-          }
-        }
-      }
-    ]
-  }
+            ],
+          },
+        },
+      },
+    ],
+  },
+  resolve: { extensions: ['.js', '.jsx'] },
 };

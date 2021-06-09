@@ -1,5 +1,6 @@
 import React from 'react';
 import Stars from '../Reviews/star.jsx';
+import PropTypes from 'prop-types';
 
 const Rating = (props) => {
   var rates = Object.keys(props.rating).sort();
@@ -10,6 +11,10 @@ const Rating = (props) => {
   return (
     <Stars rate={ave} />
   )
+}
+
+Rating.propTypes = {
+  rating: PropTypes.number
 }
 
 export default Rating;

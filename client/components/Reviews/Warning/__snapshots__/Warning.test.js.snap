@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapShot 1`] = `
+<div
+  className="warningContainer"
+  data-testid="WarningContainer"
+>
+  You must enter the following:
+  <div
+    data-testid="WarningItems"
+  >
+    <div
+      className="warningItems"
+    >
+      A
+    </div>
+  </div>
+  <div
+    data-testid="WarningItems"
+  >
+    <div
+      className="warningItems"
+    >
+      B
+    </div>
+  </div>
+  <div
+    data-testid="WarningItems"
+  >
+    <div
+      className="warningItems"
+    >
+      C
+    </div>
+  </div>
+  <div
+    data-testid="WarningItems"
+  >
+    <div
+      className="warningItems"
+    >
+      D
+    </div>
+  </div>
+  <div>
+    <div
+      className="warningButtonBG"
+    />
+    <button
+      className="warningButton"
+      data-testid="WarningButton"
+      onClick={[Function]}
+      type="button"
+    >
+      Back
+    </button>
+    <div
+      className="warningButtonPart1"
+    />
+    <div
+      className="warningButtonPart2"
+    />
+  </div>
+</div>
+`;

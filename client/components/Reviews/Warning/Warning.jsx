@@ -1,53 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const pop = {
-  height: '40%',
-  width: '40%',
-  overflow: 'visible',
-  border: '5px solid Red',
-  position: 'absolute',
-  backgroundColor: 'white',
-  zIndex: '99',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  margin: '50px',
-};
-
-const btn = {
-  width: '100px',
-  justifyContent: 'center',
-};
-
-const text = {
-  margin: '10px',
-};
-
 const Warning = (props) => {
   const { warningItems, show } = props;
   return (
     <div
-      style={pop}
+      data-testid="WarningContainer"
+      className="warningContainer"
     >
       You must enter the following:
       { warningItems.map((i) => (
         <div
-          className="hi"
           key={i}
-          style={text}
+          data-testid="WarningItems"
         >
-          {i}
+          <div className="warningItems">
+            {i}
+          </div>
         </div>
       ))}
-      <button
-        type="button"
-        style={btn}
-        onClick={show}
-      >
-        Back
-      </button>
+      <div>
+        <div className="warningButtonBG" />
+        <button
+          data-testid="WarningButton"
+          type="button"
+          className="warningButton"
+          onClick={show}
+        >
+          Back
+        </button>
+        <div className="warningButtonPart1" />
+        <div className="warningButtonPart2" />
+      </div>
     </div>
   );
 };
