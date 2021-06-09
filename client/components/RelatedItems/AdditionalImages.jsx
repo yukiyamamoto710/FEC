@@ -10,6 +10,7 @@ class AdditionalImages extends React.Component {
     };
     this.nextProduct = this.nextProduct.bind(this);
     this.prevProduct = this.prevProduct.bind(this);
+    this.changeMainImage = this.changeMainImage.bind(this);
   }
 
   componentDidMount() {
@@ -32,18 +33,22 @@ class AdditionalImages extends React.Component {
     })
   }
 
+  changeMainImage(e) {
+    this.props.changeMainImage(e.target.src)
+  }
+
   render() {
     const {images} = this.props;
     const {idx, displayed} = this.state;
     return (
       <div className="additional-images">
-        <button className="slideLeft"
+        <button className="slideLeft-mini"
           onClick={this.prevProduct}
           hidden={idx === 0}>
             &lt;
           </button>
-        {displayed.map((image)=><img key={image} className="thumbnail" src={image}/>)}
-        <button className="slideRight"
+        {displayed.map((image)=><img key={image} className="thumbnail" src={image} onClick={this.changeMainImage}/>)}
+        <button className="slideRight-mini"
             onClick={this.nextProduct}
             disabled={images.length < 4 || idx === images.length-4}>
               &gt;
@@ -54,7 +59,8 @@ class AdditionalImages extends React.Component {
 }
 
 AdditionalImages.propTypes = {
-  images: PropTypes.array
+  images: PropTypes.array,
+  changeMainImage: PropTypes.func
 }
 
 export default AdditionalImages;

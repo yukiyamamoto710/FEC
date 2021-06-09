@@ -147,14 +147,23 @@ th {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  min-height: 75px;
-  margin-top: -40%;
+  height: 45px;
+  margin-top: -50px;
   z-index: 1;
   position: absolute;
+  padding: 0;
 }
 
 .thumbnail {
   width: 100%;
   max-width: 40px;
   margin: 0 2px;
+}
+
+.slideLeft-mini,
+.slideRight-mini {
+  border: none;
+  width: 5px;
+  background: none;
+  color: white;
 }

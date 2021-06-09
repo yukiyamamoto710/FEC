@@ -16,6 +16,13 @@ class CardTemplate extends React.Component {
     this.togglePop = this.togglePop.bind(this);
     this.displayAdditionalImages = this.displayAdditionalImages.bind(this);
     this.hideAdditionalImages = this.hideAdditionalImages.bind(this);
+    this.changeMainImage = this.changeMainImage.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      mainImage: this.props.product.results[0].photos[0].url
+    })
   }
 
   togglePop() {
@@ -38,6 +45,12 @@ class CardTemplate extends React.Component {
     })
   }
 
+  changeMainImage(url) {
+    this.setState({
+      mainImage: url
+    })
+  }
+
   render() {
     const {id, product, deselect} = this.props;
     if (id === "outfit") {
@@ -46,7 +59,7 @@ class CardTemplate extends React.Component {
         <li className="card outfit">
           <div className="parent">
             <span className="close" onClick={()=>deselect()}>&#9447;</span>
-            <img className="related-product-img" src={product.results[0].photos[0].url}/>
+            <img className="related-product-img" src={this.state.mainImage}/>
             <div className="product-info">
               <div>{product.category}</div>
               <div className="product-name">{product.name}</div>
@@ -64,8 +77,8 @@ class CardTemplate extends React.Component {
             {this.state.seen ?
             <Comparison togglePop={this.togglePop} product={product} id={id}/> : null}
             <span className="star" onClick={this.togglePop}>&#9734;</span>
-            <img className="related-product-img" src={product.results[0].photos[0].url} onMouseOver={this.displayAdditionalImages} />
-            {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages}/>}
+            <img className="related-product-img" src={this.state.mainImage} onMouseOver={this.displayAdditionalImages} />
+            {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
             <div className="product-info">
               <div className="product-category">{product.category}</div>
               <div className="product-name">{product.name}</div>
