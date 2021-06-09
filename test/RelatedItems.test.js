@@ -1,5 +1,12 @@
-// const sum = require('/Users/yukiyamamoto/Documents/Immersive/FEC/client/components/RelatedItems/sampleTest.jsx');
+/**
+ * @jest-environment jsdom
+ */
 
-// test('adds 1 + 2 to equal 3', () => {
-//   expect(sum(1, 2)).toBe(3);
-// });
+import React from 'react';
+import { render } from '@testing-library/react';
+import RelatedItems from '../client/components/RelatedItems/RelatedItems.jsx';
+
+it('should render the OutfitCard component', () => {
+  const { asFragment } = render(<RelatedItems id={25811}/>);
+  expect(asFragment(<RelatedItems id={25811}/>)).toMatchSnapshot()
+})
