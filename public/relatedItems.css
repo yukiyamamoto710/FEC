@@ -130,16 +130,25 @@
 table {
   width: 100%;
 }
-.col-1 {
+/* .col-1 {
   text-align: left;
 }
 
 .col-3 {
   text-align: right;
+} */
+
+.description-row {
+  font-size: 12px;
+}
+
+.column,
+.description-row {
+  text-align: center;
 }
 
 th {
-  max-width: 33%;
+  min-width: 33%;
 }
 
 /* AdditionalImages component */
