@@ -51,7 +51,8 @@ class RelatedProducts extends React.Component {
         <ul className="carousel">
           <button className="slideLeft"
             onClick={this.prevProduct}
-            hidden={idx === 0}>
+            hidden={idx === 0}
+            data-testid="slideLeft">
               &lt;
           </button>
           {displayed.map(product=>
@@ -59,7 +60,8 @@ class RelatedProducts extends React.Component {
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
-            disabled={relatedItemsList.length < 4 || idx === relatedItemsList.length-4}>
+            disabled={relatedItemsList.length < 4 || idx === relatedItemsList.length-4}
+            data-testid="slideRight">
               &gt;
           </button>
         </ul>
