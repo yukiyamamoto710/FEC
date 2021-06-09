@@ -53,7 +53,7 @@ class QAList extends React.Component {
   }
 
   renderLoadMore() {
-    console.log('this is sorted Answers and Limit', this.state.sortedAnswers.length, ':' , this.state.limit);
+    //console.log('this is sorted Answers and Limit', this.state.sortedAnswers.length, ':' , this.state.limit);
     if(this.state.sortedAnswers.length === 0 || this.state.sortedAnswers.length === 2) {
       return;
     }
@@ -65,7 +65,7 @@ class QAList extends React.Component {
       );
     }
     return (
-      <button className="helpful accordian" onClick={this.handleLoadMore}>
+      <button className="helpful accordian__section" onClick={this.handleLoadMore}>
         Collapse Answers
       </button>
     )

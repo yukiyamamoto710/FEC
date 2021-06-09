@@ -53,7 +53,6 @@ const Answer = ({answer, answerer, date}) => {
   //       <Helpful/>
   //       <br/>
   //     </span>
-
   //   </div>
   // );
 

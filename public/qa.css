@@ -80,3 +80,10 @@
   outline: none;
 }
 
+.loadmoreQ {
+  background-color: white;
+  width: 120px;
+  padding: 5px;
+  font-size: 10px; margin: 5px;
+  font-weight: bold;
+}
