@@ -27,6 +27,7 @@ class DropDown extends React.Component {
     if(this.props.name !== prevProps.name) {
       this.setState({name: this.props.name});
     }
+
   }
 
   handleClick() {
@@ -59,13 +60,13 @@ class DropDown extends React.Component {
     return(
       <div className = 'dropdown'>
         <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
-          <select className = {name}>
+          <div className = {name}>
             {objKeys.map((item, index) => {
               return(
                 <DropDownSelection key = {index} style = {this.props.style} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
               )
             })}
-          </select>
+          </div>
         </button>
       </div>
     )
@@ -100,7 +101,7 @@ class DropDown extends React.Component {
     } else {
       name = 'show-content'
     }
-    if(this.props.name === 'Select Size v') {
+    if(this.props.name === 'Select Size') {
       return(
         this.showSize(name)
       );

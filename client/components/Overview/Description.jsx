@@ -58,8 +58,8 @@ class Description extends React.Component {
          <h2>{name}</h2>
          <div className = 'price'>${this.props.price}</div>
          <div>{this.props.salePrice}</div>
-         <DropDown name = 'Select Size v' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/>
-         <DropDown name = 'Quantity v'  quant = {this.state.skuSizeSelected} callback = {this.changeQuant}/>
+         <DropDown name = 'Select Size' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/>
+         <DropDown name = 'Quantity'  quant = {this.state.skuSizeSelected} callback = {this.changeQuant}/>
          <AddToCart style = {styleSelected} size = {skuSizeSelected} quantity = {skuQuantSelected} callback = {this.addItem}/>
        </div>
        <div>{slogan}</div>
