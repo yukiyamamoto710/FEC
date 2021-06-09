@@ -52,7 +52,7 @@ class CardTemplate extends React.Component {
   }
 
   render() {
-    const {cardname, product, deselect, relatedId, changeProductId} = this.props;
+    const {cardname, product, deselect, relatedId, changeProductId, id} = this.props;
     if (cardname === "outfit") {
       // if it is an outfit card
       return (
@@ -99,6 +99,7 @@ CardTemplate.propTypes = {
   cardname: PropTypes.string,
   deselect: PropTypes.func,
   product: PropTypes.object,
+  relatedId: PropTypes.number,
   changeProductId: PropTypes.func
 }
 

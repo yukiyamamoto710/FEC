@@ -69,7 +69,7 @@ class Comparison extends React.Component {
 }
 
 Comparison.propTypes = {
-  id: PropTypes.object,
+  id: PropTypes.number,
   togglePop: PropTypes.func,
   product: PropTypes.object
 }
