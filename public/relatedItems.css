@@ -1,7 +1,7 @@
 .container {
   position: relative; /* relative to a normal position */
   margin: auto; /* when displaying a block, setting margin auto will center */
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 .carousel {
@@ -18,7 +18,7 @@
   margin: 0 10px;
   box-sizing: border-box;
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
   height: 350px;
 }
 
@@ -33,6 +33,11 @@
 
 .product-info {
   margin: 5px;
+}
+
+.product-category,
+.product-price {
+  font-size: 12px;
 }
 
 .discounted-price {
@@ -50,7 +55,7 @@
 .slideLeft,
 .slideRight {
   border: none;
-  width: 75px;
+  width: 30px;
 }
 
 .slideLeft:hover,

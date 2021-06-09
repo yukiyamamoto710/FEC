@@ -90,12 +90,13 @@ class RelatedItems extends React.Component {
   }
 
   render() {
+    const {relatedItemsList, selectedItemsList} = this.state;
     return (
       <div>
-        {this.state.relatedItemsList.length !== 0 ?
+        {relatedItemsList.length !== 0 ?
         <>
-          <RelatedProducts relatedItemsList={this.state.relatedItemsList} id={this.props.id}/>
-          <Outfit selectedItemsList={this.state.selectedItemsList} addToOutfit={this.addToOutfit}/>
+          <RelatedProducts relatedItemsList={relatedItemsList} id={this.props.id}/>
+          <Outfit selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit}/>
         </>:null}
       </div>
     )
