@@ -17,6 +17,7 @@ class CardTemplate extends React.Component {
     this.displayAdditionalImages = this.displayAdditionalImages.bind(this);
     this.hideAdditionalImages = this.hideAdditionalImages.bind(this);
     this.changeMainImage = this.changeMainImage.bind(this);
+    this.changeProductId = this.changeProductId.bind(this);
   }
 
   componentDidMount() {
@@ -51,8 +52,14 @@ class CardTemplate extends React.Component {
     })
   }
 
+  changeProductId(e) {
+    if (["card", "related-product-img", "product-info", "product-category", "product-name", "product-price"].indexOf(e.target.className) !== -1) {
+      this.props.changeProductId(this.props.relatedId);
+    }
+  }
+
   render() {
-    const {cardname, product, deselect, relatedId, changeProductId, id} = this.props;
+    const {cardname, product, deselect, id} = this.props;
     if (cardname === "outfit") {
       // if it is an outfit card
       return (
@@ -72,12 +79,12 @@ class CardTemplate extends React.Component {
     } else {
       // else it is an related item card
       return (
-        <li className="card" onClick={()=>changeProductId(relatedId)}>
+        <li className="card" onClick={this.changeProductId}>
           <div className="parent">
             {this.state.seen ?
             <Comparison togglePop={this.togglePop} product={product} id={id}/> : null}
-            <span className="star" onClick={this.togglePop}>&#9734;</span>
             <div onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
+              <span className="star" onClick={this.togglePop}>&#9734;</span>
               <img className="related-product-img" src={this.state.mainImage} />
               {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
             </div>
