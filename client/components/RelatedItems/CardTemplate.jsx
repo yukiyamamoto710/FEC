@@ -77,8 +77,10 @@ class CardTemplate extends React.Component {
             {this.state.seen ?
             <Comparison togglePop={this.togglePop} product={product} id={id}/> : null}
             <span className="star" onClick={this.togglePop}>&#9734;</span>
-            <img className="related-product-img" src={this.state.mainImage} onMouseOver={this.displayAdditionalImages} />
-            {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
+            <div onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
+              <img className="related-product-img" src={this.state.mainImage} />
+              {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
+            </div>
             <div className="product-info">
               <div className="product-category">{product.category}</div>
               <div className="product-name">{product.name}</div>
@@ -92,10 +94,8 @@ class CardTemplate extends React.Component {
   }
 }
 
-// additional images should be clickable
-// onMouseOut={this.hideAdditionalImages}
-
 CardTemplate.propTypes = {
+  id: PropTypes.number,
   cardname: PropTypes.string,
   deselect: PropTypes.func,
   product: PropTypes.object,
