@@ -37,6 +37,38 @@
   margin-bottom: 25px;
   max-height: 500px;
   min-height: 500px;
+  position: relative;
+}
+
+.Picture {
+  /* display: inline;
+
+  min-height: 500px; */
+  width: 55%;
+  height: 50%;
+  margin-bottom: 25px;
+  max-height: 500px;
+  min-height: 500px;
+}
+
+.rightArrow {
+  display: inline;
+  z-index: 1;
+  position: absolute;
+  left: 85%;
+  margin-top: 85%;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.leftArrow {
+  display: inline;
+  z-index: 1;
+  position: absolute;
+  left: 10%;
+  margin-top: 85%;
+  border-radius: 100%;
+  background-color: white;
 }
 
 /* h3 {
@@ -52,8 +84,10 @@
   display: flex;
   width: 40%;
   flex-wrap: wrap;
-  margin-left: auto;
+  margin-left: 55%;
   margin-top: -15%;
+  padding-left: 5px;
+  padding-bottom: 10px;
 
 }
 .price {
@@ -73,6 +107,7 @@
   flex-wrap: wrap;
   width: 30%;
   margin-right: auto;
+
 }
 
 .dropdown-content {
@@ -155,6 +190,10 @@
 
 .selection {
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 

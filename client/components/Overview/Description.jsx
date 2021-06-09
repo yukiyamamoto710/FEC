@@ -56,6 +56,7 @@ class Description extends React.Component {
        <div className = 'describe'>
          <div className = 'category'>{category}</div>
          <h2>{name}</h2>
+         <div>{this.props.styleItem}</div>
          <div className = 'price'>${this.props.price}</div>
          <div>{this.props.salePrice}</div>
          <DropDown name = 'Select Size' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/>
