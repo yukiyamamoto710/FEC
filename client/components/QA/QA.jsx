@@ -3,7 +3,6 @@ import QAItem from './QAItem.jsx';
 import AddQ from './AddQ.jsx';
 import _ from 'underscore';
 
-
 class QA extends React.Component {
   constructor(props) {
     super(props);
@@ -23,16 +22,8 @@ class QA extends React.Component {
   }
 
   sortQuestions() {
-    //_.sortBy(this.state.questions, (question) => {question.question_helfulness})
-    // const sortedQuestions = new Promise ((resolve, reject) => {_.sortBy(this.state.questions, (question) => {question.question_helfulness})});
-    // console.log(sortedQuestions)
-    // sortedQuestions
-    //   .then((sortedQuestions) => {this.setState({sortedQuestions: sortedQuestions})})
-    //   .then(() => {console.log('this is sorted Questions', this.state.sortedQuestions)})
-    //   .catch((err) => {console.error(err)});
-
     var sortedQuestions = this.state.questions.sort((a,b) => a.question_helpfulness - b.question_helpfulness)
-    this.setState({'sortedQuestions': sortedQuestions}, () => {this.showQuestions()})
+    this.setState({'sortedQuestions': sortedQuestions.reverse()}, () => {this.showQuestions()})
   }
 
   showQuestions (limit = 4) {
