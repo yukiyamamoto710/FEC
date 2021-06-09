@@ -12,13 +12,13 @@ class Thumbnail extends React.Component {
   }
 
 
-  componentDidUpdate(prevProps) {
-    console.log('previous props: ', prevProps.identifier);
-    console.log('current props: ', this.props.identifier);
-    if(this.props.identifier !== prevProps.identifier) {
-      this.setState({clicked: false});
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   console.log('previous props: ', prevProps.identifier);
+  //   console.log('current props: ', this.props.identifier);
+  //   if(this.props.identifier !== prevProps.identifier) {
+  //     this.setState({clicked: false});
+  //   }
+  // }
 
   handleClick () {
     //console.log(event.target.name);
@@ -26,7 +26,7 @@ class Thumbnail extends React.Component {
     this.setState({clicked: true});
   }
   render() {
-    const clicked = this.state.clicked ? 'highlightedThumb' : 'thumbnail'
+    const clicked = this.props.identifier ? 'highlightedThumb' : 'thumbnail'
     // if(this.state.clicked) {
     //   clicked =
     // }

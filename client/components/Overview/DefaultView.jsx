@@ -30,23 +30,30 @@ class DefaultView extends React.Component {
   // }
 
   changeThumbNail(index) {
-    this.props.callback(index);
     this.setState({
       index: index,
-      thumbnail: false
+      thumbnail: true
     });
+    this.props.callback(index);
+
 
 
   }
 
   render() {
     var currentPic = this.props.picture;
+    var isHighlighted;
     return(
       <>
       <div className = 'thumbnails'>
         {this.props.thumbnailArray.map((item, index) => {
+          if(this.state.thumbail) {
+            isHighlighted = true;
+          } else {
+            isHighlighted = false;
+          }
           return(
-            <Thumbnail index = {index} thumbnail = {item.photos[0].thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {this.state.index}/>
+            <Thumbnail index = {index} thumbnail = {item.photos[0].thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {isHighlighted}/>
           );
         })}
       </div>
