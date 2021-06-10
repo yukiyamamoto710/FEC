@@ -8,7 +8,6 @@
 .accordion {
   background-color: whitesmoke;
   cursor: pointer;
-  padding: 5px;
   display: flex;
   align-items: center;
   border: none;
@@ -21,7 +20,7 @@
 .accordion__title {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
 
 }
 
@@ -39,7 +38,7 @@
 /* Style the accordion content panel. Note: hidden by default */
 .accordion__content {
   background-color: white;
-  padding: 5px;
+  padding: 7.5px;
   overflow: hidden;
   transition: max-height 0.6s ease;
   font-family: "Open Sans", sans-serif;
@@ -56,6 +55,17 @@
 .accordion__answer {
   font-weight: 400;
   font-size: 14px;
+}
+
+.addAnswer {
+  background-color: whitesmoke;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  outline: none;
 }
 
 .helpful {
@@ -81,3 +91,17 @@
   outline: none;
 }
 
+.loadmoreQ {
+  background-color: white;
+  width: 120px;
+  padding: 5px;
+  font-size: 10px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.spread {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

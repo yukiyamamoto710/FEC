@@ -7,16 +7,27 @@ class DropDown extends React.Component {
     super(props);
     this.state = {
       clicked: false,
-      name: ''
+      style: '',
+      price: 0,
+      name: '',
+      quant: 0
     }
     this.handleClick = this.handleClick.bind(this);
     this.showSize = this.showSize.bind(this);
     this.showQuantity = this.showQuantity.bind(this);
     this.storeSize = this.storeSize.bind(this);
+    this.storeQuantity = this.storeQuantity.bind(this);
   }
 
   componentDidMount() {
     this.setState({name: this.props.name});
+  }
+
+  componentDidUpdate (prevProps) {
+    if(this.props.name !== prevProps.name) {
+      this.setState({name: this.props.name});
+    }
+
   }
 
   handleClick() {
@@ -25,9 +36,22 @@ class DropDown extends React.Component {
     });
   }
 
-  storeSize(quantity, size) {
-    this.props.callback(quantity);
+  storeSize(size, quantity, style) {
+    console.log('this is style in dropdown', style, quantity);
+    this.props.callback(size, style);
     this.setState({name: size});
+  }
+
+  storeQuantity(quantity) {
+    this.props.callback(quantity);
+    this.setState({
+      name: quantity,
+      quant: quantity,
+    });
+  }
+
+  storeStyle(style, price) {
+    this.props.callback(style, price);
   }
 
   showSize(name) {
@@ -39,7 +63,7 @@ class DropDown extends React.Component {
           <div className = {name}>
             {objKeys.map((item, index) => {
               return(
-                <DropDownSelection key = {index} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
+                <DropDownSelection key = {index} style = {this.props.style} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
               )
             })}
           </div>
@@ -56,11 +80,11 @@ class DropDown extends React.Component {
     }
     return(
       <div className = 'dropdown'>
-        <button onClick = {this.handleClick} className = 'dropbtn'>{this.props.name}
+        <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
           <div className = {name}>
             {selectArray.map((item, index) => {
               return(
-                <option key = {index}>{item}</option>
+                <DropDownSelection key = {index} size = {item} quantity = {item} callback = {this.storeQuantity}/>
               )
             })}
           </div>
@@ -77,7 +101,7 @@ class DropDown extends React.Component {
     } else {
       name = 'show-content'
     }
-    if(this.props.name === 'Select Size v') {
+    if(this.props.name === 'Select Size') {
       return(
         this.showSize(name)
       );
