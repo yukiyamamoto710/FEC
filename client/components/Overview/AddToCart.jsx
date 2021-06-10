@@ -7,7 +7,8 @@ const AddToCart = (props) => {
     props.callback({
       style: props.style,
       size: props.size,
-      quantity: props.quantity
+      quantity: props.quantity,
+      sku: props.sku
     });
   }
 
