@@ -112,11 +112,11 @@ class RelatedItems extends React.Component {
     const {relatedItemsList, selectedItemsList} = this.state;
     return (
       <div>
-        {relatedItemsList.length !== 0 ?
+        { relatedItemsList.length !== 0 ?
         <>
           <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId}/>
           <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/>
-        </>:null}
+        </> : null }
       </div>
     )
   }

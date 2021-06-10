@@ -1,0 +1,32 @@
+{
+  "id": 1,
+  "name": "Item1",
+  "category": "Shirt",
+  "default_price": "756.00",
+  "product_id": "26094",
+  "results": [
+    {
+      "style_id": 148757,
+      "name": "Plum",
+      "original_price": "756.00",
+      "sale_price": "500.00",
+      "default?": true,
+      "photos": [
+        {
+          "thumbnail_url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+          "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+        }
+      ]
+    }
+  ],
+  "rating": {
+    "product_id": "26094",
+    "ratings": {
+      "1": "2",
+      "2": "6",
+      "3": "3",
+      "4": "3",
+      "5": "6"
+    }
+  }
+}
