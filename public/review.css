@@ -267,3 +267,19 @@
 }
 
 transform: perspective(500px) rotateY(45deg); */
+
+.add_moreBTN {
+  background-color: white;
+  width: 120px;
+  padding: 5px;
+  font-size: 12px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.add_moreBTNContainer {
+  display: flex;
+  justify-content: left;
+  height: 50px;
+  padding: 10px;
+}

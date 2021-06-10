@@ -46,7 +46,7 @@ class Reviews extends React.Component {
     this.notHelpful = this.notHelpful.bind(this);
     this.report = this.report.bind(this);
     this.add = this.add.bind(this);
-    this.more = this.more.bind(this);
+    this.moreReview = this.moreReview.bind(this);
     this.getTarget = this.getTarget.bind(this);
     this.addReview = this.addReview.bind(this);
     this.loading = this.loading.bind(this);
@@ -201,7 +201,7 @@ class Reviews extends React.Component {
     });
   };
 
-  more() {
+  moreReview() {
     let oldlen = this.state.reviewsList.length;
     let num = oldlen + 2;
     let targetId = this.state.productId;
@@ -317,7 +317,7 @@ class Reviews extends React.Component {
               helpful ={ this.helpful }
               notHelpful ={ this.notHelpful }
               report ={ this.report }
-              more = { this.more }
+              moreReview = { this.moreReview }
               addfunc = { this.add }
               msgClick = { this.msgClick }
               moreBTN = { moreBTNshowed }/>
