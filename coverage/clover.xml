@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1623305625047" clover="3.2.0">
-  <project timestamp="1623305625047" name="All files">
-    <metrics statements="451" coveredstatements="293" conditionals="30" coveredconditionals="19" methods="29" coveredmethods="12" elements="510" coveredelements="324" complexity="0" loc="451" ncloc="451" packages="2" files="8" classes="8"/>
+<coverage generated="1623306111618" clover="3.2.0">
+  <project timestamp="1623306111618" name="All files">
+    <metrics statements="451" coveredstatements="295" conditionals="35" coveredconditionals="26" methods="29" coveredmethods="12" elements="515" coveredelements="333" complexity="0" loc="451" ncloc="451" packages="2" files="8" classes="8"/>
     <package name="RelatedItems">
       <metrics statements="398" coveredstatements="247" conditionals="19" coveredconditionals="16" methods="28" coveredmethods="11"/>
       <file name="AdditionalImages.jsx" path="/Users/yukiyamamoto/Documents/Immersive/FEC/client/components/RelatedItems/AdditionalImages.jsx">
@@ -226,17 +226,17 @@
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="26" type="stmt"/>
-        <line num="7" count="26" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="26" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="26" type="stmt"/>
-        <line num="10" count="26" type="stmt"/>
-        <line num="11" count="26" type="stmt"/>
-        <line num="12" count="26" type="stmt"/>
-        <line num="13" count="26" type="stmt"/>
-        <line num="14" count="26" type="stmt"/>
-        <line num="15" count="26" type="stmt"/>
-        <line num="16" count="26" type="stmt"/>
+        <line num="6" count="27" type="stmt"/>
+        <line num="7" count="27" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="27" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="27" type="stmt"/>
+        <line num="10" count="27" type="stmt"/>
+        <line num="11" count="27" type="stmt"/>
+        <line num="12" count="27" type="stmt"/>
+        <line num="13" count="27" type="stmt"/>
+        <line num="14" count="27" type="stmt"/>
+        <line num="15" count="27" type="stmt"/>
+        <line num="16" count="27" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
@@ -425,30 +425,30 @@
       </file>
     </package>
     <package name="Reviews">
-      <metrics statements="53" coveredstatements="46" conditionals="11" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <metrics statements="53" coveredstatements="48" conditionals="16" coveredconditionals="10" methods="1" coveredmethods="1"/>
       <file name="star.jsx" path="/Users/yukiyamamoto/Documents/Immersive/FEC/client/components/Reviews/star.jsx">
-        <metrics statements="53" coveredstatements="46" conditionals="11" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <metrics statements="53" coveredstatements="48" conditionals="16" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="4" count="26" type="stmt"/>
-        <line num="5" count="26" type="cond" truecount="0" falsecount="1"/>
-        <line num="6" count="26" type="stmt"/>
-        <line num="7" count="26" type="stmt"/>
-        <line num="8" count="26" type="stmt"/>
-        <line num="9" count="26" type="cond" truecount="0" falsecount="1"/>
+        <line num="4" count="27" type="stmt"/>
+        <line num="5" count="27" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="27" type="stmt"/>
+        <line num="7" count="27" type="stmt"/>
+        <line num="8" count="27" type="stmt"/>
+        <line num="9" count="27" type="cond" truecount="0" falsecount="1"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="11" count="26" type="stmt"/>
+        <line num="11" count="27" type="cond" truecount="1" falsecount="0"/>
         <line num="12" count="26" type="stmt"/>
-        <line num="13" count="26" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="27" type="cond" truecount="1" falsecount="1"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="18" count="26" type="stmt"/>
-        <line num="19" count="26" type="stmt"/>
-        <line num="20" count="26" type="stmt"/>
-        <line num="21" count="26" type="stmt"/>
+        <line num="18" count="27" type="stmt"/>
+        <line num="19" count="27" type="stmt"/>
+        <line num="20" count="27" type="stmt"/>
+        <line num="21" count="27" type="cond" truecount="1" falsecount="0"/>
         <line num="22" count="26" type="cond" truecount="1" falsecount="0"/>
         <line num="23" count="78" type="stmt"/>
         <line num="24" count="78" type="stmt"/>
@@ -457,28 +457,28 @@
         <line num="27" count="78" type="stmt"/>
         <line num="28" count="78" type="stmt"/>
         <line num="29" count="78" type="stmt"/>
-        <line num="30" count="78" type="cond" truecount="0" falsecount="1"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="26" type="stmt"/>
-        <line num="33" count="26" type="cond" truecount="0" falsecount="1"/>
-        <line num="34" count="26" type="cond" truecount="0" falsecount="1"/>
-        <line num="35" count="26" type="stmt"/>
-        <line num="36" count="26" type="cond" truecount="0" falsecount="1"/>
-        <line num="37" count="26" type="stmt"/>
-        <line num="38" count="26" type="stmt"/>
-        <line num="39" count="26" type="cond" truecount="1" falsecount="0"/>
-        <line num="40" count="26" type="stmt"/>
-        <line num="41" count="26" type="stmt"/>
-        <line num="42" count="26" type="stmt"/>
-        <line num="43" count="26" type="stmt"/>
-        <line num="44" count="26" type="stmt"/>
-        <line num="45" count="26" type="stmt"/>
-        <line num="46" count="26" type="stmt"/>
-        <line num="47" count="26" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="78" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="27" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="27" type="cond" truecount="1" falsecount="0"/>
+        <line num="34" count="27" type="cond" truecount="0" falsecount="1"/>
+        <line num="35" count="27" type="stmt"/>
+        <line num="36" count="27" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="27" type="stmt"/>
+        <line num="38" count="27" type="stmt"/>
+        <line num="39" count="27" type="cond" truecount="1" falsecount="0"/>
+        <line num="40" count="31" type="stmt"/>
+        <line num="41" count="31" type="stmt"/>
+        <line num="42" count="31" type="stmt"/>
+        <line num="43" count="31" type="stmt"/>
+        <line num="44" count="31" type="stmt"/>
+        <line num="45" count="31" type="stmt"/>
+        <line num="46" count="31" type="stmt"/>
+        <line num="47" count="31" type="cond" truecount="0" falsecount="1"/>
         <line num="48" count="0" type="stmt"/>
-        <line num="49" count="26" type="stmt"/>
-        <line num="50" count="26" type="stmt"/>
-        <line num="51" count="26" type="stmt"/>
+        <line num="49" count="27" type="stmt"/>
+        <line num="50" count="27" type="stmt"/>
+        <line num="51" count="27" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
       </file>

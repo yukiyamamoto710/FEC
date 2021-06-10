@@ -10,7 +10,7 @@ const Rating = ({rating}) => {
 
   return (
     <div>
-     <Stars data-testid="star" rate={ave} />
+     <Stars rate={ave} />
     </div>
   )
 }

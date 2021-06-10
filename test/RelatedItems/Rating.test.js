@@ -7,7 +7,7 @@
  import product from './fixtures/product.json';
  import '@testing-library/jest-dom/extend-expect';
 
-//  it('should show the rating of 3.25', () => {
-//   const { getByTestId } = render(<Rating rating={product.rating}/>);
-//   expect(getByTestId("star")).toHaveTextContent();
-//   })
+ test('should show the rating of 3.25', () => {
+  const { getByRole } = render(<Rating rating={product.rating}/>);
+  expect(getByRole("imag")).toHaveAttribute('src');
+  })
