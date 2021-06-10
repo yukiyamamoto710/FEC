@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import DescirptionRow from './DescriptionRow.jsx';
 import PropTypes from 'prop-types';
 

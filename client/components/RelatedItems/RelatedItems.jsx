@@ -69,7 +69,6 @@ class RelatedItems extends React.Component {
     }
     Promise.all(promises)
       .then((response) => {
-        console.log('render relatedItemsList')
         this.setState({
           relatedItemsList: response
         })
