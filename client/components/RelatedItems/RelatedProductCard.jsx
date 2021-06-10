@@ -88,6 +88,7 @@ RelatedProductCard.propTypes = {
   cardname: PropTypes.string,
   deselectOutfit: PropTypes.func,
   product: PropTypes.object,
+  currentItem: PropTypes.object,
   changeProductId: PropTypes.func
 }
 

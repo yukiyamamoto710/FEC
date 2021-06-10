@@ -113,18 +113,10 @@ class RelatedItems extends React.Component {
   }
 
   addToOutfit() {
-    if (!this.state.selected) {
-      this.getAllProductInfo(this.props.id)
-        .then((results) => {
-          this.setState({
-            selectedItemsList: [results, ...this.state.selectedItemsList],
-            selected: true
-          })
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-    }
+    this.setState({
+      selectedItemsList: [this.state.currentItem, ...this.state.selectedItemsList],
+      selected: true
+    })
   }
 
   removeFromOutfit(id) {
@@ -148,7 +140,7 @@ class RelatedItems extends React.Component {
         { relatedItemsList.length !== 0 ?
         <>
           <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId} currentItem={currentItem}/>
-          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit} currentItem={currentItem}/>
+          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/>
         </> : null }
       </div>
     )
