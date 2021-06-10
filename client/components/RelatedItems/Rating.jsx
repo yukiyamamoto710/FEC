@@ -7,9 +7,11 @@ const Rating = ({rating}) => {
   var size = rates.reduce((sum, i)=>(sum + Number(rating[i])),0);
   var total = rates.reduce((sum, i)=>(sum + Number(i) * Number(rating[i])), 0);
   var ave  = total/size;
-  
+
   return (
-    <Stars rate={ave} />
+    <div>
+     <Stars data-testid="star" rate={ave} />
+    </div>
   )
 }
 
