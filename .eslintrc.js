@@ -24,6 +24,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    // without this rule test part render() will get redling;
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
   },
 };

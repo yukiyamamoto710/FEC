@@ -3,7 +3,12 @@
  */
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, cleanup, fireEvent } from '@testing-library/react';
+import {
+  render,
+  cleanup,
+  fireEvent,
+  screen,
+} from '@testing-library/react';
 import Warning from './Warning';
 
 afterEach(cleanup);
@@ -18,11 +23,13 @@ it('Waring will render all the warnings', () => {
 });
 
 it('Warning will trigger when clicked', () => {
-  const { getByTestId } = render(<Warning show={testFunc} />);
-
-  fireEvent.click(getByTestId('WarningButton'));
-
-  expect(testArray.length).toBe(4);
+  const handleClick = jest.fn();
+  // const { getByTestId } = render(<Warning show={handleClick} />);
+  render(<Warning show={handleClick} />);
+  fireEvent.click(screen.getByTestId('WarningButton'));
+  // fireEvent.click(getByTestId('WarningButton'));
+  expect(handleClick).toHaveBeenCalledTimes(1);
+  // expect(testArray.length).toBe(4);
 });
 
 it('matches snapShot', () => {

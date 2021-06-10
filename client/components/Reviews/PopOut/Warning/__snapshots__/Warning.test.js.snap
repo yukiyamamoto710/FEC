@@ -33,15 +33,6 @@ exports[`matches snapShot 1`] = `
       C
     </div>
   </div>
-  <div
-    data-testid="WarningItems"
-  >
-    <div
-      className="warningItems"
-    >
-      D
-    </div>
-  </div>
   <div>
     <div
       className="warningButtonBG"

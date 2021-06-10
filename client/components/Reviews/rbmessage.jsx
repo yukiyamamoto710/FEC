@@ -2,10 +2,11 @@ import React from 'react';
 import Message from './message.jsx';
 import Photo from './photo.jsx';
 import Head from './meshead.jsx';
-import HR from './helpful.jsx'
-///// key should be review_id
-/// since cant post and cant get the review_id
-/// use index
+import HR from './helpful';
+
+// key should be review_id
+// since cant post and cant get the review_id
+// use index
 const MessageList = (props) => {
   const { list, helpful, report, notHelpful, msgClick } = props;
 

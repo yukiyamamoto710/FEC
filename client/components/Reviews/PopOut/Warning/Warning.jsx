@@ -37,7 +37,7 @@ const Warning = (props) => {
 };
 
 Warning.propTypes = {
-  warningItems: PropTypes.instanceOf(Array),
+  warningItems: PropTypes.arrayOf(PropTypes.string),
   show: PropTypes.func,
 };
 

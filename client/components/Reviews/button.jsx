@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = (props) =>{
+const Button = (props) => {
   const { more, add, moreBTN } = props;
   return (
     <div
@@ -17,10 +17,12 @@ const Button = (props) =>{
           </button>
         ) : null }
       <button
-        style = { button }
-        onClick = { add }>
-          ADD A REVIEWS +
-        </button>
+        type="button"
+        style={button}
+        onClick={add}
+      >
+        ADD A REVIEWS +
+      </button>
     </div>
   );
 };
@@ -35,7 +37,7 @@ const style = {
 };
 
 const button = {
-  backgroundColor:'white',
+  backgroundColor: 'white',
   width: '120px',
   padding: '5px',
   fontSize: '10px',

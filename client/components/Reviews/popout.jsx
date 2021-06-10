@@ -95,8 +95,8 @@ const PopOut = (props) =>{
             onClick ={a}>
               Submit
           </button>
-          <input type ='file' key = 'photo1' onChange = { getTarget } id = 'Photo'></input>
-          <input type ='file' key = 'photo2' onChange = { getTarget } id = 'Photo'></input>
+          <input type ='file' key = 'photo1' onChange = { getTarget } id = 'Photo' />
+          <input type ='file' key = 'photo2' onChange = { getTarget } id = 'Photo' />
         </div>
       </div>
     )
