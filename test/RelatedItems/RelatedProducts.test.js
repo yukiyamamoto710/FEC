@@ -5,12 +5,12 @@
  import { render, screen, fireEvent } from '@testing-library/react';
  import RelatedProducts from '../../client/components/RelatedItems/RelatedProducts.jsx';
  import relatedItemsList from './fixtures/relatedItemsList.json';
+ import '@testing-library/jest-dom/extend-expect';
 
  it('renders the RelatedProducts component', () => {
    render(<RelatedProducts id={1} relatedItemsList={relatedItemsList}/>);
    screen.getByText("RELATED PRODUCTS");
    expect(getByTestId("slideRight")).toBeDisabled();
-   expect()
  })
 
  it('should show the fifth product in list and hide the first one', () => {
