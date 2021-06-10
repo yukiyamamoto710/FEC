@@ -10,6 +10,7 @@ class Description extends React.Component {
       styleSelected: '',
       skuSizeSelected: '',
       skuQuantSelected: 0,
+      sku: 0,
       inCart: 0,
       cart: []
     }
@@ -18,10 +19,11 @@ class Description extends React.Component {
     this.addItem = this.addItem.bind(this);
   }
 
-  changeSKU(size, style) {
+  changeSKU(size, style, sku) {
     this.setState({
       styleSelected: style,
       skuSizeSelected: size,
+      sku: sku
     });
   }
 
@@ -41,40 +43,44 @@ class Description extends React.Component {
       cart: copy,
       styleSelected: '',
       skuSizeSelected: '',
-      skuQuantSelected: 0
+      skuQuantSelected: 0,
+      sku: 0
     })
   }
 
 
 
   render() {
-    const { category, name, slogan, description, features } = this.props.descriptions;
+    const { category, name, slogan, description, features} = this.props.descriptions;
     //console.log('thispropsstyle in descroption', this.props.style);
-    const {styleSelected, skuSizeSelected, skuQuantSelected} = this.state;
+    const {styleSelected, skuSizeSelected, skuQuantSelected, sku} = this.state;
     return(
       <>
        <div className = 'describe'>
          <div className = 'category'>{category}</div>
          <h2>{name}</h2>
+         <div>{this.props.styleItem}</div>
+         <br></br>
          <div className = 'price'>${this.props.price}</div>
-         <div>{this.props.salePrice}</div>
+         <span>{this.props.salePrice}</span>
          <DropDown name = 'Select Size' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/>
          <DropDown name = 'Quantity'  quant = {this.state.skuSizeSelected} callback = {this.changeQuant}/>
-         <AddToCart className = 'addCart' style = {styleSelected} size = {skuSizeSelected} quantity = {skuQuantSelected} callback = {this.addItem}/>
+         <AddToCart className = 'addCart' style = {styleSelected} size = {skuSizeSelected} quantity = {skuQuantSelected} callback = {this.addItem} sku = {sku}/>
        </div>
-       <div>{slogan}</div>
-       <div className = 'description'>{description}</div>
-       <div>{features.map((item, index) => {
-          return (
-            <div key = {index}>{item.feature} {item.value}</div>
-          )
-        })}</div>
+       <div className = 'description'>
+         <h3>{slogan}</h3>
+         <p>{description}</p>
+         <div>{features.map((item, index) => {
+            return (
+              <div key = {index}>{item.feature} {item.value}</div>
+            )
+          })}</div>
+        </div>
 
       </>
     );
   }
 
 }
-
 
 export default Description;

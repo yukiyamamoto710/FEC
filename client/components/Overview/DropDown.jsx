@@ -36,9 +36,9 @@ class DropDown extends React.Component {
     });
   }
 
-  storeSize(size, quantity, style) {
-    console.log('this is style in dropdown', style, quantity);
-    this.props.callback(size, style);
+  storeSize(size, quantity, style, price, sku) {
+    console.log('this is style in dropdown', style, quantity, sku);
+    this.props.callback(size, style, sku);
     this.setState({name: size});
   }
 
@@ -63,7 +63,7 @@ class DropDown extends React.Component {
           <div className = {name}>
             {objKeys.map((item, index) => {
               return(
-                <DropDownSelection key = {index} style = {this.props.style} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize}/>
+                <DropDownSelection key = {index} style = {this.props.style} size = {this.props.skus[item].size} quantity = {this.props.skus[item].quantity} callback = {this.storeSize} sku = {item}/>
               )
             })}
           </div>
@@ -113,12 +113,6 @@ class DropDown extends React.Component {
 
   }
 }
-
-
-
-
-
-
 
 
 export default DropDown;

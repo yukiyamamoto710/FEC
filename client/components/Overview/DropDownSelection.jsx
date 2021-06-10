@@ -22,7 +22,7 @@ class DropDownSelection extends React.Component{
       styleName = '';
     }
 
-    this.props.callback(this.props.size, this.props.quantity, styleName, currentPrice);
+    this.props.callback(this.props.size, this.props.quantity, styleName, currentPrice, this.props.sku);
   }
 
   render() {

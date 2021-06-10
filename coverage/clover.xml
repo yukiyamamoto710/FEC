@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1623347560670" clover="3.2.0">
   <project timestamp="1623347560679" name="All files">
     <metrics statements="451" coveredstatements="295" conditionals="35" coveredconditionals="26" methods="29" coveredmethods="12" elements="515" coveredelements="333" complexity="0" loc="451" ncloc="451" packages="2" files="8" classes="8"/>
     <package name="RelatedItems">
       <metrics statements="398" coveredstatements="247" conditionals="19" coveredconditionals="16" methods="28" coveredmethods="11"/>
       <file name="AdditionalImages.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/AdditionalImages.jsx">
+=======
+<coverage generated="1623347554362" clover="3.2.0">
+  <project timestamp="1623347554362" name="All files">
+    <metrics statements="451" coveredstatements="295" conditionals="35" coveredconditionals="26" methods="29" coveredmethods="12" elements="515" coveredelements="333" complexity="0" loc="451" ncloc="451" packages="2" files="8" classes="8"/>
+    <package name="RelatedItems">
+      <metrics statements="398" coveredstatements="247" conditionals="19" coveredconditionals="16" methods="28" coveredmethods="11"/>
+      <file name="AdditionalImages.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/AdditionalImages.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="66" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -73,7 +82,11 @@
         <line num="65" count="1" type="stmt"/>
         <line num="66" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Comparison.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/Comparison.jsx">
+=======
+      <file name="Comparison.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/Comparison.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="77" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -153,7 +166,11 @@
         <line num="76" count="1" type="stmt"/>
         <line num="77" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="DescriptionRow.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/DescriptionRow.jsx">
+=======
+      <file name="DescriptionRow.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/DescriptionRow.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="42" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -198,7 +215,11 @@
         <line num="41" count="1" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Price.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/Price.jsx">
+=======
+      <file name="Price.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/Price.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="18" coveredstatements="18" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -219,7 +240,11 @@
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="Rating.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/Rating.jsx">
+=======
+      <file name="Rating.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/Rating.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="22" coveredstatements="22" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -244,7 +269,11 @@
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="RelatedProductCard.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/RelatedProductCard.jsx">
+=======
+      <file name="RelatedProductCard.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/RelatedProductCard.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="94" coveredstatements="72" conditionals="5" coveredconditionals="3" methods="8" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -341,7 +370,11 @@
         <line num="93" count="1" type="stmt"/>
         <line num="94" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
       <file name="RelatedProducts.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/RelatedProducts.jsx">
+=======
+      <file name="RelatedProducts.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/RelatedProducts.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="79" coveredstatements="75" conditionals="8" coveredconditionals="7" methods="6" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -426,7 +459,11 @@
     </package>
     <package name="Reviews">
       <metrics statements="53" coveredstatements="48" conditionals="16" coveredconditionals="10" methods="1" coveredmethods="1"/>
+<<<<<<< HEAD
       <file name="star.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/Reviews/star.jsx">
+=======
+      <file name="star.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/Reviews/star.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="53" coveredstatements="48" conditionals="16" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
