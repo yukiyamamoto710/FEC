@@ -4,9 +4,11 @@ class AddA extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicked: false,
+      clicked: true,
+      answer: '',
+      nickname: '',
     };
-    this.handleChange = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.renderPage = this.renderPage.bind(this);
   }
 
@@ -22,14 +24,9 @@ class AddA extends React.Component {
           Add Answer:
           <form onSubmit={this.handleSubmit}>
             <input placeholder='Add Answer' name='answer' value={this.state.answer} onChange={this.handleChange}/>
+            <input placeholder='Enter Nickname' name='nickname' value={this.state.nickname} onChange={this.handleChange}/>
             <button>Add</button>
           </form>
-        </div>
-      )
-    } else {
-      return (
-        <div>
-          <button>Add Answer</button>
         </div>
       )
     }
@@ -37,7 +34,7 @@ class AddA extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style = {pop}>
         {this.renderPage()}
       </div>
     );
@@ -45,3 +42,13 @@ class AddA extends React.Component {
 }
 
 export default AddA;
+
+const pop = {
+  overflow: 'visible',
+  border:'1px solid black',
+  position: 'absolute',
+  backgroundColor:'white',
+  zIndex:'98',
+  display: 'flex',
+  flexDirection: 'column',
+}
