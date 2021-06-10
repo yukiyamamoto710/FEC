@@ -19,7 +19,6 @@
     "babel-jest": "^27.0.2",
     "babel-loader": "^8.2.2",
     "express": "^4.17.1",
-    "jest": "^27.0.4",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
@@ -31,7 +30,11 @@
     "webpack-cli": "^4.7.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
     "eslint": "^7.28.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-plugin-react": "^7.24.0",
+    "jest": "^27.0.4"
   }
 }
