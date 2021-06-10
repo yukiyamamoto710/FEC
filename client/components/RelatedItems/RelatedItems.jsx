@@ -8,6 +8,7 @@ class RelatedItems extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentItem: {},
       relatedItems: [], // related products IDs
       relatedItemsList: [],
       selectedItemsList: [],
@@ -22,11 +23,29 @@ class RelatedItems extends React.Component {
 
   componentDidMount() {
     this.getRelatedItemsIds(this.props.id);
+    this.getAllProductInfo(this.props.id)
+      .then((results) => {
+        this.setState({
+          currentItem: results
+        })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.id !== this.props.id) {
       this.getRelatedItemsIds(this.props.id);
+      this.getAllProductInfo(this.props.id)
+        .then((results) => {
+          this.setState({
+            currentItem: results
+          })
+        })
+        .catch((err) => {
+          console.log(err);
+        })
     }
   }
 
@@ -50,6 +69,7 @@ class RelatedItems extends React.Component {
     }
     Promise.all(promises)
       .then((response) => {
+        console.log('render relatedItemsList')
         this.setState({
           relatedItemsList: response
         })
@@ -63,8 +83,21 @@ class RelatedItems extends React.Component {
     return new Promise((resolve, reject) => {
       axios.get('/get', {params: {endpoint: `products/${id}`}})
         .then((product) => {
+          // eventually clean up data at the server side before sending to client
+          delete product.data['campus'];
+          delete product.data['created_at'];
+          delete product.data['description'];
+          delete product.data['slogan'];
+          delete product.data['updated_at'];
+          delete product.data['product_id'];
+
           axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
             .then((styles) => {
+              // eventually clean up data at the server side before sending to client
+              styles.data.results.map(style=> {
+                delete style['skus'];
+              })
+
               axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
                 .then((rating) => {
                   var mergedList = Object.assign(product.data, styles.data)
@@ -109,13 +142,13 @@ class RelatedItems extends React.Component {
 
   render() {
     const {id, changeProductId} = this.props;
-    const {relatedItemsList, selectedItemsList} = this.state;
+    const {relatedItemsList, selectedItemsList, currentItem} = this.state;
     return (
       <div>
         { relatedItemsList.length !== 0 ?
         <>
-          <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId}/>
-          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/>
+          <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId} currentItem={currentItem}/>
+          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit} currentItem={currentItem}/>
         </> : null }
       </div>
     )

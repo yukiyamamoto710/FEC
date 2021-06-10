@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DescriptionRow = ({feature, relatedProduct, currentProduct}) => {
+const DescriptionRow = ({feature, relatedProduct, currentItem}) => {
   // get an array of obj (if it does not contain a particular feature array should be empty)
   var featureInRelatedProduct = relatedProduct.filter(entry=>entry.feature===feature);
-  var featureInCurrentProduct = currentProduct.filter(entry=>entry.feature===feature);
+  var featureInCurrentProduct = currentItem.filter(entry=>entry.feature===feature);
   var displayCol1 = null;
   var displayCol3 = null;
   if (featureInRelatedProduct.length) {
@@ -36,7 +36,7 @@ const DescriptionRow = ({feature, relatedProduct, currentProduct}) => {
 DescriptionRow.propTypes = {
   feature: PropTypes.string,
   relatedProduct: PropTypes.array,
-  currentProduct: PropTypes.array
+  currentItem: PropTypes.array
 }
 
 export default DescriptionRow;

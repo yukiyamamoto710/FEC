@@ -43,7 +43,7 @@ class RelatedProducts extends React.Component {
   }
 
   render() {
-    const {relatedItemsList, id, changeProductId} = this.props;
+    const {relatedItemsList, id, changeProductId, currentItem} = this.props;
     const {idx, displayed} = this.state;
     return (
       <div className="container">
@@ -56,7 +56,7 @@ class RelatedProducts extends React.Component {
               &lt;
           </button>
           {displayed.map(product=>
-            <RelatedProductCard key={product.id} product={product} id={id} changeProductId={changeProductId}/>
+            <RelatedProductCard key={product.id} product={product} id={id} changeProductId={changeProductId} currentItem={currentItem}/>
             )}
           <button className="slideRight"
             onClick={this.nextProduct}
@@ -73,7 +73,8 @@ class RelatedProducts extends React.Component {
 RelatedProducts.propTypes = {
   id: PropTypes.number,
   relatedItemsList: PropTypes.array,
-  changeProductId: PropTypes.func
+  changeProductId: PropTypes.func,
+  currentItem: PropTypes.object
 }
 
 export default RelatedProducts;

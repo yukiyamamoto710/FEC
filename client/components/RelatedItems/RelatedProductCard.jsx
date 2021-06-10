@@ -60,12 +60,12 @@ class RelatedProductCard extends React.Component {
   }
 
   render() {
-    const {id, product} = this.props;
+    const {id, product, currentItem} = this.props;
     return (
       <li className="card" onClick={this.changeProductId}>
         <div className="parent">
           {this.state.seen ?
-          <Comparison togglePop={this.togglePop} product={product} id={id}/> : null}
+          <Comparison togglePop={this.togglePop} product={product} id={id} currentItem={currentItem}/> : null}
           <div onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
             <span className="star" onClick={this.togglePop}>&#9734;</span>
             <img className="related-product-img" src={this.state.mainImage} />

@@ -15,19 +15,13 @@ class Comparison extends React.Component {
 
   // performance wise - I need to fetch data for currently displayed product at a different place
   componentDidMount() {
-    axios.get('/get', {params: {endpoint: `products/${this.props.id}`}})
-      .then((results) => {
-        this.setState({
-          currentProduct: results.data
-        }, this.combineAllFeatures)
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+     this.setState({
+       currentItem: this.props.currentItem
+     }, this.combineAllFeatures)
   }
 
   combineAllFeatures() {
-    var allFeatureObjs = this.props.product.features.concat(this.state.currentProduct.features);
+    var allFeatureObjs = this.props.product.features.concat(this.state.currentItem.features);
     var allFeatures = allFeatureObjs.map(obj=>obj.feature);
     // filter out the duplicate features
     var featureList = [...new Set(allFeatures)];
@@ -42,34 +36,44 @@ class Comparison extends React.Component {
 
   render() {
     const{product} = this.props;
-    const {currentProduct, featureList} = this.state;
-    return (
-      <div className="modal">
-        <div className="modal_content">
-          <span className="close" onClick={this.handleClick}>&times;</span>
-          <p>Comparing</p>
-          <table>
-            <thead>
-              <tr className="column">
-                <th className="col-1">{product.name}</th>
-                <th className="col-2"></th>
-                <th className="col-3">{!currentProduct ? null: currentProduct.name}</th>
-              </tr>
-            </thead>
-            <tbody className="description-row">
-              {featureList.map(feature=>
-                <DescirptionRow key={feature} feature={feature} relatedProduct={product.features} currentProduct={currentProduct.features}/>
-              )}
-            </tbody>
-          </table>
+    const {currentItem, featureList} = this.state;
+    if (currentItem) {
+      return (
+        <div className="modal">
+          <div className="modal_content">
+            <span className="close" onClick={this.handleClick}>&times;</span>
+            <p>Comparing</p>
+            <table>
+              <thead>
+                <tr className="column">
+                  <th className="col-1">{product.name}</th>
+                  <th className="col-2"></th>
+                  <th className="col-3">{currentItem.name}</th>
+                </tr>
+              </thead>
+              <tbody className="description-row">
+                {featureList.map(feature=>
+                  <DescirptionRow key={feature} feature={feature} relatedProduct={product.features} currentItem={currentItem.features}/>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return (
+        <div className="modal">
+        <div className="modal_content">
+        </div>
+        </div>
+      )
+    }
   }
 }
 
 Comparison.propTypes = {
   id: PropTypes.number,
+  currentItem: PropTypes.object,
   togglePop: PropTypes.func,
   product: PropTypes.object
 }
