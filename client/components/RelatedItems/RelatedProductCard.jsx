@@ -73,7 +73,7 @@ class RelatedProductCard extends React.Component {
           </div>
           <div className="product-info">
             <div className="product-category">{product.category}</div>
-            <div className="product-name">{product.name}</div>
+            <div multiple data-testid="product-name" className="product-name">{product.name}</div>
             <Price product={product}/>
             <Rating rating={product.rating.ratings} />
           </div>

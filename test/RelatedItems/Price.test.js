@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
  import React from 'react';
- import { render, screen, fireEvent } from '@testing-library/react';
+ import { render, screen } from '@testing-library/react';
  import Price from '../../client/components/RelatedItems/Price.jsx';
  import product from './fixtures/product.json';
  import product2 from './fixtures/product2.json';

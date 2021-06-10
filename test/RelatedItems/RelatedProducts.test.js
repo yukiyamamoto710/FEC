@@ -7,18 +7,28 @@
  import relatedItemsList from './fixtures/relatedItemsList.json';
  import '@testing-library/jest-dom/extend-expect';
 
- it('renders the RelatedProducts component', () => {
-   render(<RelatedProducts id={1} relatedItemsList={relatedItemsList}/>);
-   screen.getByText("RELATED PRODUCTS");
-   expect(getByTestId("slideRight")).toBeDisabled();
- })
+//  it('renders the RelatedProducts component', () => {
+//    render(<RelatedProducts id={1} relatedItemsList={relatedItemsList}/>);
+//    screen.getByText("RELATED PRODUCTS");
+//    expect(getByTestId("slideRight")).toBeDisabled();
+//  })
 
- it('should show the fifth product in list and hide the first one', () => {
+ it('arrow buttons should be enabled/disabled depending on the displayed products', () => {
    const { getByTestId } = render(<RelatedProducts id={25811} relatedItemsList={relatedItemsList}/>);
-   fireEvent.click(getByTestId("slideRight"))
-   expect(getByTestId("id")).toHaveTextContent("1");
    expect(getByTestId("slideRight")).toBeVisible();
+   expect(getByTestId("slideLeft")).not.toBeVisible();
+
+   fireEvent.click(getByTestId("slideRight"))
+   expect(getByTestId("slideRight")).toBeDisabled();
    expect(getByTestId("slideLeft")).toBeEnabled();
+
+   fireEvent.click(getByTestId("slideLeft"))
+   expect(getByTestId("slideRight")).toBeEnabled();
+   expect(getByTestId("slideLeft")).not.toBeVisible();
  })
 
- it('should show the ')
+ it('should only display four products at a time', () => {
+  const { getAllByTestId } = render(<RelatedProducts id={25811} relatedItemsList={relatedItemsList}/>);
+
+  expect(getAllByTestId("product-name")).toHaveTextContent(["Item1", "Item2", "Item3", "Item4"]);
+})
