@@ -18,7 +18,7 @@ class App extends React.Component{
     this.renderPage = this.renderPage.bind(this);
     this.fetchEverything = this.fetchEverything.bind(this);
     this.testing = this.testing.bind(this);
-
+    this.changeProductId = this.changeProductId.bind(this);
   }
 
   componentDidMount(){
@@ -62,12 +62,20 @@ class App extends React.Component{
     }
   }
 
+  changeProductId(id) {
+    this.setState({
+      targetId: id,
+    }, () =>{
+      this.fetchGET('qa', `questions/?product_id=${id}`, 'questions');
+    })
+  }
+
   renderPage() {
     if(this.state.loaded) {
       return (
         <div>
           <Overview id = {this.state.targetId}/>
-          <RelatedItems id={this.state.targetId} />
+          <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
           <QA id={this.state.targetId} questions={this.state.questions}/>
           <Reviews id = { this.state.targetId}/>
         </div>

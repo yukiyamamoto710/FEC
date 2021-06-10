@@ -13,23 +13,28 @@ class DropDownSelection extends React.Component{
     //console.log(this.props.size);
     event.preventDefault();
     //console.log(event.target.value);
-    this.props.callback(this.props.quantity, this.props.size);
+    //console.log('dropdownselection propsstyle' , this.props.style.sale_price, this.props.style.original_price, this.props.style.name)
+    if(this.props.style !== undefined) {
+      var currentPrice = this.props.style.sale_price === null ? this.props.style.original_price : this.props.style.sale_price;
+      var styleName = this.props.style.name;
+    } else {
+      currentPrice = 0;
+      styleName = '';
+    }
+
+    this.props.callback(this.props.size, this.props.quantity, styleName, currentPrice);
   }
 
   render() {
     return(
-      <option className = 'selection' value = {this.props.size} onClick = {this.handleClick}>{this.props.size}</option>
+      <option className = 'selection' value = {this.props.size} onClick = {this.handleClick}>{this.props.size}
+
+      </option>
     );
   }
 
 
 }
-
-
-
-
-
-
 
 
 
