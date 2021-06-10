@@ -15,7 +15,9 @@ class Overview extends React.Component {
       stylesList: [],
       mounted: false,
       index: 0,
-      urlName: 'url'
+      urlName: 'thumbnail_url',
+      clicked: false,
+      thumbIndex: 0
     }
 
     this.changePic = this.changePic.bind(this);
@@ -68,13 +70,14 @@ class Overview extends React.Component {
   changePic(number) {
     this.setState({
       index: number,
-      urlName: 'url'
+      //before this state was changing between my url and my thumbnail url
+      //urlName: 'url'
     })
   }
 
   changeThumbnail(number) {
     this.setState({
-      index: number,
+      thumbIndex: number,
       urlName: 'thumbnail_url'
     })
   }
@@ -85,6 +88,7 @@ class Overview extends React.Component {
       //console.log(this.state.stylesList);
       var price;
       var salePrice;
+      var styleItem = currentItem[this.state.index].name;
       if(currentItem[this.state.index].sale_price !== null) {
         salePrice = <div>{currentItem[this.state.index].sale_price}</div>;
         price = <div style = {crossed}>{currentItem[this.state.index].original_price}</div>
@@ -94,8 +98,8 @@ class Overview extends React.Component {
       }
       return(
         <>
-         <DefaultView picture = {currentItem[this.state.index].photos[0][this.state.urlName]} thumbnailArray = {currentItem} index = {this.state.index}callback = {this.changeThumbnail}/>
-         <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice}/>
+         <DefaultView picture = {currentItem[this.state.thumbIndex].photos[0][this.state.urlName]} thumbnailArray = {currentItem} index = {this.state.index}callback = {this.changeThumbnail}/>
+         <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice} styleItem = {styleItem}/>
          <div className = 'stylesBox'>
          {this.state.stylesList.results.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
