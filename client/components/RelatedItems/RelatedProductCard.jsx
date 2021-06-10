@@ -62,7 +62,7 @@ class RelatedProductCard extends React.Component {
   render() {
     const {id, product, currentItem} = this.props;
     return (
-      <li className="card" onClick={this.changeProductId}>
+      <li data-testid="card" className="card" onClick={this.changeProductId}>
         <div className="parent">
           {this.state.seen ?
           <Comparison togglePop={this.togglePop} product={product} id={id} currentItem={currentItem}/> : null}

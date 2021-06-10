@@ -2,22 +2,20 @@
  * @jest-environment jsdom
  */
 import React from 'react';
-import { render, waitForElement, fireEvent, cleanup } from '@testing-library/react';
-import RelatedItems from '../client/components/RelatedItems/RelatedItems.jsx';
+import { render, waitForElement, fireEvent, cleanup, screen } from '@testing-library/react';
+import RelatedItems from '../../client/components/RelatedItems/RelatedItems.jsx';
 import axiosMock from 'axios';
-import relatedItemsList from '../fixtures/relatedItemsList.json';
 import '@testing-library/jest-dom/extend-expect';
 
-// afterEach(cleanup)
+afterEach(cleanup)
 
-// it('should load and display the data', async () => {
-//   const { getByTestId } = render(<RelatedItems id={25811}/>);
-//   // axiosMock.get.mockResolvedValueOnce({
-//   //   data: {product: [1, 2 , 3]}
-//   // })
-// })
+it('should render the RelatedItems component', () => {
+  const { asFragment } = render(<RelatedItems id={25811}/>);
+  expect(asFragment(<RelatedItems id={25811}/>)).toMatchSnapshot()
+})
 
-// it('should render the OutfitCard component', () => {
-//   const { asFragment } = render(<RelatedItems id={25811}/>);
-//   expect(asFragment(<RelatedItems id={25811}/>)).toMatchSnapshot()
-// })
+it('should render the RelatedItems component', () => {
+  render(<RelatedItems id={25811}/>);
+  const relatedItems = [1, 2, 3, 4, 5];
+  expect(screen.getByTestId("card")).toHaveTextContent("1")
+})

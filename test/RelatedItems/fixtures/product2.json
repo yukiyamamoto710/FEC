@@ -4,6 +4,20 @@
   "category": "Shirt",
   "default_price": "756.00",
   "product_id": "26094",
+  "features": [
+    {
+      "feature": "Fair Trade Certified",
+      "value": null
+    },
+    {
+      "feature": "Non-GMO",
+      "value": null
+    },
+    {
+      "feature": "Material",
+      "value": "\"FullSupport Hybrid Compound\""
+    }
+  ],
   "results": [
     {
       "style_id": 148757,

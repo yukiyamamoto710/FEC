@@ -7,12 +7,6 @@
  import relatedItemsList from './fixtures/relatedItemsList.json';
  import '@testing-library/jest-dom/extend-expect';
 
-//  it('renders the RelatedProducts component', () => {
-//    render(<RelatedProducts id={1} relatedItemsList={relatedItemsList}/>);
-//    screen.getByText("RELATED PRODUCTS");
-//    expect(getByTestId("slideRight")).toBeDisabled();
-//  })
-
  it('arrow buttons should be enabled/disabled depending on the displayed products', () => {
    const { getByTestId } = render(<RelatedProducts id={25811} relatedItemsList={relatedItemsList}/>);
    expect(getByTestId("slideRight")).toBeVisible();

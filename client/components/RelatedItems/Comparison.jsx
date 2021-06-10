@@ -8,7 +8,6 @@ class Comparison extends React.Component {
     this.state = {
       featureList: []
     };
-    this.handleClick = this.handleClick.bind(this);
     this.combineAllFeatures = this.combineAllFeatures.bind(this);
   }
 
@@ -29,10 +28,6 @@ class Comparison extends React.Component {
     })
   }
 
-  handleClick() {
-    this.props.togglePop();
-  }
-
   render() {
     const{product} = this.props;
     const {currentItem, featureList} = this.state;
@@ -40,7 +35,7 @@ class Comparison extends React.Component {
       return (
         <div className="modal">
           <div className="modal_content">
-            <span className="close" onClick={this.handleClick}>&times;</span>
+            <span data-testid="close-button" className="close" onClick={()=>this.props.togglePop()}>&times;</span>
             <p>Comparing</p>
             <table>
               <thead>
