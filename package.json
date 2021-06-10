@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "watch": "webpack --config ./webpack.config.js --mode development --watch",
-    "test": "jest --coverage --watch"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
