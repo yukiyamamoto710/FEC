@@ -96,6 +96,7 @@ class PopOut extends React.Component {
     } else {
       // POST
       console.log();
+      this.props.cancel();
       addReview(this.state);
     }
   }
@@ -238,20 +239,20 @@ class PopOut extends React.Component {
           <div className="btnContainer">
             <button
               type="button"
-              className="unclickedButton"
+              className="clickedButton"
               onClick={this.checkReview}
             >
               Submit
             </button>
             <input
-              className="unclickedButton"
+              className="clickedButton"
               type="file"
               key="photo1"
               onChange={this.targetChange}
               id="photos"
             />
             <input
-              className="unclickedButton"
+              className="clickedButton"
               type="file"
               key="photo2"
               onChange={this.targetChange}

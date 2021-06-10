@@ -219,22 +219,23 @@ class Reviews extends React.Component {
       newReview: obj,
     })
   }
-  // addReview(array){
+  addReview(obj){
   //   if (array.length === 0) {
   //     let obj = { ...this.state.newReview };
-  //     let a = new Date();
-  //     let b = a.toISOString()
-  //     obj.date = b;
+      let a = new Date();
+      let b = a.toISOString()
+      obj.date = b;
   //     obj.body = obj.Description;
   //     obj.photos = obj.Photo;
   //     obj.rating = obj.Stars;
-  //     obj.response = null;
-  //     obj.reviewer_name = obj.Name;
+      obj.response = null;
+      obj.reviewer_name = obj.name;
   //     obj.summary = obj.Title;
-  //     let arr = [ ...this.state.reviewsList ];
-  //     arr.unshift( obj );
-  //     this.setState({
-  //       reviewsList: arr,
+      let arr = [ ...this.state.reviewsList ];
+      arr.unshift( obj );
+      console.log(arr, obj)
+      this.setState({
+        reviewsList: arr,
   //       newReview: {
   //         'Stars': 1,
   //         'recommend': true,
@@ -252,20 +253,20 @@ class Reviews extends React.Component {
   //         'date': '',
   //         'helpfulness': 0,
   //         'response': null,
-  //       },
-  //       add:false,
-  //     });
+        // },
+      //   add:false,
+      });
   //   } else {
   //     this.setState({
   //       warningItems: array,
   //     })
   //   }
-  // };
+  };
 
-  addReview(obj) {
-    console.log(obj);
-    console.log(this.state.reviewsList);
-  }
+  // addReview(obj) {
+  //   console.log(obj);
+  //   console.log(this.state.reviewsList);
+  // }
 
   cancel() {
     this.setState({
