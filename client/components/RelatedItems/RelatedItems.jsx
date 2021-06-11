@@ -11,8 +11,7 @@ class RelatedItems extends React.Component {
       currentItem: {},
       relatedItems: [], // related products IDs
       relatedItemsList: [],
-      selectedItemsList: [],
-      selected: false // if the current product is added to outfit list
+      selectedItemsList: []
     }
     this.getRelatedItemsIds = this.getRelatedItemsIds.bind(this);
     this.renderRelatedItems = this.renderRelatedItems.bind(this);
@@ -118,13 +117,16 @@ class RelatedItems extends React.Component {
   }
 
   addToOutfit() {
-    var updated = [this.state.currentItem, ...this.state.selectedItemsList]
-    this.setState({
-      selectedItemsList: updated,
-      selected: true
-    })
-    // update a local storage
-    localStorage.setItem('outfit', JSON.stringify(updated));
+    var ids = [...this.state.selectedItemsList].map(item=>item.id);
+    console.log(ids);
+    if (ids.indexOf(this.state.currentItem.id) === -1) {
+      var updated = [this.state.currentItem, ...this.state.selectedItemsList]
+      this.setState({
+        selectedItemsList: updated
+      })
+      // update a local storage
+      localStorage.setItem('outfit', JSON.stringify(updated));
+    }
   }
 
   removeFromOutfit(id) {
@@ -135,8 +137,7 @@ class RelatedItems extends React.Component {
       }
     }
     this.setState({
-      selectedItemsList: updated,
-      selected: false
+      selectedItemsList: updated
     })
     // update a local storage
     localStorage.setItem('outfit', JSON.stringify(updated));
