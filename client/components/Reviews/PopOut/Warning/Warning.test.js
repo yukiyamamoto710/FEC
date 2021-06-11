@@ -32,6 +32,10 @@ it('Warning will trigger when clicked', () => {
   // expect(testArray.length).toBe(4);
 });
 
+it('should have default show()', () => {
+  expect(Warning.defaultProps.show()).toBeDefined();
+});
+
 it('matches snapShot', () => {
   const tree = renderer.create(<Warning warningItems={testArray} show={testFunc} />).toJSON();
   expect(tree).toMatchSnapshot();

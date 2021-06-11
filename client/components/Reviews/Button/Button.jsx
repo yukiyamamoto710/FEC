@@ -43,8 +43,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   moreBTNshow: true,
-  addReview: () => {},
-  moreReview: () => {},
+  addReview: () => (1),
+  moreReview: () => (1),
 };
 
 export default Button;

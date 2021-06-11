@@ -43,7 +43,7 @@ Warning.propTypes = {
 
 Warning.defaultProps = {
   warningItems: [],
-  show: () => {},
+  show: () => (1),
 };
 
 export default Warning;

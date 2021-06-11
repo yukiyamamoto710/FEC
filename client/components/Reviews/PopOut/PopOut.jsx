@@ -276,9 +276,9 @@ PopOut.propTypes = {
 };
 
 PopOut.defaultProps = {
-  addReview: () => {},
+  addReview: () => (1),
   data: {},
-  cancel: () => {},
+  cancel: () => (1),
 };
 
 export default PopOut;

@@ -11,8 +11,6 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Button from './Button';
-import Reviews from '../Reviews';
-import Rbase from '../rbase';
 
 afterEach(cleanup);
 
@@ -79,16 +77,34 @@ describe('click should trigger func', () => {
   });
 });
 
-it('when moreBTNshow be false, AddBTN should be able to trigger', () => {
-  // jest.enableAutomock();
-  // jest.spyOn(Reviews.moreReview);
+it('when moreBTNshow be true, AddBTN should be able to trigger', () => {
   const testfunc = jest.fn();
+  const test = true;
   const { getByTestId } = render(
     <Button
-      moreBTNshow={true}
-      moreReview={() => {testfunc}}
+      moreBTNshow={test}
+      moreReview={testfunc}
     />,
   );
   fireEvent.click(getByTestId('moreBtn'));
   expect(testfunc).toHaveBeenCalledTimes(1);
+});
+
+test('should have default addReview and moreReview', () => {
+  expect(Button.defaultProps.addReview()).toBeDefined();
+  expect(Button.defaultProps.moreReview()).toBeDefined();
+});
+
+it('matches snapShot', () => {
+  const test = true;
+  const test1 = jest.fn();
+  const test2 = jest.fn();
+  const tree = renderer.create(
+    <Button
+      moreBTNshow={test}
+      addReview={test1}
+      moreReview={test2}
+    />,
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
 });
