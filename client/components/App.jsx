@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import Header from './Header.jsx'
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews.jsx';
-import QA from './QA/QA.jsx';
+// import QA from './QA/QA.jsx';
 
 class App extends React.Component{
   constructor(props){
@@ -25,7 +26,6 @@ class App extends React.Component{
     this.fetchEverything();
   }
 
-
   fetchGET(string, endpoint, stateName){
     return (
       axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
@@ -41,9 +41,8 @@ class App extends React.Component{
   }
 
   fetchEverything() {
-
     this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-    //this.fetchGET('products', this.state.targetId, 'list');
+    // this.fetchGET('products', this.state.targetId, 'list');
   }
 
   testing(){
@@ -65,8 +64,6 @@ class App extends React.Component{
   changeProductId(id) {
     this.setState({
       targetId: id,
-    }, () =>{
-      this.fetchGET('qa', `questions/?product_id=${id}`, 'questions');
     })
   }
 
@@ -74,10 +71,10 @@ class App extends React.Component{
     if(this.state.loaded) {
       return (
         <div>
-          <div className="header">Header</div>
+          <Header />
           <Overview id = {this.state.targetId}/>
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
-          <QA id={this.state.targetId} questions={this.state.questions}/>
+          {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
           <Reviews id = { this.state.targetId}/>
         </div>
       )
@@ -95,7 +92,6 @@ class App extends React.Component{
       <div>
         {this.renderPage()}
         <button onClick = {this.testing}> TESTING </button>
-        {/* <Reviews id ={this.state.targetId}/> */}
       </div>
     )
   }

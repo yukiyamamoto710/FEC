@@ -5,10 +5,30 @@ div#app {
 }
 
 .header {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
   max-width: 1000px;
   background-color: rgb(102, 162, 182);
   color: white;
   height: 75px;
-  margin: 50px;
+  margin-bottom: 50px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid;
+  color: white;
+}
+
+.search {
+  margin-right: 5px;
+  background: none;
+  border: none;
+  color: white;
 }
