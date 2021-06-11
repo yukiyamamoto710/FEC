@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">46.43% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/28</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">46.43% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/28</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -90,21 +90,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -116,22 +116,22 @@ import Price from './Price.jsx';
 import Rating from './Rating.jsx';
 import PropTypes from 'prop-types';
 &nbsp;
-const OutfitCard = <span class="fstat-no" title="function not covered" >({product, removeFromOutfit}) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;li className="card outfit"&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="parent"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;span className="close" onClick={()=&gt;removeFromOutfit(product.id)}&gt;&amp;#9447;&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;img className="related-product-img" src={product.results[0].photos[0].url}/&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className="product-info"&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;div&gt;{product.category}&lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;div className="product-name"&gt;{product.name}&lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Price product={product}/&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Rating rating={product.rating.ratings} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/li&gt;</span>
-<span class="cstat-no" title="statement not covered" >  )</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+const OutfitCard = ({product, removeFromOutfit}) =&gt; {
+  return (
+    &lt;li className="card outfit"&gt;
+      &lt;div className="parent"&gt;
+        &lt;span data-testid="close" className="close" onClick={<span class="fstat-no" title="function not covered" >()=&gt;r</span>emoveFromOutfit(product.id)}&gt;&amp;#9447;&lt;/span&gt;
+        &lt;img data-testid="image" className="related-product-img" src={product.results[0].photos[0].url}/&gt;
+        &lt;div className="product-info"&gt;
+          &lt;div data-testid="category"&gt;{product.category}&lt;/div&gt;
+          &lt;div data-testid="name" className="product-name"&gt;{product.name}&lt;/div&gt;
+          &lt;Price product={product}/&gt;
+          &lt;Rating rating={product.rating.ratings} /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  )
+}
 &nbsp;
 OutfitCard.propTypes = {
   removeFromOutfit: PropTypes.func,
@@ -145,7 +145,7 @@ export default OutfitCard;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jun 10 2021 15:00:08 GMT-0700 (Pacific Daylight Time)
+                at Thu Jun 10 2021 20:40:46 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

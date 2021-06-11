@@ -10,9 +10,20 @@
 
  const features = ["Cut","Frame","Fair Trade Certified","Non-GMO","Material"]
 
- test('should show the rating of 3.25', () => {
+ describe('Comparison', () => {
   const togglePop = jest.fn()
   render(<Comparison id={1} currentItem={product} product={product2} togglePop={togglePop}/>);
-  fireEvent.click(screen.getByTestId("close-button"))
-  expect(togglePop).toHaveBeenCalledTimes(1);
-  })
+
+  test('should render 5 description rows', () => {
+    const rows = screen.getAllByTestId("row");
+    expect(rows).toHaveLength(5);
+    rows.forEach((row) => {
+      expect(row).toHaveClass("row");
+      expect(row).toContainHTML("<td>")
+    })
+  });
+    // fireEvent.click(screen.getByTestId("close-button"))
+    // expect(togglePop).toHaveBeenCalledTimes(1);
+    // })
+ })
+

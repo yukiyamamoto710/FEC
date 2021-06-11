@@ -3,12 +3,20 @@
  */
  import React from 'react';
  import { render, screen } from '@testing-library/react';
- import Price from '../../client/components/RelatedItems/Price.jsx';
+ import RelatedProductCard from '../../client/components/RelatedItems/RelatedProductCard.jsx';
  import product from './fixtures/product.json';
- import product2 from './fixtures/product2.json';
  import '@testing-library/jest-dom/extend-expect';
 
- it('should show the original price', () => {
-  render(<Price product={product}/>);
-  expect(screen.getByTestId("price")).toHaveTextContent("$756");
-  });
+describe('Outfit Card', () => {
+  it('should render related product', () => {
+    const deselectOutfit = jest.fn();
+    const changeProductId = jest.fn();
+
+    render(<RelatedProductCard id={1} product={product} deselectOutfit={deselectOutfit} changeProductId={changeProductId}/>);
+
+    expect(screen.getByTestId("close")).toHaveTextContent("&#9447;");
+    expect(screen.getByTestId("image")).toHaveAttribute("img");
+    expect(screen.getByTestId("category")).toHaveTextContent("Shirt");
+    expect(screen.getByTestId("name")).toHaveTextContent("Item1");
+    });
+})

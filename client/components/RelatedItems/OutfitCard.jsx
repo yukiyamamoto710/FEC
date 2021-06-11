@@ -7,11 +7,11 @@ const OutfitCard = ({product, removeFromOutfit}) => {
   return (
     <li className="card outfit">
       <div className="parent">
-        <span className="close" onClick={()=>removeFromOutfit(product.id)}>&#9447;</span>
-        <img className="related-product-img" src={product.results[0].photos[0].url}/>
+        <span data-testid="close" className="close" onClick={()=>removeFromOutfit(product.id)}>&#9447;</span>
+        <img data-testid="image" className="related-product-img" src={product.results[0].photos[0].url}/>
         <div className="product-info">
-          <div>{product.category}</div>
-          <div className="product-name">{product.name}</div>
+          <div data-testid="category">{product.category}</div>
+          <div data-testid="name" className="product-name">{product.name}</div>
           <Price product={product}/>
           <Rating rating={product.rating.ratings} />
         </div>
