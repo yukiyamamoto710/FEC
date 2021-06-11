@@ -44,13 +44,15 @@ class AdditionalImages extends React.Component {
       <div className="additional-images">
         <button className="slideLeft-mini"
           onClick={this.prevProduct}
-          hidden={idx === 0}>
+          hidden={idx === 0}
+          data-testid="slideLeft-mini">
             &lt;
           </button>
-        {displayed.map((image)=><img key={image} className="thumbnail" src={image} onClick={this.changeMainImage}/>)}
+        {displayed.map((image, i)=><img data-testid={i} key={image} className="thumbnail" src={image} onClick={this.changeMainImage}/>)}
         <button className="slideRight-mini"
             onClick={this.nextProduct}
-            disabled={images.length < 4 || idx === images.length-4}>
+            disabled={images.length < 4 || idx === images.length-4}
+            data-testid="slideRight-mini">
               &gt;
         </button>
       </div>
