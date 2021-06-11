@@ -43,7 +43,6 @@ class Overview extends React.Component {
         console.log(error);
       })
       }
-
   }
 
   fetchGET(string, id, name){
@@ -100,7 +99,7 @@ class Overview extends React.Component {
         <>
          <DefaultView picture = {currentItem[this.state.thumbIndex].photos[0][this.state.urlName]} thumbnailArray = {currentItem} index = {this.state.index}callback = {this.changeThumbnail}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice} styleItem = {styleItem}/>
-         <div className = 'stylesBox'>
+         <div data-testid = 'stylesBox' className = 'stylesBox'>
          {this.state.stylesList.results.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
          })}
@@ -116,7 +115,7 @@ class Overview extends React.Component {
     if(this.state.stylesList.length === 0) {
       console.log(this.state.description);
       return (
-       <>LOADING</>
+       <div>LOADING</div>
       );
     } else {
       return (
