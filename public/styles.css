@@ -3,3 +3,12 @@ div#app {
   margin: auto;
   font-family: "Open Sans", sans-serif;
 }
+
+.header {
+  display: block;
+  max-width: 1000px;
+  background-color: rgb(102, 162, 182);
+  color: white;
+  height: 75px;
+  margin: 50px;
+}

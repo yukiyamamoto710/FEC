@@ -74,6 +74,7 @@ class App extends React.Component{
     if(this.state.loaded) {
       return (
         <div>
+          <div className="header">Header</div>
           <Overview id = {this.state.targetId}/>
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
           <QA id={this.state.targetId} questions={this.state.questions}/>

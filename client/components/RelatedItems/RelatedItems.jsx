@@ -22,16 +22,19 @@ class RelatedItems extends React.Component {
   }
 
   componentDidMount() {
-    this.getRelatedItemsIds(this.props.id);
+    this.getRelatedItemsIds(this.props.id)
+    const storage = JSON.parse(localStorage.getItem('outfit'));
     this.getAllProductInfo(this.props.id)
       .then((results) => {
         this.setState({
-          currentItem: results
+          currentItem: results,
+          selectedItemsList: storage ? storage: []
         })
       })
       .catch((err) => {
         console.log(err);
       })
+
   }
 
   componentDidUpdate(prevProps) {
@@ -51,11 +54,14 @@ class RelatedItems extends React.Component {
 
   getRelatedItemsIds (id) {
     axios.get('/get', {params: {endpoint: `products/${id}/related`}})
-      .then((response) =>{
+      .then((response) => {
         this.setState({
           relatedItems: response.data,
           selected: false // everytime different product is displayed, change selected back to false
-        }, this.renderRelatedItems)
+        })
+      })
+      .then(() => {
+        this.renderRelatedItems();
       })
       .catch(err=>{
         console.log(err)
@@ -112,10 +118,13 @@ class RelatedItems extends React.Component {
   }
 
   addToOutfit() {
+    var updated = [this.state.currentItem, ...this.state.selectedItemsList]
     this.setState({
-      selectedItemsList: [this.state.currentItem, ...this.state.selectedItemsList],
+      selectedItemsList: updated,
       selected: true
     })
+    // update a local storage
+    localStorage.setItem('outfit', JSON.stringify(updated));
   }
 
   removeFromOutfit(id) {
@@ -129,6 +138,8 @@ class RelatedItems extends React.Component {
       selectedItemsList: updated,
       selected: false
     })
+    // update a local storage
+    localStorage.setItem('outfit', JSON.stringify(updated));
   }
 
   render() {
@@ -137,10 +148,10 @@ class RelatedItems extends React.Component {
     return (
       <div>
         { relatedItemsList.length !== 0 ?
-        <>
+        <React.Fragment>
           <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId} currentItem={currentItem}/>
           <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/>
-        </> : null }
+        </React.Fragment> : null }
       </div>
     )
   }
