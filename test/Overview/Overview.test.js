@@ -47,6 +47,17 @@
 
       });
 
+    it('left arrow should be hidden when index is zero', () => {
+      const mock = jest.fn();
+      render(<DefaultView picture = {product.results[0].photos[0].url} thumbnailArray = {product.results} callback = {mock}/>);
+      fireEvent.click(screen.getByAltText("left-arrow"));
+      expect(screen.getByAltText("left-arrow")).not.toBeVisible();
+      //?????? class is hidden. display: none. should not be visible
+
+    });
+
+
+
     it('should show a function being called in Thumbnail', () => {
       //console.log((screen.getByTestId('stylesBox'));
       const mock = jest.fn();
@@ -57,3 +68,5 @@
       expect(mock).toHaveBeenCalled();
 
       });
+
+

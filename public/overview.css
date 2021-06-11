@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   z-index: 1;
   position: absolute;
+  height: 500px;
 
 }
 .thumbnail {
@@ -27,13 +28,13 @@
   margin: 5px;
   border-width: 2px;
   border-style: solid;
-  border-color: yellow;
+  border-color: black;
 }
 
 .bigPicture {
   display: inline;
   width: 55%;
-  height: 50%;
+  height: 55%;
   margin-bottom: 25px;
   max-height: 500px;
   min-height: 500px;
@@ -55,15 +56,12 @@
 }
 
 .expandedPicture {
-  width: 80%;
-  height: 80%;
+  width: 900px;
+  height: 900px;
   z-index: 2;
   top:5%;
-  left:5%;
-  bottom:5%;
-  right:5%;
   position: absolute;
-  box-sizing: border-box;
+  display: block;
   /* margin-bottom: 25px; */
   /* max-height: 800px;
   min-height: 00px; */
@@ -97,16 +95,25 @@ h3 {
   background-color: white;
 }
 
+.smallLeftArrow {
+
+}
+
+.smallRightArrow {
+
+}
+
 
 
 .stylesBox {
   display: flex;
-  width: 40%;
+  width: 50%;
+  height: 300px;
   flex-wrap: wrap;
   margin-left: 55%;
-  margin-top: -25%;
+  margin-top: min(-400px, -450px);
   padding-left: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 15%;
 
 }
 .price {

@@ -25,7 +25,7 @@ class Thumbnail extends React.Component {
     this.props.callback(this.props.index);
   }
   render() {
-    const clicked = this.props.identifier ? 'highlightedThumb' : 'thumbnail'
+    const clicked = this.props.identifier ? this.props.highlightedThumb : this.props.noHighlight;
 
     return(
       <>{<img className = {clicked} onClick = {this.handleClick} name = {this.props.index} src= {this.props.thumbnail} alt="Picture of Clothing"></img>}</>
