@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapShot 1`] = `
+<div
+  className="msgHeader"
+  data-testid="msgHeader"
+>
+  <div
+    className="ratingHead"
+    data-testid="stars"
+  >
+    <div>
+      <button
+        className="starButton"
+        data-testid="button0"
+        id={1}
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+      <div
+        className="msgStar"
+      >
+        <div
+          className="msgStar fullStar"
+        />
+      </div>
+    </div>
+    <div>
+      <button
+        className="starButton"
+        data-testid="button1"
+        id={2}
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+      <div
+        className="msgStar"
+      >
+        <div
+          className="msgStar emptyStar"
+        />
+      </div>
+    </div>
+    <div>
+      <button
+        className="starButton"
+        data-testid="button2"
+        id={3}
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+      <div
+        className="msgStar"
+      >
+        <div
+          className="msgStar emptyStar"
+        />
+      </div>
+    </div>
+    <div>
+      <button
+        className="starButton"
+        data-testid="button3"
+        id={4}
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+      <div
+        className="msgStar"
+      >
+        <div
+          className="msgStar emptyStar"
+        />
+      </div>
+    </div>
+    <div>
+      <button
+        className="starButton"
+        data-testid="button4"
+        id={5}
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+      <div
+        className="msgStar"
+      >
+        <div
+          className="msgStar emptyStar"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    Yuki
+    ,
+     
+    May 22 2021
+  </div>
+</div>
+`;

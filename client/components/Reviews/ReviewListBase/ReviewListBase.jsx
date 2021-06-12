@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReviewListHeader from './ReviewListHeader/ReviewListHeader';
-// import MessageList from './rbmessage.jsx';
+import ReviewMSGList from './ReviewMSGList/ReviewMSGList';
 // import Form from './form.jsx';
 // import Button from './Button/Button';
 // import PopOut from './popout.jsx';
@@ -12,11 +12,14 @@ const ReviewListBase = (props) => {
     reviews,
     stars,
   } = props;
-  console.log(reviews, stars,'ss');
   const [reviewsList, setReviewsList] = useState(reviews);
   const [userReview, setUserReview] = useState([]);
   const [sort, setSort] = useState('relevant');
-  console.log(sort)
+
+  useEffect(() => {
+    setReviewsList(reviews);
+  }, [reviews]);
+
   return (
     <div
       style={style}
@@ -25,14 +28,10 @@ const ReviewListBase = (props) => {
         len={reviewsList.length}
         sortBy={(target) => { setSort(target); }}
       />
-      {/* <MessageList
-        msgClick={msgClick}
-        list={list}
-        helpful={helpful}
-        report={report}
-        notHelpful={notHelpful}
+      <ReviewMSGList
+        reviewsList={reviewsList}
       />
-      <br /> */}
+      <br />
       {/* <Button
         moreBTNshow={moreBTN}
         moreReview={moreReview}

@@ -12,6 +12,7 @@ export default function Reviews(props) {
   const [reviews, setReviews] = useState([]);
   const [stars, setStars] = useState(5);
 
+  console.log(reviews, rating,'sdsa');
   useEffect(() => {
     console.log(id);
     reviewsGET('reviews', id, 2, 'relevant', setReviews, setReviewsLoad);

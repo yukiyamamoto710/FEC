@@ -14,13 +14,14 @@ import Characteristics from './Characteristics';
 afterEach(cleanup);
 
 it('should render', () => {
-  render(<Characteristics name={'hello World'}/>);
-  const test = screen.queryByText('hello World')
+  render(<Characteristics name="hello World" />);
+  const test = screen.queryByText('hello World');
   expect(test).toBeInTheDocument();
 });
 
 it('should render', () => {
-  render(<Characteristics dataArray={['hi', 'Hello', 'World']} />);
+  const array = ['hi', 'Hello', 'World'];
+  render(<Characteristics dataArray={array} />);
   const test = screen.queryByText('hi');
   const test1 = screen.queryByText('Hello');
   const test2 = screen.queryByText('World');
