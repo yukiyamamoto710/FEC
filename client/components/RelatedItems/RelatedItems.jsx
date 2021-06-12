@@ -117,7 +117,6 @@ class RelatedItems extends React.Component {
   }
 
   addToOutfit() {
-    console.log('invoked???')
     var ids = [...this.state.selectedItemsList].map(item=>item.id);
     if (ids.indexOf(this.state.currentItem.id) === -1) {
       var updated = [this.state.currentItem, ...this.state.selectedItemsList]
