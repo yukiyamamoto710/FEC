@@ -17,6 +17,7 @@ class DefaultView extends React.Component {
     this.handleRight = this.handleRight.bind(this);
     this.handleLeft = this.handleLeft.bind(this);
     this.expand = this.expand.bind(this);
+    this.closeOut = this.closeOut.bind(this);
   }
 
   // componentDidMount() {
@@ -37,6 +38,10 @@ class DefaultView extends React.Component {
     this.setState({expanded: true});
   }
 
+  closeOut() {
+    this.setState({expanded: false});
+  }
+
   changeThumbNail(index) {
     this.setState({
       index: index,
@@ -46,7 +51,7 @@ class DefaultView extends React.Component {
 
   handleRight() {
     var number = JSON.parse(event.target.name);
-    if(number < this.props.styleArray.length - 1) {
+    if(number < this.props.styleObj.photos.length - 1) {
         this.changeThumbNail(number + 1);
       }
   }
@@ -54,7 +59,7 @@ class DefaultView extends React.Component {
   handleLeft() {
     var number = JSON.parse(event.target.name);
     if(number > 0) {
-        this.changeThumbNail(number + - 1);
+        this.changeThumbNail(number - 1);
       }
   }
 
@@ -63,10 +68,11 @@ class DefaultView extends React.Component {
     var isHighlighted;
     var expand = this.state.expanded === true ? 'expandedPicture' : 'Picture';
     var left = this.state.index === 0 ? 'hidden' : 'leftArrow';
-    var right = this.state.index === this.props.styleArray.length - 1 ? 'hidden' : 'rightArrow';
+    var right = this.state.index === this.props.styleObj.photos.length - 1 ? 'hidden' : 'rightArrow';
     //probably have to set the variable expand to be its own jsx fragment instead of just changing the class
     if(this.state.expanded === true) {
-      expand = <ExpandedPic currentPic = {currentPic} left = {left} right = {right} index = {this.state.index} styleArray = {this.props.styleArray} callback = {this.changeThumbNail}/>
+      //console.log(this.props.styleObj.photos);
+      expand = <ExpandedPic currentPic = {currentPic} left = {left} right = {right} index = {this.state.index} styleObj = {this.props.styleObj.photos} callback = {this.changeThumbNail} closeOut = {this.closeOut}/>
     } else {
       expand =
       <div className = 'bigPicture'>
@@ -79,7 +85,7 @@ class DefaultView extends React.Component {
     return(
       <>
       <div className = 'thumbnails'>
-        {this.props.styleArray.photos.map((item, index) => {
+        {this.props.styleObj.photos.map((item, index) => {
           //need to refactor this later - when props index and regular index are the same this highights the wrong thing
           isHighlighted = this.props.index === index ? true : false;
           return(

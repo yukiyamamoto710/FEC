@@ -1,40 +1,106 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Thumbnail from './Thumbnail.jsx';
 const ExpandedPic = (props) => {
 
     const [order, setIndex] = useState(0);
+    const [zoomed, zoomState] = useState(false);
+    //const [expand, expandState] = useState(true);
 
-    var left = {order} === 0 ? 'hidden' : 'smallLeftArrow';
-    var right = {order} === props.thumbnailArray.length - 1 ? 'hidden' : 'smallRightArrow';
+    var left = order === 0 ? 'hidden' : 'smallLeftArrow';
+    var right = order === props.styleObj.length - 1 ? 'hidden' : 'smallRightArrow';
+    var zoom;
+
+
+    const changeThumbNail = (index)  => {
+      setIndex(index)
+      props.callback(index);
+    }
+
+    const handleRight = () => {
+      console.log(order);
+      var number = JSON.parse(event.target.name);
+      if(number < props.styleObj.length - 1) {
+          props.callback(number + 1);
+          setIndex(order + 1);
+        }
+    }
+
+    const handleLeft = () => {
+      var number = JSON.parse(event.target.name);
+      if(number > 0) {
+          props.callback(number - 1);
+          setIndex(order - 1);
+        }
+
+    }
+
+    const zoomIn = () => {
+      zoomState(!zoomed);
+    }
+
+    const move = (e) => {
+      //console.log(event);
+      const mover = document.querySelector('.zoomedPicture');
+      if(mover !== undefined && mover !== null) {
+        //console.log(mover);
+        console.log('this is event' , e);
+        var bbox = e.target.getBoundingClientRect();
+        var mouseX = e.clientX - bbox.left;
+        var mouseY = e.clientY - bbox.top;
+
+        var xPercent = (mouseX / bbox.width) * 100;
+        var yPercent = (mouseY / bbox.height) * 100;
+        //mover.setAttribute('style', 'top:' + e.pageX, e.pageY);
+        //mover.style.backgroundPositionY = -e.offsetY + "px";
+        e.target.style.transformOrigin = xPercent + '% ' + yPercent + '%';
+
+        //mover.setAttribute('style','top:'+ newX +'px; left:'+ newY +'px;');
+      }
+    }
+
+    if(zoomed) {
+      zoom = 'zoomedPicture';
+    } else {
+      zoom = 'expandedPicture';
+    }
+
+    // const mover = document.querySelector('zoomedPicture');
+
+    // if(mover !== undefined && mover !== null) {
+    //   console.log(mover);
+    //   mover.addEventListener('mousemove', (e) => {
+    //     mover.style.backgroundPositionX = -e.offsetX + "px";
+    //     mover.style.backgroundPositionY = -e.offsetY + "px";
+    //   })
+    // }
 
     return(
       <div>
-        {props.thumbnailArray.map((item, index) => {
-          //need to refactor this later - when props index and regular index are the same this highights the wrong thing
-          const isHighlighted = {order} === index ? true : false;
-          return(
-            <Thumbnail index = {index} thumbnail = {item.photos[0].thumbnail_url} callback = {props.callback} key = {index} identifier = {isHighlighted} highlightedThumb = 'highlightedThumb' noHighlight = 'thumbnail'/>
-          );
-        })}
       <div className = 'bigPicture'>
         <img className ='Picture' src= {props.currentPic} alt=" Picture of Clothing"></img>
-        <img className = {props.right}  src = 'right-arrow.svg' name = {props.index}></img>
-        <img className = {props.left}  src = 'left-arrow.svg' name = {props.index} alt = 'left-arrow'></img>
+        <img className = {props.right} src = 'right-arrow.svg' ></img>
+        <img className = {props.left} src = 'left-arrow.svg' alt = 'left-arrow'></img>
       </div>
-      <div >
-        <img className ='expandedPicture' src= {props.currentPic} alt="Big Picture of Clothing"></img>
-        <img className = {right} src = 'right-arrow.svg' name = {props.index}></img>
-        <img className = {left} src = 'left-arrow.svg' name = {props.index}></img>
-    </div>
+      <div className = 'expandedPictureContainer'>
+        <button className = 'exit' onClick = {props.closeOut}>X</button>
+        <img className = {zoom} onMouseMove = {move} onClick = {zoomIn} src= {props.currentPic} alt="Big Picture of Clothing"></img>
+        <div className = 'thumbnailsIcons'>
+          {props.styleObj.map((item, index) => {
+            const isHighlighted = props.index === index ? true : false;
+            return(
+              <Thumbnail index = {index} thumbnail = {item.thumbnail_url} callback = {changeThumbNail} key = {index} identifier = {isHighlighted} highlightedThumb = 'highlightedThumbnailIcon' noHighlight = 'thumbnailIcon'/>
+            );
+          })}
+        </div>
+        <img className = {right} onClick = {handleRight} src = 'right-arrow.svg' name = {order}></img>
+        <img className = {left} onClick = {handleLeft} src = 'left-arrow.svg' name = {order}></img>
+     </div>
     </div>
     )
 
 
 }
-
-
-
 
 
 export default ExpandedPic;

@@ -22,7 +22,7 @@ class Thumbnail extends React.Component {
 
   handleClick () {
     //console.log(event.target.name);
-    console.log('clicked from thumbnail', this.props.index)
+    console.log('clicked from thumbnail', this.props.index, this.props.identifier)
     this.props.callback(this.props.index);
   }
   render() {

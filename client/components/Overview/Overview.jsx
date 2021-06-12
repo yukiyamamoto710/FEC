@@ -15,7 +15,7 @@ class Overview extends React.Component {
       stylesList: [],
       mounted: false,
       index: 0,
-      urlName: 'thumbnail_url',
+      urlName: 'url',
       clicked: false,
       thumbIndex: 0
     }
@@ -76,7 +76,7 @@ class Overview extends React.Component {
   }
 
   changeThumbnail(number) {
-    console.log('number received from thumbnail', number)
+
     this.setState({
       thumbIndex: number,
       urlName: 'thumbnail_url'
@@ -90,8 +90,6 @@ class Overview extends React.Component {
       var price;
       var salePrice;
       var styleItem = currentItem[this.state.index].name;
-      var thumbOrIndex;
-      var url;
 
       if(currentItem[this.state.index].sale_price !== null) {
         salePrice = <div>{currentItem[this.state.index].sale_price}</div>;
@@ -102,15 +100,15 @@ class Overview extends React.Component {
       }
 
       return(
-        <>
-         <DefaultView picture = {currentItem[this.state.index].photos[this.state.thumbIndex][this.state.urlName]} styleArray = {currentItem[this.state.index]} callback = {this.changeThumbnail} index = {this.state.thumbIndex}/>
+        <div className = 'wrapper'>
+         <DefaultView picture = {currentItem[this.state.index].photos[this.state.thumbIndex][this.state.urlName]} styleObj = {currentItem[this.state.index]} callback = {this.changeThumbnail} index = {this.state.thumbIndex}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice} styleItem = {styleItem}/>
          <div data-testid = 'stylesBox' className = 'stylesBox'>
          {currentItem.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
          })}
          </div>
-        </>
+        </div>
        );
   }
 

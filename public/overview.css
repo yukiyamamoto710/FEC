@@ -22,6 +22,41 @@
   border-color: grey;
 }
 
+.thumbnailsIcons {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  z-index: 3;
+  position: absolute;
+  bottom: 14%;
+  min-width: 500px;
+  max-width: 90%;
+  background-color: aliceblue;
+  justify-content: left;
+
+}
+
+.thumbnailIcon {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 100%;
+}
+
+.highlightedThumbnailIcon {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 100%;
+}
+
+
 .highlightedThumb {
   height: 50px;
   width: 50px;
@@ -56,8 +91,8 @@
 }
 
 .expandedPicture {
-  width: 900px;
-  height: 900px;
+  width: 1000px;
+  height: 1000px;
   z-index: 2;
   top:5%;
   position: absolute;
@@ -65,6 +100,48 @@
   /* margin-bottom: 25px; */
   /* max-height: 800px;
   min-height: 00px; */
+}
+
+.expandedPicture:hover {
+  cursor: zoom-in;
+}
+
+.expandedPictureContainer {
+  z-index: 2;
+  max-width: 500px;
+  max-height: 500px;
+  min-height: 500px;
+  /* margin-bottom: 25px; */
+  /* max-height: 800px;
+  min-height: 00px; */
+}
+
+.zoomedPicture {
+  -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(3.5);
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    /* --x: 0px;
+    --y: 0px;
+    background-position: var(--x) var(--y); */
+    /* -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate; */
+}
+
+/* @-webkit-keyframes moveX {
+  from { left: 0; } to { left: 400px; }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: 200px; }
+} */
+
+.zoomedPicture:hover {
+  cursor: zoom-out;
 }
 
 p {
@@ -96,12 +173,23 @@ h3 {
 }
 
 .smallLeftArrow {
-
+  display: inline;
+  z-index: 3;
+  position: absolute;
+  left: 10%;
+  border-radius: 100%;
+  background-color: white;
 }
 
 .smallRightArrow {
-
+  display: inline;
+  z-index: 3;
+  position: absolute;
+  left: 85%;
+  border-radius: 100%;
+  background-color: white;
 }
+
 
 
 
@@ -114,6 +202,7 @@ h3 {
   margin-top: min(-400px, -450px);
   padding-left: 5px;
   padding-bottom: 15%;
+  min-width: 50%;
 
 }
 .price {
@@ -127,11 +216,15 @@ h3 {
 }
 
 .describe {
-  position: relative;
+  /* position: relative;
   width: 25%;
-  float: right;
-  left: -17%;
-  margin-top: 5%;
+  float: right; */
+
+  /* margin-top: 5%; */
+  width: 25%;
+  position: absolute;
+  top: 0%;
+  right: 15%;
 
 }
 
@@ -230,5 +323,16 @@ h3 {
   display: none;
 }
 
+.exit {
+  z-index: 3;
+  background-color: white;
+  position: absolute;
+  top: 5%;
+}
 
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
 
