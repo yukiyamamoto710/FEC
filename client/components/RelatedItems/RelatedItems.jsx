@@ -85,36 +85,48 @@ class RelatedItems extends React.Component {
 
   getAllProductInfo(id) {
     return new Promise((resolve, reject) => {
-      axios.get('/get', {params: {endpoint: `products/${id}`}})
-        .then((product) => {
-          // eventually clean up data at the server side before sending to client
-          delete product.data['campus'];
-          delete product.data['created_at'];
-          delete product.data['description'];
-          delete product.data['slogan'];
-          delete product.data['updated_at'];
-          delete product.data['product_id'];
-
-          axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
-            .then((styles) => {
-              // eventually clean up data at the server side before sending to client
-              styles.data.results.map(style=> {
-                delete style['skus'];
-              })
-
-              axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
-                .then((rating) => {
-                  var mergedList = Object.assign(product.data, styles.data)
-                  mergedList['rating'] = rating.data
-                  resolve(mergedList)
-                })
-            })
+      axios.get(`/relatedItems/${id}`)
+        .then((response) => {
+          resolve(response.data);
         })
         .catch((err) => {
-          reject(err);
+          reject(err)
         })
     })
   }
+
+  // getAllProductInfo(id) {
+  //   return new Promise((resolve, reject) => {
+  //     axios.get('/get', {params: {endpoint: `products/${id}`}})
+  //       .then((product) => {
+  //         // eventually clean up data at the server side before sending to client
+  //         delete product.data['campus'];
+  //         delete product.data['created_at'];
+  //         delete product.data['description'];
+  //         delete product.data['slogan'];
+  //         delete product.data['updated_at'];
+  //         delete product.data['product_id'];
+
+  //         axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
+  //           .then((styles) => {
+  //             // eventually clean up data at the server side before sending to client
+  //             styles.data.results.map(style=> {
+  //               delete style['skus'];
+  //             })
+
+  //             axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
+  //               .then((rating) => {
+  //                 var mergedList = Object.assign(product.data, styles.data)
+  //                 mergedList['rating'] = rating.data
+  //                 resolve(mergedList)
+  //               })
+  //           })
+  //       })
+  //       .catch((err) => {
+  //         reject(err);
+  //       })
+  //   })
+  // }
 
   addToOutfit() {
     var ids = [...this.state.selectedItemsList].map(item=>item.id);

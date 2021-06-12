@@ -2,10 +2,10 @@ import React from 'react';
 import Stars from '../Reviews/star.jsx';
 import PropTypes from 'prop-types';
 
-const Rating = ({rating}) => {
-  var rates = Object.keys(rating).sort();
-  var size = rates.reduce((sum, i)=>(sum + Number(rating[i])),0);
-  var total = rates.reduce((sum, i)=>(sum + Number(i) * Number(rating[i])), 0);
+const Rating = ({ratings}) => {
+  var rates = Object.keys(ratings).sort();
+  var size = rates.reduce((sum, i)=>(sum + Number(ratings[i])),0);
+  var total = rates.reduce((sum, i)=>(sum + Number(i) * Number(ratings[i])), 0);
   var ave  = total/size;
 
   return (
@@ -16,7 +16,7 @@ const Rating = ({rating}) => {
 }
 
 Rating.propTypes = {
-  rating: PropTypes.object
+  ratings: PropTypes.object
 }
 
 export default Rating;
