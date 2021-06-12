@@ -1,22 +1,49 @@
 /**
  * @jest-environment jsdom
  */
-import React from 'react';
-import { render, waitForElement, fireEvent, cleanup, screen } from '@testing-library/react';
-import RelatedItems from '../../client/components/RelatedItems/RelatedItems.jsx';
-import axiosMock from 'axios';
-import '@testing-library/jest-dom/extend-expect';
+ import React from 'react';
+ import { render, screen, fireEvent } from '@testing-library/react';
+ import RelatedItems from '../../client/components/RelatedItems/RelatedItems.jsx';
+ import selectedItemsList from './fixtures/relatedItemsList.json';
+ import relatedItemsList from './fixtures/relatedItemsList.json';
+ import '@testing-library/jest-dom/extend-expect';
 
-afterEach(cleanup)
+ describe('RelatedItems component', () => {
+   const { location } = window;
+   delete window.location;
+   window.location = { reload: jest.fn() };
 
-// it('should render the RelatedItems component', () => {
-//   const { asFragment } = render(<RelatedItems id={25811}/>);
-//   expect(asFragment(<RelatedItems id={25811}/>)).toMatchSnapshot()
-// })
+   test('should render the same Outfit list after the page refresh', () => {
+     render(<RelatedItems id={1}/>)
+     const outfits = screen.getAllByRole("listitem");
+     const id = screen.get
+     window.location.reload();
+     const outfits2 = screen.getAllByRole("listitem");
+     expect(outfits).toEqual(outfits2);
+   });
 
-// it('should render the RelatedItems component', () => {
-//   render(<RelatedItems id={25811}/>);
-//   expect(screen.getByTestId("card")).toHaveTextContent("1")
-// })
+   test('arrow buttons should be disabled if less than 3 outfit cards', () => {
+     var items = [...selectedItemsList].slice(0, 2)
+     render(<Outfits selectedItemsList={items}/>)
+     expect(screen.getByTestId("slideRight")).not.toBeVisible();
+     expect(screen.getByTestId("slideLeft")).not.toBeVisible();
+   });
 
-// test HTTP requests here too
+   // should not add the current product more than once
+   test('arrow buttons should be enabled/disabled depending on what is on display', () => {
+     var items = [...selectedItemsList].slice(0, 4)
+     render(<Outfits selectedItemsList={items}/>)
+     expect(screen.getByTestId("slideRight")).toBeVisible();
+     expect(screen.getByTestId("slideLeft")).not.toBeVisible();
+
+     fireEvent.click(screen.getByTestId("slideRight"))
+     expect(screen.getByTestId("slideRight")).toBeDisabled();
+     expect(screen.getByTestId("slideLeft")).toBeEnabled();
+
+     fireEvent.click(screen.getByTestId("slideLeft"))
+     expect(screen.getByTestId("slideRight")).toBeEnabled();
+     expect(screen.getByTestId("slideLeft")).not.toBeVisible();
+   });
+
+   // should remove the 
+ })
