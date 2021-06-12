@@ -75,7 +75,7 @@ import PropTypes from 'prop-types';
 const Outfits = (props) => {
   const {selectedItemsList, addToOutfit, removeFromOutfit} = props;
 
-  const [state, setState] = useState({idx: 0, displayed: [...selectedItemsList].slice(0, 3)});
+  const [state, setState] = useState({idx: 0, displayed: []});
 
   useEffect(() => {
     setState({idx: 0, displayed: [...selectedItemsList].slice(0, 3)})
@@ -98,9 +98,7 @@ const Outfits = (props) => {
           <OutfitCard key={product.id} product={product} removeFromOutfit={removeFromOutfit}/>
           )}
         <button className="slideRight"
-          onClick={()=>{
-            setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})
-          }}
+          onClick={()=>{setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})}}
           hidden={selectedItemsList.length < 3}
           disabled={state.idx === selectedItemsList.length-3}>
             &gt;
