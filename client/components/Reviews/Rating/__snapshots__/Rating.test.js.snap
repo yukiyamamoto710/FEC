@@ -1,0 +1,890 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapShot 1`] = `
+<div
+  className="rating"
+  data-testid="rating"
+>
+  <div
+    className="ratingHead"
+    data-testid="head"
+  >
+    3.8
+    <div>
+      <img
+        id={-2}
+        src="star3.svg"
+      />
+      <img
+        id={-1}
+        src="star3.svg"
+      />
+      <img
+        id={0}
+        src="star3.svg"
+      />
+      <img
+        src="star3.svg"
+      />
+      <img
+        id={1}
+        src="star5.svg"
+      />
+    </div>
+  </div>
+  <h5
+    data-testid="text"
+  >
+    75% of reviews recommend this product
+  </h5>
+  <div
+    data-testid="starList"
+  >
+    <div
+      style={
+        Object {
+          "margin": "10px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "marginTop": "10px",
+          }
+        }
+      >
+        <button
+          id="5"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderBottom": "1px solid black",
+              "borderStyle": "none",
+              "fontSize": "7px",
+              "marginRight": "10px",
+              "padding": "1px",
+            }
+          }
+        >
+          5
+           Stars
+        </button>
+        <div
+          style={
+            Object {
+              "backgroundColor": " rgb(240,240,240)",
+              "border": "1px solid rgb(240,240,240)",
+              "height": "10px",
+              "maring": "2px",
+              "width": "80%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "green",
+                "border": "1px solid green",
+                "height": "9px",
+                "margin": "1px",
+                "width": "50%",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "marginTop": "10px",
+          }
+        }
+      >
+        <button
+          id="4"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderBottom": "1px solid black",
+              "borderStyle": "none",
+              "fontSize": "7px",
+              "marginRight": "10px",
+              "padding": "1px",
+            }
+          }
+        >
+          4
+           Stars
+        </button>
+        <div
+          style={
+            Object {
+              "backgroundColor": " rgb(240,240,240)",
+              "border": "1px solid rgb(240,240,240)",
+              "height": "10px",
+              "maring": "2px",
+              "width": "80%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "green",
+                "border": "1px solid green",
+                "height": "9px",
+                "margin": "1px",
+                "width": "25%",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "marginTop": "10px",
+          }
+        }
+      >
+        <button
+          id="3"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderBottom": "1px solid black",
+              "borderStyle": "none",
+              "fontSize": "7px",
+              "marginRight": "10px",
+              "padding": "1px",
+            }
+          }
+        >
+          3
+           Stars
+        </button>
+        <div
+          style={
+            Object {
+              "backgroundColor": " rgb(240,240,240)",
+              "border": "1px solid rgb(240,240,240)",
+              "height": "10px",
+              "maring": "2px",
+              "width": "80%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "marginTop": "10px",
+          }
+        }
+      >
+        <button
+          id="2"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderBottom": "1px solid black",
+              "borderStyle": "none",
+              "fontSize": "7px",
+              "marginRight": "10px",
+              "padding": "1px",
+            }
+          }
+        >
+          2
+           Stars
+        </button>
+        <div
+          style={
+            Object {
+              "backgroundColor": " rgb(240,240,240)",
+              "border": "1px solid rgb(240,240,240)",
+              "height": "10px",
+              "maring": "2px",
+              "width": "80%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "marginTop": "10px",
+          }
+        }
+      >
+        <button
+          id="1"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderBottom": "1px solid black",
+              "borderStyle": "none",
+              "fontSize": "7px",
+              "marginRight": "10px",
+              "padding": "1px",
+            }
+          }
+        >
+          1
+           Stars
+        </button>
+        <div
+          style={
+            Object {
+              "backgroundColor": " rgb(240,240,240)",
+              "border": "1px solid rgb(240,240,240)",
+              "height": "10px",
+              "maring": "2px",
+              "width": "80%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "green",
+                "border": "1px solid green",
+                "height": "9px",
+                "margin": "1px",
+                "width": "25%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-testid="characteristics"
+  >
+    <div
+      style={
+        Object {
+          "fontSize": "10px",
+          "margin": "10px",
+          "width": "90%",
+        }
+      }
+    >
+      Comfort
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "position": "relative",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Uncomfortable
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Slightly uncomfortable
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Ok
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Comfortable
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Perfect
+        </div>
+        <div
+          style={
+            Object {
+              "left": "55%",
+              "position": "absolute",
+              "top": "0px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "black",
+                "height": "15px",
+                "margin": "1px",
+                "width": "5px",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-testid="characteristics"
+  >
+    <div
+      style={
+        Object {
+          "fontSize": "10px",
+          "margin": "10px",
+          "width": "90%",
+        }
+      }
+    >
+      Quality
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "position": "relative",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Poor
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Below average
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          What I expected
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Pretty great
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Perfect
+        </div>
+        <div
+          style={
+            Object {
+              "left": "40%",
+              "position": "absolute",
+              "top": "0px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "black",
+                "height": "15px",
+                "margin": "1px",
+                "width": "5px",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-testid="characteristics"
+  >
+    <div
+      style={
+        Object {
+          "fontSize": "10px",
+          "margin": "10px",
+          "width": "90%",
+        }
+      }
+    >
+      Size
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "position": "relative",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          A size too small
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          ½ a size too small
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Perfect
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          ½ a size too big
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          A size too wide
+        </div>
+        <div
+          style={
+            Object {
+              "left": "45%",
+              "position": "absolute",
+              "top": "0px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "black",
+                "height": "15px",
+                "margin": "1px",
+                "width": "5px",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-testid="characteristics"
+  >
+    <div
+      style={
+        Object {
+          "fontSize": "10px",
+          "margin": "10px",
+          "width": "90%",
+        }
+      }
+    >
+      Width
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "position": "relative",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Too narrow
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Slightly narrow
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Perfect
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Slightly wide
+        </div>
+        <div
+          style={
+            Object {
+              "fontSize": "10px",
+              "width": "19%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "rgb(240,240,240)",
+                "height": "10px",
+                "margin": "1px",
+                "position": "relative",
+                "width": "95%",
+              }
+            }
+          />
+          Too wide
+        </div>
+        <div
+          style={
+            Object {
+              "left": "65%",
+              "position": "absolute",
+              "top": "0px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundColor": "black",
+                "height": "15px",
+                "margin": "1px",
+                "width": "5px",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

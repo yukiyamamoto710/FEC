@@ -15,7 +15,6 @@ import Button from './Button';
 afterEach(cleanup);
 
 describe('render correct', () => {
-  afterEach(cleanup);
   it('when moreBTNshow be true addBTN should show', () => {
     const test1 = true;
     render(<Button moreBTNshow={test1} />);

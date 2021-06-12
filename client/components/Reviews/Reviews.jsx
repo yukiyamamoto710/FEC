@@ -233,7 +233,7 @@ class Reviews extends React.Component {
   //     obj.summary = obj.Title;
       let arr = [ ...this.state.reviewsList ];
       arr.unshift( obj );
-      console.log(arr, obj)
+      console.log(arr,)
       this.setState({
         reviewsList: arr,
   //       newReview: {
@@ -263,10 +263,10 @@ class Reviews extends React.Component {
   //   }
   };
 
-  // addReview(obj) {
-  //   console.log(obj);
-  //   console.log(this.state.reviewsList);
-  // }
+  addReview(obj) {
+    console.log(obj);
+    console.log(this.state.reviewsList);
+  }
 
   cancel() {
     this.setState({
