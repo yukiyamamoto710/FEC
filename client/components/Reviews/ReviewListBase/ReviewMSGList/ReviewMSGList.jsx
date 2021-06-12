@@ -1,5 +1,5 @@
 import React from 'react';
-import Message from '../../message';
+import Message from '../../Message/Message';
 import Photos from '../../Photos/Photos';
 import MSGHeader from './MSGHeader/MSGHeader';
 import HR from '../../helpful';
@@ -11,7 +11,7 @@ const MessageList = (props) => {
   const {
     reviewsList,
   } = props;
-
+  console.log(reviewsList.response, 'qwewq');
   return (
     <div className="msgListBase">
       { reviewsList.map((i, index) => (
@@ -27,22 +27,7 @@ const MessageList = (props) => {
           <div className="msgSummary ">
             {i.summary}
           </div>
-          {/* { i.click === undefined
-            ? (
-              <Message
-                id={index}
-                msgClick={msgClick}
-                text={i.body}
-              />
-            )
-            : (
-              <Message
-                id={index}
-                style={body}
-                msgClick={msgClick}
-                text={i.body}
-              />
-            )} */}
+          <Message body={i.body} />
           {i.recommend
             ? (
               <div className="msgBody">
@@ -50,17 +35,20 @@ const MessageList = (props) => {
               </div>
             )
             : null}
+          {(i.response)
+            ? (
+              <div className="msgResponseContainer">
+                Response:
+                <br />
+                <div className="msgResponse">
+                  {i.response}
+                </div>
+              </div>
+            )
+            : null}
           <Photos
             photos={i.photos}
           />
-          {(i.response !== null)
-            ? (
-              <Message
-                res={i.response}
-                style={response}
-              />
-            )
-            : null}
           {/* <HR
             helpful={i.helpfulness}
             notHelpful={0} //  shoudl get the key from i
