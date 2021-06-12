@@ -9,12 +9,11 @@ class RelatedItems extends React.Component {
     super(props);
     this.state = {
       currentItem: {},
-      relatedItems: [], // related products IDs
       relatedItemsList: [],
       selectedItemsList: []
     }
     this.getRelatedItemsIds = this.getRelatedItemsIds.bind(this);
-    this.renderRelatedItems = this.renderRelatedItems.bind(this);
+    // this.renderRelatedItems = this.renderRelatedItems.bind(this);
     this.getAllProductInfo = this.getAllProductInfo.bind(this);
     this.addToOutfit = this.addToOutfit.bind(this);
     this.removeFromOutfit = this.removeFromOutfit.bind(this);
@@ -33,7 +32,6 @@ class RelatedItems extends React.Component {
       .catch((err) => {
         console.log(err);
       })
-
   }
 
   componentDidUpdate(prevProps) {
@@ -54,34 +52,37 @@ class RelatedItems extends React.Component {
   getRelatedItemsIds (id) {
     axios.get('/get', {params: {endpoint: `products/${id}/related`}})
       .then((response) => {
-        this.setState({
-          relatedItems: response.data,
-          selected: false // everytime different product is displayed, change selected back to false
-        })
+        var promises = [];
+        for (var i = 0; i < response.data.length; i++) {
+          promises.push(this.getAllProductInfo(response.data[i]));
+        }
+        Promise.all(promises)
+          .then((response) => {
+            this.setState({
+              relatedItemsList: response
+            })
+          })
       })
-      .then(() => {
-        this.renderRelatedItems();
-      })
-      .catch(err=>{
+      .catch((err)=>{
         console.log(err)
-      });
+      })
   }
 
-  renderRelatedItems() {
-    var promises = [];
-    for (var i = 0; i < this.state.relatedItems.length; i++) {
-      promises.push(this.getAllProductInfo(this.state.relatedItems[i]));
-    }
-    Promise.all(promises)
-      .then((response) => {
-        this.setState({
-          relatedItemsList: response
-        })
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }
+  // renderRelatedItems() {
+  //   var promises = [];
+  //   for (var i = 0; i < this.state.relatedItems.length; i++) {
+  //     promises.push(this.getAllProductInfo(this.state.relatedItems[i]));
+  //   }
+  //   Promise.all(promises)
+  //     .then((response) => {
+  //       this.setState({
+  //         relatedItemsList: response
+  //       })
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     })
+  // }
 
   getAllProductInfo(id) {
     return new Promise((resolve, reject) => {
