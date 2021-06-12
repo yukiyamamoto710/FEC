@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapShot 1`] = `
+<div
+  className="charaContainer"
+  data-testid="chara"
+>
+  hi
+  <div
+    className="charaBar"
+  >
+    <div>
+      <div
+        className="charaSmallBar"
+      />
+      <div
+        className="charaText"
+      >
+        hi
+      </div>
+    </div>
+    <div>
+      <div
+        className="charaSmallBar"
+      />
+      <div
+        className="charaText"
+      >
+        Hello
+      </div>
+    </div>
+    <div>
+      <div
+        className="charaSmallBar"
+      />
+      <div
+        className="charaText"
+      >
+        World
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "left": "200%",
+          "position": "absolute",
+          "top": "0px",
+        }
+      }
+    >
+      <div
+        className="charaBarPoint"
+      />
+    </div>
+  </div>
+</div>
+`;

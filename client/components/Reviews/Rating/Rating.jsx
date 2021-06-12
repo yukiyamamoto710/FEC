@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StarList from '../StarList/StarList';
-import Characteristics from '../characteristics';
+import StarList from './StarList/StarList';
+import Characteristics from './Characteristics/Characteristics';
 import { Data } from '../data';
 import Stars from '../Stars/Stars';
 
@@ -74,9 +74,9 @@ const Rating = (props) => {
           data-testid="characteristics"
         >
           <Characteristics
-            array={Data[i]}
+            dataArray={Data[i]}
             name={i}
-            value={rating.characteristics[i].value}
+            value={Number(rating.characteristics[i].value)}
           />
         </div>
       ))}
