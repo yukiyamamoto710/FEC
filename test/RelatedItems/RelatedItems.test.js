@@ -9,13 +9,14 @@ import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup)
 
-it('should render the RelatedItems component', () => {
-  const { asFragment } = render(<RelatedItems id={25811}/>);
-  expect(asFragment(<RelatedItems id={25811}/>)).toMatchSnapshot()
-})
+// it('should render the RelatedItems component', () => {
+//   const { asFragment } = render(<RelatedItems id={25811}/>);
+//   expect(asFragment(<RelatedItems id={25811}/>)).toMatchSnapshot()
+// })
 
-it('should render the RelatedItems component', () => {
-  render(<RelatedItems id={25811}/>);
-  const relatedItems = [1, 2, 3, 4, 5];
-  expect(screen.getByTestId("card")).toHaveTextContent("1")
-})
+// it('should render the RelatedItems component', () => {
+//   render(<RelatedItems id={25811}/>);
+//   expect(screen.getByTestId("card")).toHaveTextContent("1")
+// })
+
+// test HTTP requests here too

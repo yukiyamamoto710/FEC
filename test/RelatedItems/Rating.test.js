@@ -9,5 +9,5 @@
 
  test('should show the rating of 3.25', () => {
   const { getByRole } = render(<Rating rating={product.rating}/>);
-  expect(getByRole("imag")).toHaveAttribute('src');
+  expect(getByRole("img")).toHaveAttribute('src');
   })

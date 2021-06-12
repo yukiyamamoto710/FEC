@@ -5,7 +5,6 @@
  import { render, screen } from '@testing-library/react';
  import OutfitCard from '../../client/components/RelatedItems/OutfitCard.jsx';
  import product from './fixtures/product.json';
- import product2 from './fixtures/product2.json';
  import '@testing-library/jest-dom/extend-expect';
 
 describe('Outfit Card', () => {
