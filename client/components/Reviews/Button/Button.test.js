@@ -89,7 +89,7 @@ it('when moreBTNshow be true, AddBTN should be able to trigger', () => {
   expect(testfunc).toHaveBeenCalledTimes(1);
 });
 
-test('should have default addReview and moreReview', () => {
+it('should have default addReview and moreReview', () => {
   expect(Button.defaultProps.addReview()).toBeDefined();
   expect(Button.defaultProps.moreReview()).toBeDefined();
 });

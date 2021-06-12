@@ -112,250 +112,141 @@ exports[`matches snapShot 1`] = `
     75% of reviews recommend this product
   </h5>
   <div
-    data-testid="starList"
+    data-testid="starListR"
   >
     <div
-      style={
-        Object {
-          "margin": "10px",
-        }
-      }
+      className="starListContainer"
+      data-testid="starList"
     >
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "marginTop": "10px",
-          }
-        }
-      >
-        <button
-          id="5"
-          onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderBottom": "1px solid black",
-              "borderStyle": "none",
-              "fontSize": "7px",
-              "marginRight": "10px",
-              "padding": "1px",
-            }
-          }
-        >
-          5
-           Stars
-        </button>
+      <div>
         <div
-          style={
-            Object {
-              "backgroundColor": " rgb(240,240,240)",
-              "border": "1px solid rgb(240,240,240)",
-              "height": "10px",
-              "maring": "2px",
-              "width": "80%",
-            }
-          }
+          className="starListBase"
         >
+          <button
+            className="starListText"
+            onClick={[Function]}
+            type="button"
+          >
+            5 Stars
+          </button>
           <div
-            style={
-              Object {
-                "backgroundColor": "green",
-                "border": "1px solid green",
-                "height": "9px",
-                "margin": "1px",
-                "width": "50%",
+            className="starRatingBarBase"
+            data-testid="starRatingBar"
+          >
+            <div
+              style={
+                Object {
+                  "backgroundColor": "green",
+                  "border": "5px solid green",
+                  "width": "50%",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
       </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "marginTop": "10px",
-          }
-        }
-      >
-        <button
-          id="4"
-          onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderBottom": "1px solid black",
-              "borderStyle": "none",
-              "fontSize": "7px",
-              "marginRight": "10px",
-              "padding": "1px",
-            }
-          }
-        >
-          4
-           Stars
-        </button>
+      <div>
         <div
-          style={
-            Object {
-              "backgroundColor": " rgb(240,240,240)",
-              "border": "1px solid rgb(240,240,240)",
-              "height": "10px",
-              "maring": "2px",
-              "width": "80%",
-            }
-          }
+          className="starListBase"
         >
+          <button
+            className="starListText"
+            onClick={[Function]}
+            type="button"
+          >
+            4 Stars
+          </button>
           <div
-            style={
-              Object {
-                "backgroundColor": "green",
-                "border": "1px solid green",
-                "height": "9px",
-                "margin": "1px",
-                "width": "25%",
+            className="starRatingBarBase"
+            data-testid="starRatingBar"
+          >
+            <div
+              style={
+                Object {
+                  "backgroundColor": "green",
+                  "border": "5px solid green",
+                  "width": "25%",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
       </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "marginTop": "10px",
-          }
-        }
-      >
-        <button
-          id="3"
-          onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderBottom": "1px solid black",
-              "borderStyle": "none",
-              "fontSize": "7px",
-              "marginRight": "10px",
-              "padding": "1px",
-            }
-          }
-        >
-          3
-           Stars
-        </button>
+      <div>
         <div
-          style={
-            Object {
-              "backgroundColor": " rgb(240,240,240)",
-              "border": "1px solid rgb(240,240,240)",
-              "height": "10px",
-              "maring": "2px",
-              "width": "80%",
-            }
-          }
+          className="starListBase"
         >
+          <button
+            className="starListText"
+            onClick={[Function]}
+            type="button"
+          >
+            3 Stars
+          </button>
           <div
-            style={
-              Object {
-                "display": "none",
+            className="starRatingBarBase"
+            data-testid="starRatingBar"
+          >
+            <div
+              style={
+                Object {
+                  "display": "none",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
       </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "marginTop": "10px",
-          }
-        }
-      >
-        <button
-          id="2"
-          onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderBottom": "1px solid black",
-              "borderStyle": "none",
-              "fontSize": "7px",
-              "marginRight": "10px",
-              "padding": "1px",
-            }
-          }
-        >
-          2
-           Stars
-        </button>
+      <div>
         <div
-          style={
-            Object {
-              "backgroundColor": " rgb(240,240,240)",
-              "border": "1px solid rgb(240,240,240)",
-              "height": "10px",
-              "maring": "2px",
-              "width": "80%",
-            }
-          }
+          className="starListBase"
         >
+          <button
+            className="starListText"
+            onClick={[Function]}
+            type="button"
+          >
+            2 Stars
+          </button>
           <div
-            style={
-              Object {
-                "display": "none",
+            className="starRatingBarBase"
+            data-testid="starRatingBar"
+          >
+            <div
+              style={
+                Object {
+                  "display": "none",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
       </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-            "marginTop": "10px",
-          }
-        }
-      >
-        <button
-          id="1"
-          onClick={[Function]}
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderBottom": "1px solid black",
-              "borderStyle": "none",
-              "fontSize": "7px",
-              "marginRight": "10px",
-              "padding": "1px",
-            }
-          }
-        >
-          1
-           Stars
-        </button>
+      <div>
         <div
-          style={
-            Object {
-              "backgroundColor": " rgb(240,240,240)",
-              "border": "1px solid rgb(240,240,240)",
-              "height": "10px",
-              "maring": "2px",
-              "width": "80%",
-            }
-          }
+          className="starListBase"
         >
+          <button
+            className="starListText"
+            onClick={[Function]}
+            type="button"
+          >
+            1 Stars
+          </button>
           <div
-            style={
-              Object {
-                "backgroundColor": "green",
-                "border": "1px solid green",
-                "height": "9px",
-                "margin": "1px",
-                "width": "25%",
+            className="starRatingBarBase"
+            data-testid="starRatingBar"
+          >
+            <div
+              style={
+                Object {
+                  "backgroundColor": "green",
+                  "border": "5px solid green",
+                  "width": "25%",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -364,128 +255,62 @@ exports[`matches snapShot 1`] = `
     data-testid="characteristics"
   >
     <div
-      style={
-        Object {
-          "fontSize": "10px",
-          "margin": "10px",
-          "width": "90%",
-        }
-      }
+      className="charaContainer"
+      data-testid="chara"
     >
       Comfort
       <div
-        style={
-          Object {
-            "display": "flex",
-            "position": "relative",
-            "width": "100%",
-          }
-        }
+        className="charaBar"
       >
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Uncomfortable
+          <div
+            className="charaText"
+          >
+            Uncomfortable
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Slightly uncomfortable
+          <div
+            className="charaText"
+          >
+            Slightly uncomfortable
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Ok
+          <div
+            className="charaText"
+          >
+            Ok
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Comfortable
+          <div
+            className="charaText"
+          >
+            Comfortable
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Perfect
+          <div
+            className="charaText"
+          >
+            Perfect
+          </div>
         </div>
         <div
           style={
@@ -497,14 +322,7 @@ exports[`matches snapShot 1`] = `
           }
         >
           <div
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": "15px",
-                "margin": "1px",
-                "width": "5px",
-              }
-            }
+            className="charaBarPoint"
           />
         </div>
       </div>
@@ -514,128 +332,62 @@ exports[`matches snapShot 1`] = `
     data-testid="characteristics"
   >
     <div
-      style={
-        Object {
-          "fontSize": "10px",
-          "margin": "10px",
-          "width": "90%",
-        }
-      }
+      className="charaContainer"
+      data-testid="chara"
     >
       Quality
       <div
-        style={
-          Object {
-            "display": "flex",
-            "position": "relative",
-            "width": "100%",
-          }
-        }
+        className="charaBar"
       >
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Poor
+          <div
+            className="charaText"
+          >
+            Poor
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Below average
+          <div
+            className="charaText"
+          >
+            Below average
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          What I expected
+          <div
+            className="charaText"
+          >
+            What I expected
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Pretty great
+          <div
+            className="charaText"
+          >
+            Pretty great
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Perfect
+          <div
+            className="charaText"
+          >
+            Perfect
+          </div>
         </div>
         <div
           style={
@@ -647,14 +399,7 @@ exports[`matches snapShot 1`] = `
           }
         >
           <div
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": "15px",
-                "margin": "1px",
-                "width": "5px",
-              }
-            }
+            className="charaBarPoint"
           />
         </div>
       </div>
@@ -664,128 +409,62 @@ exports[`matches snapShot 1`] = `
     data-testid="characteristics"
   >
     <div
-      style={
-        Object {
-          "fontSize": "10px",
-          "margin": "10px",
-          "width": "90%",
-        }
-      }
+      className="charaContainer"
+      data-testid="chara"
     >
       Size
       <div
-        style={
-          Object {
-            "display": "flex",
-            "position": "relative",
-            "width": "100%",
-          }
-        }
+        className="charaBar"
       >
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          A size too small
+          <div
+            className="charaText"
+          >
+            A size too small
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          ½ a size too small
+          <div
+            className="charaText"
+          >
+            ½ a size too small
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Perfect
+          <div
+            className="charaText"
+          >
+            Perfect
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          ½ a size too big
+          <div
+            className="charaText"
+          >
+            ½ a size too big
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          A size too wide
+          <div
+            className="charaText"
+          >
+            A size too wide
+          </div>
         </div>
         <div
           style={
@@ -797,14 +476,7 @@ exports[`matches snapShot 1`] = `
           }
         >
           <div
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": "15px",
-                "margin": "1px",
-                "width": "5px",
-              }
-            }
+            className="charaBarPoint"
           />
         </div>
       </div>
@@ -814,128 +486,62 @@ exports[`matches snapShot 1`] = `
     data-testid="characteristics"
   >
     <div
-      style={
-        Object {
-          "fontSize": "10px",
-          "margin": "10px",
-          "width": "90%",
-        }
-      }
+      className="charaContainer"
+      data-testid="chara"
     >
       Width
       <div
-        style={
-          Object {
-            "display": "flex",
-            "position": "relative",
-            "width": "100%",
-          }
-        }
+        className="charaBar"
       >
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Too narrow
+          <div
+            className="charaText"
+          >
+            Too narrow
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Slightly narrow
+          <div
+            className="charaText"
+          >
+            Slightly narrow
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Perfect
+          <div
+            className="charaText"
+          >
+            Perfect
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Slightly wide
+          <div
+            className="charaText"
+          >
+            Slightly wide
+          </div>
         </div>
-        <div
-          style={
-            Object {
-              "fontSize": "10px",
-              "width": "19%",
-            }
-          }
-        >
+        <div>
           <div
-            style={
-              Object {
-                "backgroundColor": "rgb(240,240,240)",
-                "height": "10px",
-                "margin": "1px",
-                "position": "relative",
-                "width": "95%",
-              }
-            }
+            className="charaSmallBar"
           />
-          Too wide
+          <div
+            className="charaText"
+          >
+            Too wide
+          </div>
         </div>
         <div
           style={
@@ -947,14 +553,7 @@ exports[`matches snapShot 1`] = `
           }
         >
           <div
-            style={
-              Object {
-                "backgroundColor": "black",
-                "height": "15px",
-                "margin": "1px",
-                "width": "5px",
-              }
-            }
+            className="charaBarPoint"
           />
         </div>
       </div>

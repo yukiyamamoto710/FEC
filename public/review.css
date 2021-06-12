@@ -432,3 +432,13 @@ transform: perspective(500px) rotateY(45deg); */
   margin: 2px;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
+
+.reviewListHeader {
+  display: flex;
+  font-size: 12px;
+}
+
+.reviewListSort {
+  border-style: none;
+  outline: 0px;
+}

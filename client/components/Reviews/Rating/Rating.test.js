@@ -39,11 +39,11 @@ describe('render correct', () => {
   });
   it('starList should always be 5, testData2', () => {
     const { getAllByTestId } = render(<Rating rating={testData2} />);
-    expect(getAllByTestId('starList').length).toBe(1);
+    expect(getAllByTestId('starListR').length).toBe(1);
   });
   it('starList should always be 5, testData1', () => {
     const { getAllByTestId } = render(<Rating rating={testData1} />);
-    expect(getAllByTestId('starList').length).toBe(1);
+    expect(getAllByTestId('starListR').length).toBe(1);
   });
   it('characteristics should be same amount as keys, testData1', () => {
     const { getAllByTestId } = render(<Rating rating={testData1} />);

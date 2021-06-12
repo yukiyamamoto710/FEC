@@ -61,7 +61,7 @@ const Rating = (props) => {
       <h5 data-testid="text">
         {`${rAve}% of reviews recommend this product`}
       </h5>
-      <div data-testid="starList">
+      <div data-testid="starListR">
         <StarList
           stars={keyArray.reverse()}
           starsClicked={starsClicked}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ratingGET from './func/ratingGet/ratingGet';
 import reviewsGET from './func/reviewsGet/reviewsGet';
 import Rating from './Rating/Rating';
-import Rbase from './rbase';
+import ReviewListBase from './ReviewListBase/ReviewListBase';
 
 export default function Reviews(props) {
   const { id } = props;
@@ -27,8 +27,9 @@ export default function Reviews(props) {
           rating={rating}
           starsClicked={(num) => setStars(num)}
         />
-        {/* <Rbase
-          list={reviews}
+        <ReviewListBase
+          reviews={reviews}
+          stars={stars}
           // sort = { this.sort }
           // helpful ={ this.helpful }
           // notHelpful ={ this.notHelpful }
@@ -37,7 +38,7 @@ export default function Reviews(props) {
           // addfunc = { this.add }
           // msgClick = { this.msgClick }
           // moreBTN = { moreBTNshowed }/>
-        /> */}
+        />
       </div>
     );
   }
