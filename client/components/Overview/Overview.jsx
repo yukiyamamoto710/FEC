@@ -69,12 +69,14 @@ class Overview extends React.Component {
   changePic(number) {
     this.setState({
       index: number,
+      thumbIndex: 0,
       //before this state was changing between my url and my thumbnail url
-      //urlName: 'url'
+      urlName: 'url'
     })
   }
 
   changeThumbnail(number) {
+    console.log('number received from thumbnail', number)
     this.setState({
       thumbIndex: number,
       urlName: 'thumbnail_url'
@@ -88,6 +90,9 @@ class Overview extends React.Component {
       var price;
       var salePrice;
       var styleItem = currentItem[this.state.index].name;
+      var thumbOrIndex;
+      var url;
+
       if(currentItem[this.state.index].sale_price !== null) {
         salePrice = <div>{currentItem[this.state.index].sale_price}</div>;
         price = <div style = {crossed}>{currentItem[this.state.index].original_price}</div>
@@ -95,12 +100,13 @@ class Overview extends React.Component {
         salePrice = <div></div>
         price = <div>{currentItem[this.state.index].original_price}</div>
       }
+
       return(
         <>
-         <DefaultView picture = {currentItem[this.state.thumbIndex].photos[0][this.state.urlName]} thumbnailArray = {currentItem} index = {this.state.index}callback = {this.changeThumbnail}/>
+         <DefaultView picture = {currentItem[this.state.index].photos[this.state.thumbIndex][this.state.urlName]} styleArray = {currentItem[this.state.index]} callback = {this.changeThumbnail} index = {this.state.thumbIndex}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice} styleItem = {styleItem}/>
          <div data-testid = 'stylesBox' className = 'stylesBox'>
-         {this.state.stylesList.results.map((item, index) => {
+         {currentItem.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
          })}
          </div>

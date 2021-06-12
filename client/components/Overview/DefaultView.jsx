@@ -46,7 +46,7 @@ class DefaultView extends React.Component {
 
   handleRight() {
     var number = JSON.parse(event.target.name);
-    if(number < this.props.thumbnailArray.length - 1) {
+    if(number < this.props.styleArray.length - 1) {
         this.changeThumbNail(number + 1);
       }
   }
@@ -63,10 +63,10 @@ class DefaultView extends React.Component {
     var isHighlighted;
     var expand = this.state.expanded === true ? 'expandedPicture' : 'Picture';
     var left = this.state.index === 0 ? 'hidden' : 'leftArrow';
-    var right = this.state.index === this.props.thumbnailArray.length - 1 ? 'hidden' : 'rightArrow';
+    var right = this.state.index === this.props.styleArray.length - 1 ? 'hidden' : 'rightArrow';
     //probably have to set the variable expand to be its own jsx fragment instead of just changing the class
     if(this.state.expanded === true) {
-      expand = <ExpandedPic currentPic = {currentPic} left = {left} right = {right} index = {this.state.index} thumbnailArray = {this.props.thumbnailArray} callback = {this.changeThumbNail}/>
+      expand = <ExpandedPic currentPic = {currentPic} left = {left} right = {right} index = {this.state.index} styleArray = {this.props.styleArray} callback = {this.changeThumbNail}/>
     } else {
       expand =
       <div className = 'bigPicture'>
@@ -79,11 +79,11 @@ class DefaultView extends React.Component {
     return(
       <>
       <div className = 'thumbnails'>
-        {this.props.thumbnailArray.map((item, index) => {
+        {this.props.styleArray.photos.map((item, index) => {
           //need to refactor this later - when props index and regular index are the same this highights the wrong thing
-          isHighlighted = this.state.index === index ? true : false;
+          isHighlighted = this.props.index === index ? true : false;
           return(
-            <Thumbnail index = {index} thumbnail = {item.photos[0].thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {isHighlighted} highlightedThumb = 'highlightedThumb' noHighlight = 'thumbnail'/>
+            <Thumbnail index = {index} thumbnail = {item.thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {isHighlighted} highlightedThumb = 'highlightedThumb' noHighlight = 'thumbnail'/>
           );
         })}
       </div>
