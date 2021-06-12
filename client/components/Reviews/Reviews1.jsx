@@ -25,7 +25,7 @@ export default function Reviews(props) {
       <div>
         <Rating
           rating={rating}
-          starsClicked={(event) => setStars(event.target.value)}
+          starsClicked={(num) => setStars(num)}
         />
         {/* <Rbase
           list={reviews}

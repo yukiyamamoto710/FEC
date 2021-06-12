@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SRList from '../srlist';
+import StarList from '../StarList/StarList';
 import Characteristics from '../characteristics';
 import { Data } from '../data';
 import Stars from '../Stars/Stars';
@@ -62,10 +62,10 @@ const Rating = (props) => {
         {`${rAve}% of reviews recommend this product`}
       </h5>
       <div data-testid="starList">
-        <SRList
-          star={keyArray.reverse()}
-          ratingstar={starsClicked}
-          per={perArray}
+        <StarList
+          stars={keyArray.reverse()}
+          starsClicked={starsClicked}
+          perArray={perArray}
         />
       </div>
       {cKey.map((i) => (
