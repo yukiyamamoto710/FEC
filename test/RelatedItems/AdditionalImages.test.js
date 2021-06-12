@@ -26,15 +26,6 @@ describe('Additional Images', () => {
     expect(screen.getByTestId("slideLeft-mini")).not.toBeVisible();
   });
 
-  test('arrow buttons should be disabled if less than 4 thumbnails', () => {
-    var images2 = [...images].slice(0, 3);
-    render(<AdditionalImages images={images2}/>)
-    const thumbnails = screen.getAllByRole("img");
-    expect(thumbnails).toHaveLength(3);
-    expect(screen.getByTestId("slideRight-mini")).toBeDisabled();
-    expect(screen.getByTestId("slideLeft-mini")).not.toBeVisible();
-  });
-
   test('arrow buttons should be enabled/disabled depending on what is on display', () => {
     render(<AdditionalImages images={images}/>)
     expect(screen.getByTestId("slideRight-mini")).toBeVisible();
