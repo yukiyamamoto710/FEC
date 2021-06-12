@@ -10,7 +10,7 @@ const AdditionalImages = ({images, changeMainImage}) => {
   }
 
   return (
-    <div className="additional-images">
+    <div data-testid="additional-images" className="additional-images">
       <button className="slideLeft-mini"
         onClick={()=>setState({idx: state.idx-1, displayed: [...images].slice(state.idx-1, state.idx+3)})}
         hidden={state.idx === 0}

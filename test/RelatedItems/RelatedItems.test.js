@@ -15,35 +15,24 @@
 
    test('should render the same Outfit list after the page refresh', () => {
      render(<RelatedItems id={1}/>)
-     const outfits = screen.getAllByRole("listitem");
+     const outfits = screen.getAllByTestId("outfit-container");
      const id = screen.get
      window.location.reload();
-     const outfits2 = screen.getAllByRole("listitem");
+     const outfits2 = screen.getAllByRole("outfit-container");
      expect(outfits).toEqual(outfits2);
    });
 
-   test('arrow buttons should be disabled if less than 3 outfit cards', () => {
-     var items = [...selectedItemsList].slice(0, 2)
-     render(<Outfits selectedItemsList={items}/>)
-     expect(screen.getByTestId("slideRight")).not.toBeVisible();
-     expect(screen.getByTestId("slideLeft")).not.toBeVisible();
-   });
+  //  test('should not add the current product more than once', () => {
+  //    var items = [...selectedItemsList].slice(0, 2)
+  //    render(<Outfits selectedItemsList={items}/>)
+  //    expect(screen.getByTestId("slideRight")).not.toBeVisible();
+  //    expect(screen.getByTestId("slideLeft")).not.toBeVisible();
+  //  });
 
-   // should not add the current product more than once
-   test('arrow buttons should be enabled/disabled depending on what is on display', () => {
-     var items = [...selectedItemsList].slice(0, 4)
-     render(<Outfits selectedItemsList={items}/>)
-     expect(screen.getByTestId("slideRight")).toBeVisible();
-     expect(screen.getByTestId("slideLeft")).not.toBeVisible();
+  //  test('should remove the clicked item from a list of outfit', () => {
+  //     render(<RelatedItems id={1}
+  //     fireEvent.click(screen.getByTestId("close"));
+  //     expect(removeFromOutfit).toHaveBeenCalledWith(1);
+  //  });
 
-     fireEvent.click(screen.getByTestId("slideRight"))
-     expect(screen.getByTestId("slideRight")).toBeDisabled();
-     expect(screen.getByTestId("slideLeft")).toBeEnabled();
-
-     fireEvent.click(screen.getByTestId("slideLeft"))
-     expect(screen.getByTestId("slideRight")).toBeEnabled();
-     expect(screen.getByTestId("slideLeft")).not.toBeVisible();
-   });
-
-   // should remove the 
  })
