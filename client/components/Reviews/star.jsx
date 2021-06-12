@@ -1,7 +1,7 @@
 import React from 'react';
 ////////////need to find 1/4 star 3/4 star icons
-const Stars = (props) =>{
-  const { rate, starCK, name } = props;
+const Stars = (props) => {
+  const { rate, starCK, name, className } = props;
   let num1 = Math.floor(rate) || 0;
   let num2 = 0;
   let num3 = 0;
@@ -10,14 +10,14 @@ const Stars = (props) =>{
     num2 = 0;
   } else if (rate < num1 + 0.5) {
     num2 = 1;
-  } else if (rate < num1 + .075) {
+  } else if (rate < num1 + 0.075) {
     num3 = 1;
-  } else if ( rate < num1 + 1){
+  } else if (rate < num1 + 1) {
     num4 = 1;
   }
   let num = 5 - num2 - num3 - num4 - num1;
   return (
-    <div>
+    <div className={className}>
       { num1 !== 0?
         [ ...Array(num1) ].map(( i, index ) =>{
         return (

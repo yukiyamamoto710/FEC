@@ -244,7 +244,11 @@
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
+<<<<<<< HEAD
+      <file name="RelatedProductCard.jsx" path="/Users/kenneth/Desktop/hackreacter/FEC/client/components/RelatedItems/RelatedProductCard.jsx">
+=======
       <file name="RelatedProductCard.jsx" path="/Users/evansding/Desktop/FEC Project 2/FEC/client/components/RelatedItems/RelatedProductCard.jsx">
+>>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
         <metrics statements="94" coveredstatements="72" conditionals="5" coveredconditionals="3" methods="8" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
