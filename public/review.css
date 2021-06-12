@@ -291,5 +291,64 @@ transform: perspective(500px) rotateY(45deg); */
 .ratingHead {
   display:flex;
   font-size: 45px;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratingStar{
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+ .emptyStar {
+  background-color: rgb(230, 217, 217);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .fullStar {
+  background-color: rgb(192, 192, 31);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .qOneStar {
+  background:linear-gradient(
+    to right,
+    rgb(192, 192, 31) 0%,
+    rgb(192, 192, 31) 25%,
+    rgb(230, 217, 217) 50%,
+    rgb(230, 217, 217) 100%,
+  );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .qTwoStar {
+  background:linear-gradient(
+    to right,
+    rgb(192, 192, 31) 0%,
+    rgb(192, 192, 31) 50%,
+    rgb(230, 217, 217) 75%,
+    rgb(230, 217, 217) 100%
+    );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .qThreeStar {
+  background:linear-gradient(
+    to right,
+    rgb(192, 192, 31) 0%,
+    rgb(192, 192, 31) 75%,
+    rgb(230, 217, 217) 100%
+    );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.starButton {
+  width: 25px;
+  height: 30px;
+  background-color: rgba(228, 18, 18, 0);
+  color: #ffffff00;
+  border: none;
+  position: absolute;
+  z-index: 50;
+
 }

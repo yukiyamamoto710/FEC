@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SRList from '../srlist';
 import Characteristics from '../characteristics';
 import { Data } from '../data';
-import Stars from '../star';
+import Stars from '../Stars/Stars';
 
 const Rating = (props) => {
   const { rating, starsClicked } = props;
@@ -53,7 +53,10 @@ const Rating = (props) => {
         data-testid="head"
       >
         {ave}
-        <Stars rate={ave} />
+        <Stars
+          rate={ave}
+          classNameForSize="ratingStar"
+        />
       </div>
       <h5 data-testid="text">
         {`${rAve}% of reviews recommend this product`}

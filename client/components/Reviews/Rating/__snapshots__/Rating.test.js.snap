@@ -10,26 +10,100 @@ exports[`matches snapShot 1`] = `
     data-testid="head"
   >
     3.8
-    <div>
-      <img
-        id={-2}
-        src="star3.svg"
-      />
-      <img
-        id={-1}
-        src="star3.svg"
-      />
-      <img
-        id={0}
-        src="star3.svg"
-      />
-      <img
-        src="star3.svg"
-      />
-      <img
-        id={1}
-        src="star5.svg"
-      />
+    <div
+      className="ratingHead"
+      data-testid="stars"
+    >
+      <div>
+        <button
+          className="starButton"
+          data-testid="button0"
+          id={1}
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+        <div
+          className="ratingStar"
+        >
+          <div
+            className="ratingStar fullStar"
+          />
+        </div>
+      </div>
+      <div>
+        <button
+          className="starButton"
+          data-testid="button1"
+          id={2}
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+        <div
+          className="ratingStar"
+        >
+          <div
+            className="ratingStar fullStar"
+          />
+        </div>
+      </div>
+      <div>
+        <button
+          className="starButton"
+          data-testid="button2"
+          id={3}
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+        <div
+          className="ratingStar"
+        >
+          <div
+            className="ratingStar fullStar"
+          />
+        </div>
+      </div>
+      <div>
+        <button
+          className="starButton"
+          data-testid="button3"
+          id={4}
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+        <div
+          className="ratingStar"
+        >
+          <div
+            className="ratingStar qThreeStar"
+          />
+        </div>
+      </div>
+      <div>
+        <button
+          className="starButton"
+          data-testid="button4"
+          id={5}
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+        <div
+          className="ratingStar"
+        >
+          <div
+            className="ratingStar emptyStar"
+          />
+        </div>
+      </div>
     </div>
   </div>
   <h5
