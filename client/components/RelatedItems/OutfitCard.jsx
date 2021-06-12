@@ -10,7 +10,7 @@ const OutfitCard = ({product, removeFromOutfit}) => {
         <span data-testid="close" className="close" onClick={()=>removeFromOutfit(product.id)}>&#9447;</span>
         <img data-testid="image" className="related-product-img" src={product.results[0].photos[0].url}/>
         <div className="product-info">
-          <div data-testid="category">{product.category}</div>
+          <div data-testid="category" className="product-category">{product.category}</div>
           <div data-testid="name" className="product-name">{product.name}</div>
           <Price product={product}/>
           <Rating rating={product.rating.ratings} />
