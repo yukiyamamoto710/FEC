@@ -15,7 +15,7 @@ class Overview extends React.Component {
       stylesList: [],
       mounted: false,
       index: 0,
-      urlName: 'thumbnail_url',
+      urlName: 'url',
       clicked: false,
       thumbIndex: 0
     }
@@ -43,7 +43,6 @@ class Overview extends React.Component {
         console.log(error);
       })
       }
-
   }
 
   fetchGET(string, id, name){
@@ -70,12 +69,14 @@ class Overview extends React.Component {
   changePic(number) {
     this.setState({
       index: number,
+      thumbIndex: 0,
       //before this state was changing between my url and my thumbnail url
-      //urlName: 'url'
+      urlName: 'url'
     })
   }
 
   changeThumbnail(number) {
+
     this.setState({
       thumbIndex: number,
       urlName: 'thumbnail_url'
@@ -89,6 +90,7 @@ class Overview extends React.Component {
       var price;
       var salePrice;
       var styleItem = currentItem[this.state.index].name;
+
       if(currentItem[this.state.index].sale_price !== null) {
         salePrice = <div>{currentItem[this.state.index].sale_price}</div>;
         price = <div style = {crossed}>{currentItem[this.state.index].original_price}</div>
@@ -96,16 +98,17 @@ class Overview extends React.Component {
         salePrice = <div></div>
         price = <div>{currentItem[this.state.index].original_price}</div>
       }
+
       return(
-        <>
-         <DefaultView picture = {currentItem[this.state.thumbIndex].photos[0][this.state.urlName]} thumbnailArray = {currentItem} index = {this.state.index}callback = {this.changeThumbnail}/>
+        <div className = 'wrapper'>
+         <DefaultView picture = {currentItem[this.state.index].photos[this.state.thumbIndex][this.state.urlName]} styleObj = {currentItem[this.state.index]} callback = {this.changeThumbnail} index = {this.state.thumbIndex}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice} styleItem = {styleItem}/>
-         <div className = 'stylesBox'>
-         {this.state.stylesList.results.map((item, index) => {
+         <div data-testid = 'stylesBox' className = 'stylesBox'>
+         {currentItem.map((item, index) => {
            return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
          })}
          </div>
-        </>
+        </div>
        );
   }
 
@@ -116,7 +119,7 @@ class Overview extends React.Component {
     if(this.state.stylesList.length === 0) {
       console.log(this.state.description);
       return (
-       <>LOADING</>
+       <div>LOADING</div>
       );
     } else {
       return (
