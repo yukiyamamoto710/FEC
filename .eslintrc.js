@@ -5,21 +5,14 @@ module.exports = {
         "node": true,
         "jest": true,
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-
-    }
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+  ],
+  rules: {
+    // without this rule test part render() will get redling;
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+  },
 };

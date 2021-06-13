@@ -2,11 +2,11 @@ import React from 'react';
 import Rbheader from './rbheader.jsx';
 import MessageList from './rbmessage.jsx';
 import Form from './form.jsx';
-import Button from './button.jsx';
+import Button from './Button/Button';
 import PopOut from './popout.jsx';
 
 const Rbase = (props) =>{
-  const { list, sort, helpful, notHelpful, report, more,
+  const { list, sort, helpful, notHelpful, report, moreReview,
     addfunc, moreBTN, msgClick } = props;
   return (
     <div
@@ -22,9 +22,9 @@ const Rbase = (props) =>{
         notHelpful = { notHelpful }/>
       <br></br>
       <Button
-        moreBTN = { moreBTN }
-        more = { more }
-        add ={ addfunc } />
+        moreBTNshow = { moreBTN }
+        moreReview = { moreReview }
+        addReview ={ addfunc } />
     </div>
   )
 }
@@ -32,7 +32,7 @@ const Rbase = (props) =>{
 export default Rbase;
 
 const style = {
-  display:'flex',
+  display: 'flex',
   flexDirection: 'column',
-  width:'100%'
+  width: '100%',
 }
