@@ -20,3 +20,17 @@ app.get('/get', (req, res) => {
     }
   });
 });
+
+app.post('/cart', (req, res) => {
+  var url = req.route.path.slice(1)
+
+  console.log(req.body);
+  api.hrapi(`${url}`, req.body.quantity, JSON.parse(req.body.sku),  (err, data) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      console.log(data);
+      res.status(201).send(data);
+    }
+  });
+});

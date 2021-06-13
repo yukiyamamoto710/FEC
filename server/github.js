@@ -14,10 +14,11 @@ let hrapi = (input, callback) => {
   return axios(option)
     .then((data) => {
       let datas = data.data
+      //console.log(datas);
       callback(null, datas)
     })
     .catch((err) => {
-      console.log(err,'err')
+      //console.log(err,'err')
       callback(err)
     })
 }
