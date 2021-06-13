@@ -44,8 +44,9 @@ const ExpandedPic = (props) => {
       const mover = document.querySelector('.zoomedPicture');
       if(mover !== undefined && mover !== null) {
         //console.log(mover);
-        console.log('this is event' , e);
+
         var bbox = e.target.getBoundingClientRect();
+        console.log('this is bbox' , bbox);
         var mouseX = e.clientX - bbox.left;
         var mouseY = e.clientY - bbox.top;
 
@@ -65,22 +66,12 @@ const ExpandedPic = (props) => {
       zoom = 'expandedPicture';
     }
 
-    // const mover = document.querySelector('zoomedPicture');
-
-    // if(mover !== undefined && mover !== null) {
-    //   console.log(mover);
-    //   mover.addEventListener('mousemove', (e) => {
-    //     mover.style.backgroundPositionX = -e.offsetX + "px";
-    //     mover.style.backgroundPositionY = -e.offsetY + "px";
-    //   })
-    // }
-
     return(
       <div>
       <div className = 'bigPicture'>
         <img className ='Picture' src= {props.currentPic} alt=" Picture of Clothing"></img>
-        <img className = {props.right} src = 'right-arrow.svg' ></img>
-        <img className = {props.left} src = 'left-arrow.svg' alt = 'left-arrow'></img>
+        <img src = 'right-arrow.svg' ></img>
+        <img src = 'left-arrow.svg' alt = 'left-arrow'></img>
       </div>
       <div className = 'expandedPictureContainer'>
         <button className = 'exit' onClick = {props.closeOut}>X</button>

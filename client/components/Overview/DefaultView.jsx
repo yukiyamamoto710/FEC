@@ -16,7 +16,7 @@ class DefaultView extends React.Component {
     this.changeThumbNail = this.changeThumbNail.bind(this);
     this.handleRight = this.handleRight.bind(this);
     this.handleLeft = this.handleLeft.bind(this);
-    this.expand = this.expand.bind(this);
+    this.expandPic = this.expandPic.bind(this);
     this.closeOut = this.closeOut.bind(this);
   }
 
@@ -34,7 +34,7 @@ class DefaultView extends React.Component {
   //     this.setState({thumbnail: false});
   //   }
   // }
-  expand() {
+  expandPic() {
     this.setState({expanded: true});
   }
 
@@ -66,7 +66,7 @@ class DefaultView extends React.Component {
   render() {
     var currentPic = this.props.picture;
     var isHighlighted;
-    var expand = this.state.expanded === true ? 'expandedPicture' : 'Picture';
+    var expand;
     var left = this.state.index === 0 ? 'hidden' : 'leftArrow';
     var right = this.state.index === this.props.styleObj.photos.length - 1 ? 'hidden' : 'rightArrow';
     //probably have to set the variable expand to be its own jsx fragment instead of just changing the class
@@ -76,7 +76,7 @@ class DefaultView extends React.Component {
     } else {
       expand =
       <div className = 'bigPicture'>
-        <img className ='Picture' onClick = {this.expand} src= {currentPic} alt=" Big Picture of Clothing"></img>
+        <img className ='Picture' onClick = {this.expandPic} src= {currentPic} alt=" Big Picture of Clothing"></img>
         <img className = {right} onClick = {this.handleRight} src = 'right-arrow.svg' name = {this.state.index}></img>
         <img className = {left} onClick = {this.handleLeft} src = 'left-arrow.svg' name = {this.state.index} alt = 'left-arrow'></img>
       </div>
