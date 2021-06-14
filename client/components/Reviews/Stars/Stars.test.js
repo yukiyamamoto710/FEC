@@ -7,7 +7,6 @@ import {
   render,
   cleanup,
   fireEvent,
-  screen,
 } from '@testing-library/react';
 import Stars from './Stars';
 
@@ -15,17 +14,28 @@ afterEach(cleanup);
 
 it('Stars will trigger when clicked', () => {
   const testFunc = jest.fn();
-  render(<Stars starsClicked={testFunc} />);
-  fireEvent.click(screen.getByTestId('button0'));
-  fireEvent.click(screen.getByTestId('button1'));
-  fireEvent.click(screen.getByTestId('button2'));
-  fireEvent.click(screen.getByTestId('button3'));
-  fireEvent.click(screen.getByTestId('button4'));
+  const { getByTestId } = render(<Stars starClicked={testFunc} />);
+  fireEvent.click(getByTestId('button0'));
+  fireEvent.click(getByTestId('button1'));
+  fireEvent.click(getByTestId('button2'));
+  fireEvent.click(getByTestId('button3'));
+  fireEvent.click(getByTestId('button4'));
+  expect(testFunc).toHaveBeenCalledTimes(5);
+});
+
+it('Stars will trigger when keypress', () => {
+  const testFunc = jest.fn();
+  const { getByTestId } = render(<Stars starClicked={testFunc} />);
+  fireEvent.keyPress(getByTestId('button0'), { key: 'Enter', code: 13, charCode: 13 });
+  fireEvent.keyPress(getByTestId('button1'), { key: 'Enter', code: 13, charCode: 13 });
+  fireEvent.keyPress(getByTestId('button2'), { key: 'Enter', code: 13, charCode: 13 });
+  fireEvent.keyPress(getByTestId('button3'), { key: 'Enter', code: 13, charCode: 13 });
+  fireEvent.keyPress(getByTestId('button4'), { key: 'Enter', code: 13, charCode: 13 });
   expect(testFunc).toHaveBeenCalledTimes(5);
 });
 
 it('should have default starsClicked()', () => {
-  expect(Stars.defaultProps.starsClicked()).toBeDefined();
+  expect(Stars.defaultProps.starClicked()).toBeDefined();
 });
 
 it('matches snapShot', () => {

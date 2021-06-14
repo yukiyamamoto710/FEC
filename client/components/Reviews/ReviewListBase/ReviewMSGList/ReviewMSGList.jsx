@@ -1,20 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Message from '../../Message/Message';
 import Photos from '../../Photos/Photos';
 import MSGHeader from './MSGHeader/MSGHeader';
-import HR from '../../helpful';
+import HelpfulMSG from '../../HelpfulMSG/HelpfulMSG';
 
-// key should be review_id
-// since cant post and cant get the review_id
-// use index
 const MessageList = (props) => {
   const {
-    reviewsList,
+    listReviews,
+    reported,
   } = props;
-  console.log(reviewsList.response, 'qwewq');
   return (
-    <div className="msgListBase">
-      { reviewsList.map((i, index) => (
+    <div
+      data-testid="msgListBase"
+      className="msgListBase"
+    >
+      { listReviews.map((i, index) => (
         <div
           key={index}
           className="msgContainer"
@@ -49,48 +50,25 @@ const MessageList = (props) => {
           <Photos
             photos={i.photos}
           />
-          {/* <HR
-            helpful={i.helpfulness}
-            notHelpful={0} //  shoudl get the key from i
-            no={notHelpful}
-            yes={helpful}
-            report={report}
-            index={index}
-          /> */}
+          <HelpfulMSG
+            countHelpful={i.helpfulness}
+            reviewId={i.review_id}
+            countNotHelpful={0}// should get the key from i
+            reported={reported}
+          />
         </div>
       ))}
     </div>
   );
 };
 
+MessageList.propTypes = {
+  reported: PropTypes.func,
+  listReviews: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+MessageList.defaultProps = {
+  reported: () => 1,
+  listReviews: [{}],
+};
 export default MessageList;
-
-const style = {
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-  height: '450px',
-  overflow: 'auto',
-};
-
-const container = {
-  borderBottom: '1px solid rgb(192,192,192)',
-};
-
-const summery = {
-  fontSize: '12px',
-  fontWeight: 'bold',
-  marginBottom: '5px',
-};
-
-const body = {
-  fontSize: '10px',
-  margin: '5px',
-};
-
-const response = {
-  border: '1px solid rgb(192,192,192)',
-  backgroundColor: 'rgb(192,192,192)',
-  fontSize: '10px',
-  margin: '5px',
-};

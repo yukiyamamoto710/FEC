@@ -1,47 +1,60 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import ratingGET from './func/ratingGet/ratingGet';
-import reviewsGET from './func/reviewsGet/reviewsGet';
 import Rating from './Rating/Rating';
 import ReviewListBase from './ReviewListBase/ReviewListBase';
 
 export default function Reviews(props) {
   const { id } = props;
-  const [ratingLoad, setRatingLoad] = useState(false);
-  const [reviewsLoad, setReviewsLoad] = useState(false);
+  const [isRatingLoad, setIsRatingLoad] = useState(false);
+  const [countStars, setCountStars] = useState(5);
   const [rating, setRating] = useState({});
-  const [reviews, setReviews] = useState([]);
-  const [stars, setStars] = useState(5);
+  const [listUserReview, setListUserReview] = useState([]);
+  const [listReported, setListReported] = useState([]);
 
-  console.log(reviews, rating,'sdsa');
   useEffect(() => {
-    console.log(id);
-    reviewsGET('reviews', id, 2, 'relevant', setReviews, setReviewsLoad);
-    ratingGET('reviews/meta', id, setRating, setRatingLoad);
+    setCountStars(5);
+    ratingGET('reviews/meta', id, setRating, setIsRatingLoad);
   }, [id]);
 
-  console.log(stars);
+  const starClicked = (num) => {
+    setCountStars(num);
+  };
 
-  if (ratingLoad && reviewsLoad) {
+  const addUserReview = (obj) => {
+    setListUserReview([...listUserReview, obj]);
+  };
+
+  const addListReported = (reportId) => {
+    setListReported([...listReported, reportId]);
+  };
+
+  if (isRatingLoad) {
     return (
-      <div>
+      <div className="reviewContainer">
         <Rating
           rating={rating}
-          starsClicked={(num) => setStars(num)}
+          starClicked={starClicked}
         />
         <ReviewListBase
-          reviews={reviews}
-          stars={stars}
-          // sort = { this.sort }
-          // helpful ={ this.helpful }
-          // notHelpful ={ this.notHelpful }
-          // report ={ this.report }
-          // moreReview = { this.moreReview }
-          // addfunc = { this.add }
-          // msgClick = { this.msgClick }
-          // moreBTN = { moreBTNshowed }/>
+          rating={rating}
+          id={id}
+          listReported={listReported}
+          addListReported={addListReported}
+          listUserReview={listUserReview}
+          addUserReview={addUserReview}
+          stars={countStars}
         />
       </div>
     );
   }
   return <div> Loading... </div>;
 }
+
+Reviews.propTypes = {
+  id: PropTypes.number,
+};
+
+Reviews.defaultProps = {
+  id: 25711,
+};

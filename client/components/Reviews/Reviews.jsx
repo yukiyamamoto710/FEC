@@ -80,8 +80,6 @@ class Reviews extends React.Component {
   };
 
   getTarget(event) {
-    console.log(event.target.value)
-    console.log(event.target.innerHTML)
     let key = event.target.id;
     let value = event.target.value;
     let HTML = event.target.innerHTML;

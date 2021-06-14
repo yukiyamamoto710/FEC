@@ -1,12 +1,12 @@
 import React from 'react';
-import Stars from './star.jsx';
-import { Data } from './data.js';
+import Stars from './Stars/Stars';
+import { Data } from './data';
 
 const FormStarCK = (props) => {
   const {
     name,
     info,
-    starCK,
+    starClick,
   } = props;
   return (
     <div className="topSmallContainer">
@@ -16,10 +16,11 @@ const FormStarCK = (props) => {
       <Stars
         className="formStar"
         rate={info}
-        starCK={starCK}
-        name={name}
+        classNameForSize="formStar"
+        starClick={starClick}
+        name={String(name)}
       />
-      <div className="formDetail">
+      <div className="formText">
         {Data[name][info - 1]}
       </div>
     </div>

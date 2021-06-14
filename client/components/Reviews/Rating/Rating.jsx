@@ -6,7 +6,7 @@ import { Data } from '../data';
 import Stars from '../Stars/Stars';
 
 const Rating = (props) => {
-  const { rating, starsClicked } = props;
+  const { rating, starClicked } = props;
   const obj = { ...rating.ratings };
   const key = Object.keys(obj).sort();
   let num = 0;
@@ -64,7 +64,7 @@ const Rating = (props) => {
       <div data-testid="starListR">
         <StarList
           stars={keyArray.reverse()}
-          starsClicked={starsClicked}
+          starClicked={starClicked}
           perArray={perArray}
         />
       </div>
@@ -96,11 +96,11 @@ Rating.propTypes = {
       }),
     ),
   }),
-  starsClicked: PropTypes.func,
+  starClicked: PropTypes.func,
 };
 
 Rating.defaultProps = {
   rating: {},
-  starsClicked: () => 1,
+  starClicked: () => 1,
 };
 export default Rating;

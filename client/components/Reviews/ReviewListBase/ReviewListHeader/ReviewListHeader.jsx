@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 const ReviewListHeader = (props) => {
   const { len, sortBy } = props;
+
+  const handleChangeSelect = (event) => sortBy(event.target.value);
+
   return (
     <div
       className="reviewListHeader"
@@ -11,7 +14,7 @@ const ReviewListHeader = (props) => {
       <select
         data-testid="select"
         className="reviewListHeader reviewListSort"
-        onChange={(event) => sortBy(event.target.value)}
+        onChange={handleChangeSelect}
       >
         <option data-testid="option">relevant</option>
         <option data-testid="option">newest</option>
@@ -31,14 +34,3 @@ ReviewListHeader.defaultProps = {
   sortBy: () => 1,
 };
 export default ReviewListHeader;
-
-const style = {
-  display: 'flex',
-  fontSize: '12px',
-};
-
-const style1 = {
-  borderStyle: 'none',
-  outline: '0px',
-  fontSize: '12px',
-};

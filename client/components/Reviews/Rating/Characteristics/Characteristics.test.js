@@ -26,7 +26,7 @@ it('should render', () => {
   const test1 = screen.queryByText('Hello');
   const test2 = screen.queryByText('World');
   expect(test).toBeInTheDocument();
-  expect(test1).toBeInTheDocument();
+  expect(test1).not.toBeInTheDocument();
   expect(test2).toBeInTheDocument();
 });
 

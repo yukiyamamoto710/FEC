@@ -5,8 +5,9 @@ import checkStar from '../func/checkStar/checkStar';
 const Stars = (props) => {
   const {
     rate,
+    name,
     classNameForSize,
-    starsClicked,
+    starClick,
   } = props;
 
   return (
@@ -15,22 +16,18 @@ const Stars = (props) => {
       className="ratingHead"
     >
       {[...Array(5)].map((i, index) => (
-        // eslint-disable-next-line react/no-array-index-key
         <div key={index}>
-          <button
+          <div
+            className={`${classNameForSize} ${checkStar(index, rate)}`}
             data-testid={`button${index}`}
-            type="button"
-            id={index + 1}
-            className="starButton"
-            onClick={starsClicked}
-          >
-            .
-          </button>
-          <div className={classNameForSize}>
-            <div
-              className={`${classNameForSize} ${checkStar(index, rate)}`}
-            />
-          </div>
+            onKeyPress={starClick}
+            tabIndex={0}
+            role="button"
+            label={checkStar(index, rate)}
+            namew={name}
+            id={`${name} ${index + 1}`}
+            onClick={starClick}
+          />
         </div>
       ))}
     </div>
@@ -40,13 +37,15 @@ const Stars = (props) => {
 Stars.propTypes = {
   rate: PropTypes.number,
   classNameForSize: PropTypes.string,
-  starsClicked: PropTypes.func,
+  starClick: PropTypes.func,
+  name: PropTypes.string,
 };
 
 Stars.defaultProps = {
   rate: 1,
+  name: '',
   classNameForSize: '',
-  starsClicked: () => 1,
+  starClick: () => 1,
 };
 
 export default Stars;

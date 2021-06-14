@@ -15,94 +15,69 @@ exports[`matches snapShot 1`] = `
       data-testid="stars"
     >
       <div>
-        <button
-          className="starButton"
+        <div
+          className="ratingStar fullStar"
           data-testid="button0"
-          id={1}
+          id=" 1"
+          label="fullStar"
+          namew=""
           onClick={[Function]}
-          type="button"
-        >
-          .
-        </button>
-        <div
-          className="ratingStar"
-        >
-          <div
-            className="ratingStar fullStar"
-          />
-        </div>
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
       </div>
       <div>
-        <button
-          className="starButton"
+        <div
+          className="ratingStar fullStar"
           data-testid="button1"
-          id={2}
+          id=" 2"
+          label="fullStar"
+          namew=""
           onClick={[Function]}
-          type="button"
-        >
-          .
-        </button>
-        <div
-          className="ratingStar"
-        >
-          <div
-            className="ratingStar fullStar"
-          />
-        </div>
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
       </div>
       <div>
-        <button
-          className="starButton"
+        <div
+          className="ratingStar fullStar"
           data-testid="button2"
-          id={3}
+          id=" 3"
+          label="fullStar"
+          namew=""
           onClick={[Function]}
-          type="button"
-        >
-          .
-        </button>
-        <div
-          className="ratingStar"
-        >
-          <div
-            className="ratingStar fullStar"
-          />
-        </div>
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
       </div>
       <div>
-        <button
-          className="starButton"
+        <div
+          className="ratingStar qThreeStar"
           data-testid="button3"
-          id={4}
+          id=" 4"
+          label="qThreeStar"
+          namew=""
           onClick={[Function]}
-          type="button"
-        >
-          .
-        </button>
-        <div
-          className="ratingStar"
-        >
-          <div
-            className="ratingStar qThreeStar"
-          />
-        </div>
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
       </div>
       <div>
-        <button
-          className="starButton"
-          data-testid="button4"
-          id={5}
-          onClick={[Function]}
-          type="button"
-        >
-          .
-        </button>
         <div
-          className="ratingStar"
-        >
-          <div
-            className="ratingStar emptyStar"
-          />
-        </div>
+          className="ratingStar emptyStar"
+          data-testid="button4"
+          id=" 5"
+          label="emptyStar"
+          namew=""
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
       </div>
     </div>
   </div>
@@ -124,6 +99,8 @@ exports[`matches snapShot 1`] = `
         >
           <button
             className="starListText"
+            data-testid="startListButton5"
+            id="5"
             onClick={[Function]}
             type="button"
           >
@@ -151,6 +128,8 @@ exports[`matches snapShot 1`] = `
         >
           <button
             className="starListText"
+            data-testid="startListButton4"
+            id="4"
             onClick={[Function]}
             type="button"
           >
@@ -178,6 +157,8 @@ exports[`matches snapShot 1`] = `
         >
           <button
             className="starListText"
+            data-testid="startListButton3"
+            id="3"
             onClick={[Function]}
             type="button"
           >
@@ -203,6 +184,8 @@ exports[`matches snapShot 1`] = `
         >
           <button
             className="starListText"
+            data-testid="startListButton2"
+            id="2"
             onClick={[Function]}
             type="button"
           >
@@ -228,6 +211,8 @@ exports[`matches snapShot 1`] = `
         >
           <button
             className="starListText"
+            data-testid="startListButton1"
+            id="1"
             onClick={[Function]}
             type="button"
           >
@@ -262,68 +247,47 @@ exports[`matches snapShot 1`] = `
       <div
         className="charaBar"
       >
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Uncomfortable
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Slightly uncomfortable
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Ok
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Comfortable
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Perfect
-          </div>
-        </div>
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
         <div
           style={
             Object {
+              "bottom": "10%",
               "left": "55%",
               "position": "absolute",
-              "top": "0px",
             }
           }
         >
           <div
             className="charaBarPoint"
           />
+        </div>
+      </div>
+      <div
+        className="barTextContainer"
+      >
+        <div
+          className="barText"
+        >
+          Uncomfortable
+        </div>
+        <div
+          className="barText"
+        >
+          Perfect
         </div>
       </div>
     </div>
@@ -339,68 +303,47 @@ exports[`matches snapShot 1`] = `
       <div
         className="charaBar"
       >
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Poor
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Below average
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            What I expected
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Pretty great
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Perfect
-          </div>
-        </div>
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
         <div
           style={
             Object {
+              "bottom": "10%",
               "left": "40%",
               "position": "absolute",
-              "top": "0px",
             }
           }
         >
           <div
             className="charaBarPoint"
           />
+        </div>
+      </div>
+      <div
+        className="barTextContainer"
+      >
+        <div
+          className="barText"
+        >
+          Poor
+        </div>
+        <div
+          className="barText"
+        >
+          Perfect
         </div>
       </div>
     </div>
@@ -416,68 +359,47 @@ exports[`matches snapShot 1`] = `
       <div
         className="charaBar"
       >
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            A size too small
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            ½ a size too small
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Perfect
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            ½ a size too big
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            A size too wide
-          </div>
-        </div>
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
         <div
           style={
             Object {
+              "bottom": "10%",
               "left": "45%",
               "position": "absolute",
-              "top": "0px",
             }
           }
         >
           <div
             className="charaBarPoint"
           />
+        </div>
+      </div>
+      <div
+        className="barTextContainer"
+      >
+        <div
+          className="barText"
+        >
+          A size too small
+        </div>
+        <div
+          className="barText"
+        >
+          A size too wide
         </div>
       </div>
     </div>
@@ -493,68 +415,47 @@ exports[`matches snapShot 1`] = `
       <div
         className="charaBar"
       >
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Too narrow
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Slightly narrow
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Perfect
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Slightly wide
-          </div>
-        </div>
-        <div>
-          <div
-            className="charaSmallBar"
-          />
-          <div
-            className="charaText"
-          >
-            Too wide
-          </div>
-        </div>
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
+        <div
+          className="charaSmallBar"
+        />
         <div
           style={
             Object {
+              "bottom": "10%",
               "left": "65%",
               "position": "absolute",
-              "top": "0px",
             }
           }
         >
           <div
             className="charaBarPoint"
           />
+        </div>
+      </div>
+      <div
+        className="barTextContainer"
+      >
+        <div
+          className="barText"
+        >
+          Too narrow
+        </div>
+        <div
+          className="barText"
+        >
+          Too wide
         </div>
       </div>
     </div>

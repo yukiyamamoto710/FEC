@@ -6,7 +6,7 @@ const Characteristics = (props) => {
   const perce = Math.floor((value / 5) * 100);
   const point = {
     position: 'absolute',
-    top: '0px',
+    bottom: '10%',
     left: `${perce}%`,
   };
 
@@ -17,17 +17,18 @@ const Characteristics = (props) => {
     >
       {name}
       <div className="charaBar">
-        { dataArray.map((i) => (
-          <div key={i}>
-            <div className="charaSmallBar" />
-            <div className="charaText">
-              { i }
-            </div>
-          </div>
-        )) }
+        <div className="charaSmallBar" />
+        <div className="charaSmallBar" />
+        <div className="charaSmallBar" />
+        <div className="charaSmallBar" />
+        <div className="charaSmallBar" />
         <div style={point}>
           <div className="charaBarPoint" />
         </div>
+      </div>
+      <div className="barTextContainer">
+        <div className="barText">{dataArray[0]}</div>
+        <div className="barText">{dataArray[dataArray.length - 1]}</div>
       </div>
     </div>
   );

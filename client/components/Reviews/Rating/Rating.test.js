@@ -58,7 +58,7 @@ describe('render correct', () => {
 });
 
 it('should have default starsClicked()', () => {
-  expect(Rating.defaultProps.starsClicked()).toBeDefined();
+  expect(Rating.defaultProps.starClicked()).toBeDefined();
 });
 
 it('matches snapShot', () => {

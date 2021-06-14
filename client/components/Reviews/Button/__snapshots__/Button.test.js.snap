@@ -8,7 +8,7 @@ exports[`matches snapShot 1`] = `
   <button
     className="add_moreBTN"
     data-testid="moreBtn"
-    onClick={[MockFunction]}
+    onClick={[Function]}
     type="button"
   >
     MORE REVIEWS
@@ -16,7 +16,7 @@ exports[`matches snapShot 1`] = `
   <button
     className="add_moreBTN"
     data-testid="AddBtn"
-    onClick={[MockFunction]}
+    onClick={[Function]}
     type="button"
   >
     ADD A REVIEWS

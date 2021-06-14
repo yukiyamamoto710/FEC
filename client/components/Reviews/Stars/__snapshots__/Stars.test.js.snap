@@ -6,94 +6,69 @@ exports[`matches snapShot 1`] = `
   data-testid="stars"
 >
   <div>
-    <button
-      className="starButton"
+    <div
+      className="hi fullStar"
       data-testid="button0"
-      id={1}
+      id=" 1"
+      label="fullStar"
+      namew=""
       onClick={[Function]}
-      type="button"
-    >
-      .
-    </button>
-    <div
-      className="hi"
-    >
-      <div
-        className="hi fullStar"
-      />
-    </div>
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    />
   </div>
   <div>
-    <button
-      className="starButton"
+    <div
+      className="hi emptyStar"
       data-testid="button1"
-      id={2}
+      id=" 2"
+      label="emptyStar"
+      namew=""
       onClick={[Function]}
-      type="button"
-    >
-      .
-    </button>
-    <div
-      className="hi"
-    >
-      <div
-        className="hi emptyStar"
-      />
-    </div>
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    />
   </div>
   <div>
-    <button
-      className="starButton"
+    <div
+      className="hi emptyStar"
       data-testid="button2"
-      id={3}
+      id=" 3"
+      label="emptyStar"
+      namew=""
       onClick={[Function]}
-      type="button"
-    >
-      .
-    </button>
-    <div
-      className="hi"
-    >
-      <div
-        className="hi emptyStar"
-      />
-    </div>
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    />
   </div>
   <div>
-    <button
-      className="starButton"
+    <div
+      className="hi emptyStar"
       data-testid="button3"
-      id={4}
+      id=" 4"
+      label="emptyStar"
+      namew=""
       onClick={[Function]}
-      type="button"
-    >
-      .
-    </button>
-    <div
-      className="hi"
-    >
-      <div
-        className="hi emptyStar"
-      />
-    </div>
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    />
   </div>
   <div>
-    <button
-      className="starButton"
-      data-testid="button4"
-      id={5}
-      onClick={[Function]}
-      type="button"
-    >
-      .
-    </button>
     <div
-      className="hi"
-    >
-      <div
-        className="hi emptyStar"
-      />
-    </div>
+      className="hi emptyStar"
+      data-testid="button4"
+      id=" 5"
+      label="emptyStar"
+      namew=""
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    />
   </div>
 </div>
 `;

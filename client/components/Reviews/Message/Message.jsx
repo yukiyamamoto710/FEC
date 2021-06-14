@@ -5,6 +5,14 @@ const Message = (props) => {
   const { body } = props;
   const [click, setClick] = useState(false);
 
+  const handleClickText = () => {
+    setClick(!click);
+  };
+
+  const handleKeyPressText = () => {
+    setClick(!click);
+  };
+
   if (click) {
     return (
       <div
@@ -12,8 +20,8 @@ const Message = (props) => {
         className="msgBody1"
         role="button"
         tabIndex={0}
-        onKeyPress={() => { setClick(false); }}
-        onClick={() => { setClick(false); }}
+        onKeyPress={handleKeyPressText}
+        onClick={handleClickText}
       >
         {body}
       </div>
@@ -25,8 +33,8 @@ const Message = (props) => {
       className="msgBody"
       role="button"
       tabIndex={0}
-      onKeyPress={() => { setClick(true); }}
-      onClick={() => { setClick(true); }}
+      onKeyPress={handleKeyPressText}
+      onClick={handleClickText}
     >
       {body}
     </div>
