@@ -23,9 +23,15 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
+<<<<<<< HEAD
                 <span class="strong">11.07% </span>
                 <span class="quiet">Statements</span>
                 <span class='fraction'>31/280</span>
+=======
+                <span class="strong">73.59% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>209/284</span>
+>>>>>>> main
             </div>
         
             
@@ -44,9 +50,15 @@
         
             
             <div class='fl pad1y space-right2'>
+<<<<<<< HEAD
                 <span class="strong">11.07% </span>
                 <span class="quiet">Lines</span>
                 <span class='fraction'>31/280</span>
+=======
+                <span class="strong">73.59% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>209/284</span>
+>>>>>>> main
             </div>
         
             
@@ -337,7 +349,38 @@
 <a name='L278'></a><a href='#L278'>278</a>
 <a name='L279'></a><a href='#L279'>279</a>
 <a name='L280'></a><a href='#L280'>280</a>
+<<<<<<< HEAD
 <a name='L281'></a><a href='#L281'>281</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+=======
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+>>>>>>> main
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -403,6 +446,12 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<<<<<<< HEAD
+=======
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+>>>>>>> main
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -625,12 +674,127 @@ import { msg, textExample } from '../data';
 import Warning from './Warning/Warning';
 import usePopOut from './usePopOut';
 &nbsp;
+<<<<<<< HEAD
 // const modle = {
 //   product_id: '',
 //   summary: '',
 //   name: '',
 //   email: '',
 // };
+=======
+class PopOut extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      product_id: '',
+      characteristics: '',
+      rating: 1,
+      summary: '',
+      body: '',
+      recommend: true,
+      name: '',
+      email: '',
+      photos: [],
+      warning: [],
+    };
+    this.upDate = this.upDate.bind(this);
+    this.targetChange = this.targetChange.bind(this);
+    this.checkReview = this.checkReview.bind(this);
+    this.loaded = this.loaded.bind(this);
+    this.starCK = this.starCK.bind(this);
+    this.showWarning = this.showWarning.bind(this);
+  }
+&nbsp;
+  componentDidMount() {
+    const { data } = this.props;
+    this.upDate(data);
+  }
+&nbsp;
+  componentDidUpdate(prevProps) {
+    // {} should never === {};
+    const { data } = this.props;
+    if (prevProps !== this.props) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      this.upDate(data);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+  }
+&nbsp;
+  upDate(data) {
+    this.setState({
+      characteristics: data.characteristics,
+      product_id: data.product_id,
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  targetChange(event) {</span>
+<span class="cstat-no" title="statement not covered" >    const { id, value } = event.target;</span>
+<span class="cstat-no" title="statement not covered" >    const { photos } = this.state;</span>
+<span class="cstat-no" title="statement not covered" >    const arr = [...photos];</span>
+<span class="cstat-no" title="statement not covered" >    if (id === 'recommend') {</span>
+<span class="cstat-no" title="statement not covered" >      if (value === 'false') {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+<span class="cstat-no" title="statement not covered" >          recommend: false,</span>
+<span class="cstat-no" title="statement not covered" >        });</span>
+<span class="cstat-no" title="statement not covered" >      } else {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+<span class="cstat-no" title="statement not covered" >          recommend: true,</span>
+<span class="cstat-no" title="statement not covered" >        });</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    } else if (id === 'photos') {</span>
+<span class="cstat-no" title="statement not covered" >      if (value !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >        arr.push(String(value));</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+<span class="cstat-no" title="statement not covered" >          [id]: arr,</span>
+<span class="cstat-no" title="statement not covered" >        });</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    } else {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+<span class="cstat-no" title="statement not covered" >        [id]: value,</span>
+<span class="cstat-no" title="statement not covered" >      });</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  checkReview() {</span>
+<span class="cstat-no" title="statement not covered" >    const { addReview } = this.props;</span>
+<span class="cstat-no" title="statement not covered" >    const {</span>
+<span class="cstat-no" title="statement not covered" >      body,</span>
+<span class="cstat-no" title="statement not covered" >      email,</span>
+<span class="cstat-no" title="statement not covered" >      name,</span>
+<span class="cstat-no" title="statement not covered" >      summary,</span>
+<span class="cstat-no" title="statement not covered" >    } = this.state;</span>
+<span class="cstat-no" title="statement not covered" >    const waring = [];</span>
+<span class="cstat-no" title="statement not covered" >    if (body.length &lt; 50) { waring.push('Description'); }</span>
+<span class="cstat-no" title="statement not covered" >    if (!email.includes('@')) { waring.push('Email'); }</span>
+<span class="cstat-no" title="statement not covered" >    if (name.length === 0) { waring.push('Name'); }</span>
+<span class="cstat-no" title="statement not covered" >    if (summary.length === 0) { waring.push('Title'); }</span>
+<span class="cstat-no" title="statement not covered" >    if (waring.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+<span class="cstat-no" title="statement not covered" >        warning: waring,</span>
+<span class="cstat-no" title="statement not covered" >      });</span>
+<span class="cstat-no" title="statement not covered" >    } else {</span>
+<span class="cstat-no" title="statement not covered" >      // POST</span>
+<span class="cstat-no" title="statement not covered" >      console.log();</span>
+<span class="cstat-no" title="statement not covered" >      this.props.cancel();</span>
+<span class="cstat-no" title="statement not covered" >      addReview(this.state);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  starCK(event) {</span>
+<span class="cstat-no" title="statement not covered" >    const { characteristics, rating } = this.state;</span>
+<span class="cstat-no" title="statement not covered" >    const obj = { ...characteristics };</span>
+<span class="cstat-no" title="statement not covered" >    const key = event.target.name;</span>
+<span class="cstat-no" title="statement not covered" >    const value = event.target.id;</span>
+<span class="cstat-no" title="statement not covered" >    if (event.target.name === 'Stars') {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+<span class="cstat-no" title="statement not covered" >        rating: Number(rating) + Number(value),</span>
+<span class="cstat-no" title="statement not covered" >      });</span>
+<span class="cstat-no" title="statement not covered" >    } else {</span>
+<span class="cstat-no" title="statement not covered" >      obj[key].value = Number(obj[key].value) + Number(value);</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+<span class="cstat-no" title="statement not covered" >        characteristics: obj,</span>
+<span class="cstat-no" title="statement not covered" >      });</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+>>>>>>> main
 &nbsp;
 const PopOut = <span class="fstat-no" title="function not covered" >(props) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  const { addUserReview, data, cancelAddReview } = props;</span>
@@ -649,6 +813,7 @@ const PopOut = <span class="fstat-no" title="function not covered" >(props) =&gt
 <span class="cstat-no" title="statement not covered" >      value: 0,</span>
 <span class="cstat-no" title="statement not covered" >    };</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
+<<<<<<< HEAD
 <span class="cstat-no" title="statement not covered" >  const {</span>
 <span class="cstat-no" title="statement not covered" >    handleChangeTarget,</span>
 <span class="cstat-no" title="statement not covered" >    handleClickCheckReview,</span>
@@ -882,6 +1047,153 @@ const PopOut = <span class="fstat-no" title="function not covered" >(props) =&gt
 <span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >  );</span>
 <span class="cstat-no" title="statement not covered" >};</span>
+=======
+&nbsp;
+  loaded() {
+    const { cancel } = this.props;
+    const {
+      recommend,
+      characteristics,
+      body,
+      rating,
+      warning,
+    } = this.state;
+    return (
+      &lt;div&gt;
+        {<span class="branch-0 cbranch-no" title="branch not covered" >warning.length !== 0</span>
+<span class="cstat-no" title="statement not covered" >          ? (</span>
+            &lt;Warning
+              data-testid="warning"
+              warningItems={warning}
+              show={this.showWarning}
+            /&gt;
+          ) : null}
+        &lt;div className="popOutContainer"&gt;
+          &lt;div className="topContainer"&gt;
+            &lt;button
+              className="formButton"
+              type="button"
+              onClick={cancel}
+            &gt;
+              X
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div className="firstContainer"&gt;
+            &lt;div className="firstTopContainer"&gt;
+              &lt;div className="topSmallContainer"&gt;
+                &lt;div&gt;Recommend&lt;/div&gt;
+                &lt;div className="buttonBase"&gt;
+                  &lt;button
+                    type="button"
+                    onClick={this.targetChange}
+                    className={recommend
+<span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >                      ? 'clickedButton'</span></span>
+<span class="cstat-no" title="statement not covered" >                      : 'unclickedButton'}</span>
+                    id="recommend"
+                    value="true"
+                  &gt;
+                    YES
+                  &lt;/button&gt;
+                  &lt;button
+                    type="button"
+                    onClick={this.targetChange}
+                    className={recommend
+<span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >                      ? 'unclickedButton'</span></span>
+<span class="cstat-no" title="statement not covered" >                      : 'clickedButton'}</span>
+                    id="recommend"
+                    value={false}
+                  &gt;
+                    No
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;FormStarCK
+                starCK={this.starCK}
+                info={rating}
+                name="Stars"
+              /&gt;
+              {Object.keys(characteristics).map((i) =&gt; (
+                &lt;FormStarCK
+                  starCK={this.starCK}
+                  key={i}
+                  info={characteristics[i].value}
+                  name={i}
+                /&gt;
+              ))}
+            &lt;/div&gt;
+            &lt;div className="midSmallContainer"&gt;
+              &lt;div className="tagContainer"&gt;
+                &lt;div className="tag"&gt;Name :&lt;/div&gt;
+                &lt;div className="tag"&gt;Email :&lt;/div&gt;
+                &lt;div className="tag"&gt;Title :&lt;/div&gt;
+                &lt;div className="tag"&gt;Description :&lt;/div&gt;
+                &lt;div className="tag"&gt;
+                  Count :
+                  {body.length}
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div className="textcontainer"&gt;
+                { ['name', 'email', 'summary'].map((i, index) =&gt; (
+                  &lt;div key={i} className="formTextContainer"&gt;
+                    &lt;div&gt;
+                      &lt;input
+                        className="formText"
+                        type="text"
+                        maxLength="60"
+                        onChange={this.targetChange}
+                        placeholder={textExample[index]}
+                        id={i}
+                      /&gt;
+                      {<span class="branch-0 cbranch-no" title="branch not covered" >this.state[i].length === 0 || msg[index] === undefined</span>
+                        ? <span class="branch-0 cbranch-no" title="branch not covered" >&lt;div className="block" /&gt;</span>
+                        : &lt;div className="formMSG"&gt;{msg[index]}&lt;/div&gt;}
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                ))}
+                &lt;textarea
+                  id="body"
+                  className="textarea"
+                  rows="5"
+                  maxLength="1000"
+                  onChange={this.targetChange}
+                  placeholder={textExample[3]}
+                /&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div className="btnContainer"&gt;
+            &lt;button
+              type="button"
+              className="clickedButton"
+              onClick={this.checkReview}
+            &gt;
+              Submit
+            &lt;/button&gt;
+            &lt;input
+              className="clickedButton"
+              type="file"
+              key="photo1"
+              onChange={this.targetChange}
+              id="photos"
+            /&gt;
+            &lt;input
+              className="clickedButton"
+              type="file"
+              key="photo2"
+              onChange={this.targetChange}
+              id="photos"
+            /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+&nbsp;
+  render() {
+    return &lt;div data-testid="popout"&gt;{this.loaded()}&lt;/div&gt;;
+  }
+}
+>>>>>>> main
 &nbsp;
 PopOut.propTypes = {
   data: PropTypes.shape({
@@ -904,7 +1216,11 @@ export default PopOut;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+<<<<<<< HEAD
                 at Mon Jun 14 2021 13:37:26 GMT-0700 (Pacific Daylight Time)
+=======
+                at Mon Jun 14 2021 10:43:57 GMT-0700 (Pacific Daylight Time)
+>>>>>>> main
             </div>
         </div>
         <script src="../../prettify.js"></script>
