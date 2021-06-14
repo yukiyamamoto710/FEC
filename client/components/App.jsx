@@ -92,9 +92,9 @@ class App extends React.Component{
   render(){
     return (
       <div>
-        {/* {this.renderPage()} */}
+        {this.renderPage()}
         <button onClick = {this.testing}> TESTING </button>
-        <Reviews id ={this.state.targetId}/>
+        {/* <Reviews id ={this.state.targetId}/> */}
       </div>
     )
   }
