@@ -22,8 +22,14 @@ class RelatedProductCard extends React.Component {
   }
 
   componentDidMount() {
+    var defaultIdx = 0;
+    for (var i = 0; i < this.props.product.results.length; i++) {
+      if (this.props.product.results[i]['default?']) {
+        defaultIdx = i;
+      }
+    }
     this.setState({
-      mainImage: this.props.product.results[0].photos[0].url
+      mainImage: this.props.product.results[defaultIdx].photos[0].url
     })
   }
 
