@@ -5,6 +5,7 @@ const api = require('./github.js')
 
 app.use(express.json());
 app.use(express.static('./public'));
+// app.use("/:id", express.static('./public'))
 
 app.listen(PORT, ()=>{
   console.log('connect')
@@ -34,3 +35,14 @@ app.post('/cart', (req, res) => {
     }
   });
 });
+
+// app.get('/:product_id', (req, res) => {
+//   api.hrapi(`products/${req.params.product_id}`, (err, data) => {
+//     if (err) {
+//       res.status(404).send(err);
+//     } else {
+//       //console.log(data);
+//       res.status(200).send(data);
+//     }
+//   });
+// });
