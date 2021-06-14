@@ -11,6 +11,7 @@ app.listen(PORT, ()=>{
 });
 
 app.get('/get', (req, res) => {
+  console.log('this is req: ', req, 'this is query: ', req.query);
   api.hrapi(`${req.query.endpoint}`, (err, data) => {
     if (err) {
       res.status(404).send(err);
@@ -23,9 +24,8 @@ app.get('/get', (req, res) => {
 
 app.post('/cart', (req, res) => {
   var url = req.route.path.slice(1)
-
   console.log(req.body);
-  api.hrapi(`${url}`, req.body.quantity, JSON.parse(req.body.sku),  (err, data) => {
+  api.post(`${url}`, req.body.quantity, JSON.parse(req.body.sku),  (err, data) => {
     if (err) {
       res.status(404).send(err);
     } else {

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Reviews/rbase.jsx</title>
+    <title>Code coverage report for Reviews/form.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">Reviews</a> rbase.jsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">Reviews</a> form.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.11% </span>
+                <span class="strong">52.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/38</span>
+                <span class='fraction'>21/40</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.11% </span>
+                <span class="strong">52.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/38</span>
+                <span class='fraction'>21/40</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -94,12 +94,9 @@
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -121,9 +118,16 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -132,42 +136,44 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import Rbheader from './rbheader.jsx';
-import MessageList from './rbmessage.jsx';
-import Form from './form.jsx';
-import Button from './Button/Button';
-import PopOut from './popout.jsx';
 &nbsp;
-const Rbase = <span class="fstat-no" title="function not covered" >(props) =&gt;{</span>
-<span class="cstat-no" title="statement not covered" >  const { list, sort, helpful, notHelpful, report, moreReview,</span>
-<span class="cstat-no" title="statement not covered" >    addfunc, moreBTN, msgClick } = props;</span>
+const Form = <span class="fstat-no" title="function not covered" >(props)=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >  const { getTarget, style, name, info } = props;</span>
+<span class="cstat-no" title="statement not covered" >  let a = ck;</span>
+<span class="cstat-no" title="statement not covered" >  let b = ck1;</span>
+<span class="cstat-no" title="statement not covered" >  if (info === true) {</span>
+<span class="cstat-no" title="statement not covered" >    a = ck1;</span>
+<span class="cstat-no" title="statement not covered" >    b = ck;</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div</span>
-<span class="cstat-no" title="statement not covered" >      style = { style }&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;Rbheader</span>
-<span class="cstat-no" title="statement not covered" >        length = { list.length }</span>
-<span class="cstat-no" title="statement not covered" >        sort = { sort }/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;MessageList</span>
-<span class="cstat-no" title="statement not covered" >        msgClick = { msgClick }</span>
-<span class="cstat-no" title="statement not covered" >        list = { list }</span>
-<span class="cstat-no" title="statement not covered" >        helpful = { helpful }</span>
-<span class="cstat-no" title="statement not covered" >        report = { report }</span>
-<span class="cstat-no" title="statement not covered" >        notHelpful = { notHelpful }/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;br&gt;&lt;/br&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;Button</span>
-<span class="cstat-no" title="statement not covered" >        moreBTNshow = { moreBTN }</span>
-<span class="cstat-no" title="statement not covered" >        moreReview = { moreReview }</span>
-<span class="cstat-no" title="statement not covered" >        addReview ={ addfunc } /&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;div style = {style}&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;{ name }&lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;div style = { base }&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;div onClick = { getTarget } style = { a } id = { name } value ={ 'YES' } &gt;YES&lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;div onClick = { getTarget } style = { b } id = { name } &gt;NO&lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;&lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >  )</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-export default Rbase;
+export default Form;
 &nbsp;
-const style = {
+&nbsp;
+const base = {
   display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
+}
+&nbsp;
+const ck = {
+  borderBottom: '1px solid black',
+  margin: '2px',
+}
+&nbsp;
+const ck1 = {
+  borderBottom: '1px solid black',
+  margin: '2px',
+  fontWeight: 'bold',
 }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
