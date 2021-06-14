@@ -2,6 +2,7 @@
 import React from 'react';
 import DropDown from './DropDown.jsx';
 import AddToCart from './AddToCart.jsx';
+import axios from 'axios';
 
 class Description extends React.Component {
   constructor(props) {
@@ -38,6 +39,15 @@ class Description extends React.Component {
     var number = this.state.inCart + 1;
     var copy = this.state.cart.slice();
     copy.push(obj);
+
+    // axios.post('products/cart', obj)
+    // .then((response) => {
+    //   console.log(response);
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    // });
+
     this.setState({
       inCart: number,
       cart: copy,
