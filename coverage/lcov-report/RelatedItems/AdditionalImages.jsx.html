@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>34/36</span>
+                <span class='fraction'>36/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>34/36</span>
+                <span class='fraction'>36/36</span>
             </div>
         
             
@@ -96,31 +96,31 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -134,22 +134,22 @@ const AdditionalImages = ({images, changeMainImage}) =&gt; {
 &nbsp;
   const [state, setState] = useState({idx: 0, displayed: [...images].slice(0, 4)});
 &nbsp;
-  const toggleMainImage = <span class="fstat-no" title="function not covered" >(e) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    changeMainImage(e.target.src);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  const toggleMainImage = (e) =&gt; {
+    changeMainImage(e.target.src);
+  }
 &nbsp;
   return (
     &lt;div data-testid="additional-images" className="additional-images"&gt;
       &lt;button className="slideLeft-mini"
-        onClick={<span class="fstat-no" title="function not covered" >()=&gt;s</span>etState({idx: state.idx-1, displayed: [...images].slice(state.idx-1, state.idx+3)})}
+        onClick={()=&gt;setState({idx: state.idx-1, displayed: [...images].slice(state.idx-1, state.idx+3)})}
         hidden={state.idx === 0}
         data-testid="slideLeft-mini"&gt;
           &amp;lt;
         &lt;/button&gt;
       {state.displayed.map((image, i)=&gt;&lt;img data-testid={i} key={image} className="thumbnail" src={image} onClick={toggleMainImage}/&gt;)}
       &lt;button className="slideRight-mini"
-          onClick={<span class="fstat-no" title="function not covered" >()=&gt;s</span>etState({idx: state.idx+1, displayed: [...images].slice(state.idx+1, state.idx+5)})}
-          disabled={<span class="branch-0 cbranch-no" title="branch not covered" >images.length &lt; 4 || state.idx === images.length-4}</span>
+          onClick={()=&gt;setState({idx: state.idx+1, displayed: [...images].slice(state.idx+1, state.idx+5)})}
+          disabled={images.length &lt; 4 || state.idx === images.length-4}
           data-testid="slideRight-mini"&gt;
             &amp;gt;
       &lt;/button&gt;
@@ -169,7 +169,7 @@ export default AdditionalImages;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 12 2021 13:08:00 GMT-0700 (Pacific Daylight Time)
+                at Mon Jun 14 2021 10:35:23 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
