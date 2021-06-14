@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import useMessage from './useMessage';
 
 const Message = (props) => {
   const { body } = props;
-  const [click, setClick] = useState(false);
+  const {
+    isClick,
+    handleClickText,
+    handleKeyPressText,
+  } = useMessage();
 
-  const handleClickText = () => {
-    setClick(!click);
-  };
-
-  const handleKeyPressText = () => {
-    setClick(!click);
-  };
-
-  if (click) {
+  if (isClick) {
     return (
       <div
         data-testid="textShow"

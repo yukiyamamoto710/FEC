@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import PopOut from '../PopOut/PopOut';
+import useButton from './useButton';
 
 const Button = (props) => {
   const {
@@ -9,19 +10,12 @@ const Button = (props) => {
     addUserReview,
     isMoreReviews,
   } = props;
-
-  const [isAddReview, setIsAddReview] = useState(false);
-
-  const cancelAddReview = () => {
-    setIsAddReview(false);
-  };
-  const handleClickAddReview = () => {
-    setIsAddReview(true);
-  };
-
-  const handleClickMoreReview = () => {
-    getMoreReviews(2);
-  };
+  const {
+    handleClickMoreReview,
+    handleClickAddReview,
+    cancelAddReview,
+    isAddReview,
+  } = useButton(getMoreReviews);
 
   return (
     <div

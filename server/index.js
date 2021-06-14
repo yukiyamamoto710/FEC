@@ -11,7 +11,7 @@ app.listen(PORT, () => {
   console.log('connect');
 });
 
-app.get('/get', (req, res) => {
+app.use('/get', (req, res) => {
   api.hrapi(`${req.query.endpoint}`, (err, data) => {
     if (err) {
       res.status(404).send(err);

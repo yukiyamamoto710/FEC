@@ -21,7 +21,7 @@ const HelpfulMSG = (props) => {
 
   useEffect(() => {
     if (isClicked) {
-      axios.put('/post/reviews', { review_id: reviewId })
+      axios.put('/put/reviews', { review_id: reviewId })
         .then()
         .catch();
     }

@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import FormStarCK from '../formClick';
+import FormStarCK from './FormStarCK/FormStarCK';
 import { msg, textExample } from '../data';
 import Warning from './Warning/Warning';
+import usePopOut from './usePopOut';
 
-const modle = {
-  product_id: '',
-  summary: '',
-  name: '',
-  email: '',
-};
+// const modle = {
+//   product_id: '',
+//   summary: '',
+//   name: '',
+//   email: '',
+// };
 
 const PopOut = (props) => {
   const { addUserReview, data, cancelAddReview } = props;
-  const [userReview, setUserReview] = useState(modle);
-  const [recommend, setRecommend] = useState(true);
-  const [photos, setPhotos] = useState([]);
-  const [rating, setRating] = useState(0);
-  const [body, setBody] = useState('');
-  const [characteristics, setCharacteristics] = useState({});
-  const [listWarning, setListWarning] = useState([]);
+  // const [userReview, setUserReview] = useState(modle);
+  // const [recommend, setRecommend] = useState(true);
+  // const [photos, setPhotos] = useState([]);
+  // const [rating, setRating] = useState(0);
+  // const [body, setBody] = useState('');
+  // const [characteristics, setCharacteristics] = useState({});
+  // const [listWarning, setListWarning] = useState([]);
   const key = Object.keys(data.characteristics);
   const obj = {};
   for (let i = 0; i < key.length; i += 1) {
@@ -29,87 +30,103 @@ const PopOut = (props) => {
       value: 0,
     };
   }
-  useEffect(() => {
-    setCharacteristics(obj);
-    modle.product_id = data.product_id;
-    setUserReview(modle);
-    setRecommend(true);
-    setPhotos([]);
-    setBody([]);
-    setRating(0);
-    setListWarning([]);
-  }, [data]);
+  const {
+    handleChangeTarget,
+    handleClickCheckReview,
+    isShowWarning,
+    starClick,
+    userReview,
+    recommend,
+    rating,
+    body,
+    characteristics,
+    listWarning,
+  } = usePopOut({
+    key, obj, data, addUserReview, cancelAddReview,
+  });
 
-  useEffect(() => {
-    setUserReview(userReview);
-  }, [userReview]);
+  // useEffect(() => {
+  //   setCharacteristics(obj);
+  //   modle.product_id = data.product_id;
+  //   setUserReview(modle);
+  //   setRecommend(true);
+  //   setPhotos([]);
+  //   setBody([]);
+  //   setRating(0);
+  //   setListWarning([]);
+  // }, [data]);
 
-  const starClick = (event) => {
-    const obj = { ...characteristics };
-    const arr = event.target.id.split(' ');
-    const key = arr[0];
-    const value = arr[1];
-    if (key === 'Stars') {
-      setRating(Number(value));
-    } else {
-      obj[key].value = String(value);
-      setCharacteristics(obj);
-    }
-  };
+  // useEffect(() => {
+  //   setUserReview(userReview);
+  // }, [userReview]);
 
-  const isShowWarning = () => {
-    setListWarning([]);
-  };
-  const handleClickCheckReview = () => {
-    const {
-      email,
-      name,
-      summary,
-    } = userReview;
-    const warning = [];
-    if (body.length < 50) { warning.push('Description'); }
-    if (!email.includes('@')) { warning.push('Email'); }
-    if (name.length === 0) { warning.push('Name'); }
-    if (summary.length === 0) { warning.push('Title'); }
-    if (rating === 0) { warning.push('Stars'); }
-    for (let i = 0; i < key.length; i += 1) {
-      if (!characteristics[key[i]].value) {
-        warning.push(key[i]);
-      }
-    }
-    if (warning.length > 0) {
-      setListWarning(warning);
-    } else {
-      // POST
-      const newObj = { ...userReview };
-      newObj.body = body;
-      newObj.rating = rating;
-      newObj.photos = [...photos];
-      newObj.recommend = recommend;
-      newObj.characteristics = { ...characteristics };
-      cancelAddReview();
-      addUserReview(newObj);
-    }
-  };
+  // const starClick = (event) => {
+  //   const newObj = { ...characteristics };
+  //   const arr = event.target.id.split(' ');
+  //   const newKey = arr[0];
+  //   const value = arr[1];
+  //   if (newKey === 'Stars') {
+  //     setRating(Number(value));
+  //   } else {
+  //     newObj[newKey].value = String(value);
+  //     setCharacteristics(newObj);
+  //   }
+  // };
 
-  const handleChangeTarget = (event) => {
-    const { id, value } = event.target;
-    if (id === 'recommend') {
-      if (value === 'false') {
-        setRecommend(false);
-      } else {
-        setRecommend(true);
-      }
-    } else if (id === 'photos') {
-      if (value !== undefined) {
-        setPhotos([...photos, String(value)]);
-      }
-    } else if (id === 'body') {
-      setBody(value);
-    } else {
-      userReview[id] = value;
-    }
-  };
+  // const isShowWarning = () => {
+  //   setListWarning([]);
+  // };
+
+  // const handleClickCheckReview = () => {
+  //   const {
+  //     email,
+  //     name,
+  //     summary,
+  //   } = userReview;
+  //   const warning = [];
+  //   if (body.length < 50) { warning.push('Description'); }
+  //   if (!email.includes('@')) { warning.push('Email'); }
+  //   if (name.length === 0) { warning.push('Name'); }
+  //   if (summary.length === 0) { warning.push('Title'); }
+  //   if (rating === 0) { warning.push('Stars'); }
+  //   for (let i = 0; i < key.length; i += 1) {
+  //     if (!characteristics[key[i]].value) {
+  //       warning.push(key[i]);
+  //     }
+  //   }
+  //   if (warning.length > 0) {
+  //     setListWarning(warning);
+  //   } else {
+  //     // POST
+  //     const newObj = { ...userReview };
+  //     newObj.body = body;
+  //     newObj.rating = rating;
+  //     newObj.photos = [...photos];
+  //     newObj.recommend = recommend;
+  //     newObj.characteristics = { ...characteristics };
+  //     cancelAddReview();
+  //     addUserReview(newObj);
+  //   }
+  // };
+
+  // const handleChangeTarget = (event) => {
+  //   const { id, value } = event.target;
+  //   if (id === 'recommend') {
+  //     if (value === 'false') {
+  //       setRecommend(false);
+  //     } else {
+  //       setRecommend(true);
+  //     }
+  //   } else if (id === 'photos') {
+  //     if (value !== undefined) {
+  //       setPhotos([...photos, String(value)]);
+  //     }
+  //   } else if (id === 'body') {
+  //     setBody(value);
+  //   } else {
+  //     userReview[id] = value;
+  //   }
+  // };
 
   return (
     <div
@@ -130,6 +147,7 @@ const PopOut = (props) => {
             <div>Recommend</div>
             <div className="buttonBase">
               <button
+                data-testid="recommendYes"
                 type="button"
                 onClick={handleChangeTarget}
                 className={recommend
@@ -141,6 +159,7 @@ const PopOut = (props) => {
                 YES
               </button>
               <button
+                data-testid="recommendNo"
                 type="button"
                 onClick={handleChangeTarget}
                 className={recommend
@@ -245,4 +264,17 @@ const PopOut = (props) => {
   );
 };
 
+PopOut.propTypes = {
+  data: PropTypes.shape({
+    characteristics: PropTypes.shape({}),
+    product_id: PropTypes.string,
+  }),
+  addUserReview: PropTypes.func,
+  cancelAddReview: PropTypes.func,
+};
+PopOut.defaultProps = {
+  data: { characteristics: {}, product_id: '25711' },
+  addUserReview: () => 1,
+  cancelAddReview: () => 1,
+};
 export default PopOut;

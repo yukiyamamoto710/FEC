@@ -25,7 +25,7 @@ it('should render', () => {
       stars={5}
     />,
   );
-  expect(getByTestId('reviewListBase')).toBeInTheDocument();
+  expect(screen.queryByText('loading...')).toBeInTheDocument();
 });
 
 it('should have default reported', () => {

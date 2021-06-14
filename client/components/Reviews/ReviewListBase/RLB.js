@@ -9,11 +9,11 @@ export default function RLB(id, listReported, listUserReview, stars) {
   const [isReviewsLoad, setIsReviewsLoad] = useState(false);
   const [listReviews, setListReviews] = useState([]);
 
-  // useEffect(() => {
-  //   setIsMoreReviews(true);
-  //   setSort('relevant');
-  //   reviewsGET('reviews', id, 2, sort, setData, setIsReviewsLoad);
-  // }, [id]);
+  useEffect(() => {
+    setIsMoreReviews(true);
+    setSort('relevant');
+    reviewsGET('reviews', id, 2, sort, setData, setIsReviewsLoad);
+  }, [id]);
 
   // useEffect(() => {
   //   const Reviews = data.filter((i) => (
@@ -31,18 +31,15 @@ export default function RLB(id, listReported, listUserReview, stars) {
   //   setListReviews(newReviews);
   // }, [isReviewsLoad, listReported, data, listUserReview, stars]);
 
-  // useEffect(() => {
-  //   axios.get('/get', {
-  //     params: {
-  //       endpoint: `reviews/?product_id=${id}&count=${data.length || 2}&sort=${sort}`,
-  //     },
-  //   })
-  //     .then((res) => {
-  //       const arr = res.data.results;
-  //       setData(arr);
-  //     })
-  //     .catch();
-  // }, [sort]);
+  useEffect(() => {
+    let num;
+    if (data.length === 0) {
+      num = 2;
+    } else {
+      num = data.length + 2;
+    }
+    reviewsGET('reviews', id, num, sort, setData);
+  }, [sort]);
 
   const sortBy = (str) => {
     setSort(str);
@@ -74,4 +71,4 @@ export default function RLB(id, listReported, listUserReview, stars) {
     getMoreReviews,
     sortBy,
   };
-};
+}

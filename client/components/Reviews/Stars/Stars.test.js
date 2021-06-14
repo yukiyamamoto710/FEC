@@ -14,7 +14,7 @@ afterEach(cleanup);
 
 it('Stars will trigger when clicked', () => {
   const testFunc = jest.fn();
-  const { getByTestId } = render(<Stars starClicked={testFunc} />);
+  const { getByTestId } = render(<Stars starClick={testFunc} />);
   fireEvent.click(getByTestId('button0'));
   fireEvent.click(getByTestId('button1'));
   fireEvent.click(getByTestId('button2'));
@@ -25,7 +25,7 @@ it('Stars will trigger when clicked', () => {
 
 it('Stars will trigger when keypress', () => {
   const testFunc = jest.fn();
-  const { getByTestId } = render(<Stars starClicked={testFunc} />);
+  const { getByTestId } = render(<Stars starClick={testFunc} />);
   fireEvent.keyPress(getByTestId('button0'), { key: 'Enter', code: 13, charCode: 13 });
   fireEvent.keyPress(getByTestId('button1'), { key: 'Enter', code: 13, charCode: 13 });
   fireEvent.keyPress(getByTestId('button2'), { key: 'Enter', code: 13, charCode: 13 });
@@ -34,8 +34,8 @@ it('Stars will trigger when keypress', () => {
   expect(testFunc).toHaveBeenCalledTimes(5);
 });
 
-it('should have default starsClicked()', () => {
-  expect(Stars.defaultProps.starClicked()).toBeDefined();
+it('should have default starClick()', () => {
+  expect(Stars.defaultProps.starClick()).toBeDefined();
 });
 
 it('matches snapShot', () => {
