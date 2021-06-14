@@ -3,9 +3,8 @@ import axios from 'axios';
 import Header from './Header.jsx'
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
-import Reviews from './Reviews/Reviews.jsx';
-// import { BrowserRouter as Router, Swtiche, Route, Link } from 'react-router-dom'
-// import QA from './QA/QA.jsx';
+import Reviews from './Reviews/Reviews1.jsx';
+import QA from './QA/QA.jsx';
 
 class App extends React.Component{
   constructor(props){
@@ -31,11 +30,11 @@ class App extends React.Component{
     return (
       axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
       .then((response) =>{
-        console.log('successful get request', `${string}/${endpoint}`);
+        console.log(window.location.pathname);
         var url = window.location.pathname;
         this.setState({
           [stateName]: response.data,
-          targetId: url === '/' ? 25167: url.slice(1, url.length - 1)
+          targetId: url === '/' ? 25167: Number(url.slice(1, url.length - 1))
           //has to set state for data.[whatever key we need from data]
         }, () =>this.setState({loaded: true}))
       })

@@ -133,8 +133,8 @@ class RelatedItems extends React.Component {
       <div>
         { relatedItemsList.length !== 0 ?
         <React.Fragment>
-          <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId} currentItem={currentItem}/>
-          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/>
+          {/* <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId} currentItem={currentItem}/>
+          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/> */}
         </React.Fragment> : null }
       </div>
     )

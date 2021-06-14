@@ -1,4 +1,5 @@
 TN:
+<<<<<<< HEAD
 SF:client/components/RelatedItems/AdditionalImages.jsx
 FN:5,AdditionalImages
 FN:16,componentDidMount
@@ -17,6 +18,11 @@ FNDA:12,render
 =======
 <<<<<<< HEAD
 TN:
+=======
+<<<<<<< HEAD
+SF:client/components/Reviews/RatingTestData.js
+=======
+>>>>>>> main
 SF:client/components/Overview/AddToCart.jsx
 FN:4,AddToCart
 FNF:1
@@ -2548,6 +2554,7 @@ BRH:0
 end_of_record
 TN:
 SF:client/components/Reviews/data.js
+>>>>>>> main
 FNF:0
 FNH:0
 DA:1,1
@@ -2560,6 +2567,15 @@ DA:7,1
 DA:8,1
 DA:9,1
 DA:10,1
+<<<<<<< HEAD
+DA:11,1
+DA:12,1
+DA:13,1
+DA:14,1
+DA:15,1
+DA:16,1
+DA:17,1
+=======
 DA:11,1
 DA:12,1
 DA:13,1
@@ -3397,6 +3413,7 @@ DA:14,0
 DA:15,0
 DA:16,0
 DA:17,0
+>>>>>>> main
 DA:18,1
 DA:19,1
 DA:20,1
@@ -3410,6 +3427,8 @@ DA:27,1
 DA:28,1
 DA:29,1
 DA:30,1
+<<<<<<< HEAD
+=======
 LF:30
 LH:17
 BRF:0
@@ -3488,6 +3507,7 @@ DA:27,0
 DA:28,0
 DA:29,0
 DA:30,0
+>>>>>>> main
 DA:31,1
 DA:32,1
 DA:33,1
@@ -3503,6 +3523,10 @@ DA:42,1
 DA:43,1
 DA:44,1
 DA:45,1
+<<<<<<< HEAD
+LF:45
+LH:45
+=======
 DA:46,1
 DA:47,1
 DA:48,1
@@ -3510,10 +3534,26 @@ DA:49,1
 DA:50,1
 LF:50
 LH:24
+>>>>>>> main
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:client/components/Reviews/PopOut/usePopOut.js
+FN:11,usePopOut
+FN:38,starClick
+FN:51,isShowWarning
+FN:55,handleClickCheckReview
+FN:88,handleChangeTarget
+FNF:5
+FNH:5
+FNDA:24,usePopOut
+FNDA:7,starClick
+FNDA:2,isShowWarning
+FNDA:2,handleClickCheckReview
+FNDA:10,handleChangeTarget
+=======
 SF:client/components/Reviews/star.jsx
 FN:3,Stars
 FNF:1
@@ -3733,6 +3773,7 @@ FNDA:2,loaded
 FNDA:2,render
 FNDA:0,addReview
 FNDA:0,cancel
+>>>>>>> main
 DA:1,1
 DA:2,1
 DA:3,1
@@ -3744,6 +3785,151 @@ DA:8,1
 DA:9,1
 DA:10,1
 DA:11,1
+<<<<<<< HEAD
+DA:12,24
+DA:13,24
+DA:14,24
+DA:15,24
+DA:16,24
+DA:17,24
+DA:18,24
+DA:19,24
+DA:20,24
+DA:21,24
+DA:22,24
+DA:23,5
+DA:24,5
+DA:25,5
+DA:26,5
+DA:27,5
+DA:28,5
+DA:29,5
+DA:30,5
+DA:31,5
+DA:32,24
+DA:33,24
+DA:34,24
+DA:35,5
+DA:36,24
+DA:37,24
+DA:38,24
+DA:39,7
+DA:40,7
+DA:41,7
+DA:42,7
+DA:43,7
+DA:44,2
+DA:45,7
+DA:46,5
+DA:47,5
+DA:48,5
+DA:49,7
+DA:50,24
+DA:51,24
+DA:52,2
+DA:53,2
+DA:54,24
+DA:55,24
+DA:56,2
+DA:57,2
+DA:58,2
+DA:59,2
+DA:60,2
+DA:61,2
+DA:62,2
+DA:63,2
+DA:64,2
+DA:65,2
+DA:66,2
+DA:67,2
+DA:68,8
+DA:69,4
+DA:70,4
+DA:71,8
+DA:72,2
+DA:73,1
+DA:74,1
+DA:75,1
+DA:76,1
+DA:77,1
+DA:78,1
+DA:79,1
+DA:80,1
+DA:81,1
+DA:82,1
+DA:83,1
+DA:84,1
+DA:85,1
+DA:86,2
+DA:87,24
+DA:88,24
+DA:89,10
+DA:90,10
+DA:91,2
+DA:92,1
+DA:93,1
+DA:94,1
+DA:95,1
+DA:96,10
+DA:97,1
+DA:98,1
+DA:99,1
+DA:100,8
+DA:101,2
+DA:102,7
+DA:103,5
+DA:104,5
+DA:105,10
+DA:106,24
+DA:107,24
+DA:108,24
+DA:109,24
+DA:110,24
+DA:111,24
+DA:112,24
+DA:113,24
+DA:114,24
+DA:115,24
+DA:116,24
+DA:117,24
+DA:118,24
+DA:119,24
+LF:119
+LH:119
+BRDA:11,0,0,24
+BRDA:22,1,0,5
+BRDA:34,2,0,5
+BRDA:38,3,0,7
+BRDA:43,4,0,2
+BRDA:45,5,0,5
+BRDA:51,6,0,2
+BRDA:55,7,0,2
+BRDA:62,8,0,1
+BRDA:63,9,0,1
+BRDA:64,10,0,1
+BRDA:65,11,0,1
+BRDA:66,12,0,1
+BRDA:67,13,0,8
+BRDA:68,14,0,4
+BRDA:72,15,0,1
+BRDA:88,16,0,10
+BRDA:90,17,0,2
+BRDA:91,18,0,1
+BRDA:96,19,0,8
+BRDA:96,20,0,1
+BRDA:100,21,0,7
+BRDA:100,22,0,2
+BRDA:102,23,0,5
+BRF:24
+BRH:24
+end_of_record
+TN:
+SF:client/components/Reviews/func/postReview/postReview.js
+FN:3,postReview
+FNF:1
+FNH:1
+FNDA:1,postReview
+=======
 DA:12,1
 DA:13,1
 DA:14,1
@@ -4106,10 +4292,28 @@ FN:4,Button
 FNF:1
 FNH:1
 FNDA:2,Button
+>>>>>>> main
 DA:1,1
 DA:2,1
 DA:3,1
 DA:4,1
+<<<<<<< HEAD
+DA:5,1
+DA:6,1
+DA:7,1
+DA:8,1
+DA:9,1
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,1
+DA:16,1
+LF:16
+LH:11
+BRDA:3,0,0,1
+=======
 DA:5,2
 DA:6,2
 DA:7,2
@@ -4132,6 +4336,7 @@ DA:23,1
 LF:23
 LH:23
 BRDA:4,0,0,2
+>>>>>>> main
 BRF:1
 BRH:1
 >>>>>>> main
