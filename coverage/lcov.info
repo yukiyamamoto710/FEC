@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 TN:
 SF:client/components/RelatedItems/AdditionalImages.jsx
 FN:5,AdditionalImages
@@ -1317,6 +1316,7 @@ BRF:5
 BRH:5
 end_of_record
 <<<<<<< HEAD
+<<<<<<< HEAD
 TN:
 SF:client/components/Reviews/star.jsx
 FN:3,Stars
@@ -1401,3 +1401,5 @@ end_of_record
 =======
 >>>>>>> origin
 >>>>>>> 191139c8da6c87756a2ae755ac6ec7c4d8f3a28e
+=======
+>>>>>>> main
