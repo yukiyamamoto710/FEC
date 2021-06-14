@@ -2,16 +2,17 @@ import React from 'react';
 import axios from 'axios';
 import Rbase from './rbase.jsx';
 import Rating from './rating.jsx';
-import PopOut from './popout.jsx';
-import Warning from './Warning/Warning.jsx'
+// import Popout from './popout.jsx';
+// import Warning from './Warning/Warning';
+import PopOut from './PopOut/PopOut';
 
-class Reviews extends React.Component{
-  constructor(props){
+class Reviews extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       productId: '',
       reviewsList: [],
-      productRating:'',
+      productRating: '',
       add: false,
       newReview: {
         'Stars': 1,
@@ -36,7 +37,7 @@ class Reviews extends React.Component{
       moreBTNshowed: true,
       rtStarCk: false,
       tempList: [],
-      warning: [],
+      warningItems: [],
     };
     this.reviewsGET = this.reviewsGET.bind(this);
     this.ratingGET = this.ratingGET.bind(this);
@@ -45,7 +46,7 @@ class Reviews extends React.Component{
     this.notHelpful = this.notHelpful.bind(this);
     this.report = this.report.bind(this);
     this.add = this.add.bind(this);
-    this.more = this.more.bind(this);
+    this.moreReview = this.moreReview.bind(this);
     this.getTarget = this.getTarget.bind(this);
     this.addReview = this.addReview.bind(this);
     this.loading = this.loading.bind(this);
@@ -53,10 +54,10 @@ class Reviews extends React.Component{
     this.msgClick = this.msgClick.bind(this);
     this.cancel = this.cancel.bind(this);
     this.starCK = this.starCK.bind(this);
-    this.cancelW = this.cancelW.bind(this);
+    this.cancelWarning = this.cancelWarning.bind(this);
   };
 
-  componentDidMount(){
+  componentDidMount() {
     let targetId = this.props.id;
     this.setState({
       productId: targetId,
@@ -65,7 +66,7 @@ class Reviews extends React.Component{
     this.reviewsGET( `reviews`, targetId, 2, 'relevant' );
   };
 
-  componentDidUpdate(prevProps){
+  componentDidUpdate(prevProps) {
     if ( prevProps.id !== this.props.id ) {
       let targetId = this.props.id;
       this.setState({
@@ -78,7 +79,35 @@ class Reviews extends React.Component{
     };
   };
 
-  reviewsGET(string, id, count, sort){
+  getTarget(event) {
+    console.log(event.target.value)
+    console.log(event.target.innerHTML)
+    let key = event.target.id;
+    let value = event.target.value;
+    let HTML = event.target.innerHTML;
+    let obj = { ...this.state.newReview };
+    if ( key === 'recommend' ) {
+      if ( HTML === 'YES' ) {
+        value = true;
+      } else {
+        value = false;
+      };
+    }
+
+    if ( key === 'Photo' ) {
+      if(value === undefined){
+        value = ''
+      }
+      obj[key].push({ url: String(value) });
+    } else {
+       obj[key] = value;
+    }
+    this.setState({
+      newReview: obj,
+    });
+  };
+
+  reviewsGET(string, id, count, sort) {
     axios.get( '/get', {
       params: {
         endpoint: `${ string }/?product_id=${ id }&count=${ count }&sort=${ sort }`
@@ -92,6 +121,7 @@ class Reviews extends React.Component{
         } else {
           show = true;
         }
+        console.log(arr)
         this.setState({
           reviewsList: arr,
           rvGet: true,
@@ -101,12 +131,13 @@ class Reviews extends React.Component{
       .catch( err => console.log);
   };
 
-  ratingGET(string, id){
+  ratingGET(string, id) {
     axios.get( '/get', {
       params: {
         endpoint: `${ string }/?product_id=${ id }`
       }})
       .then( res =>{
+        console.log(res.data,'s')
         this.setState({
           productRating: res.data,
           rtGet: true,
@@ -115,13 +146,13 @@ class Reviews extends React.Component{
       .catch( err => console.log );
   };
 
-  sort(target){
+  sort(target) {
     let id = this.state.productId;
     let num = this.state.reviewsList.length;
     this.reviewsGET( 'reviews', id, num, target )
   };
 
-  helpful(target){
+  helpful(target) {
     let arr = this.state.reviewsList.slice();
     if ( arr[ target ][ 'help' ] !== true ) {
       arr[ target ].helpfulness++;
@@ -136,7 +167,7 @@ class Reviews extends React.Component{
     });
   };
 
-  notHelpful(target){
+  notHelpful(target) {
     let arr = this.state.reviewsList.slice();
     if ( arr[ target ][ 'help' ] !== true ) {
       // need to find out which key for not helpful;
@@ -152,7 +183,7 @@ class Reviews extends React.Component{
     });
   };
 
-  report(target){
+  report(target) {
     let arr = this.state.reviewsList.slice();
     arr.splice( target, 1 );
     this.setState({
@@ -164,47 +195,22 @@ class Reviews extends React.Component{
     //temple change to State take out first to test function working or not
   };
 
-  add(){
+  add() {
     this.setState({
       add: true,
     });
   };
 
-  more(){
+  moreReview() {
     let oldlen = this.state.reviewsList.length;
     let num = oldlen + 2;
     let targetId = this.state.productId;
     this.reviewsGET( 'reviews', targetId, num, 'relevant' );
   };
 
-  getTarget(event){
-    console.log(event.target.value)
-    console.log(event.target.innerHTML)
-    let key = event.target.id;
-    let value = event.target.value;
-    let HTML = event.target.innerHTML;
-    let obj = { ...this.state.newReview };
-    if ( key === 'recommend' ) {
-      if ( HTML === 'YES' ) {
-        value = true;
-      } else {
-        value = false;
-      };
-    }
 
-    if ( key === 'Photo' ){
-      if(value === undefined){
-        value = ''
-      }
-      obj[key].push({ url: String(value) });
-    } else {
-       obj[key] = value;
-    }
-    this.setState({
-      newReview: obj,
-    });
-  };
-  starCK(event){
+
+  starCK(event) {
     let obj = { ...this.state.newReview };
     let key = event.target.name;
     let value = event.target.id;
@@ -213,48 +219,54 @@ class Reviews extends React.Component{
       newReview: obj,
     })
   }
-  addReview(array){
-    if (array.length === 0) {
-      let obj = { ...this.state.newReview };
+  addReview(obj){
+  //   if (array.length === 0) {
+  //     let obj = { ...this.state.newReview };
       let a = new Date();
       let b = a.toISOString()
       obj.date = b;
-      obj.body = obj.Description;
-      obj.photos = obj.Photo;
-      obj.rating = obj.Stars;
+  //     obj.body = obj.Description;
+  //     obj.photos = obj.Photo;
+  //     obj.rating = obj.Stars;
       obj.response = null;
-      obj.reviewer_name = obj.Name;
-      obj.summary = obj.Title;
+      obj.reviewer_name = obj.name;
+  //     obj.summary = obj.Title;
       let arr = [ ...this.state.reviewsList ];
       arr.unshift( obj );
+      console.log(arr, obj)
       this.setState({
         reviewsList: arr,
-        newReview: {
-          'Stars': 1,
-          'recommend': true,
-          'Size': 1,
-          'Width': 1,
-          'Comfort': 1,
-          'Quality': 1,
-          'Length': 1,
-          'Fit': 1,
-          'Title': '',
-          'Description': '',
-          'Photo': [],
-          'Name': '',
-          'Email': '',
-          'date': '',
-          'helpfulness': 0,
-          'response': null,
-        },
-        add:false,
+  //       newReview: {
+  //         'Stars': 1,
+  //         'recommend': true,
+  //         'Size': 1,
+  //         'Width': 1,
+  //         'Comfort': 1,
+  //         'Quality': 1,
+  //         'Length': 1,
+  //         'Fit': 1,
+  //         'Title': '',
+  //         'Description': '',
+  //         'Photo': [],
+  //         'Name': '',
+  //         'Email': '',
+  //         'date': '',
+  //         'helpfulness': 0,
+  //         'response': null,
+        // },
+      //   add:false,
       });
-    } else {
-      this.setState({
-        warning: array,
-      })
-    }
+  //   } else {
+  //     this.setState({
+  //       warningItems: array,
+  //     })
+  //   }
   };
+
+  // addReview(obj) {
+  //   console.log(obj);
+  //   console.log(this.state.reviewsList);
+  // }
 
   cancel() {
     this.setState({
@@ -262,35 +274,39 @@ class Reviews extends React.Component{
     })
   };
 
-  cancelW() {
+  cancelWarning() {
     this.setState({
-      warning: [],
-    })
-  };
+      warningItems: [],
+    });
+  }
 
-  loading(){
+  loading() {
     const { rvGet, rtGet } = this.state;
     if ( rvGet === true && rtGet === true ) {
-      const { reviewsList, productRating, moreBTNshowed, newReview, add, warning } = this.state;
+      const { reviewsList, productRating, moreBTNshowed, newReview, add, warningItems } = this.state;
       return (
         <div
           style = { bas }>
           <div>RATINGS REVIEWS</div>
           <div
             style = { base }>
-              { warning.length !== 0?
+              {/* { warningItems.length !== 0?
                 <Warning
-                  arr = { warning }
-                  func = { this.cancelW }/>
+                  warningItems = { warningItems }
+                  show = { this.cancelWarning }
+                />
               :
-                null }
+                null } */}
+
               { add === true?
-                <PopOut
+              <PopOut
                   addReview = { this.addReview }
-                  review = { newReview }
-                  getTarget = { this.getTarget }
-                  starCK = { this.starCK }
-                  cancel = {this.cancel}/>
+                  // review = { newReview }
+                  // getTarget = { this.getTarget }
+                  // starCK = { this.starCK }
+                  cancel = {this.cancel}
+                  data = {this.state.productRating}
+                />
               :
                 null }
             <Rating
@@ -302,7 +318,7 @@ class Reviews extends React.Component{
               helpful ={ this.helpful }
               notHelpful ={ this.notHelpful }
               report ={ this.report }
-              more = { this.more }
+              moreReview = { this.moreReview }
               addfunc = { this.add }
               msgClick = { this.msgClick }
               moreBTN = { moreBTNshowed }/>
@@ -314,7 +330,7 @@ class Reviews extends React.Component{
     };
   };
 
-  ratingstar(num){
+  ratingstar(num) {
     const { reviewsList, tempList, rtStarCk } = this.state;
     let arr;
     if ( rtStarCk === false ) {
@@ -338,7 +354,7 @@ class Reviews extends React.Component{
     }
   };
 
-  msgClick(event){
+  msgClick(event) {
     let arr = [ ...this.state.reviewsList ];
     let index = event.target.id;
     if (arr[index]['click'] === undefined) {
@@ -351,7 +367,7 @@ class Reviews extends React.Component{
     })
   }
 
-  render(){
+  render() {
     return (
       <div>
         { this.loading() }
