@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for RelatedItems/Comparison.jsx</title>
+    <title>Code coverage report for Reviews/rating.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">RelatedItems</a> Comparison.jsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">Reviews</a> rating.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">32.47% </span>
+                <span class="strong">30.99% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>25/77</span>
+                <span class='fraction'>22/71</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">32.47% </span>
+                <span class="strong">30.99% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/77</span>
+                <span class='fraction'>22/71</span>
             </div>
         
             
@@ -129,12 +129,8 @@
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -148,9 +144,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -161,8 +154,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -170,13 +161,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -211,83 +195,84 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import axios from 'axios';
-import DescirptionRow from './DescriptionRow.jsx';
-import PropTypes from 'prop-types';
+import Top from './rttop.jsx';
+import Message from './message.jsx';
+import SRList from './srlist.jsx';
+import Characteristics from './characteristics.jsx';
+import { Data } from './data'
 &nbsp;
-class Comparison extends React.Component {
-<span class="fstat-no" title="function not covered" >  constructor(props) {</span>
-<span class="cstat-no" title="statement not covered" >    super(props);</span>
-<span class="cstat-no" title="statement not covered" >    this.state = {</span>
-<span class="cstat-no" title="statement not covered" >      featureList: []</span>
+const Rating = <span class="fstat-no" title="function not covered" >(props) =&gt;{</span>
+<span class="cstat-no" title="statement not covered" >  const { rating, ratingstar } = props;</span>
+<span class="cstat-no" title="statement not covered" >  let obj = { ...rating.ratings };</span>
+<span class="cstat-no" title="statement not covered" >  let key = Object.keys( obj ).sort();</span>
+<span class="cstat-no" title="statement not covered" >  let biggest = Number( key[ key.length - 1 ] );</span>
+<span class="cstat-no" title="statement not covered" >  let num = 1;</span>
+<span class="cstat-no" title="statement not covered" >  let keyArray = [ ...Array( biggest ) ].map( i =&gt;</span>
+<span class="cstat-no" title="statement not covered" >    String( num++ ));</span>
+<span class="cstat-no" title="statement not covered" >  let valueArray = keyArray.map( i =&gt;{</span>
+<span class="cstat-no" title="statement not covered" >    if ( obj[ i ] !== undefined ) {</span>
+<span class="cstat-no" title="statement not covered" >      return Number( obj[ i ] )</span>
+<span class="cstat-no" title="statement not covered" >    } else {</span>
+<span class="cstat-no" title="statement not covered" >      return 0;</span>
 <span class="cstat-no" title="statement not covered" >    };</span>
-<span class="cstat-no" title="statement not covered" >    this.handleClick = this.handleClick.bind(this);</span>
-<span class="cstat-no" title="statement not covered" >    this.combineAllFeatures = this.combineAllFeatures.bind(this);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >  });</span>
+<span class="cstat-no" title="statement not covered" >  let size = key.reduce(( sum, i ) =&gt;( sum + Number( obj[ i ] )), 0 );</span>
+<span class="cstat-no" title="statement not covered" >  let perArray = valueArray.map( i =&gt; Math.floor( i / size * 100 ));</span>
+<span class="cstat-no" title="statement not covered" >  let total = key.reduce(( sum, i ) =&gt;( sum + Number( i ) * Number( obj[ i ] )), 0);</span>
+<span class="cstat-no" title="statement not covered" >  let ave  = Math.round( total / size * 10 ) / 10;</span>
+<span class="cstat-no" title="statement not covered" >  let tNum = Number( rating.recommended.true );</span>
+<span class="cstat-no" title="statement not covered" >  let fNum = Number( rating.recommended.false );</span>
+<span class="cstat-no" title="statement not covered" >  let rAve = Math.floor( tNum / ( tNum + fNum ) * 100 );</span>
+<span class="cstat-no" title="statement not covered" >  let text = `${ rAve }% of reviews recommend this product`;</span>
+<span class="cstat-no" title="statement not covered" >  const c = 'characteristics';</span>
+<span class="cstat-no" title="statement not covered" >  let cKey = Object.keys( rating[ c ] );</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
+<span class="cstat-no" title="statement not covered" >    &lt;div</span>
+<span class="cstat-no" title="statement not covered" >      style = { style }&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;Top</span>
+<span class="cstat-no" title="statement not covered" >        rating = { ave }/&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;Message</span>
+<span class="cstat-no" title="statement not covered" >        text = { text }</span>
+<span class="cstat-no" title="statement not covered" >        style = { msg }/&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;SRList</span>
+<span class="cstat-no" title="statement not covered" >        star = { keyArray.reverse() }</span>
+<span class="cstat-no" title="statement not covered" >        ratingstar = { ratingstar }</span>
+<span class="cstat-no" title="statement not covered" >        per = { perArray.reverse() }/&gt;</span>
+<span class="cstat-no" title="statement not covered" >      { cKey.map(( i, index ) =&gt;{</span>
+<span class="cstat-no" title="statement not covered" >        return (</span>
+<span class="cstat-no" title="statement not covered" >          &lt;Characteristics</span>
+<span class="cstat-no" title="statement not covered" >            key = { index }</span>
+<span class="cstat-no" title="statement not covered" >            array =  { Data[i] }</span>
+<span class="cstat-no" title="statement not covered" >            name = { i }</span>
+<span class="cstat-no" title="statement not covered" >            value = { rating[c][i].value }/&gt;</span>
+<span class="cstat-no" title="statement not covered" >        )</span>
+<span class="cstat-no" title="statement not covered" >      })}</span>
+<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >  )</span>
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-  // performance wise - I need to fetch data for currently displayed product at a different place
-<span class="fstat-no" title="function not covered" >  componentDidMount() {</span>
-<span class="cstat-no" title="statement not covered" >    axios.get('/get', {params: {endpoint: `products/${this.props.id}`}})</span>
-<span class="cstat-no" title="statement not covered" >      .then((results) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        this.setState({</span>
-<span class="cstat-no" title="statement not covered" >          currentProduct: results.data</span>
-<span class="cstat-no" title="statement not covered" >        }, this.combineAllFeatures)</span>
-<span class="cstat-no" title="statement not covered" >      })</span>
-<span class="cstat-no" title="statement not covered" >      .catch((err) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        console.log(err);</span>
-<span class="cstat-no" title="statement not covered" >      })</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+export default Rating;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  combineAllFeatures() {</span>
-<span class="cstat-no" title="statement not covered" >    var allFeatureObjs = this.props.product.features.concat(this.state.currentProduct.features);</span>
-<span class="cstat-no" title="statement not covered" >    var allFeatures = allFeatureObjs.map(obj=&gt;obj.feature);</span>
-<span class="cstat-no" title="statement not covered" >    // filter out the duplicate features</span>
-<span class="cstat-no" title="statement not covered" >    var featureList = [...new Set(allFeatures)];</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({</span>
-<span class="cstat-no" title="statement not covered" >      featureList: featureList</span>
-<span class="cstat-no" title="statement not covered" >    })</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-&nbsp;
-<span class="fstat-no" title="function not covered" >  handleClick() {</span>
-<span class="cstat-no" title="statement not covered" >    this.props.togglePop();</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-&nbsp;
-<span class="fstat-no" title="function not covered" >  render() {</span>
-<span class="cstat-no" title="statement not covered" >    const{product} = this.props;</span>
-<span class="cstat-no" title="statement not covered" >    const {currentProduct, featureList} = this.state;</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="modal"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className="modal_content"&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;span className="close" onClick={this.handleClick}&gt;&amp;times;&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;p&gt;Comparing&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;table&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;thead&gt;</span>
-<span class="cstat-no" title="statement not covered" >              &lt;tr className="column"&gt;</span>
-<span class="cstat-no" title="statement not covered" >                &lt;th className="col-1"&gt;{product.name}&lt;/th&gt;</span>
-<span class="cstat-no" title="statement not covered" >                &lt;th className="col-2"&gt;&lt;/th&gt;</span>
-<span class="cstat-no" title="statement not covered" >                &lt;th className="col-3"&gt;{!currentProduct ? null: currentProduct.name}&lt;/th&gt;</span>
-<span class="cstat-no" title="statement not covered" >              &lt;/tr&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/thead&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;tbody className="description-row"&gt;</span>
-<span class="cstat-no" title="statement not covered" >              {featureList.map(feature=&gt;</span>
-<span class="cstat-no" title="statement not covered" >                &lt;DescirptionRow key={feature} feature={feature} relatedProduct={product.features} currentProduct={currentProduct.features}/&gt;</span>
-<span class="cstat-no" title="statement not covered" >              )}</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/tbody&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;/table&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    )</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+const style = {
+  width:'40%',
+  marginTop:'20px'
 }
 &nbsp;
-Comparison.propTypes = {
-  id: PropTypes.number,
-  togglePop: PropTypes.func,
-  product: PropTypes.object
+const msg = {
+  fontSize:'10px',
+  marginTop:'10px',
+  justifyContent: 'left',
+  margin: '10px',
 }
 &nbsp;
-export default Comparison;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
