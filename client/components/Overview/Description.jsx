@@ -40,13 +40,13 @@ class Description extends React.Component {
     var copy = this.state.cart.slice();
     copy.push(obj);
 
-    // axios.post('products/cart', obj)
-    // .then((response) => {
-    //   console.log(response);
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // });
+    axios.post('/cart', obj)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
     this.setState({
       inCart: number,
