@@ -7,15 +7,11 @@ import {
   render,
   cleanup,
   fireEvent,
-  screen,
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { renderHook, act } from '@testing-library/react-hooks';
 import PopOut from './PopOut';
 import { testData1 } from '../RatingTestData';
-import usePopOut from './usePopOut';
-import Warning from './Warning/Warning';
-import { msg, textExample } from '../data';
+import { msg } from '../data';
 
 afterEach(cleanup);
 
@@ -46,4 +42,13 @@ it('render correctly', () => {
 it('should get default addUserReview and cancelAddReview', () => {
   expect(PopOut.defaultProps.addUserReview()).toBeDefined();
   expect(PopOut.defaultProps.cancelAddReview()).toBeDefined();
+});
+
+it('matches snapShot', () => {
+  const tree = renderer.create(
+    <PopOut
+      data={testData1}
+    />,
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
 });

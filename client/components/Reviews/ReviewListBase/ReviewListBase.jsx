@@ -5,7 +5,8 @@ import reviewsGET from '../func/reviewsGet/reviewsGet';
 import ReviewListHeader from './ReviewListHeader/ReviewListHeader';
 import ReviewMSGList from './ReviewMSGList/ReviewMSGList';
 import Button from '../Button/Button';
-// import RLB from './ReviewListBaseHook';
+import useReviewListBase from './useReviewListBase';
+import moreReviewsGet from '../func/moreReviewsGet/moreReviewsGet';
 
 const ReviewListBase = (props) => {
   const {
@@ -18,76 +19,85 @@ const ReviewListBase = (props) => {
     stars,
   } = props;
 
-  // const {
-  //   data,
-  //   sort,
-  //   isMoreReviews,
-  //   isReviewsLoad,
-  //   listReviews,
-  //   getMoreReviews,
-  //   sortBy,
-  // } = RLB(id, listReported, listUserReview, stars);
-  const [data, setData] = useState([]);
-  const [sort, setSort] = useState('relevant');
-  const [isMoreReviews, setIsMoreReviews] = useState(true);
-  const [isReviewsLoad, setIsReviewsLoad] = useState(false);
-  const [listReviews, setListReviews] = useState([]);
+  const {
+    data,
+    sort,
+    isMoreReviews,
+    isReviewsLoad,
+    listReviews,
+    getMoreReviews,
+    sortBy,
+  } = useReviewListBase(id, listReported, listUserReview, stars);
+  // const [data, setData] = useState([]);
+  // const [sort, setSort] = useState('relevant');
+  // const [isMoreReviews, setIsMoreReviews] = useState(true);
+  // const [isReviewsLoad, setIsReviewsLoad] = useState(false);
+  // const [listReviews, setListReviews] = useState([]);
 
-  useEffect(() => {
-    setIsMoreReviews(true);
-    setSort('relevant');
-    reviewsGET('reviews', id, 2, sort, setData, setIsReviewsLoad);
-  }, [id]);
+  // useEffect(() => {
+  //   setIsMoreReviews(true);
+  //   setSort('relevant');
+  //   reviewsGET('reviews', id, 2, sort, setData, setIsReviewsLoad);
+  // }, [id]);
 
-  useEffect(() => {
-    const Reviews = data.filter((i) => (
-      !listReported.includes(i.review_id)
-    ));
+  // useEffect(() => {
+  //   const Reviews = data.filter((i) => (
+  //     !listReported.includes(i.review_id)
+  //   ));
 
-    const StarsReview = Reviews.filter((i) => (
-      Number(i.rating) <= Number(stars)
-    ));
+  //   const StarsReview = Reviews.filter((i) => (
+  //     Number(i.rating) <= Number(stars)
+  //   ));
 
-    const UserReview = listUserReview.filter((i) => (
-      Number(i.product_id) === Number(id)
-    ));
-    const newReviews = UserReview.concat(StarsReview);
-    setListReviews(newReviews);
-  }, [isReviewsLoad, listReported, data, listUserReview, stars]);
+  //   const UserReview = listUserReview.filter((i) => (
+  //     Number(i.product_id) === Number(id)
+  //   ));
+  //   const newReviews = UserReview.concat(StarsReview);
+  //   setListReviews(newReviews);
+  // }, [isReviewsLoad, listReported, data, listUserReview, stars]);
 
-  useEffect(() => {
-    axios.get('/get', {
-      params: {
-        endpoint: `reviews/?product_id=${id}&count=${data.length || 2}&sort=${sort}`,
-      },
-    })
-      .then((res) => {
-        const arr = res.data.results;
-        setData(arr);
-      })
-      .catch();
-  }, [sort]);
+  // useEffect(() => {
+  //   axios.get('/get', {
+  //     params: {
+  //       endpoint: `reviews/?product_id=${id}&count=${data.length || 2}&sort=${sort}`,
+  //     },
+  //   })
+  //     .then((res) => {
+  //       const arr = res.data.results;
+  //       setData(arr);
+  //     })
+  //     .catch();
+  // }, [sort]);
 
-  const sortBy = (str) => {
-    setSort(str);
-  };
+  // const sortBy = (str) => {
+  //   setSort(str);
+  // };
 
-  const getMoreReviews = (num) => {
-    axios.get('/get', {
-      params: {
-        endpoint: `reviews/?product_id=${id}&count=${data.length + num}&sort=${sort}`,
-      },
-    })
-      .then((res) => {
-        const arr = res.data.results;
-        if (arr.length === data.length) {
-          setIsMoreReviews(false);
-        } else {
-          setData(arr);
-        }
-      })
-      .catch();
-  };
+  // const getMoreReviews = (num) => {
+  //   moreReviewsGet({
+  //     string: 'reviews',
+  //     id,
+  //     count: data.length + num,
+  //     sort,
+  //     trueState: setData,
+  //     countTarget: data.length,
+  //     falseState: setIsMoreReviews,
+  //   });
+  //   // axios.get('/get', {
+  //   //   params: {
+  //   //     endpoint: `reviews/?product_id=${id}&count=${data.length + num}&sort=${sort}`,
+  //   //   },
+  //   // })
+  //   //   .then((res) => {
+  //   //     const arr = res.data.results;
+  //   //     if (arr.length === data.length) {
+  //   //       setIsMoreReviews(false);
+  //   //     } else {
+  //   //       setData(arr);
+  //   //     }
+  //   //   })
+  //   //   .catch();
+  // };
 
   if (isReviewsLoad) {
     return (

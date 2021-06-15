@@ -12,5 +12,5 @@ export default function reviewsGET(string, id, count, sort, setState, checkLoadi
       checkLoading(true);
       console.log(arr);
     })
-    .catch((err) => console.log);
-};
+    .catch(console.log);
+}
