@@ -5,7 +5,7 @@ import React from 'react';
 import { render, waitFor, fireEvent, screen } from '@testing-library/react';
 import RelatedItems from '../../client/components/RelatedItems/RelatedItems.jsx';
 import axios from 'axios';
-import relatedItemsList from './fixures/relatedItemsList.json';
+import relatedItemsList from './fixtures/relatedItemsList.json';
 import '@testing-library/jest-dom/extend-expect';
 
 jest.mock('axios');
@@ -29,4 +29,9 @@ describe('RelatedItems component', () => {
     render(<RelatedItems id={1}/>);
     const list = await waitFor(() => screen.find)
   })
+
+  // adding the current product to outfit
+  // if it is already in the list it does not add
+
+  // remove the clicked product from outfit
 });
