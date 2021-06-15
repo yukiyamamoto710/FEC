@@ -23,10 +23,11 @@ describe('Related Products component', () => {
  })
 
  test('should only display four products at a time', () => {
-  render(<RelatedProducts id={1} relatedItemsList={relatedItemsList}/>);
-  const display = screen.getAllByTextId("card");
-  const textArr = ["Item1", "Item2", "Item3", "Item4"];
-  display.forEach((product, i)=>{
-    expect(product).toHaveBeenCalledWith(textArr[i])
-  });
+    render(<RelatedProducts id={1} relatedItemsList={relatedItemsList}/>);
+    const display = screen.getAllByTestId("card");
+    const textArr = ["Item1", "Item2", "Item3", "Item4"];
+    display.forEach((product, i)=>{
+      expect(product).toHaveTextContent(textArr[i])
+    })
+  })
 })
