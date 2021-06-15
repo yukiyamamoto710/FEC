@@ -12,7 +12,7 @@ const Outfits = (props) => {
   }, [selectedItemsList])
 
   return (
-    <div className="container">
+    <div data-testid="outfit-container" className="container">
       <h3 className="outfit">YOUR OUTFIT</h3>
       <ul className="carousel">
         <button className="slideLeft"

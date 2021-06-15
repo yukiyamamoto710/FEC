@@ -2,12 +2,13 @@
  * @jest-environment jsdom
  */
 import React from 'react';
-import { render, waitForElement, fireEvent, cleanup, screen } from '@testing-library/react';
+import { render, waitFor, fireEvent, screen } from '@testing-library/react';
 import RelatedItems from '../../client/components/RelatedItems/RelatedItems.jsx';
-import axiosMock from 'axios';
+import axios from 'axios';
+import relatedItemsList from './fixures/relatedItemsList.json';
 import '@testing-library/jest-dom/extend-expect';
 
-afterEach(cleanup)
+jest.mock('axios');
 
 describe('RelatedItems component', () => {
   const { location } = window;
@@ -21,5 +22,11 @@ describe('RelatedItems component', () => {
     window.location.reload();
     const outfits2 = screen.getAllByRole("outfit-container");
     expect(outfits).toEqual(outfits2);
-  });
+  })
+
+  test('should render the related items list', async() => {
+    axios.get.mockResolvedValue({data: relatedItemsList});
+    render(<RelatedItems id={1}/>);
+    const list = await waitFor(() => screen.find)
+  })
 });
