@@ -1,11 +1,12 @@
 const express = require('express');
-
+const path = require('path');
 const app = express();
 const PORT = 3000 || process.env.PORT;
 const api = require('./github');
 
 app.use(express.json());
 app.use(express.static('./public'));
+// app.use('/:id', express.static(__dirname + '/public'));
 
 app.listen(PORT, () => {
   console.log('connect');
