@@ -68,5 +68,3 @@
       expect(mock).toHaveBeenCalled();
 
       });
-
-

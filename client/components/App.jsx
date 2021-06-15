@@ -109,7 +109,6 @@ class App extends React.Component{
       <div>
         {this.renderPage()}
         <button onClick = {this.testing}> TESTING </button>
-        <Reviews id ={this.state.targetId}/>
       </div>
     )
   }
