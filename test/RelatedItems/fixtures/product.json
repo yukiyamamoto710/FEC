@@ -3,6 +3,24 @@
   "name": "Item1",
   "category": "Shirt",
   "default_price": "756.00",
+  "features": [
+    {
+      "feature": "Cut",
+      "value": "\"Loose\""
+    },
+    {
+      "feature": "Frame",
+      "value": "\"DuraResin\""
+    },
+    {
+      "feature": "Fair Trade Certified",
+      "value": null
+    },
+    {
+      "feature": "Non-GMO",
+      "value": null
+    }
+  ],
   "product_id": "26094",
   "results": [
     {

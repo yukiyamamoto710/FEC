@@ -28,11 +28,18 @@ class Overview extends React.Component {
   componentDidMount() {
     console.log('this is props id', this.props.id);
     this.fetchGET('products', this.props.id, 'description');
+    this.getStyles(this.props.id)
+    .then((response) => {
+      this.setState({stylesList: response.data});
+    })
+    .catch((error) => {
+      console.log(error);
+    })
   }
 
 
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     var id = this.props.id;
     if(this.state.stylesList.length === 0) {
       this.getStyles(id)
@@ -43,7 +50,20 @@ class Overview extends React.Component {
         console.log(error);
       })
       }
-  }
+
+    if(this.props.id !== prevProps.id) {
+      this.fetchGET('products', this.props.id, 'description');
+      this.getStyles(id)
+      .then((response) => {
+        this.setState({stylesList: response.data});
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      }
+    }
+
+
 
   fetchGET(string, id, name){
     axios.get('/get', {params: {endpoint: `${string}/${id}`}})
