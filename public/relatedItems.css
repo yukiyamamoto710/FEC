@@ -29,6 +29,7 @@
   margin: 0;
   border: 0;
   padding: 0;
+  font-size: 14px;
 }
 
 .product-info {
@@ -51,6 +52,7 @@
 
 .product-name {
   font-weight: bold;
+  font-size: 14px;
 }
 
 .slideLeft,
@@ -77,6 +79,8 @@
 
 .add-button,
 .add-message {
+  text-transform: uppercase;
+  font-weight: bold;
   display: block;
   position: relative;
   top: 35%;
@@ -130,16 +134,14 @@
 table {
   width: 100%;
 }
-/* .col-1 {
-  text-align: left;
-}
 
-.col-3 {
-  text-align: right;
-} */
+.column {
+  font-size: 14px;
+}
 
 .description-row {
   font-size: 12px;
+  margin-top: 5px;
 }
 
 .column,
@@ -147,8 +149,9 @@ table {
   text-align: center;
 }
 
-th {
+th, td {
   min-width: 33%;
+  padding-top: 5px;
 }
 
 /* AdditionalImages component */
