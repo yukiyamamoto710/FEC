@@ -1,12 +1,12 @@
 const express = require('express');
-
+const path = require('path');
 const app = express();
 const PORT = 3000 || process.env.PORT;
 const api = require('./github');
 
 app.use(express.json());
-// app.use("/:id", express.static('./public'))
-app.use("/", express.static('./public'));
+app.use(express.static('./public'));
+// app.use('/:id', express.static(__dirname + '/public'));
 
 app.listen(PORT, () => {
   console.log('connect');
@@ -46,14 +46,3 @@ app.post('/cart', (req, res) => {
     }
   });
 });
-
-// app.get('/:product_id', (req, res) => {
-//   api.hrapi(`products/${req.params.product_id}`, (err, data) => {
-//     if (err) {
-//       res.status(404).send(err);
-//     } else {
-//       //console.log(data);
-//       res.status(200).send(data);
-//     }
-//   });
-// });
