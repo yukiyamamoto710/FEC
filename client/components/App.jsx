@@ -5,14 +5,14 @@ import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews1.jsx';
 import QA from './QA/QA.jsx';
 
-class App extends React.Component{
-  constructor(props){
+class App extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
-      list:[],
-      targetId: 25167,//reveiws testing. we can initialize with a particular ID
+      list: [],
+      targetId: 25167, // reveiws testing. we can initialize with a particular ID
       styles: [],
-      loaded: false
+      loaded: false,
     };
     this.fetchGET = this.fetchGET.bind(this);
     this.renderPage = this.renderPage.bind(this);
@@ -21,84 +21,80 @@ class App extends React.Component{
     this.changeProductId = this.changeProductId.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.fetchEverything();
   }
 
-
-  fetchGET(string, endpoint, stateName){
+  fetchGET(string, endpoint, stateName) {
     return (
-      axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
-      .then((response) =>{
-        console.log('successful get request', `${string}/${endpoint}`);
-        this.setState({
-          [stateName]: response.data,
-          //has to set state for data.[whatever key we need from data]
-        }, () =>this.setState({loaded: true}))
-      })
-      .catch(err=> console.error(err))
+      axios.get('/get', { params: { endpoint: `${string}/${endpoint}` } })
+        .then((response) => {
+          console.log('successful get request', `${string}/${endpoint}`);
+          this.setState({
+            [stateName]: response.data,
+          // has to set state for data.[whatever key we need from data]
+          }, () => this.setState({ loaded: true }));
+        })
+        .catch((err) => console.error(err))
     );
   }
 
   fetchEverything() {
-
     this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-    //this.fetchGET('products', this.state.targetId, 'list');
+    // this.fetchGET('products', this.state.targetId, 'list');
   }
 
-  testing(){
-    if(this.state.targetId === 25821){
+  testing() {
+    if (this.state.targetId === 25821) {
       this.setState({
-        targetId:25711,
-      },() =>{
+        targetId: 25711,
+      }, () => {
         this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-      })
-    }else{
+      });
+    } else {
       this.setState({
-        targetId:25821,
-      },() =>{
+        targetId: 25821,
+      }, () => {
         this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-      })
+      });
     }
   }
 
   changeProductId(id) {
     this.setState({
       targetId: id,
-    }, () =>{
+    }, () => {
       this.fetchGET('qa', `questions/?product_id=${id}`, 'questions');
-    })
+    });
   }
 
   renderPage() {
-    if(this.state.loaded) {
+    if (this.state.loaded) {
       return (
         <div>
-          <Overview id = {this.state.targetId}/>
-          <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
-          <QA id={this.state.targetId} questions={this.state.questions}/>
-          <Reviews id = { this.state.targetId}/>
+          <Overview id={this.state.targetId} />
+          <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} />
+          <QA id={this.state.targetId} questions={this.state.questions} />
+          <Reviews id={this.state.targetId} />
         </div>
-      )
-    } else {
-      return (
-        <div>
-          Page Loading ...
-        </div>
-      )
+      );
     }
+    return (
+      <div>
+        Page Loading ...
+      </div>
+    );
   }
 
-  render(){
+  render() {
     return (
       <div>
         {/* {this.renderPage()} */}
-        <button onClick = {this.testing}> TESTING </button>
-        <Reviews id ={this.state.targetId}/>
+        <button onClick={this.testing}> TESTING </button>
+        <Reviews id={this.state.targetId} />
       </div>
-    )
+    );
   }
 }
 
 export default App;
-
