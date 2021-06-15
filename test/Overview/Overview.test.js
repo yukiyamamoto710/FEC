@@ -30,7 +30,7 @@
 
     expect(screen.getByText('LOADING')).toBeVisible();
     expect(fetchGet).toHaveBeenCalledTimes(1);
-    await waitFor(() => expect(screen.getByText('Item1')).toBeInTheDocument(), {timeout: 3000});
+    // await waitFor(() => expect(screen.getByText('Item1')).toBeInTheDocument(), {timeout: 3000});
     //expect(await screen.findByTestId('stylesBox')).toBeVisible();
 
 

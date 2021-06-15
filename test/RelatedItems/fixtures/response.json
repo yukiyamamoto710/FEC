@@ -19,6 +19,22 @@
         ]
       }
     ],
+
+    "skus": {
+      "37": {
+            "quantity": 8,
+            "size": "XS"
+      },
+      "38": {
+            "quantity": 16,
+            "size": "S"
+      },
+      "39": {
+            "quantity": 17,
+            "size": "M"
+      }
+    },
+
     "rating": {
       "product_id": "26094",
       "ratings": {
