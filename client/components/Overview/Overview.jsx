@@ -111,6 +111,11 @@ class Overview extends React.Component {
     })
   }
 
+  scroll() {
+    console.log('clicked');
+    window.scrollTo(0,document.body.scrollHeight - document.querySelector(".rating").scrollHeight);
+  }
+
   renderItems() {
       //const { category, name, id, slogan, description, features } = this.state.description;
       const currentItem = this.state.stylesList.results;
@@ -131,7 +136,7 @@ class Overview extends React.Component {
         <div className = 'wrapper'>
           <div className = 'ratingOverview'>
             <Rating rating = {this.props.rating.ratings}/>
-            <a href = '#' className = 'readallreviews' >Read All Reviews</a>
+            <div className = 'readallreviews' onClick = {this.scroll} >Read All Reviews</div>
           </div>
          <DefaultView picture = {currentItem[this.state.index].photos[this.state.thumbIndex][this.state.urlName]} styleObj = {currentItem[this.state.index]} callback = {this.changeThumbnail} index = {this.state.thumbIndex}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice} styleItem = {styleItem}/>

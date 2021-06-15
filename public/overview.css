@@ -11,6 +11,11 @@
 .readallreviews {
   margin-left: 5px;
   margin-top: 5px;
+  color: blue;
+}
+
+.readallreviews:hover {
+  cursor: pointer;
 }
 
 
@@ -98,8 +103,8 @@
   width: 55%;
   height: 50%;
   margin-bottom: 25px;
-  max-height: 500px;
-  min-height: 500px;
+  max-height: 600px;
+  min-height: 600px;
   min-width: 500px;
 }
 
@@ -174,7 +179,7 @@ h3 {
   z-index: 1;
   position: absolute;
   left: 85%;
-  margin-top: 85%;
+  margin-top: 100%;
   border-radius: 100%;
   background-color: white;
 }
@@ -184,7 +189,7 @@ h3 {
   z-index: 1;
   position: absolute;
   left: 10%;
-  margin-top: 85%;
+  margin-top: 100%;
   border-radius: 100%;
   background-color: white;
 }
