@@ -46,8 +46,7 @@ describe('Additional Images', () => {
     const thumbnails = screen.getAllByRole("img");
     thumbnails.forEach((thumbnail, i) => {
       fireEvent.click(screen.getByTestId(i));
-      expect(changeMainImage).toHaveBeenCalledTimes(1)
-      expect(changeMainImage).toHaveBeenCalledWith(screen.getByTestId(i));
+      expect(changeMainImage).toHaveBeenCalledWith(thumbnail.src);
     })
   });
 })

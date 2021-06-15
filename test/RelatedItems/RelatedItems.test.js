@@ -9,14 +9,17 @@ import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup)
 
-// it('should render the RelatedItems component', () => {
-//   const { asFragment } = render(<RelatedItems id={25811}/>);
-//   expect(asFragment(<RelatedItems id={25811}/>)).toMatchSnapshot()
-// })
+describe('RelatedItems component', () => {
+  const { location } = window;
+  delete window.location;
+  window.location = { reload: jest.fn() };
 
-// it('should render the RelatedItems component', () => {
-//   render(<RelatedItems id={25811}/>);
-//   expect(screen.getByTestId("card")).toHaveTextContent("1")
-// })
-
-// test HTTP requests here too
+  test('should render the same Outfit list after the page refresh', () => {
+    render(<RelatedItems id={1}/>)
+    const outfits = screen.getAllByTestId("outfit-container");
+    const id = screen.get
+    window.location.reload();
+    const outfits2 = screen.getAllByRole("outfit-container");
+    expect(outfits).toEqual(outfits2);
+  });
+});
