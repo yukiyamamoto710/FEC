@@ -74,7 +74,8 @@ class RelatedProductCard extends React.Component {
           <Comparison togglePop={this.togglePop} product={product} id={id} currentItem={currentItem}/> : null}
           <div onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
             <span className="star" onClick={this.togglePop}>&#9734;</span>
-            <img className="related-product-img" src={this.state.mainImage} />
+            <div className="related-product-img">
+            <img className="related-product-img" src={this.state.mainImage} alt={product.name}/></div>
             {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
           </div>
           <div className="product-info">
