@@ -19,7 +19,6 @@ class RelatedItems extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentdidmount' + this.props.id)
     this.getRelatedItemsIds(this.props.id)
     const storage = JSON.parse(localStorage.getItem('outfit'));
     this.getAllProductInfo(this.props.id)

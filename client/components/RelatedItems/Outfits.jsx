@@ -17,7 +17,8 @@ const Outfits = (props) => {
       <ul className="carousel">
         <button className="slideLeft"
           onClick={()=>setState({idx: state.idx-1, displayed: [...selectedItemsList].slice(state.idx-1, state.idx+2)})}
-          hidden={state.idx === 0}>
+          hidden={state.idx === 0}
+          data-testid="slideLeft">
             &lt;
         </button>
         <li className="card empty">
@@ -30,7 +31,8 @@ const Outfits = (props) => {
         <button className="slideRight"
           onClick={()=>{setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})}}
           hidden={selectedItemsList.length < 3}
-          disabled={state.idx === selectedItemsList.length-3}>
+          disabled={state.idx === selectedItemsList.length-3}
+          data-testid="slideRight">
             &gt;
         </button>
       </ul>

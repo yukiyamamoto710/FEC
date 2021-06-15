@@ -23,20 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/18</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-<<<<<<< HEAD
-                <span class='fraction'>2/2</span>
-=======
-                <span class='fraction'>1/2</span>
->>>>>>> main
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -48,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/18</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -59,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -81,59 +77,30 @@
 <a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<span class="cline-any cline-yes">32x</span>
-=======
-<span class="cline-any cline-yes">2x</span>
->>>>>>> main
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<<<<<<< HEAD
 <span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">32x</span>
-=======
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
->>>>>>> main
-=======
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
->>>>>>> main
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 &nbsp;
 const Price = ({product}) =&gt; {
-  if (product.results[0].sale_price) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="product-price"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;span data-testid="sale-price" className="discounted-price"&gt;${Math.abs(Number(product.results[0].sale_price))}&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;span data-testid="original-price" className="original-price"&gt;${Math.abs(Number(product.results[0].original_price))}&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    );</span>
+  if (product.results[0].sale_price) {
+    return (
+      &lt;div className="product-price"&gt;
+        &lt;span data-testid="sale-price" className="discounted-price"&gt;${Math.abs(Number(product.results[0].sale_price))}&lt;/span&gt;
+        &lt;span data-testid="original-price" className="original-price"&gt;${Math.abs(Number(product.results[0].original_price))}&lt;/span&gt;
+      &lt;/div&gt;
+    );
   } else {
     return (
       &lt;div data-testid="price" className="product-price"&gt;${Math.abs(Number(product.results[0].original_price))}&lt;/div&gt;
@@ -148,31 +115,7 @@ export default Price;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                at Fri Jun 11 2021 22:18:20 GMT-0700 (Pacific Daylight Time)
-=======
-                at Thu Jun 10 2021 17:25:21 GMT-0700 (Pacific Daylight Time)
->>>>>>> 191139c8da6c87756a2ae755ac6ec7c4d8f3a28e
-=======
-<<<<<<< HEAD
-                at Thu Jun 10 2021 10:52:40 GMT-0700 (Pacific Daylight Time)
-=======
-                at Thu Jun 10 2021 10:52:34 GMT-0700 (Pacific Daylight Time)
->>>>>>> f003810a1a7c451f7e70b6b1598f6ac11b850853
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> origin
->>>>>>> 191139c8da6c87756a2ae755ac6ec7c4d8f3a28e
-=======
-                at Mon Jun 14 2021 11:25:02 GMT-0700 (Pacific Daylight Time)
->>>>>>> main
-=======
-                at Mon Jun 14 2021 10:43:57 GMT-0700 (Pacific Daylight Time)
->>>>>>> main
+                at Mon Jun 14 2021 22:00:50 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

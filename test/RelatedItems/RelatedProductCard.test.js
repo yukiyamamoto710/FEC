@@ -2,9 +2,10 @@
  * @jest-environment jsdom
  */
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import RelatedProductCard from '../../client/components/RelatedItems/RelatedProductCard.jsx';
 import product from './fixtures/product.json';
+import product2 from './fixtures/product2.json';
 import '@testing-library/jest-dom/extend-expect';
 
 
@@ -14,8 +15,8 @@ describe('Related Product Card', () => {
 
   test('should render related product', () => {
     render(<RelatedProductCard id={25811} product={product} changeProductId={changeProductId}/>);
-    expect(screen.getByTestId("product-category")).toHaveTextContent("Shirt");
-    expect(screen.getByTestId("product-name")).toHaveTextContent("Item1");
+    expect(screen.getByTestId("category")).toHaveTextContent("Shirt");
+    expect(screen.getByTestId("name")).toHaveTextContent("Item1");
   });
 
   test('should change the currently displayed product for the page', () => {

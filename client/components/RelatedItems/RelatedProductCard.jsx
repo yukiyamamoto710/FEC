@@ -72,15 +72,15 @@ class RelatedProductCard extends React.Component {
         <div className="parent">
           {this.state.seen ?
           <Comparison togglePop={this.togglePop} product={product} id={id} currentItem={currentItem}/> : null}
-          <div onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
-            <span className="star" onClick={this.togglePop}>&#9734;</span>
+          <div data-testid="related-product-card" onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
+            <span data-testid="star" className="star" onClick={this.togglePop}>&#9734;</span>
             <div className="related-product-img">
             <img className="related-product-img" src={this.state.mainImage} alt={product.name}/></div>
             {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
           </div>
           <div className="product-info">
-            <div className="product-category">{product.category}</div>
-            <div multiple data-testid="product-name" className="product-name">{product.name}</div>
+            <div data-testid="category" className="product-category">{product.category}</div>
+            <div data-testid="name" className="product-name">{product.name}</div>
             <Price product={product}/>
             <Rating rating={product.rating.ratings} />
           </div>

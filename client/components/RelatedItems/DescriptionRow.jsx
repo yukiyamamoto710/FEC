@@ -25,11 +25,13 @@ const DescriptionRow = ({feature, relatedProduct, currentItem}) => {
     }
   }
   return (
-    <tr data-testid="row" className="row">
-      <td data-testid="col-1" className="col-1">{displayCol1}</td>
-      <td data-testid="col-2" className="col-1">{feature}</td>
-      <td data-testid="col-3" className="col-3">{displayCol3}</td>
-    </tr>
+    <tbody className="description-row">
+      <tr data-testid="row" className="row">
+        <td data-testid="col-1" className="col-1">{displayCol1}</td>
+        <td data-testid="col-2" className="col-1">{feature}</td>
+        <td data-testid="col-3" className="col-3">{displayCol3}</td>
+      </tr>
+    </tbody>
   )
 }
 

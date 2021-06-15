@@ -33,7 +33,7 @@ class Comparison extends React.Component {
     const {currentItem, featureList} = this.state;
     if (currentItem) {
       return (
-        <div className="modal">
+        <div data-testid="modal" className="modal">
           <div className="modal_content">
             <span data-testid="close-button" className="close" onClick={()=>this.props.togglePop()}>&times;</span>
             <p>Comparing</p>
@@ -45,20 +45,20 @@ class Comparison extends React.Component {
                   <th className="col-3">{currentItem.name}</th>
                 </tr>
               </thead>
-              <tbody className="description-row">
+              {/* <tbody className="description-row"> */}
                 {featureList.map(feature=>
                   <DescirptionRow key={feature} feature={feature} relatedProduct={product.features} currentItem={currentItem.features}/>
                 )}
-              </tbody>
+              {/* </tbody> */}
             </table>
           </div>
         </div>
       )
     } else {
       return (
-        <div className="modal">
-        <div className="modal_content">
-        </div>
+        <div data-testid="modal" className="modal">
+          <div className="modal_content">
+          </div>
         </div>
       )
     }

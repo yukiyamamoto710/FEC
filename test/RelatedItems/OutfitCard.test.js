@@ -2,11 +2,10 @@
  * @jest-environment jsdom
  */
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import OutfitCard from '../../client/components/RelatedItems/OutfitCard.jsx';
 import product from './fixtures/product.json';
 import '@testing-library/jest-dom/extend-expect';
-
 
 describe('Outfit Card', () => {
   const removeFromOutfit = jest.fn();
