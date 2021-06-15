@@ -84,7 +84,7 @@
   margin: 5px;
   border-width: 2px;
   border-style: solid;
-  border-color: black;
+  border-color: white;
 }
 
 .bigPicture {
@@ -356,5 +356,14 @@ h3 {
   max-width: 1000px;
   margin: auto;
   position: relative;
+}
+
+.addCart {
+    background-color: white;
+    width: 120px;
+    padding: 5px;
+    font-size: 12px;
+    margin: 5px;
+    font-weight: bold;
 }
 
