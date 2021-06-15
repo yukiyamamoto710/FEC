@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.22% </span>
+                <span class="strong">91.11% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/45</span>
+                <span class='fraction'>41/45</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.22% </span>
+                <span class="strong">91.11% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>28/45</span>
+                <span class='fraction'>41/45</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,13 +106,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -124,17 +117,24 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -149,14 +149,14 @@
 import React from 'react';
 &nbsp;
 class Thumbnail extends React.Component {
-<span class="fstat-no" title="function not covered" >  constructor(props) {</span>
-<span class="cstat-no" title="statement not covered" >    super(props);</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    this.state = {</span>
-<span class="cstat-no" title="statement not covered" >      clicked: false</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >    this.handleClick = this.handleClick.bind(this);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  constructor(props) {
+    super(props);
+&nbsp;
+    this.state = {
+      clicked: false
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
 &nbsp;
 &nbsp;
   // componentDidUpdate(prevProps) {
@@ -172,13 +172,13 @@ class Thumbnail extends React.Component {
 <span class="cstat-no" title="statement not covered" >    console.log('clicked from thumbnail', this.props.index, this.props.identifier)</span>
 <span class="cstat-no" title="statement not covered" >    this.props.callback(this.props.index);</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-<span class="fstat-no" title="function not covered" >  render() {</span>
-<span class="cstat-no" title="statement not covered" >    const clicked = this.props.identifier ? this.props.highlightedThumb : this.props.noHighlight;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return(</span>
-<span class="cstat-no" title="statement not covered" >      &lt;&gt;{&lt;img className = {clicked} onClick = {this.handleClick} name = {this.props.index} src= {this.props.thumbnail} alt="Thumbnail"&gt;&lt;/img&gt;}&lt;/&gt;</span>
-<span class="cstat-no" title="statement not covered" >    );</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  render() {
+    const clicked = <span class="branch-0 cbranch-no" title="branch not covered" >this.props.identifier ? this.props.highlightedThumb : t</span>his.props.noHighlight;
+&nbsp;
+    return(
+      &lt;&gt;{&lt;img className = {clicked} onClick = {this.handleClick} name = {this.props.index} src= {this.props.thumbnail} alt="Thumbnail"&gt;&lt;/img&gt;}&lt;/&gt;
+    );
+  }
 &nbsp;
 }
 &nbsp;
@@ -196,7 +196,7 @@ export default Thumbnail;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jun 14 2021 18:35:01 GMT-0700 (Pacific Daylight Time)
+                at Mon Jun 14 2021 19:17:19 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>

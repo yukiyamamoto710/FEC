@@ -6,6 +6,8 @@ import Description from './Description.jsx';
 import DefaultView from './DefaultView.jsx';
 //import Stars from '../Reviews/Stars/Stars.jsx';
 import Rating from '../RelatedItems/Rating.jsx';
+import fetchGet from './api/fetchGet.js';
+
 
 //stateful component
 //what do i need from the API? product name, product style, review
@@ -29,7 +31,18 @@ class Overview extends React.Component {
 
   componentDidMount() {
     console.log('this is props id', this.props.id);
-    this.fetchGET('products', this.props.id, 'description');
+    fetchGet('products', this.props.id, 'description')
+    .then((response) =>{
+      console.log('successful get request', response.data);
+      this.setState({
+        description: response.data,
+        mounted: true
+        //has to set state for data.[whatever key we need from data]
+      })
+    })
+    .catch(err=>{
+      console.log(err)
+    });
   }
 
 
