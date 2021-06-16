@@ -137,7 +137,7 @@ describe('should check before post review no warning', () => {
       result.current.handleChangeTarget({ target: { id: 'name', value: 'qwe' } });
     });
     act(() => {
-      result.current.handleChangeTarget({ target: { id: 'email', value: 'qw@e' } });
+      result.current.handleChangeTarget({ target: { id: 'email', value: '@.' } });
     });
     act(() => {
       result.current.handleChangeTarget({ target: { id: 'summary', value: 'qwe' } });
@@ -160,7 +160,25 @@ describe('should check before post review no warning', () => {
     act(() => {
       result.current.handleClickCheckReview();
     });
+    expect(addUserReview).toHaveBeenCalledTimes(0);
+    expect(cancelAddReview).toHaveBeenCalledTimes(0);
+    act(() => {
+      result.current.handleChangeTarget({ target: { id: 'email', value: '@ww.' } });
+    });
+    act(() => {
+      result.current.handleClickCheckReview();
+    });
+    expect(addUserReview).toHaveBeenCalledTimes(0);
+    expect(cancelAddReview).toHaveBeenCalledTimes(0);
+    act(() => {
+      result.current.handleChangeTarget({ target: { id: 'email', value: 'q@ww.q' } });
+    });
+    act(() => {
+      result.current.handleClickCheckReview();
+    });
     expect(addUserReview).toHaveBeenCalledTimes(1);
     expect(cancelAddReview).toHaveBeenCalledTimes(1);
+
+
   });
 });

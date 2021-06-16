@@ -138,7 +138,7 @@ exports[`matches snapShot 1`] = `
         onClick={[Function]}
         type="button"
       >
-        countHelpful? Yes (0) 
+        Helpful? Yes (0) 
       </button>
       <button
         className="helpfulButton"

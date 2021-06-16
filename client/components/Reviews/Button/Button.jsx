@@ -16,7 +16,6 @@ const Button = (props) => {
     cancelAddReview,
     isAddReview,
   } = useButton(getMoreReviews);
-
   return (
     <div
       data-testid="addmoreBtn"
