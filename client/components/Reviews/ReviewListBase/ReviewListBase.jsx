@@ -127,7 +127,7 @@ const ReviewListBase = (props) => {
 };
 ReviewListBase.propTypes = {
   listUserReview: PropTypes.arrayOf(PropTypes.shape({})),
-  listReported: PropTypes.arrayOf(PropTypes.shape({})),
+  listReported: PropTypes.arrayOf(PropTypes.number),
   addListReported: PropTypes.func,
   addUserReview: PropTypes.func,
   rating: PropTypes.shape({

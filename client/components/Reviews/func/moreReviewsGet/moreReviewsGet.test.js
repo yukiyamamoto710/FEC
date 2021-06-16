@@ -33,38 +33,3 @@ it('sda', async () => {
   expect(axios.get).toHaveBeenCalledWith('/get', { params: { endpoint: 'reviews/?product_id=25167&count=2&sort=newest' } });
   expect(axios.get).toHaveBeenCalledTimes(1);
 });
-// jest.mock('./moreReviewsGet');
-// describe('moreReviewsGet', () => {
-//   it('moreReviewsGet successfully data from an API', async () => {
-//     const trueState = jest.fn();
-//     const falseState = jest.fn();
-// const data = {
-//   body: 'Blend in to your crowd',
-//   date: '2021-06-07T00:00:00.000Z',
-//   helpfulness: 0,
-//   photos: [],
-//   rating: 5,
-//   recommend: true,
-//   response: null,
-//   review_id: 406627,
-//   reviewer_name: 'Jackets',
-//   summary: 'Camo Onesie',
-// };
-
-// Mockaxios.get.mockImplementationOnce(() => Promise.resolve(data));
-
-//     const a = await moreReviewsGet({
-//       string: 'reviews',
-//       id: '25167',
-//       count: 2,
-//       sort: 'newest',
-//       trueState,
-//       countTarget: 4,
-//       falseState,
-//     })
-//     console.log(a);
-//     // expect(axios.get).toHaveBeenCalledWith(
-//     //   'http://localhost:3000/get',
-//     // );
-//   });
-// });

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Header from './Header.jsx'
+import Header from './Header.jsx';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews1.jsx';
@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      list:[],
+      list: [],
       targetId: 25167,
       styles: [],
       loaded: false,
@@ -22,13 +22,13 @@ class App extends React.Component {
     this.changeProductId = this.changeProductId.bind(this);
   }
 
-  componentDidMount(){
-    var query = window.location.search
-    var queryId = query.slice(query.length - 5);
+  componentDidMount() {
+    const query = window.location.search;
+    const queryId = query.slice(query.length - 5);
     this.setState({
-      targetId: !queryId ? 25167: Number(queryId),
-      loaded: true
-    })
+      targetId: !queryId ? 25167 : Number(queryId),
+      loaded: true,
+    });
   }
 
   // fetchGET(string, endpoint, stateName){
@@ -50,11 +50,11 @@ class App extends React.Component {
   testing() {
     if (this.state.targetId === 25821) {
       this.setState({
-        targetId:25711
-      })
-    }else{
+        targetId: 25711,
+      });
+    } else {
       this.setState({
-        targetId:25821
+        targetId: 25821,
       });
     }
   }
@@ -62,27 +62,18 @@ class App extends React.Component {
   changeProductId(id) {
     this.setState({
       targetId: id,
-    })
-    window.location.assign(`http://localhost:3000/?product_id=${id}`)
+    });
+    window.location.assign(`http://localhost:3000/?product_id=${id}`);
   }
 
   renderPage() {
-    if(this.state.loaded) {
+    if (this.state.loaded) {
       return (
         <div>
           <Header />
-          <Overview id = {this.state.targetId}/>
-          <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
-          {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
-          <Reviews id = { this.state.targetId}/>
-        </div>
-      )
-    } else {
-      return (
-        <div>
           <Overview id={this.state.targetId} />
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} />
-          <QA id={this.state.targetId} questions={this.state.questions} />
+          {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
           <Reviews id={this.state.targetId} />
         </div>
       );
@@ -98,7 +89,7 @@ class App extends React.Component {
     return (
       <div>
         {this.renderPage()}
-        <button onClick = {this.testing}> TESTING </button>
+        <button onClick={this.testing}> TESTING </button>
       </div>
     );
   }

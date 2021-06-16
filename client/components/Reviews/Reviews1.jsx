@@ -3,35 +3,27 @@ import PropTypes from 'prop-types';
 import ratingGET from './func/ratingGet/ratingGet';
 import Rating from './Rating/Rating';
 import ReviewListBase from './ReviewListBase/ReviewListBase';
+import useReview from './useReview';
 
 export default function Reviews(props) {
   const { id } = props;
-  const [isRatingLoad, setIsRatingLoad] = useState(false);
-  const [countStars, setCountStars] = useState(5);
-  const [rating, setRating] = useState({});
-  const [listUserReview, setListUserReview] = useState([]);
-  const [listReported, setListReported] = useState([]);
-
-  useEffect(() => {
-    setCountStars(5);
-    ratingGET('reviews/meta', id, setRating, setIsRatingLoad);
-  }, [id]);
-
-  const starClicked = (num) => {
-    setCountStars(num);
-  };
-
-  const addUserReview = (obj) => {
-    setListUserReview([...listUserReview, obj]);
-  };
-
-  const addListReported = (reportId) => {
-    setListReported([...listReported, reportId]);
-  };
+  const {
+    isRatingLoad,
+    countStars,
+    rating,
+    listUserReview,
+    listReported,
+    starClicked,
+    addUserReview,
+    addListReported,
+  } = useReview(id);
 
   if (isRatingLoad) {
     return (
-      <div className="reviewContainer">
+      <div
+        data-testid="reviewContainer"
+        className="reviewContainer"
+      >
         <Rating
           rating={rating}
           starClicked={starClicked}

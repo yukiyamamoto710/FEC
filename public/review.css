@@ -519,16 +519,24 @@ transform: perspective(500px) rotateY(45deg); */
 .msgBody {
   font-size: 12px;
   padding-left: 10px;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-wrap:break-word;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
 .msgBody1 {
+  width: 200px;
   font-size: 12px;
+  /* overflow:auto; */
+  word-wrap:break-word;
   padding-left: 10px;
+  /* -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; */
 }
 
 .helpfulButton {
@@ -566,5 +574,5 @@ transform: perspective(500px) rotateY(45deg); */
 .reviewListBase {
   display:flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
 }

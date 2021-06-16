@@ -1,3 +1,3 @@
-const get = (url) => Promise.resolve({ data: {data: {results:[]} }});
+const get = () => Promise.resolve({ data: {data: {results:[]} }});
 
 export default get;

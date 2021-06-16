@@ -1,15 +1,14 @@
 import axios from 'axios';
 
-export default function postReview(string, id, count, sort, setState, checkLoading) {
-  axios.get('/get', {
+export default function postReview(obj, id) {
+  axios.post('/post/review', {
+    body: obj,
     params: {
-      endpoint: `${string}/?product_id=${id}&count=${count}&sort=${sort}`,
+      endpoint: `/reviews/?product_id=${id}`,
     },
   })
     .then((res) => {
       const arr = res.data.results;
-      setState(arr);
-      checkLoading(true);
       console.log(arr);
     })
     .catch((err) => console.log);

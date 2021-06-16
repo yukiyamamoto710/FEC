@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import reviewsGET from '../func/reviewsGet/reviewsGet';
 import moreReviewsGet from '../func/moreReviewsGet/moreReviewsGet';
 
@@ -9,10 +10,18 @@ export default function useReviewListBase(id, listReported, listUserReview, star
   const [isReviewsLoad, setIsReviewsLoad] = useState(false);
   const [listReviews, setListReviews] = useState([]);
 
-  useEffect(() => {
+  useEffect(async () => {
     setIsMoreReviews(true);
     setSort('relevant');
-    reviewsGET('reviews', id, 2, sort, setData, setIsReviewsLoad);
+    // reviewsGET('reviews', id, 2, sort, setData, setIsReviewsLoad);
+    const results = await moreReviewsGet({
+      string: 'reviews',
+      id,
+      count: 2,
+      sort,
+    });
+    setData(results);
+    setIsReviewsLoad(true);
   }, [id]);
 
   useEffect(() => {
@@ -29,14 +38,27 @@ export default function useReviewListBase(id, listReported, listUserReview, star
     setListReviews(newReviews);
   }, [isReviewsLoad, listReported, data, listUserReview, stars]);
 
-  useEffect(() => {
+  useEffect(async () => {
     let num;
     if (data.length === 0) {
       num = 2;
     } else {
       num = data.length;
     }
-    reviewsGET('reviews', id, num, sort, setData);
+    // const result = await axios.get('/get', {
+    //   params: {
+    //     endpoint: `reviews/?product_id=${id}&count=${num}&sort=${sort}`,
+    //   },
+    // });
+
+    // reviewsGET('reviews', id, num, sort, setData);
+    const result = await moreReviewsGet({
+      string: 'reviews',
+      id,
+      count: num,
+      sort,
+    });
+    setData(result);
   }, [sort]);
 
   const sortBy = (str) => {
@@ -44,14 +66,19 @@ export default function useReviewListBase(id, listReported, listUserReview, star
   };
 
   const getMoreReviews = async () => {
-    const results = await moreReviewsGet({
+    // const result = await axios.get('/get', {
+    //   params: {
+    //     endpoint: `reviews/?product_id=${id}&count=${data.length + 2}&sort=${sort}`,
+    //   },
+    // });
+    const result = await moreReviewsGet({
       string: 'reviews',
       id,
       count: data.length + 2,
       sort,
     });
-    if (results.length > data.length) {
-      setData(results);
+    if (result.length > data.length) {
+      setData(result);
     } else {
       setIsMoreReviews(false);
     }

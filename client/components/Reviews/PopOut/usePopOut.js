@@ -60,7 +60,13 @@ export default function usePopOut({
     } = userReview;
     const warning = [];
     if (body.length < 50) { warning.push('Description'); }
-    if (!email.includes('@')) { warning.push('Email'); }
+    if (!email.includes('@') || !email.includes('.')) {
+      warning.push('Email');
+    } else if (email.indexOf('@') >= email.indexOf('.') - 1) {
+      warning.push('Email');
+    } else if (email.indexOf('@') === 0 || email.indexOf('.') === email.length-1) {
+      warning.push('Email');
+    }
     if (name.length === 0) { warning.push('Name'); }
     if (summary.length === 0) { warning.push('Title'); }
     if (rating === 0) { warning.push('Stars'); }
@@ -73,14 +79,21 @@ export default function usePopOut({
       setListWarning(warning);
     } else {
       const newObj = { ...userReview };
+      newObj.product_id = Number(userReview.product_id);
       newObj.body = body;
       newObj.rating = rating;
       newObj.photos = [...photos];
       newObj.recommend = recommend;
-      newObj.characteristics = { ...characteristics };
+      newObj.characteristics = { };
+      const key2 = Object.keys(characteristics);
+      for (let i = 0; i < key2.length; i += 1) {
+        const c = characteristics;
+        newObj.characteristics[c[key2[i]].id] = Number(c[key2[i]].value);
+      }
+
       cancelAddReview();
       addUserReview(newObj);
-      postReview(newObj);
+      postReview(newObj, userReview.product_id);
     }
   };
 

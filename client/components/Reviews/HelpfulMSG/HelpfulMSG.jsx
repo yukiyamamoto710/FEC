@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import putHelpfulReview from '../func/putHelpfulReview/putHelpfulReview';
+import putReportReview from '../func/putReportReview/putReportReview';
 
 const HelpfulMSG = (props) => {
   const {
@@ -21,9 +23,10 @@ const HelpfulMSG = (props) => {
 
   useEffect(() => {
     if (isClicked) {
-      axios.put('/put/reviews', { review_id: reviewId })
-        .then()
-        .catch();
+      putHelpfulReview({ review_id: Number(reviewId) }, reviewId);
+      // axios.put('/reviews/helpful', { review_id: Number(reviewId) })
+      //   .then()
+      //   .catch();
     }
   }, [isClicked]);
 
@@ -42,6 +45,7 @@ const HelpfulMSG = (props) => {
   };
 
   const handleClickReport = () => {
+    putReportReview({ review_id: Number(reviewId) }, reviewId);
     reported(reviewId);
   };
 
@@ -53,7 +57,7 @@ const HelpfulMSG = (props) => {
         type="button"
         onClick={handleClickYes}
       >
-        {`countHelpful? Yes (${countYes}) `}
+        {`Helpful? Yes (${countYes}) `}
       </button>
       <button
         data-testid="nothelpfulButton"

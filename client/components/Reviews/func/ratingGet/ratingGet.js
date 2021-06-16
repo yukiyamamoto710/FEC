@@ -13,3 +13,11 @@ export default function ratingGET(string, id, setState, checkLoading) {
     })
     .catch((err) => console.log);
 }
+// export default async function ratingGET(string, id, setState, checkLoading) {
+//   const result = await axios.get('/get', {
+//     params: {
+//       endpoint: `${string}/?product_id=${id}`,
+//     },
+//   });
+//   return result.data;
+// }
