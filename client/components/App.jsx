@@ -24,14 +24,12 @@ class App extends React.Component{
     var queryId = query.slice(query.length - 5);
     var productId = !queryId ? 25167: Number(queryId);
     var currentProduct = {};
-    var storage = JSON.parse(localStorage.getItem('allproducts'));
-
+    var storage = JSON.parse(localStorage.getItem('allproducts')) || [];
     for (var i = 0; i < storage.length; i++) {
       if (storage[i].id === productId) {
         currentProduct = storage[i];
       }
     }
-
     if (!currentProduct) {
       currentProduct = this.getProductInfo(productId);
       storage.unshift(currentProduct);
