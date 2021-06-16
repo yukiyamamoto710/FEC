@@ -24,7 +24,7 @@ const OutfitCard = ({product, removeFromOutfit}) => {
           <div data-testid="category" className="product-category">{product.category}</div>
           <div data-testid="name" className="product-name">{product.name}</div>
           <Price product={product}/>
-          <Rating rating={product.rating.ratings} />
+          <Rating rating={product.ratings} />
         </div>
       </div>
     </li>

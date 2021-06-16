@@ -13,7 +13,7 @@ class RelatedItems extends React.Component {
       selectedItemsList: []
     }
     this.getRelatedItemsIds = this.getRelatedItemsIds.bind(this);
-    this.getAllProductInfo = this.getAllProductInfo.bind(this);
+    // this.getAllProductInfo = this.getAllProductInfo.bind(this);
     this.addToOutfit = this.addToOutfit.bind(this);
     this.removeFromOutfit = this.removeFromOutfit.bind(this);
   }
@@ -21,6 +21,7 @@ class RelatedItems extends React.Component {
   componentDidMount() {
     this.getRelatedItemsIds(this.props.id)
     const outfit = JSON.parse(localStorage.getItem('outfit'));
+    // selectedItemsList: outfit ? outfit: []
       this.setState({
         currentItem: this.props.currentItem,
         selectedItemsList: outfit ? outfit: []
@@ -41,7 +42,7 @@ class RelatedItems extends React.Component {
       .then((response) => {
         var promises = [];
         for (var i = 0; i < response.data.length; i++) {
-          promises.push(this.getAllProductInfo(response.data[i]));
+          promises.push(axios.get(`getAll/${response.data[i]}`).then((res)=>res.data));
         }
         Promise.all(promises)
           .then((response) => {
@@ -53,26 +54,6 @@ class RelatedItems extends React.Component {
       .catch((err) => {
         console.log(err)
       })
-  }
-
-  getAllProductInfo(id) {
-    return new Promise((resolve, reject) => {
-      axios.get('/get', {params: {endpoint: `products/${id}`}})
-        .then((product) => {
-          axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
-            .then((styles) => {
-              axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
-                .then((rating) => {
-                  var mergedList = Object.assign(product.data, styles.data)
-                  mergedList['rating'] = rating.data
-                  resolve(mergedList)
-                })
-            })
-        })
-        .catch((err) => {
-          reject(err);
-        })
-    })
   }
 
   addToOutfit() {
