@@ -31,7 +31,7 @@ class Overview extends React.Component {
   }
 
   componentDidMount() {
-    console.log('this is props id', this.props.id);
+    console.log('this is props item', this.props.item);
     this.setState({
       stylesList: this.props.item,
       description: this.props.item
