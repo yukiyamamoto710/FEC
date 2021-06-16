@@ -68,7 +68,7 @@ class Description extends React.Component {
       <>
        <div className = 'describe'>
          <div className = 'category'>{category}</div>
-         <h2>{name}</h2>
+         <h2 data-testid = 'header'>{name}</h2>
          <div>{this.props.styleItem}</div>
          <br></br>
          <div className = 'price'>${this.props.price}</div>
