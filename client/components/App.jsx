@@ -19,9 +19,21 @@ class App extends React.Component {
     // this.fetchGET = this.fetchGET.bind(this);
     this.renderPage = this.renderPage.bind(this);
     // this.fetchEverything = this.fetchEverything.bind(this);
-    this.testing = this.testing.bind(this);
     this.changeProductId = this.changeProductId.bind(this);
+    this.ratingGET = this. ratingGET.bind(this);
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
   componentDidMount(){
     var query = window.location.search
@@ -29,19 +41,15 @@ class App extends React.Component {
     var queryId = query.slice(query.length - 5);
     this.setState({
       targetId: !queryId ? 25167: Number(queryId),
-      loaded: true
     })
-
-    this.fetchEverything();
-
-  }
-
-
-  fetchEverything() {
     this.ratingGET('reviews/meta', this.state.targetId);
-    //this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-    //this.fetchGET('products', this.state.targetId, 'list');
   }
+
+  // fetchEverything() {
+  //   this.ratingGET('reviews/meta', this.state.targetId);
+  //   //this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
+  //   //this.fetchGET('products', this.state.targetId, 'list');
+  // }
 
 
 
@@ -60,23 +68,12 @@ class App extends React.Component {
       .catch( err => console.log );
   };
 
-  testing() {
-    if (this.state.targetId === 25821) {
-      this.setState({
-        targetId: 25711,
-      });
-    } else {
-      this.setState({
-        targetId: 25821,
-      });
-    }
-  }
-
   changeProductId(id) {
-    this.setState({
-      targetId: id,
-    });
     window.location.assign(`http://localhost:3000/?product_id=${id}`);
+      this.setState({
+        targetId: id,
+        styles: [1,2,3,4],
+      });
   }
 
   renderPage() {
@@ -86,8 +83,7 @@ class App extends React.Component {
           <Header />
           <Overview id = {this.state.targetId} rating = {this.state.productRating}/>
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
-          {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
-          <Reviews id={this.state.targetId} />
+          <Reviews id={this.state.targetId} productRating={this.state.productRating} />
         </div>
       );
     }
@@ -102,7 +98,6 @@ class App extends React.Component {
     return (
       <div>
         {this.renderPage()}
-        <button onClick={this.testing}> TESTING </button>
       </div>
     );
   }

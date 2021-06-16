@@ -13,23 +13,24 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Reviews from './Reviews1';
-// import get from './qwe';
+import testData1 from './RatingTestData'
 
 jest.mock('axios');
 
 afterEach(cleanup);
-it('isReviewsLoad false', () => {
+it('isRatingLoad false', () => {
   const testId = 25711;
-  const { queryByText } = render(<Reviews id={testId} />);
-  expect(queryByText('Loading...')).toBeInTheDocument();
+  const { getByTestId } = render(<Reviews id={testId} productRating={testData1}/>);
+  expect(getByTestId('reviewContainer')).toBeInTheDocument();
 });
 
-it('isReviewsLoad true', async () => {
-  // jest.mock('axios');
-  const result = {data:'jo'}
-  axios.get.mockImplementationOnce(() => Promise.resolve(result));
-  const {getByTestId} = render(<Reviews id={25711}/>)
-  const test = await waitForElement(()=>{ getByTestId('reviewContainer')})
-  expect(await getByTestId('rating')).toBeInTheDocument();
-
+it('matches snapShot', () => {
+  const tree = renderer.create(
+    <Reviews
+      id={25711}
+      productRating={testData1}
+    />,
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
 });
+
