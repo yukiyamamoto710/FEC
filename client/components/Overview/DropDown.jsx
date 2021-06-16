@@ -59,7 +59,7 @@ class DropDown extends React.Component {
 
     return(
       <div className = 'dropdown'>
-        <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
+        <button data-testid = 'dropdown' onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
           <div className = {name}>
             {objKeys.map((item, index) => {
               return(
@@ -80,7 +80,7 @@ class DropDown extends React.Component {
     }
     return(
       <div className = 'dropdown'>
-        <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
+        <button data-testid = 'dropdown' onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
           <div className = {name}>
             {selectArray.map((item, index) => {
               return(

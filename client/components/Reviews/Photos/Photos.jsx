@@ -12,7 +12,7 @@ const Photos = (props) => {
         {photos.map((i) => (
           <div
             data-testid="img"
-            key={i.id}
+            key={i.id + i}
           >
             <img
               alt=""
