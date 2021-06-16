@@ -22,7 +22,7 @@ const Outfits = (props) => {
             &lt;
         </button>
         <li className="card empty">
-            <button className="add-button" onClick={()=>addToOutfit()}>+</button>
+            <button data-testid="add-button" className="add-button" onClick={()=>addToOutfit()}>+</button>
             <p className="add-message">Add to Outfit</p>
         </li>
         {!state.displayed.length ? null: state.displayed.map(product=>

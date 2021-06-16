@@ -7,7 +7,7 @@ const api = require('./github');
 
 app.use(express.json());
 app.use(express.static('./public'));
-// app.use('/:id', express.static(__dirname + '/public'));
+var saveProducts = {};
 
 app.listen(PORT, () => {
   console.log('connect');
@@ -38,6 +38,7 @@ app.put('/reviews/helpful', (req, res) => {
     if (err) {
       res.status(404).send(err);
     } else {
+<<<<<<< HEAD
       res.status(201).send('NO CONTENT');
     }
   });
@@ -49,6 +50,11 @@ app.put('/reviews/report', (req, res) => {
       res.status(404).send(err);
     } else {
       res.status(204).send('NO CONTENT');
+=======
+      // console.log(data);
+
+      res.status(200).send(data);
+>>>>>>> b18bda1c4e9fb6a2ce068ea46ac91a546ad51919
     }
   });
 });
@@ -65,3 +71,36 @@ app.post('/cart', (req, res) => {
     }
   });
 });
+
+// getting all products information
+app.use('/getAll/:id', (req, res) => {
+  // check if the product/data is already saved in saveProducts obj
+  const id = req.params.id;
+  var data = {};
+  if (saveProducts[id]) {
+    data = saveProducts[id];
+    res.status(200).send(data);
+  } else {
+    api.hrapi(`products/${id}`, (err, data1) => {
+      if (err) {
+        res.status(404).send(err);
+      } else {
+        api.hrapi(`products/${id}/styles`, (err, data2) => {
+          if (err) {
+            res.status(404).send(err);
+          } else {
+            api.hrapi(`reviews/meta/?product_id=${id}`, (err, data3) => {
+              if (err) {
+                res.status(404).send(err);
+              } else {
+                var mergedData = {...data1, ...data2, ...data3};
+                saveProducts[id] = mergedData;
+                res.status(200).send(mergedData);
+              }
+            })
+          }
+        })
+      }
+    })
+  }
+})

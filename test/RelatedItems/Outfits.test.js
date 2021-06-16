@@ -41,4 +41,16 @@ describe('Outfits carousel', () => {
     expect(screen.getByTestId("slideRight")).toBeEnabled();
     expect(screen.getByTestId("slideLeft")).not.toBeVisible();
   });
+
+  // test('add the current product to outfit list', () => {
+  //   const addToOutfit = jest.fn();
+  //   const items = [...selectedItemsList].slice(0, 1)
+  //   render(<Outfits id={10} selectedItemsList={items} addToOutfit={addToOutfit}/>);
+  //   const before = screen.getAllByTestId("outfit-card");
+  //   expect(before).toHaveLength(1);
+
+  //   fireEvent.click(screen.getByTestId("add-button"));
+  //   const after = screen.getAllByTestId("outfit-card");
+  //   expect(after).toHaveLength(2);
+  // })
 })

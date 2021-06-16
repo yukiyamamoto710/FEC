@@ -35,8 +35,8 @@ describe('Related Product Card', () => {
   test('hovering out of the image should hide additional images', () => {
     render(<RelatedProductCard id={25811} product={product} changeProductId={changeProductId}/>);
     fireEvent.mouseLeave(screen.getByTestId("related-product-card"));
-    const additional = screen.getAllByTestId("additional-images");
-    expect(screen.getAllByTestId("additional-images")).toHaveLength(0);
+    const additional = screen.queryByTestId("additional-images");
+    expect(additional).toBeNull();
   })
 
   test('a modal should pop up when a star is clicked', () => {
