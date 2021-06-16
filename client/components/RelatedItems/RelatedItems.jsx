@@ -24,7 +24,7 @@ class RelatedItems extends React.Component {
     // selectedItemsList: outfit ? outfit: []
       this.setState({
         currentItem: this.props.currentItem,
-        selectedItemsList: outfit ? outfit: []
+        selectedItemsList: []
       })
   }
 
