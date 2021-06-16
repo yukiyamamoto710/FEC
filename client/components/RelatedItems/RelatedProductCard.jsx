@@ -61,7 +61,7 @@ class RelatedProductCard extends React.Component {
 
   changeProductId(e) {
     if (["card", "related-product-img", "product-info", "product-category", "product-name", "product-price"].indexOf(e.target.className) !== -1) {
-      this.props.changeProductId(this.props.product.id);
+      this.props.changeProductId(this.props.product);
     }
   }
 

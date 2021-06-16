@@ -20,30 +20,18 @@ class RelatedItems extends React.Component {
 
   componentDidMount() {
     this.getRelatedItemsIds(this.props.id)
-    const storage = JSON.parse(localStorage.getItem('outfit'));
-    this.getAllProductInfo(this.props.id)
-      .then((results) => {
-        this.setState({
-          currentItem: results,
-          selectedItemsList: storage ? storage: []
-        })
-      })
-      .catch((err) => {
-        console.log(err);
+    const outfit = JSON.parse(localStorage.getItem('outfit'));
+      this.setState({
+        currentItem: this.props.currentItem,
+        selectedItemsList: outfit ? outfit: []
       })
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.id !== this.props.id) {
-      this.getRelatedItemsIds(this.props.id);
-      this.getAllProductInfo(this.props.id)
-        .then((results) => {
-          this.setState({
-            currentItem: results
-          })
-        })
-        .catch((err) => {
-          console.log(err);
+      this.getRelatedItemsIds(this.props.id)
+        this.setState({
+          currentItem: this.props.currentItem
         })
     }
   }
@@ -51,6 +39,10 @@ class RelatedItems extends React.Component {
   getRelatedItemsIds (id) {
     axios.get('/get', {params: {endpoint: `products/${id}/related`}})
       .then((response) => {
+        var storage = JSON.parse(localStorage.getItem('allproducts'))
+        // if there's already data in storage
+          // retrieve it
+        // otherwise
         var promises = [];
         for (var i = 0; i < response.data.length; i++) {
           promises.push(this.getAllProductInfo(response.data[i]));
@@ -59,6 +51,10 @@ class RelatedItems extends React.Component {
           .then((response) => {
             this.setState({
               relatedItemsList: response
+            }, ()=> {
+              var storage = JSON.parse(localStorage.getItem('allproducts'));
+              storage.unshift(response);
+              localStorage.setItem('allproducts', JSON.stringify(storage));
             })
           })
       })
@@ -71,21 +67,8 @@ class RelatedItems extends React.Component {
     return new Promise((resolve, reject) => {
       axios.get('/get', {params: {endpoint: `products/${id}`}})
         .then((product) => {
-          // eventually clean up data at the server side before sending to client
-          delete product.data['campus'];
-          delete product.data['created_at'];
-          delete product.data['description'];
-          delete product.data['slogan'];
-          delete product.data['updated_at'];
-          delete product.data['product_id'];
-
           axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
             .then((styles) => {
-              // eventually clean up data at the server side before sending to client
-              styles.data.results.map(style=> {
-                delete style['skus'];
-              })
-
               axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
                 .then((rating) => {
                   var mergedList = Object.assign(product.data, styles.data)
