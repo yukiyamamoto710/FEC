@@ -16,11 +16,7 @@ class App extends React.Component {
     };
     this.renderPage = this.renderPage.bind(this);
     this.changeProductId = this.changeProductId.bind(this);
-    // this.ratingGET = this. ratingGET.bind(this);
   }
-
-
-
 
   componentDidMount(){
     var query = window.location.search
@@ -63,11 +59,6 @@ class App extends React.Component {
         </div>
       );
     }
-    return (
-      <div>
-        Page Loading ...
-      </div>
-    );
   }
 
   render() {
