@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapShot 1`] = `
+<div>
+  <h3>
+    Reviews & Rating
+  </h3>
+  <div
+    className="reviewContainer"
+    data-testid="reviewContainer"
+  >
+    <div
+      className="rating"
+      data-testid="rating"
+    >
+      <div
+        className="ratingHead"
+        data-testid="head"
+      >
+        0
+        <div
+          className="ratingHead"
+          data-testid="stars"
+        >
+          <div>
+            <div
+              className="ratingStar emptyStar"
+              data-testid="button0"
+              id=" 1"
+              label="emptyStar"
+              namew=""
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            />
+          </div>
+          <div>
+            <div
+              className="ratingStar emptyStar"
+              data-testid="button1"
+              id=" 2"
+              label="emptyStar"
+              namew=""
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            />
+          </div>
+          <div>
+            <div
+              className="ratingStar emptyStar"
+              data-testid="button2"
+              id=" 3"
+              label="emptyStar"
+              namew=""
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            />
+          </div>
+          <div>
+            <div
+              className="ratingStar emptyStar"
+              data-testid="button3"
+              id=" 4"
+              label="emptyStar"
+              namew=""
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            />
+          </div>
+          <div>
+            <div
+              className="ratingStar emptyStar"
+              data-testid="button4"
+              id=" 5"
+              label="emptyStar"
+              namew=""
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            />
+          </div>
+        </div>
+      </div>
+      <h5
+        data-testid="text"
+      >
+        0% of reviews recommend this product
+      </h5>
+      <div
+        data-testid="starListR"
+      >
+        <div
+          className="starListContainer"
+          data-testid="starList"
+        >
+          <div>
+            <div
+              className="starListBase"
+            >
+              <button
+                className="starListText"
+                data-testid="startListButton5"
+                id="5"
+                onClick={[Function]}
+                type="button"
+              >
+                5 Stars
+              </button>
+              <div
+                className="starRatingBarBase"
+                data-testid="starRatingBar"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "green",
+                      "border": "5px solid green",
+                      "width": "NaN%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="starListBase"
+            >
+              <button
+                className="starListText"
+                data-testid="startListButton4"
+                id="4"
+                onClick={[Function]}
+                type="button"
+              >
+                4 Stars
+              </button>
+              <div
+                className="starRatingBarBase"
+                data-testid="starRatingBar"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "green",
+                      "border": "5px solid green",
+                      "width": "NaN%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="starListBase"
+            >
+              <button
+                className="starListText"
+                data-testid="startListButton3"
+                id="3"
+                onClick={[Function]}
+                type="button"
+              >
+                3 Stars
+              </button>
+              <div
+                className="starRatingBarBase"
+                data-testid="starRatingBar"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "green",
+                      "border": "5px solid green",
+                      "width": "NaN%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="starListBase"
+            >
+              <button
+                className="starListText"
+                data-testid="startListButton2"
+                id="2"
+                onClick={[Function]}
+                type="button"
+              >
+                2 Stars
+              </button>
+              <div
+                className="starRatingBarBase"
+                data-testid="starRatingBar"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "green",
+                      "border": "5px solid green",
+                      "width": "NaN%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="starListBase"
+            >
+              <button
+                className="starListText"
+                data-testid="startListButton1"
+                id="1"
+                onClick={[Function]}
+                type="button"
+              >
+                1 Stars
+              </button>
+              <div
+                className="starRatingBarBase"
+                data-testid="starRatingBar"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "green",
+                      "border": "5px solid green",
+                      "width": "NaN%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      loading...
+    </div>
+  </div>
+</div>
+`;

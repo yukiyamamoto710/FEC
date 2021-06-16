@@ -2,7 +2,6 @@ const axios = require('axios');
 const TOKEN = require('./config');
 
 const hrapi = (input, callback) => {
-  console.log(`input testing ${input}`);
   const option = {
     url: `https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/${input}`,
     headers: {
@@ -11,14 +10,45 @@ const hrapi = (input, callback) => {
     },
   };
 
-  // refactor this to return axios instead of using the callback
   return axios(option)
     .then((data) => {
       const datas = data.data;
       callback(null, datas);
     })
     .catch((err) => {
-      console.log(err, 'err');
+      callback(err);
+    });
+};
+
+const hrapipost = (input, body, callback) => {
+  const option = {
+    headers: {
+      Authorization: `${TOKEN}`,
+    },
+  };
+
+  return axios.post(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/${input}`, body, option)
+    .then((data) => {
+      const datas = data.data;
+      callback(null, datas);
+    })
+    .catch((err) => {
+      callback(err);
+    });
+};
+
+const hrapiput = (input, body, callback) => {
+  const option = {
+    headers: {
+      Authorization: `${TOKEN}`,
+    },
+  };
+  return axios.put(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo${input}`, body, option)
+    .then((data) => {
+      const datas = data.data;
+      callback(null, datas);
+    })
+    .catch((err) => {
       callback(err);
     });
 };
@@ -50,6 +80,9 @@ const post = (input, quantity, sku, callback) => {
 }
 
 module.exports = {
+  hrapi,
+  hrapipost,
+  hrapiput,
   hrapi: hrapi,
   post:post
 };

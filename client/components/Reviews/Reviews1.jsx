@@ -1,43 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import ratingGET from './func/ratingGet/ratingGet';
 import Rating from './Rating/Rating';
 import ReviewListBase from './ReviewListBase/ReviewListBase';
+import useReview from './useReview';
 
 export default function Reviews(props) {
-  const { id } = props;
-  const [isRatingLoad, setIsRatingLoad] = useState(false);
-  const [countStars, setCountStars] = useState(5);
-  const [rating, setRating] = useState({});
-  const [listUserReview, setListUserReview] = useState([]);
-  const [listReported, setListReported] = useState([]);
+  const { id, productRating } = props;
+  const {
+    countStars,
+    listUserReview,
+    listReported,
+    starClicked,
+    addUserReview,
+    addListReported,
+  } = useReview(id);
 
-  useEffect(() => {
-    setCountStars(5);
-    ratingGET('reviews/meta', id, setRating, setIsRatingLoad);
-  }, [id]);
-
-  const starClicked = (num) => {
-    setCountStars(num);
-  };
-
-  const addUserReview = (obj) => {
-    setListUserReview([...listUserReview, obj]);
-  };
-
-  const addListReported = (reportId) => {
-    setListReported([...listReported, reportId]);
-  };
-
-  if (isRatingLoad) {
-    return (
-      <div className="reviewContainer">
+  return (
+    <div>
+      <h3>Reviews & Rating</h3>
+      <div
+        data-testid="reviewContainer"
+        className="reviewContainer"
+      >
         <Rating
-          rating={rating}
+          rating={productRating}
           starClicked={starClicked}
         />
         <ReviewListBase
-          rating={rating}
+          rating={productRating}
           id={id}
           listReported={listReported}
           addListReported={addListReported}
@@ -46,15 +36,26 @@ export default function Reviews(props) {
           stars={countStars}
         />
       </div>
-    );
-  }
-  return <div> Loading... </div>;
+    </div>
+  );
 }
 
 Reviews.propTypes = {
+  productRating: PropTypes.shape({
+    characteristics: PropTypes.shape({}),
+    product_id: PropTypes.string,
+    ratings: PropTypes.shape({}),
+    recommended: PropTypes.shape({}),
+  }),
   id: PropTypes.number,
 };
 
 Reviews.defaultProps = {
+  productRating: {
+    characteristics: {},
+    product_id: "25711",
+    ratings: {},
+    recommended: {},
+  },
   id: 25711,
 };

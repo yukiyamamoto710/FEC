@@ -110,10 +110,8 @@
 .firstContainer {
     overflow: auto;
     width: 100%;
-    /* height: 80%; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -132,7 +130,7 @@
     font-size: 14px;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    width: 20%;
+    width: 120px;
     background-color: #ffffff;
 }
 .buttonBase{
@@ -519,16 +517,24 @@ transform: perspective(500px) rotateY(45deg); */
 .msgBody {
   font-size: 12px;
   padding-left: 10px;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-wrap:break-word;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
 .msgBody1 {
+  width: 200px;
   font-size: 12px;
+  /* overflow:auto; */
+  word-wrap:break-word;
   padding-left: 10px;
+  /* -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; */
 }
 
 .helpfulButton {
@@ -566,5 +572,247 @@ transform: perspective(500px) rotateY(45deg); */
 .reviewListBase {
   display:flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.noReview0 {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+.noReview1 {
   width: 100%;
+  height: 20%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.noReview2 {
+  width: 80%;
+  height: 70%;
+  top: 35%;
+  left: 10%;
+  clip-path: ellipse(45% 40% at 50% 50%);
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  z-index: 22;
+}
+
+.noReview3 {
+  width: 60%;
+  height: 60%;
+  top: 10%;
+  left: 20%;
+  position: absolute;
+  clip-path: ellipse(50% 44% at 50% 50%);
+  background-color: rgb(100, 40, 0);
+  z-index: 22;
+}
+
+.noReview4 {
+  width: 30%;
+  height: 30%;
+  top: 30%;
+  left: 70%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  z-index: 20;
+  clip-path: ellipse(40% 50% at 50% 50%);
+}
+
+.noReview5 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 75%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 21;
+}
+.noReview6 {
+  width: 30%;
+  height: 30%;
+  top: 30%;
+  left: 0%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  z-index: 20;
+  clip-path: ellipse(40% 50% at 50% 50%);
+}
+
+.noReview7 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 5%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 21;
+}
+
+.noReview8 {
+  width: 70%;
+  height: 60%;
+  top: 40%;
+  left: 15%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(44% 40% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview9 {
+  width: 30%;
+  height: 30%;
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 23;
+}
+.noReview10 {
+  width: 30%;
+  height: 30%;
+  top: 25%;
+  left: 45%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview11 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 30%;
+  position: absolute;
+  background-color: white;
+  clip-path: ellipse(45% 50% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview12 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 50%;
+  position: absolute;
+  background-color: white;
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview13 {
+  width: 15%;
+  height: 15%;
+  top: 40%;
+  left: 55%;
+  position: absolute;
+  background-color: black;
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview14 {
+  width: 15%;
+  height: 15%;
+  top: 40%;
+  left: 35%;
+  position: absolute;
+  background-color: black;
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview15 {
+  width: 45%;
+  height: 20%;
+  top: 65%;
+  left: 30%;
+  position: absolute;
+  background-color: red;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  z-index: 24;
+}
+.noReview16 {
+  width: 10%;
+  height: 10%;
+  top: 57%;
+  left: 40%;
+  position: absolute;
+  background: linear-gradient(to top,rgb(215 135 85)50%,rgb(100, 40, 0));
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview17 {
+  width: 10%;
+  height: 10%;
+  top: 57%;
+  left: 50%;
+  position: absolute;
+  background: linear-gradient(to top,rgb(215 135 85)50%,rgb(100, 40, 0));
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview18 {
+  width: 5%;
+  height: 5%;
+  top: 59%;
+  left: 43%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 25;
+}
+
+.noReview19 {
+  width: 5%;
+  height: 5%;
+  top: 59%;
+  left: 53%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 25;
+}
+
+.noReview20 {
+  width: 5%;
+  height: 5%;
+  top: 19%;
+  left: 25%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  clip-path: polygon(0 0, 34% 100%, 100% 100%);
+  z-index: 25;
+}
+
+.noReview21 {
+  width: 5%;
+  height: 5%;
+  top: 22%;
+  left: 22%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  clip-path: polygon(0 0, 34% 100%, 100% 100%);
+  z-index: 25;
+}
+
+.noReview22 {
+  width: 7%;
+  height: 10%;
+  top: 14%;
+  left: 26%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  clip-path: polygon(0 0, 34% 100%, 100% 100%);
+  z-index: 25;
 }

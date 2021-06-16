@@ -9,7 +9,6 @@ export default function ratingGET(string, id, setState, checkLoading) {
     .then((res) => {
       setState(res.data);
       checkLoading(true);
-      console.log(res.data, 's');
     })
-    .catch((err) => console.log);
+    .catch(console.log);
 }

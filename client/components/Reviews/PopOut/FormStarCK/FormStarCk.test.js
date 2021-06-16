@@ -6,7 +6,6 @@ import renderer from 'react-test-renderer';
 import {
   render,
   cleanup,
-  fireEvent,
   screen,
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
