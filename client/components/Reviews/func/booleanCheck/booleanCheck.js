@@ -5,7 +5,6 @@ export default function booleanCheck(obj) {
     trueFunc = () => {},
     falseFunc = () => {},
   } = obj;
-  console.log(boolean, value)
   if (boolean) {
     trueFunc(value);
   } else {

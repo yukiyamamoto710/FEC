@@ -1,3 +1,24 @@
+.ratingOverview {
+  display: flex;
+  width: 25%;
+  position: absolute;
+  top: 0%;
+  right: 15%;
+  font-size: 10px;
+
+}
+
+.readallreviews {
+  margin-left: 5px;
+  margin-top: 5px;
+  color: blue;
+}
+
+.readallreviews:hover {
+  cursor: pointer;
+}
+
+
 .picture {
   border-radius:100px;
   width: 100px;
@@ -11,7 +32,8 @@
   z-index: 1;
   position: absolute;
   height: 500px;
-
+  top: 5%;
+  padding-left: 3px;
 }
 .thumbnail {
   height: 50px;
@@ -28,7 +50,7 @@
   flex-wrap: wrap;
   z-index: 3;
   position: absolute;
-  bottom: 14%;
+  bottom: 31%;
   min-width: 500px;
   max-width: 90%;
   background-color: aliceblue;
@@ -63,7 +85,7 @@
   margin: 5px;
   border-width: 2px;
   border-style: solid;
-  border-color: black;
+  border-color: white;
 }
 
 .bigPicture {
@@ -82,8 +104,9 @@
   width: 55%;
   height: 50%;
   margin-bottom: 25px;
-  max-height: 500px;
-  min-height: 500px;
+  max-height: 600px;
+  min-height: 600px;
+  min-width: 500px;
 }
 
 .Picture:hover {
@@ -94,7 +117,7 @@
   width: 1000px;
   height: 1000px;
   z-index: 2;
-  top:5%;
+  top: -10%;
   position: absolute;
   display: block;
   /* margin-bottom: 25px; */
@@ -157,7 +180,7 @@ h3 {
   z-index: 1;
   position: absolute;
   left: 85%;
-  margin-top: 85%;
+  margin-top: 100%;
   border-radius: 100%;
   background-color: white;
 }
@@ -167,9 +190,41 @@ h3 {
   z-index: 1;
   position: absolute;
   left: 10%;
-  margin-top: 85%;
+  margin-top: 100%;
   border-radius: 100%;
   background-color: white;
+}
+
+.upArrow {
+    display: inline;
+    z-index: 1;
+    position: absolute;
+    left: 3%;
+    margin-top: 4%;
+    border-radius: 80%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    height: 18px;
+    width: 18px;
+    background-color: grey;
+
+}
+
+.downArrow {
+    display: inline;
+    z-index: 1;
+    position: absolute;
+    left: 3%;
+    margin-top: 90%;
+    border-radius: 80%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    height: 18px;
+    width: 18px;
+    color: white;
+    background-color: grey;
 }
 
 .smallLeftArrow {
@@ -199,7 +254,7 @@ h3 {
   height: 300px;
   flex-wrap: wrap;
   margin-left: 55%;
-  margin-top: min(-400px, -450px);
+  margin-top: min(-410px, -40px);
   padding-left: 5px;
   padding-bottom: 15%;
   min-width: 50%;
@@ -220,7 +275,7 @@ h3 {
   width: 25%;
   float: right; */
 
-  /* margin-top: 5%; */
+  margin-top: 5%;
   width: 25%;
   position: absolute;
   top: 0%;
@@ -327,12 +382,21 @@ h3 {
   z-index: 3;
   background-color: white;
   position: absolute;
-  top: 5%;
+  top: -10%;
 }
 
 .wrapper {
   max-width: 1000px;
   margin: auto;
   position: relative;
+}
+
+.addCart {
+    background-color: white;
+    width: 120px;
+    padding: 5px;
+    font-size: 12px;
+    margin: 5px;
+    font-weight: bold;
 }
 

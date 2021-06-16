@@ -23,7 +23,7 @@ it('should render corrcet number', () => {
       countNotHelpful={test1}
     />,
   );
-  expect(screen.queryByText('countHelpful? Yes (23)')).toBeInTheDocument();
+  expect(screen.queryByText('Helpful? Yes (23)')).toBeInTheDocument();
   expect(screen.queryByText('No (52)')).toBeInTheDocument();
   expect(screen.queryByText('| report')).toBeInTheDocument();
 });
@@ -39,7 +39,7 @@ it('should trigger button to change text one time only', () => {
   );
   fireEvent.click(getByTestId('helpfulButton'));
   fireEvent.click(getByTestId('helpfulButton'));
-  expect(getByTestId('helpfulButton')).toHaveTextContent('countHelpful? Yes (24)');
+  expect(getByTestId('helpfulButton')).toHaveTextContent('Helpful? Yes (24)');
 });
 
 it('should trigger button to change text one time only', () => {
