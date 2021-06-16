@@ -7,6 +7,7 @@ import DefaultView from './DefaultView.jsx';
 //import Stars from '../Reviews/Stars/Stars.jsx';
 import Rating from '../RelatedItems/Rating.jsx';
 import fetchGet from './api/fetchGet.js';
+import getStyles from './api/getStyles.js';
 
 
 //stateful component
@@ -32,66 +33,58 @@ class Overview extends React.Component {
   componentDidMount() {
     console.log('this is props id', this.props.id);
     fetchGet('products', this.props.id, 'description')
-    .then((response) =>{
+     .then((response) =>{
       console.log('successful get request', response.data);
       this.setState({
         description: response.data,
         mounted: true
         //has to set state for data.[whatever key we need from data]
+        })
       })
-    })
-    .catch(err=>{
-      console.log(err)
-    });
-  }
+      .then(getStyles(this.props.id)
+        .then((response) => {
+          this.setState({stylesList: response.data});
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+      )
+      .catch(err=>{
+        console.log(err)
+      });
+
+    }
 
 
 
   componentDidUpdate(prevProps) {
     var id = this.props.id;
-    if(this.state.stylesList.length === 0) {
-      this.getStyles(id)
-      .then((response) => {
-        this.setState({stylesList: response.data});
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      }
+    // if(this.state.stylesList.length === 0) {
+    //   getStyles(id)
+    //   .then((response) => {
+    //     this.setState({stylesList: response.data});
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
+    //   }
 
     if(this.props.id !== prevProps.id) {
-      this.fetchGET('products', this.props.id, 'description');
-      this.getStyles(id)
-      .then((response) => {
-        this.setState({stylesList: response.data});
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      }
-    }
-
-
-
-  fetchGET(string, id, name){
-    axios.get('/get', {params: {endpoint: `${string}/${id}`}})
-      .then((response) =>{
-        console.log('successful get request', response.data);
-        this.setState({
-          [name]: response.data,
-          mounted: true
-          //has to set state for data.[whatever key we need from data]
+      fetchGet('products', this.props.id, 'description');
+        getStyles(id)
+        .then((response) => {
+          this.setState({stylesList: response.data});
         })
-      })
-      .catch(err=>{
-        console.log(err)
-      });
-  }
+        .catch((error) => {
+           console.log(error);
+        })
+        }
+     }
 
 
-  getStyles(id) {
-    return axios('/get', {params: {endpoint: `products/${id}/styles`}});
-  }
+  // getStyles(id) {
+  //   return axios('/get', {params: {endpoint: `products/${id}/styles`}});
+  // }
 
 
   changePic(number) {

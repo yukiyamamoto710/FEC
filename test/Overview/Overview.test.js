@@ -3,17 +3,18 @@
  */
  import React from 'react';
  import { render, screen, fireEvent, waitFor } from '@testing-library/react';
- import ProductImage from '../../client/components/Overview/ProductImage.jsx';
  import Overview from '../../client/components/Overview/Overview.jsx';
- import Thumbnail from '../../client/components/Overview/Thumbnail.jsx';
- import DefaultView from '../../client/components/Overview/DefaultView.jsx'
- import product from '../RelatedItems/fixtures/response.json';
- import product2 from '../RelatedItems/fixtures/product2.json';
+ import response from '../RelatedItems/fixtures/response.json';
+ import product from '../RelatedItems/fixtures/product.json';
+ import styles from '../RelatedItems/fixtures/styles.json';
  import '@testing-library/jest-dom/extend-expect';
  import axios from 'axios';
  import fetchGet from '/Users/evansding/Desktop/FEC Project 2/FEC/client/components/Overview/api/fetchGet.js';
+ import getStyles from '/Users/evansding/Desktop/FEC Project 2/FEC/client/components/Overview/api/getStyles.js';
 
  jest.mock('/Users/evansding/Desktop/FEC Project 2/FEC/client/components/Overview/api/fetchGet.js');
+ jest.mock('/Users/evansding/Desktop/FEC Project 2/FEC/client/components/Overview/api/getStyles.js');
+
 
 
 //  it('should show whatever is being rendered the first time', () => {
@@ -24,13 +25,23 @@
 
   test('should show whatever is being rendered', async () => {
 
-    fetchGet.mockResolvedValue(product);
-    //console.log('this is fetchGet', fetchGet());
-    render(<Overview id ={25167} />);
+    fetchGet.mockResolvedValue(response);
+    getStyles.mockResolvedValue(styles);
+    //console.log('this is getstyles', getStyles());
+    //console.log('this is fetchGet', getStyles());
+    render(<Overview id ={25167} rating = {product.rating}/>);
 
     expect(screen.getByText('LOADING')).toBeVisible();
     expect(fetchGet).toHaveBeenCalledTimes(1);
-    // await waitFor(() => expect(screen.getByText('Item1')).toBeInTheDocument(), {timeout: 3000});
+    expect(getStyles).toHaveBeenCalledTimes(1);
+
+
+
+
+    //render(<Overview id ={25167} rating = {product.rating}/>);
+
+
+    await waitFor(() => expect(screen.getByTestId('stylesBox')).toBeInTheDocument(), {timeout: 3000});
     //expect(await screen.findByTestId('stylesBox')).toBeVisible();
 
 
