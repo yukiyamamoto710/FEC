@@ -10,7 +10,8 @@ class DefaultView extends React.Component {
     super(props);
     this.state = {
       index: 0,
-      expanded: false
+      expanded: false,
+      thumbnail: false
     }
 
     this.changeThumbNail = this.changeThumbNail.bind(this);
@@ -18,6 +19,7 @@ class DefaultView extends React.Component {
     this.handleLeft = this.handleLeft.bind(this);
     this.expandPic = this.expandPic.bind(this);
     this.closeOut = this.closeOut.bind(this);
+    this.renderThumbnail = this.renderThumbnail.bind(this);
   }
 
   // componentDidMount() {
@@ -63,12 +65,32 @@ class DefaultView extends React.Component {
       }
   }
 
+  renderThumbnail() {
+    this.setState({thumbnail: !this.state.thumbnail});
+  }
+
   render() {
     var currentPic = this.props.picture;
     var isHighlighted;
     var expand;
+    var photoArray = [];
+
     var left = this.state.index === 0 ? 'hidden' : 'leftArrow';
     var right = this.state.index === this.props.styleObj.photos.length - 1 ? 'hidden' : 'rightArrow';
+    var up = 'upArrow';
+    var down = 'downArrow';
+    if(this.props.styleObj.photos.length <= 7) {
+      up = 'hidden';
+      down = 'hidden';
+    }
+    if(this.state.thumbnail === false) {
+      photoArray = this.props.styleObj.photos.slice(0, 7);
+    } else if(this.props.styleObj.photos.length > 7){
+      photoArray = this.props.styleObj.photos.slice(7, this.props.styleObj.photos.length - 1);
+    } else {
+      photoArray = this.props.styleObj.photos.slice(0, 7);
+    }
+
     //probably have to set the variable expand to be its own jsx fragment instead of just changing the class
     if(this.state.expanded === true) {
       //console.log(this.props.styleObj.photos);
@@ -79,13 +101,15 @@ class DefaultView extends React.Component {
         <img className ='Picture' onClick = {this.expandPic} src= {currentPic} alt=" Big Picture of Clothing"></img>
         <img className = {right} onClick = {this.handleRight} src = 'right-arrow.svg' name = {this.state.index}></img>
         <img className = {left} onClick = {this.handleLeft} src = 'left-arrow.svg' name = {this.state.index} alt = 'left-arrow'></img>
+        <img className = {up} onClick = {this.renderThumbnail} src = 'up-arrow.svg' name = {this.state.index}></img>
+        <img className = {down} onClick = {this.renderThumbnail} src = 'down-arrow.svg' name = {this.state.index}></img>
       </div>
     }
 
     return(
       <>
       <div className = 'thumbnails'>
-        {this.props.styleObj.photos.map((item, index) => {
+        {photoArray.map((item, index) => {
           //need to refactor this later - when props index and regular index are the same this highights the wrong thing
           isHighlighted = this.props.index === index ? true : false;
           return(

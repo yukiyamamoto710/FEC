@@ -14,6 +14,7 @@ class App extends React.Component {
       targetId: 25167,
       styles: [],
       loaded: false,
+      productRating: {}
     };
     // this.fetchGET = this.fetchGET.bind(this);
     this.renderPage = this.renderPage.bind(this);
@@ -22,30 +23,42 @@ class App extends React.Component {
     this.changeProductId = this.changeProductId.bind(this);
   }
 
-  componentDidMount() {
-    const query = window.location.search;
-    const queryId = query.slice(query.length - 5);
+  componentDidMount(){
+    var query = window.location.search
+    console.log('this is query', query);
+    var queryId = query.slice(query.length - 5);
     this.setState({
-      targetId: !queryId ? 25167 : Number(queryId),
-      loaded: true,
-    });
+      targetId: !queryId ? 25167: Number(queryId),
+      loaded: true
+    })
+
+    this.fetchEverything();
+
   }
 
-  // fetchGET(string, endpoint, stateName){
-  //   return (
-  //     axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
-  //     .then((response) =>{
-  //       this.setState({
-  //         [stateName]: response.data
-  //       }, () =>this.setState({loaded: true}))
-  //     })
-  //     .catch(err=> console.error(err))
-  //   );
-  // }
 
-  // fetchEverything() {
-  //   this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-  // }
+  fetchEverything() {
+    this.ratingGET('reviews/meta', this.state.targetId);
+    //this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
+    //this.fetchGET('products', this.state.targetId, 'list');
+  }
+
+
+
+  ratingGET(string, id) {
+    axios.get( '/get', {
+      params: {
+        endpoint: `${ string }/?product_id=${ id }`
+      }})
+      .then( res =>{
+        console.log('res data', res.data)
+        this.setState({
+          productRating: res.data,
+          loaded: true,
+        });
+      })
+      .catch( err => console.log );
+  };
 
   testing() {
     if (this.state.targetId === 25821) {
@@ -71,8 +84,8 @@ class App extends React.Component {
       return (
         <div>
           <Header />
-          <Overview id={this.state.targetId} />
-          <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} />
+          <Overview id = {this.state.targetId} rating = {this.state.productRating}/>
+          <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
           {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
           <Reviews id={this.state.targetId} />
         </div>
