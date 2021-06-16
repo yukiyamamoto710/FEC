@@ -32,26 +32,30 @@ class Overview extends React.Component {
 
   componentDidMount() {
     console.log('this is props id', this.props.id);
-    fetchGet('products', this.props.id, 'description')
-     .then((response) =>{
-      console.log('successful get request', response.data);
-      this.setState({
-        description: response.data,
-        mounted: true
-        //has to set state for data.[whatever key we need from data]
-        })
-      })
-      .then(getStyles(this.props.id)
-        .then((response) => {
-          this.setState({stylesList: response.data});
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-      )
-      .catch(err=>{
-        console.log(err)
-      });
+    this.setState({
+      stylesList: this.props.item,
+      description: this.props.item
+    });
+    // fetchGet('products', this.props.id, 'description')
+    //  .then((response) =>{
+    //   console.log('successful get request', response.data);
+    //   this.setState({
+    //     description: response.data,
+    //     mounted: true
+    //     //has to set state for data.[whatever key we need from data]
+    //     })
+    //   })
+    //   .then(getStyles(this.props.id)
+    //     .then((response) => {
+    //       this.setState({stylesList: response.data});
+    //     })
+    //     .catch((error) => {
+    //       console.log(error) ;
+    //     })
+    //   )
+    //   .catch(err=>{
+    //     console.log(err)
+    //   });
 
     }
 
@@ -128,7 +132,7 @@ class Overview extends React.Component {
       return(
         <div className = 'wrapper'>
           <div className = 'ratingOverview'>
-            <Rating rating = {this.props.rating.ratings}/>
+            <Rating rating = {this.props.item.ratings}/>
             <div className = 'readallreviews' onClick = {this.scroll} >Read All Reviews</div>
           </div>
          <DefaultView picture = {currentItem[this.state.index].photos[this.state.thumbIndex][this.state.urlName]} styleObj = {currentItem[this.state.index]} callback = {this.changeThumbnail} index = {this.state.thumbIndex}/>

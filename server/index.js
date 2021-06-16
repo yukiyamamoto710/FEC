@@ -38,23 +38,9 @@ app.put('/reviews/helpful', (req, res) => {
     if (err) {
       res.status(404).send(err);
     } else {
-<<<<<<< HEAD
-      res.status(201).send('NO CONTENT');
-    }
-  });
-});
-
-app.put('/reviews/report', (req, res) => {
-  api.hrapiput(req.body.params.endpoint, req.body.body, (err) => {
-    if (err) {
-      res.status(404).send(err);
-    } else {
-      res.status(204).send('NO CONTENT');
-=======
       // console.log(data);
 
       res.status(200).send(data);
->>>>>>> b18bda1c4e9fb6a2ce068ea46ac91a546ad51919
     }
   });
 });

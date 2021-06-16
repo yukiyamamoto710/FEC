@@ -80,15 +80,11 @@ const post = (input, quantity, sku, callback) => {
 }
 
 module.exports = {
-<<<<<<< HEAD
   hrapi,
   hrapipost,
   hrapiput,
   hrapi: hrapi,
   post:post
-=======
-  hrapi
->>>>>>> b18bda1c4e9fb6a2ce068ea46ac91a546ad51919
 };
 
 // module.exports.hrapi(console.log);

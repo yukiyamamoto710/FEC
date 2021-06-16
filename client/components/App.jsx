@@ -16,17 +16,8 @@ class App extends React.Component {
     };
     this.renderPage = this.renderPage.bind(this);
     this.changeProductId = this.changeProductId.bind(this);
-    this.ratingGET = this. ratingGET.bind(this);
+    // this.ratingGET = this. ratingGET.bind(this);
   }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -59,7 +50,7 @@ class App extends React.Component {
       return (
         <div>
           <Header />
-          <Overview id = {this.state.targetId}/>
+          <Overview id = {this.state.targetId} item = {this.state.currentItem} rating = {this.state.currentItem.rating}/>
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} currentItem={this.state.currentItem}/>
           {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
           <Reviews id = { this.state.targetId}/>
