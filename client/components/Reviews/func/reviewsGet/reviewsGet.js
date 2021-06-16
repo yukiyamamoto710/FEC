@@ -10,7 +10,6 @@ export default function reviewsGET(string, id, count, sort, setState, checkLoadi
       const arr = res.data.results;
       setState(arr);
       checkLoading(true);
-      console.log(arr);
     })
     .catch(console.log);
 }

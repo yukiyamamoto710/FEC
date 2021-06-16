@@ -7,9 +7,6 @@ export default function putReportReview(obj, id) {
       endpoint: `/reviews/${id}/report`,
     },
   })
-    .then((res) => {
-      const arr = res.data;
-      console.log(arr);
-    })
-    .catch((err) => console.log);
-};
+    .then(console.log)
+    .catch(console.log);
+}

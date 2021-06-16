@@ -12,7 +12,8 @@ const FormStarCK = (props) => {
   return (
     <div
       data-testid="formStarCK"
-      className="topSmallContainer">
+      className="topSmallContainer"
+    >
       <div>
         { name }
       </div>

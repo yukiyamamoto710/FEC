@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import reviewsGET from '../func/reviewsGet/reviewsGet';
 import moreReviewsGet from '../func/moreReviewsGet/moreReviewsGet';
 
 export default function useReviewListBase(id, listReported, listUserReview, stars) {
@@ -13,7 +11,6 @@ export default function useReviewListBase(id, listReported, listUserReview, star
   useEffect(async () => {
     setIsMoreReviews(true);
     setSort('relevant');
-    // reviewsGET('reviews', id, 2, sort, setData, setIsReviewsLoad);
     const results = await moreReviewsGet({
       string: 'reviews',
       id,
@@ -45,13 +42,6 @@ export default function useReviewListBase(id, listReported, listUserReview, star
     } else {
       num = data.length;
     }
-    // const result = await axios.get('/get', {
-    //   params: {
-    //     endpoint: `reviews/?product_id=${id}&count=${num}&sort=${sort}`,
-    //   },
-    // });
-
-    // reviewsGET('reviews', id, num, sort, setData);
     const result = await moreReviewsGet({
       string: 'reviews',
       id,
@@ -66,11 +56,6 @@ export default function useReviewListBase(id, listReported, listUserReview, star
   };
 
   const getMoreReviews = async () => {
-    // const result = await axios.get('/get', {
-    //   params: {
-    //     endpoint: `reviews/?product_id=${id}&count=${data.length + 2}&sort=${sort}`,
-    //   },
-    // });
     const result = await moreReviewsGet({
       string: 'reviews',
       id,

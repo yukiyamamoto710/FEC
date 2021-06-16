@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
-import reviewsGET from '../func/reviewsGet/reviewsGet';
 import ReviewListHeader from './ReviewListHeader/ReviewListHeader';
 import ReviewMSGList from './ReviewMSGList/ReviewMSGList';
 import Button from '../Button/Button';
 import useReviewListBase from './useReviewListBase';
-import moreReviewsGet from '../func/moreReviewsGet/moreReviewsGet';
 
 const ReviewListBase = (props) => {
   const {
@@ -20,8 +17,6 @@ const ReviewListBase = (props) => {
   } = props;
 
   const {
-    data,
-    sort,
     isMoreReviews,
     isReviewsLoad,
     listReviews,

@@ -7,9 +7,6 @@ export default function putHelpfulReview(obj, id) {
       endpoint: `/reviews/${id}/helpful`,
     },
   })
-    .then((res) => {
-      const arr = res.data;
-      console.log(arr);
-    })
-    .catch((err) => console.log);
-};
+    .then(console.log)
+    .catch(console.log);
+}

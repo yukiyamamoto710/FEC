@@ -7,9 +7,6 @@ export default function postReview(obj, id) {
       endpoint: `/reviews/?product_id=${id}`,
     },
   })
-    .then((res) => {
-      const arr = res.data.results;
-      console.log(arr);
-    })
-    .catch((err) => console.log);
-};
+    .then(console.log)
+    .catch(console.log);
+}

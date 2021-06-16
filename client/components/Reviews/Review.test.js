@@ -13,8 +13,6 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Reviews from './Reviews1';
-import { renderHook, act } from '@testing-library/react-hooks';
-import useReview from './useReview';
 // import get from './qwe';
 
 jest.mock('axios');

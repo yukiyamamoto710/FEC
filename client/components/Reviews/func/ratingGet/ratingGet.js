@@ -9,15 +9,6 @@ export default function ratingGET(string, id, setState, checkLoading) {
     .then((res) => {
       setState(res.data);
       checkLoading(true);
-      console.log(res.data, 's');
     })
-    .catch((err) => console.log);
+    .catch(console.log);
 }
-// export default async function ratingGET(string, id, setState, checkLoading) {
-//   const result = await axios.get('/get', {
-//     params: {
-//       endpoint: `${string}/?product_id=${id}`,
-//     },
-//   });
-//   return result.data;
-// }
