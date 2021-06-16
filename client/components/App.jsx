@@ -15,7 +15,6 @@ class App extends React.Component{
       loaded: false
     };
     this.renderPage = this.renderPage.bind(this);
-    this.getProductInfo = this.getProductInfo.bind(this);
     this.changeProductId = this.changeProductId.bind(this);
   }
 
@@ -23,53 +22,21 @@ class App extends React.Component{
     var query = window.location.search
     var queryId = query.slice(query.length - 5);
     var productId = !queryId ? 25167: Number(queryId);
-    var currentProduct = {};
-    var storage = JSON.parse(localStorage.getItem('allproducts')) || [];
-    for (var i = 0; i < storage.length; i++) {
-      if (storage[i].id === productId) {
-        currentProduct = storage[i];
-      }
-    }
-    if (!currentProduct) {
-      currentProduct = this.getProductInfo(productId);
-      storage.unshift(currentProduct);
-      localStorage.setItem('allproducts', JSON.stringify(storage));
-    }
 
-    this.setState({
-      targetId: !queryId ? 25167: Number(queryId),
-      currentItem: currentProduct,
-      loaded: true
-    })
-  }
-
-  getProductInfo(id) {
-    axios.get('/get', {params: {endpoint: `products/${id}`}})
-    .then((product) => {
-      axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
-        .then((styles) => {
-          axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
-          .then((rating) => {
-            var mergedList = Object.assign(product.data, styles.data)
-            mergedList['rating'] = rating.data
-            return margedList;
-          })
+    axios.get(`/getAll/${productId}`)
+      .then((response) => {
+        this.setState({
+          targetId: !queryId ? 25167: Number(queryId),
+          currentItem: response.data,
+          loaded: true
         })
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
-  changeProductId(currentItem) {
-    // this.setState({
-    //   targetId: id,
-    //   currentItem: currentItem
-    // })
-    var storage = JSON.parse(localStorage.getItem('allproducts'))
-    storage.unshift(currentItem);
-    localStorage.setItem('allproducts', JSON.stringify(storage));
-
+  changeProductId(id) {
     window.location.assign(`http://localhost:3000/?product_id=${id}`)
   }
 
@@ -104,34 +71,3 @@ class App extends React.Component{
 }
 
 export default App;
-
-    // this.fetchGET = this.fetchGET.bind(this);
-    // this.fetchEverything = this.fetchEverything.bind(this);
-    // this.testing = this.testing.bind(this);
-  // fetchGET(string, endpoint, stateName){
-  //   return (
-  //     axios.get('/get', {params: {endpoint: `${string}/${endpoint}`}})
-  //     .then((response) =>{
-  //       this.setState({
-  //         [stateName]: response.data
-  //       }, () =>this.setState({loaded: true}))
-  //     })
-  //     .catch(err=> console.error(err))
-  //   );
-  // }
-
-  // fetchEverything() {
-  //   this.fetchGET('qa', `questions/?product_id=${this.state.targetId}`, 'questions');
-  // }
-
-  // testing(){
-  //   if(this.state.targetId === 25821){
-  //     this.setState({
-  //       targetId:25711
-  //     })
-  //   }else{
-  //     this.setState({
-  //       targetId:25821
-  //     });
-  //   }
-  // }

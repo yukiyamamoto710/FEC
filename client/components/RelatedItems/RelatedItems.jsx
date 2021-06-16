@@ -39,10 +39,6 @@ class RelatedItems extends React.Component {
   getRelatedItemsIds (id) {
     axios.get('/get', {params: {endpoint: `products/${id}/related`}})
       .then((response) => {
-        var storage = JSON.parse(localStorage.getItem('allproducts')) || [];
-        // if there's already data in storage
-          // retrieve it
-        // otherwise
         var promises = [];
         for (var i = 0; i < response.data.length; i++) {
           promises.push(this.getAllProductInfo(response.data[i]));
@@ -51,9 +47,6 @@ class RelatedItems extends React.Component {
           .then((response) => {
             this.setState({
               relatedItemsList: response
-            }, ()=> {
-              storage.unshift(response);
-              localStorage.setItem('allproducts', JSON.stringify(storage));
             })
           })
       })

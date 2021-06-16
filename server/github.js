@@ -24,7 +24,7 @@ const hrapi = (input, callback) => {
 };
 
 module.exports = {
-  hrapi,
+  hrapi
 };
 
 // module.exports.hrapi(console.log);
