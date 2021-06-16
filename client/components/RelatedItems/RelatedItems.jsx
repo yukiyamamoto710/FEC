@@ -24,7 +24,7 @@ class RelatedItems extends React.Component {
     // selectedItemsList: outfit ? outfit: []
       this.setState({
         currentItem: this.props.currentItem,
-        selectedItemsList: []
+        selectedItemsList: outfit ? outfit: []
       })
   }
 
@@ -57,7 +57,10 @@ class RelatedItems extends React.Component {
   }
 
   addToOutfit() {
-    var ids = [...this.state.selectedItemsList].map(item=>item.id);
+    var ids = [];
+    if (this.state.selectedItemsList.length) {
+      ids = [...this.state.selectedItemsList].map(item=>item.id);
+    }
     if (ids.indexOf(this.state.currentItem.id) === -1) {
       var updated = [this.state.currentItem, ...this.state.selectedItemsList]
       this.setState({
