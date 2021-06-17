@@ -1,0 +1,2467 @@
+[
+  {
+    "id": 25167,
+    "campus": "hr-sfo",
+    "name": "Camo Onesie",
+    "slogan": "Blend in to your crowd",
+    "description": "The So Fatigues will wake you up and fit you in. This high energy camo will have you blending in to even the wildest surroundings.",
+    "category": "Jackets",
+    "default_price": "140.00",
+    "created_at": "2021-06-02T16:53:33.359Z",
+    "updated_at": "2021-06-02T16:53:33.359Z",
+    "features": [
+      {
+        "feature": "Fabric",
+        "value": "Canvas"
+      },
+      {
+        "feature": "Buttons",
+        "value": "Brass"
+      }
+    ],
+    "product_id": "25167",
+    "results": [
+      {
+        "style_id": 142825,
+        "name": "Forest Green & Black",
+        "original_price": "140.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1501088430049-71c79fa3283e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1501088430049-71c79fa3283e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1534011546717-407bced4d25c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1534011546717-407bced4d25c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1549831243-a69a0b3d39e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1549831243-a69a0b3d39e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2775&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1527522883525-97119bfce82d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1527522883525-97119bfce82d?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1556648202-80e751c133da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1556648202-80e751c133da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1532543491484-63e29b3c1f5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1532543491484-63e29b3c1f5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+          }
+        ],
+        "skus": {
+          "828824": {
+            "quantity": 8,
+            "size": "XS"
+          },
+          "828825": {
+            "quantity": 16,
+            "size": "S"
+          },
+          "828826": {
+            "quantity": 17,
+            "size": "M"
+          },
+          "828827": {
+            "quantity": 10,
+            "size": "L"
+          },
+          "828828": {
+            "quantity": 15,
+            "size": "XL"
+          },
+          "828829": {
+            "quantity": 4,
+            "size": "XL"
+          }
+        }
+      },
+      {
+        "style_id": 142826,
+        "name": "Desert Brown & Tan",
+        "original_price": "140.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1533779183510-8f55a55f15c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1533779183510-8f55a55f15c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1560567546-4c6dbc16877b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1560567546-4c6dbc16877b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1458253329476-1ebb8593a652?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1458253329476-1ebb8593a652?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1422557379185-474fa15bf770?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1422557379185-474fa15bf770?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1490723286627-4b66e6b2882a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1490723286627-4b66e6b2882a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1447958272669-9c562446304f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1447958272669-9c562446304f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
+          }
+        ],
+        "skus": {
+          "828830": {
+            "quantity": 8,
+            "size": "XS"
+          },
+          "828831": {
+            "quantity": 16,
+            "size": "S"
+          },
+          "828832": {
+            "quantity": 17,
+            "size": "M"
+          },
+          "828833": {
+            "quantity": 10,
+            "size": "L"
+          },
+          "828834": {
+            "quantity": 15,
+            "size": "XL"
+          },
+          "828835": {
+            "quantity": 6,
+            "size": "XXL"
+          }
+        }
+      },
+      {
+        "style_id": 142827,
+        "name": "Ocean Blue & Grey",
+        "original_price": "140.00",
+        "sale_price": "100.00",
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1556304653-cba65c59b3c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1556304653-cba65c59b3c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2761&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544131750-2985d621da30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544131750-2985d621da30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1557760257-b02421ae77fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1557760257-b02421ae77fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1551506448-074afa034c05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1551506448-074afa034c05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=938&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1556268652-ad74ebb8f1e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1556268652-ad74ebb8f1e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1557394976-32cc983558ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1557394976-32cc983558ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+          }
+        ],
+        "skus": {
+          "828836": {
+            "quantity": 8,
+            "size": "XS"
+          },
+          "828837": {
+            "quantity": 16,
+            "size": "S"
+          },
+          "828838": {
+            "quantity": 17,
+            "size": "M"
+          },
+          "828839": {
+            "quantity": 10,
+            "size": "L"
+          },
+          "828840": {
+            "quantity": 15,
+            "size": "XL"
+          },
+          "828841": {
+            "quantity": 6,
+            "size": "XXL"
+          }
+        }
+      },
+      {
+        "style_id": 142828,
+        "name": "Digital Red & Black",
+        "original_price": "140.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530092376999-2431865aa8df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530092376999-2431865aa8df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1487174244970-cd18784bb4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1487174244970-cd18784bb4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1486025402772-bc179c8dfb0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1486025402772-bc179c8dfb0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1473691955023-da1c49c95c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1473691955023-da1c49c95c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517456837005-d757b959ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=60",
+            "url": "https://images.unsplash.com/photo-1517456837005-d757b959ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          }
+        ],
+        "skus": {
+          "828842": {
+            "quantity": 8,
+            "size": "XS"
+          },
+          "828843": {
+            "quantity": 16,
+            "size": "S"
+          },
+          "828844": {
+            "quantity": 17,
+            "size": "M"
+          },
+          "828845": {
+            "quantity": 10,
+            "size": "L"
+          },
+          "828846": {
+            "quantity": 15,
+            "size": "XL"
+          },
+          "828847": {
+            "quantity": 6,
+            "size": "XXL"
+          }
+        }
+      },
+      {
+        "style_id": 142829,
+        "name": "Sky Blue & White",
+        "original_price": "140.00",
+        "sale_price": "100.00",
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1448526478325-616f2b15b04e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1448526478325-616f2b15b04e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519098635131-4c8f806d1e82?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519098635131-4c8f806d1e82?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1483056293146-9eac9521932f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1483056293146-9eac9521932f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1515992854631-13de43baeba1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515992854631-13de43baeba1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1525141741567-f89ef016dfeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1525141741567-f89ef016dfeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1418985991508-e47386d96a71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1418985991508-e47386d96a71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "828848": {
+            "quantity": 8,
+            "size": "XS"
+          },
+          "828849": {
+            "quantity": 16,
+            "size": "S"
+          },
+          "828850": {
+            "quantity": 17,
+            "size": "M"
+          },
+          "828851": {
+            "quantity": 10,
+            "size": "L"
+          },
+          "828852": {
+            "quantity": 15,
+            "size": "XL"
+          },
+          "828853": {
+            "quantity": 6,
+            "size": "XXL"
+          }
+        }
+      },
+      {
+        "style_id": 142830,
+        "name": "Dark Grey & Black",
+        "original_price": "170.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1514866726862-0f081731e63f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1514866726862-0f081731e63f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519689373023-dd07c7988603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519689373023-dd07c7988603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1506932248762-69d978912b80?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1506932248762-69d978912b80?ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1535639818669-c059d2f038e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1535639818669-c059d2f038e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1498098662025-04e60a212db4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1498098662025-04e60a212db4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1421941027568-40ab08ee5592?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1421941027568-40ab08ee5592?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+          }
+        ],
+        "skus": {
+          "828854": {
+            "quantity": 8,
+            "size": "XS"
+          },
+          "828855": {
+            "quantity": 16,
+            "size": "S"
+          },
+          "828856": {
+            "quantity": 17,
+            "size": "M"
+          },
+          "828857": {
+            "quantity": 10,
+            "size": "L"
+          },
+          "828858": {
+            "quantity": 15,
+            "size": "XL"
+          },
+          "828859": {
+            "quantity": 6,
+            "size": "XXL"
+          }
+        }
+      }
+    ],
+    "ratings": {
+      "2": "1",
+      "3": "8",
+      "4": "3",
+      "5": "9"
+    },
+    "recommended": {
+      "false": "2",
+      "true": "19"
+    },
+    "characteristics": {
+      "Fit": {
+        "id": 84504,
+        "value": "2.8461538461538462"
+      },
+      "Length": {
+        "id": 84505,
+        "value": "2.6923076923076923"
+      },
+      "Comfort": {
+        "id": 84506,
+        "value": "3.0769230769230769"
+      },
+      "Quality": {
+        "id": 84507,
+        "value": "2.3846153846153846"
+      }
+    }
+  },
+  {
+    "id": 25168,
+    "campus": "hr-sfo",
+    "name": "Bright Future Sunglasses",
+    "slogan": "You've got to wear shades",
+    "description": "Where you're going you might not need roads, but you definitely need some shades. Give those baby blues a rest and let the future shine bright on these timeless lenses.",
+    "category": "Accessories",
+    "default_price": "69.00",
+    "created_at": "2021-06-02T16:53:33.359Z",
+    "updated_at": "2021-06-02T16:53:33.359Z",
+    "features": [
+      {
+        "feature": "Lenses",
+        "value": "Ultrasheen"
+      },
+      {
+        "feature": "UV Protection",
+        "value": null
+      },
+      {
+        "feature": "Frames",
+        "value": "LightCompose"
+      }
+    ],
+    "product_id": "25168",
+    "results": [
+      {
+        "style_id": 142831,
+        "name": "Black Lenses & Black Frame",
+        "original_price": "69.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": null,
+            "url": null
+          }
+        ],
+        "skus": {
+          "null": {
+            "quantity": null,
+            "size": null
+          }
+        }
+      },
+      {
+        "style_id": 142832,
+        "name": "Black Lenses & Gold Frame",
+        "original_price": "69.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": null,
+            "url": null
+          }
+        ],
+        "skus": {
+          "null": {
+            "quantity": null,
+            "size": null
+          }
+        }
+      },
+      {
+        "style_id": 142833,
+        "name": "Gold Lenses & Black Frame",
+        "original_price": "69.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": null,
+            "url": null
+          }
+        ],
+        "skus": {
+          "null": {
+            "quantity": null,
+            "size": null
+          }
+        }
+      },
+      {
+        "style_id": 142834,
+        "name": "Gold Lenses & Gold Frame",
+        "original_price": "69.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": null,
+            "url": null
+          }
+        ],
+        "skus": {
+          "null": {
+            "quantity": null,
+            "size": null
+          }
+        }
+      }
+    ],
+    "ratings": {
+      "2": "1",
+      "3": "1",
+      "4": "2",
+      "5": "1"
+    },
+    "recommended": {
+      "false": "2",
+      "true": "3"
+    },
+    "characteristics": {
+      "Quality": {
+        "id": 84508,
+        "value": "4.2000000000000000"
+      }
+    }
+  },
+  {
+    "id": 25172,
+    "campus": "hr-sfo",
+    "name": "Pumped Up Kicks",
+    "slogan": "Faster than a just about anything",
+    "description": "The Pumped Up serves up crisp court style with a modern look. These shoes show off tennis-whites shades and are constructed with a supple leather upper and a classic rubber cupsole.",
+    "category": "Kicks",
+    "default_price": "89.00",
+    "created_at": "2021-06-02T16:53:33.359Z",
+    "updated_at": "2021-06-02T16:53:33.359Z",
+    "features": [
+      {
+        "feature": "Sole",
+        "value": "Rubber"
+      },
+      {
+        "feature": "Material",
+        "value": "FullControlSkin"
+      },
+      {
+        "feature": "Mid-Sole",
+        "value": "ControlSupport Arch Bridge"
+      },
+      {
+        "feature": "Stitching",
+        "value": "Double Stitch"
+      }
+    ],
+    "product_id": "25172",
+    "results": [
+      {
+        "style_id": 142854,
+        "name": "White",
+        "original_price": "89.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1477420143023-6a0e0b04b69a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1477420143023-6a0e0b04b69a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1518687338977-a84d3086a934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1518687338977-a84d3086a934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=652&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1546367791-e7447b431084?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1546367791-e7447b431084?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1498168208808-4c2706938a2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1498168208808-4c2706938a2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1556812191-381c7e7d96d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1556812191-381c7e7d96d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2982&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1526330563440-3ae2174b6bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1526330563440-3ae2174b6bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80"
+          },
+          {
+            "thumbnail_url": "uhttps://images.unsplash.com/photo-1515243061678-14fc18b93935?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515243061678-14fc18b93935?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1516199707327-5399434d0aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1516199707327-5399434d0aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1083&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1541444446610-749d3299b35e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1541444446610-749d3299b35e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1548861216-17dd1ac80d5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1548861216-17dd1ac80d5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=664&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1558422504-3d17542c1799?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1558422504-3d17542c1799?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "828994": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "828995": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "828996": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "828997": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "828998": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "828999": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829000": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829001": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829002": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829003": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829004": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142855,
+        "name": "Black",
+        "original_price": "89.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1463100099107-aa0980c362e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1463100099107-aa0980c362e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1536830220630-ce146cccac84?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1536830220630-ce146cccac84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1459947727010-6267d2c1232f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1459947727010-6267d2c1232f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1526113438757-122d6d54da4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1526113438757-122d6d54da4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1563&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1523296357416-a4b3c4b9ee65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1523296357416-a4b3c4b9ee65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1510867759970-3d2ca293be77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1510867759970-3d2ca293be77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1534960680480-ca9853707e10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1534960680480-ca9853707e10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2384&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519330377309-9ee1c6783348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519330377309-9ee1c6783348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/11/converse-fields.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/11/converse-fields.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1570&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1522032238811-74bc59578599?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1522032238811-74bc59578599?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1472186422470-1f3fbde547aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1472186422470-1f3fbde547aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1647&q=80"
+          }
+        ],
+        "skus": {
+          "829005": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829006": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829007": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829008": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829009": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829010": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829011": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829012": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829013": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829014": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829015": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      }
+    ],
+    "ratings": {},
+    "recommended": {},
+    "characteristics": {
+      "Size": {
+        "id": 84521,
+        "value": null
+      },
+      "Width": {
+        "id": 84522,
+        "value": null
+      },
+      "Comfort": {
+        "id": 84523,
+        "value": null
+      },
+      "Quality": {
+        "id": 84524,
+        "value": null
+      }
+    }
+  },
+  {
+    "id": 25173,
+    "campus": "hr-sfo",
+    "name": "Blues Suede Shoes",
+    "slogan": "2019 Stanley Cup Limited Edition",
+    "description": "Touch down in the land of the Delta Blues in the middle of the pouring rain",
+    "category": "Dress Shoes",
+    "default_price": "120.00",
+    "created_at": "2021-06-02T16:53:33.359Z",
+    "updated_at": "2021-06-02T16:53:33.359Z",
+    "features": [
+      {
+        "feature": "Sole",
+        "value": "Rubber"
+      },
+      {
+        "feature": "Material",
+        "value": "FullControlSkin"
+      },
+      {
+        "feature": "Stitching",
+        "value": "Double Stitch"
+      }
+    ],
+    "product_id": "25173",
+    "results": [
+      {
+        "style_id": 142856,
+        "name": "White Sole",
+        "original_price": "120.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1561861422-a549073e547a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1561861422-a549073e547a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1560072810-1cffb09faf0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1560072810-1cffb09faf0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829016": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829017": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829018": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829019": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829020": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829021": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829022": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829023": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829024": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829025": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829026": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142857,
+        "name": "Black Sole",
+        "original_price": "120.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/uploads/1412198532414025532c0/6a31309c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/uploads/1412198532414025532c0/6a31309c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1454024183771-42d54053cd75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1454024183771-42d54053cd75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829027": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829028": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829029": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829030": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829031": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829032": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829033": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829034": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829035": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829036": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829037": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142858,
+        "name": "Tan Sole",
+        "original_price": "120.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1465124982537-9f918f1e1aaf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1465124982537-9f918f1e1aaf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829038": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829039": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829040": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829041": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829042": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829043": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829044": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829045": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829046": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829047": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829048": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142859,
+        "name": "Red Sole",
+        "original_price": "120.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1454177643390-7f100d1bbeec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1454177643390-7f100d1bbeec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829049": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829050": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829051": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829052": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829053": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829054": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829055": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829056": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829057": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829058": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829059": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142860,
+        "name": "Yellow Sole",
+        "original_price": "120.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1499013819532-e4ff41b00669?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1499013819532-e4ff41b00669?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1459631836437-1c2824882e3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1459631836437-1c2824882e3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829060": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829061": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829062": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829063": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829064": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829065": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829066": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829067": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829068": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829069": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829070": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      }
+    ],
+    "ratings": {
+      "1": "4",
+      "5": "5"
+    },
+    "recommended": {
+      "false": "3",
+      "true": "6"
+    },
+    "characteristics": {
+      "Size": {
+        "id": 84525,
+        "value": "2.2222222222222222"
+      },
+      "Width": {
+        "id": 84526,
+        "value": "2.6666666666666667"
+      },
+      "Comfort": {
+        "id": 84527,
+        "value": "2.7777777777777778"
+      },
+      "Quality": {
+        "id": 84528,
+        "value": "2.4444444444444444"
+      }
+    }
+  },
+  {
+    "id": 25171,
+    "campus": "hr-sfo",
+    "name": "Heir Force Ones",
+    "slogan": "A sneaker dynasty",
+    "description": "Now where da boxes where I keep mine? You should peep mine, maybe once or twice but never three times. I'm just a sneaker pro, I love Pumas and shell toes, but can't nothin compare to a fresh crispy white pearl",
+    "category": "Kicks",
+    "default_price": "99.00",
+    "created_at": "2021-06-02T16:53:33.359Z",
+    "updated_at": "2021-06-02T16:53:33.359Z",
+    "features": [
+      {
+        "feature": "Sole",
+        "value": "Rubber"
+      },
+      {
+        "feature": "Material",
+        "value": "FullControlSkin"
+      },
+      {
+        "feature": "Mid-Sole",
+        "value": "ControlSupport Arch Bridge"
+      },
+      {
+        "feature": "Stitching",
+        "value": "Double Stitch"
+      }
+    ],
+    "product_id": "25171",
+    "results": [
+      {
+        "style_id": 142850,
+        "name": "White & White",
+        "original_price": "99.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544441892-794166f1e3be?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544441892-794166f1e3be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1514590734052-344a18719611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1514590734052-344a18719611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1555274175-6cbf6f3b137b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1555274175-6cbf6f3b137b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1447879027584-9d17c2ca0333?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1447879027584-9d17c2ca0333?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1422728221357-57980993ea99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1422728221357-57980993ea99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1488778578932-0f84d315fcae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1488778578932-0f84d315fcae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1527431016-15eb83515018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1527431016-15eb83515018?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1534550017194-5df79ed78967?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1534550017194-5df79ed78967?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1525896650794-60ad4ec40d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1525896650794-60ad4ec40d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1560857792-215f9e3534ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1560857792-215f9e3534ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          }
+        ],
+        "skus": {
+          "828950": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "828951": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "828952": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "828953": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "828954": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "828955": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "828956": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "828957": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "828958": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "828959": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "828960": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142851,
+        "name": "White & Red",
+        "original_price": "99.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1542280756-74b2f55e73ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1542280756-74b2f55e73ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1521093470119-a3acdc43374a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1521093470119-a3acdc43374a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1474494819794-90f9664b530d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1474494819794-90f9664b530d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1465877783223-4eba513e27c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1465877783223-4eba513e27c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1428790031246-698d71b6fe3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1428790031246-698d71b6fe3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1470282312847-28b943046dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1470282312847-28b943046dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1428790067070-0ebf4418d9d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1428790067070-0ebf4418d9d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1451256656121-9ffc0c898a49?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1451256656121-9ffc0c898a49?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1524604519054-2365ac11e431?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1524604519054-2365ac11e431?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1541006008768-d181e7f9f3d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1541006008768-d181e7f9f3d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1430390456011-25ac9244999c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1430390456011-25ac9244999c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          }
+        ],
+        "skus": {
+          "828961": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "828962": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "828963": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "828964": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "828965": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "828966": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "828967": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "828968": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "828969": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "828970": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "828971": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142852,
+        "name": "White & Black",
+        "original_price": "99.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1542702942-161ceb2e3d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1542702942-161ceb2e3d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1503449377594-32dd9ac4467c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1503449377594-32dd9ac4467c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1457968867385-9f877f3f2bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1457968867385-9f877f3f2bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1469617833234-8a6843da14d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1469617833234-8a6843da14d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2764&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1511499008188-de491bbbae98?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1511499008188-de491bbbae98?ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1522653216850-4f1415a174fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1522653216850-4f1415a174fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519396317879-83334cb422f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519396317879-83334cb422f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517583010307-3f789911b89c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517583010307-3f789911b89c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1558191053-c03db2757e3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1558191053-c03db2757e3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"
+          }
+        ],
+        "skus": {
+          "828972": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "828973": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "828974": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "828975": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "828976": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "828977": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "828978": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "828979": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "828980": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "828981": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "828982": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142853,
+        "name": "White & Blue",
+        "original_price": "99.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1553981834-a23f5b69e3ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1553981834-a23f5b69e3ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1531091087823-cb600a47ab79?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1531091087823-cb600a47ab79?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1514613818067-e207c3441db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1514613818067-e207c3441db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1503146695898-afdf8ce5d5a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1503146695898-afdf8ce5d5a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1512023983263-7e94bf6b913e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1512023983263-7e94bf6b913e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1501813722636-45de2fe4f9b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1501813722636-45de2fe4f9b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507464098880-e367bc5d2c08?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507464098880-e367bc5d2c08?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1558682596-dea9bf84c219?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1558682596-dea9bf84c219?ixlib=rb-1.2.1&auto=format&fit=crop&w=2098&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1504281623087-1a6dd8f827c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1504281623087-1a6dd8f827c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1462833867037-0f06eab31cc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1462833867037-0f06eab31cc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          }
+        ],
+        "skus": {
+          "828983": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "828984": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "828985": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "828986": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "828987": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "828988": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "828989": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "828990": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "828991": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "828992": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "828993": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      }
+    ],
+    "ratings": {
+      "3": "1",
+      "4": "1"
+    },
+    "recommended": {
+      "true": "2"
+    },
+    "characteristics": {
+      "Size": {
+        "id": 84517,
+        "value": "4.0000000000000000"
+      },
+      "Width": {
+        "id": 84518,
+        "value": "3.5000000000000000"
+      },
+      "Comfort": {
+        "id": 84519,
+        "value": "4.0000000000000000"
+      },
+      "Quality": {
+        "id": 84520,
+        "value": "3.5000000000000000"
+      }
+    }
+  },
+  {
+    "id": 25174,
+    "campus": "hr-sfo",
+    "name": "YEasy 350",
+    "slogan": "Just jumped over jumpman",
+    "description": "These stretchy knit shoes show off asymmetrical lacing and a big sculpted rubber midsole. In a nod to adidas soccer heritage.",
+    "category": "Kicks",
+    "default_price": "450.00",
+    "created_at": "2021-06-02T16:53:33.359Z",
+    "updated_at": "2021-06-02T16:53:33.359Z",
+    "features": [
+      {
+        "feature": "Sole",
+        "value": "Rubber"
+      },
+      {
+        "feature": "Material",
+        "value": "FullControlSkin"
+      },
+      {
+        "feature": "Stitching",
+        "value": "Double Stitch"
+      }
+    ],
+    "product_id": "25174",
+    "results": [
+      {
+        "style_id": 142861,
+        "name": "Zebra Stripe",
+        "original_price": "900.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1551489186-cf8726f514f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1551489186-cf8726f514f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1558014356-f7c41bc744f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1558014356-f7c41bc744f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1542818212-9899bafcb9db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1542818212-9899bafcb9db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+          }
+        ],
+        "skus": {
+          "829071": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829072": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829073": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829074": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829075": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829076": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829077": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829078": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829079": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829080": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829081": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142862,
+        "name": "Oreo",
+        "original_price": "750.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1520904549193-5ab0027b3fa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1520904549193-5ab0027b3fa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829082": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829083": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829084": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829085": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829086": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829087": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829088": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829089": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829090": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829091": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829092": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142863,
+        "name": "Red Supply",
+        "original_price": "450.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1473396413399-6717ef7c4093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1473396413399-6717ef7c4093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1558014356-f7c41bc744f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1558014356-f7c41bc744f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829093": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829094": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829095": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829096": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829097": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829098": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829099": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829100": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829101": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829102": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829103": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142864,
+        "name": "White",
+        "original_price": "450.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1505248254168-1de4e1abfa78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1505248254168-1de4e1abfa78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829104": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829105": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829106": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829107": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829108": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829109": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829110": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829111": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829112": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829113": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829114": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142865,
+        "name": "Black",
+        "original_price": "950.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519482816300-1490fdf2c2bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519482816300-1490fdf2c2bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1542818212-9899bafcb9db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1542818212-9899bafcb9db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1512521952190-7e1a47820ff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1512521952190-7e1a47820ff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=978&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1470434767159-ac7bf1b43351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1470434767159-ac7bf1b43351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1547597456-4c18a06d9073?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1547597456-4c18a06d9073?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          }
+        ],
+        "skus": {
+          "829115": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829116": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829117": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829118": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829119": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829120": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829121": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829122": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829123": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829124": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829125": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142866,
+        "name": "Pink",
+        "original_price": "450.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1554735490-80893c93b06f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1554735490-80893c93b06f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829126": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829127": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829128": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829129": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829130": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829131": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829132": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829133": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829134": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829135": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829136": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142867,
+        "name": "Green",
+        "original_price": "450.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1550188053-b4e1e8e4f94f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1550188053-b4e1e8e4f94f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2775&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829137": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829138": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829139": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829140": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829141": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829142": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829143": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829144": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829145": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829146": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829147": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142868,
+        "name": "Butter",
+        "original_price": "450.00",
+        "sale_price": "400.00",
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=977&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829148": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829149": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829150": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829151": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829152": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829153": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829154": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829155": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829156": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829157": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829158": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      },
+      {
+        "style_id": 142869,
+        "name": "Grey",
+        "original_price": "450.00",
+        "sale_price": null,
+        "default?": false,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1536181211993-cf4b2c100475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1536181211993-cf4b2c100475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1507920676663-3b72429774ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517278322228-3fe7a86cf6f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1517720359744-6d12f8a09b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1530821875964-91927b611bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          },
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          }
+        ],
+        "skus": {
+          "829159": {
+            "quantity": 14,
+            "size": "7"
+          },
+          "829160": {
+            "quantity": 25,
+            "size": "7.5"
+          },
+          "829161": {
+            "quantity": 9,
+            "size": "8"
+          },
+          "829162": {
+            "quantity": 2,
+            "size": "8.5"
+          },
+          "829163": {
+            "quantity": 18,
+            "size": "9"
+          },
+          "829164": {
+            "quantity": 12,
+            "size": "9.5"
+          },
+          "829165": {
+            "quantity": 10,
+            "size": "10"
+          },
+          "829166": {
+            "quantity": 18,
+            "size": "10.5"
+          },
+          "829167": {
+            "quantity": 11,
+            "size": "11"
+          },
+          "829168": {
+            "quantity": 35,
+            "size": "11.5"
+          },
+          "829169": {
+            "quantity": 25,
+            "size": "12"
+          }
+        }
+      }
+    ],
+    "ratings": {},
+    "recommended": {},
+    "characteristics": {
+      "Size": {
+        "id": 84529,
+        "value": null
+      },
+      "Width": {
+        "id": 84530,
+        "value": null
+      },
+      "Comfort": {
+        "id": 84531,
+        "value": null
+      },
+      "Quality": {
+        "id": 84532,
+        "value": null
+      }
+    }
+  }
+]

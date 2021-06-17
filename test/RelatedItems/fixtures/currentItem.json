@@ -1,0 +1,131 @@
+{
+  "id": 25175,
+  "campus": "hr-sfo",
+  "name": "Summer Shoes",
+  "slogan": "A risky call in the spring or fall",
+  "description": "Low-top panelled buffed leather and mesh sneakers. Sizing embroidered in black at round toe. Tonal lace-up closure. Pull-loop and rubberized style name at padded tongue. Padded collar. Pull-loop at heel collar. Logo embroidered in black at outer side. Tonal treaded rubber sole. Tonal stitching.",
+  "category": "Kicks",
+  "default_price": "59.00",
+  "created_at": "2021-06-02T16:53:33.359Z",
+  "updated_at": "2021-06-02T16:53:33.359Z",
+  "features": [
+    {
+      "feature": "Sole",
+      "value": "Rubber"
+    },
+    {
+      "feature": "Material",
+      "value": "FullControlSkin"
+    },
+    {
+      "feature": "Mid-Sole",
+      "value": "ControlSupport Arch Bridge"
+    },
+    {
+      "feature": "Stitching",
+      "value": "Double Stitch"
+    }
+  ],
+  "product_id": "25175",
+  "results": [
+    {
+      "style_id": 142870,
+      "name": "White",
+      "original_price": "59.00",
+      "sale_price": null,
+      "default?": false,
+      "photos": [
+        {
+          "thumbnail_url": "https://images.unsplash.com/photo-1550338300-f9a475b50ba2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+          "url": "https://images.unsplash.com/photo-1550338300-f9a475b50ba2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80"
+        },
+        {
+          "thumbnail_url": "https://images.unsplash.com/photo-1500699889581-a7f97ec155d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+          "url": "https://images.unsplash.com/photo-1500699889581-a7f97ec155d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+        },
+        {
+          "thumbnail_url": "https://images.unsplash.com/photo-1498200163530-bdb7c50ec863?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+          "url": "https://images.unsplash.com/photo-1498200163530-bdb7c50ec863?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
+        },
+        {
+          "thumbnail_url": "https://images.unsplash.com/photo-1558118070-09ba9a9efb2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+          "url": "https://images.unsplash.com/photo-1558118070-09ba9a9efb2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+        },
+        {
+          "thumbnail_url": "https://images.unsplash.com/photo-1531889947080-bc5693ae9fa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+          "url": "https://images.unsplash.com/photo-1531889947080-bc5693ae9fa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80"
+        },
+        {
+          "thumbnail_url": "https://images.unsplash.com/photo-1529108750117-bcbad8bd25dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+          "url": "https://images.unsplash.com/photo-1529108750117-bcbad8bd25dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=662&q=80"
+        }
+      ],
+      "skus": {
+        "829170": {
+          "quantity": 14,
+          "size": "7"
+        },
+        "829171": {
+          "quantity": 25,
+          "size": "7.5"
+        },
+        "829172": {
+          "quantity": 9,
+          "size": "8"
+        },
+        "829173": {
+          "quantity": 2,
+          "size": "8.5"
+        },
+        "829174": {
+          "quantity": 18,
+          "size": "9"
+        },
+        "829175": {
+          "quantity": 12,
+          "size": "9.5"
+        },
+        "829176": {
+          "quantity": 10,
+          "size": "10"
+        },
+        "829177": {
+          "quantity": 18,
+          "size": "10.5"
+        },
+        "829178": {
+          "quantity": 11,
+          "size": "11"
+        },
+        "829179": {
+          "quantity": 35,
+          "size": "11.5"
+        },
+        "829180": {
+          "quantity": 25,
+          "size": "12"
+        }
+      }
+    }
+  ],
+  "ratings": {},
+  "recommended": {},
+  "characteristics": {
+    "Size": {
+      "id": 84533,
+      "value": null
+    },
+    "Width": {
+      "id": 84534,
+      "value": null
+    },
+    "Comfort": {
+      "id": 84535,
+      "value": null
+    },
+    "Quality": {
+      "id": 84536,
+      "value": null
+    }
+  }
+}
