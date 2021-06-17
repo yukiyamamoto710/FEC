@@ -5,6 +5,7 @@ import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews1.jsx';
 // import QA from './QA/QA.jsx';
+import QA from '/Users/kenneth/Desktop/hackreacter/FEC/client/components/Reviews/QA/Qa.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -98,6 +99,7 @@ class App extends React.Component {
     return (
       <div>
         {this.renderPage()}
+        {/* <QA id ={this.state.targetId}/> */}
       </div>
     );
   }
