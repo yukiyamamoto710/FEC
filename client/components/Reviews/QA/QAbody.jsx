@@ -10,21 +10,32 @@ import PopOutQA from './PopOutQA';
 const QAbody = (props) => {
   const { question } = props;
   const key = Object.keys(question.answers);
+  let keyArray = [];
+  if (question.answers[key[0]] !== undefined) {
+    keyArray = [...[question.answers[key[0]]]];
+  }
 
+  const [isMore, setIsMore] = useState(true);
   const [isAddAanswer,setIsAddAanswer] = useState(false);
-  const [answer, setAnswer] = useState([question.answers[key[0]]])
-  const [questions, setQuestions] = useState(question)
-
-
+  const [answer, setAnswer] = useState([...keyArray]);
+  const [questions, setQuestions] = useState(question);
+  // useEffect(()=>{
+  //   setAnswer(question.answers[key[0]])
+  // },[question])
 
   const clickMore = () =>{
+    const answerArray = [...answer];
     const num = answer.length + 2;
     const array = key.slice(0, num)
     const listAnswers = [];
     for(let i=0; i <array.length; i +=1) {
       listAnswers.push(question.answers[key[i]])
     }
-    setAnswer(listAnswers)
+    if (listAnswers.length === answerArray.length) {
+      setIsMore(false)
+    } else {
+      setAnswer(listAnswers)
+    }
   }
 
   const newArray = (arr) =>{
@@ -49,12 +60,11 @@ const QAbody = (props) => {
   }
 
   const addAanswer = (obj) => {
-    // let arr = [...answer]
-    // arr.unshift(obj)
-    // setAnswer(arr)
-    console.log()
+    let arr = [...answer]
+    arr.unshift(obj)
+    setAnswer(arr)
+    setIsAddAanswer(false)
   }
-  console.log(question.question_id,'id')
 
   return (
     <div>
@@ -107,17 +117,20 @@ const QAbody = (props) => {
               </div>
             )
           })
-        :null}
+        :<div>No Answer </div>}
       </div>
-      <div
-        role="button"
-        tabIndex={0}
-        onKeyPress={clickMore}
-        className="QAanswerbutton"
-        onClick={clickMore}
-      >
-        More answer
-      </div>
+      {isMore && answer.length !== 0
+      ?
+        <div
+          role="button"
+          tabIndex={0}
+          onKeyPress={clickMore}
+          className="QAanswerbutton"
+          onClick={clickMore}
+        >
+          More answer
+        </div>
+      : null}
     </div>
   )
 }

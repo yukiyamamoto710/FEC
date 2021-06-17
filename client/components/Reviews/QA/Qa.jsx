@@ -6,6 +6,7 @@ import ButtonQA from './ButtonQA'
 
 const QA = (props) => {
   const { id } = props;
+  const [listQuestions, setListQuestions]= useState([]);
   const [questions, setQuestions]= useState([]);
   const [isLoad, setIsLoad] = useState(false)
   const [isPopOut, setIsPopOut] = useState(false);
@@ -20,20 +21,27 @@ const QA = (props) => {
     })
       .then((res) => {
         const arr = res.data.results;
-        setQuestions(arr);
+        setQuestions(arr.slice(0,2));
+        setListQuestions(arr)
         setIsLoad(true);
       })
       .catch(console.log);
   },[id])
 
-  const addUserReview = ()=>{
+  const addUserReview = () => {
     setIsPopOut(true)
   }
-  const getMoreReviews=()=>{
-    console.log()
+  const getMoreReviews = () => {
+    let arr = [...questions];
+    const num = arr.length;
+    const num1 = listQuestions.length;
+    if(num + 2 >= num1){
+      setIsMore(false)
+    }
+    setQuestions(listQuestions.slice(0,num + 2))
   }
 
-  const cancelAddQuestion =()=>{
+  const cancelAddQuestion = () => {
     setIsPopOut(false)
   }
 
@@ -50,7 +58,6 @@ const QA = (props) => {
         <div
           className="QAcontainer"
         >
-          <div>search</div>
           <div className="Qabody">
             {questions.map((i)=>{
               return (
@@ -69,7 +76,8 @@ const QA = (props) => {
             isMoreReviews={isMore}
           />
         </div>
-        {isPopOut
+        <div className="popoutQA">
+          {isPopOut
           ?
           <PopOutQA
             addUserReview={addQuestion}
@@ -78,6 +86,7 @@ const QA = (props) => {
             id={id}
           />
           :null}
+        </div>
       </div>
     )
   } else {

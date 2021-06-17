@@ -31,7 +31,7 @@ export default function usePopOutQA(id, addUserReview) {
     }
   };
 
-  const handleClickCheckReview = (endPoint, cancelAddReview, targetName)=>{
+  const handleClickCheckReview = (endPoint, targetName)=>{
     let arr = [];
     if(body.length === 0) {arr.push('Description')};
     if(name.length === 0) {arr.push('name')};
@@ -56,8 +56,12 @@ export default function usePopOutQA(id, addUserReview) {
         obj['product_id']= id;
       }
       postQA(obj, endPoint)
-      // addUserReview(obj)
-      cancelAddReview()
+      obj['answerer_name'] = name;
+      obj['helpfulness'] = 0;
+      obj['date'] = new Date().toISOString();
+      obj['id'] = Math.random() * 10000000
+      console.log(obj['date']);
+      addUserReview(obj)
     }
   }
 

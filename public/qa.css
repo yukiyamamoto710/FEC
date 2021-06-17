@@ -168,3 +168,8 @@
 .Qabody1 {
   width: 90%;
 }
+
+.popoutQA {
+  position: relative;
+  bottom: 400px;
+}
