@@ -16,7 +16,11 @@ class App extends React.Component {
     };
     this.renderPage = this.renderPage.bind(this);
     this.changeProductId = this.changeProductId.bind(this);
+    // this.ratingGET = this. ratingGET.bind(this);
   }
+
+
+
 
   componentDidMount(){
     var query = window.location.search
@@ -46,7 +50,7 @@ class App extends React.Component {
       return (
         <div>
           <Header />
-          <Overview id = {this.state.targetId} item = {this.state.currentItem} rating = {this.state.currentItem.rating}/>
+          <Overview id = {this.state.targetId} item = {this.state.currentItem}/>
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} currentItem={this.state.currentItem}/>
           {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
           <Reviews id = { this.state.targetId}/>
@@ -59,6 +63,11 @@ class App extends React.Component {
         </div>
       );
     }
+    return (
+      <div>
+        Page Loading ...
+      </div>
+    );
   }
 
   render() {

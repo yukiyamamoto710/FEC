@@ -9,7 +9,10 @@ const ExpandedPic = (props) => {
 
     var left = order === 0 ? 'hidden' : 'smallLeftArrow';
     var right = order === props.styleObj.length - 1 ? 'hidden' : 'smallRightArrow';
-    var zoom;
+    const zoomedPicture = 'zoomedPicture';
+    const expandedPicture = 'expandedPicture';
+
+
 
 
     const changeThumbNail = (index)  => {
@@ -46,9 +49,15 @@ const ExpandedPic = (props) => {
         //console.log(mover);
 
         var bbox = e.target.getBoundingClientRect();
-        console.log('this is bbox' , bbox);
+        console.log('this is x and y: ' , e.clientX, e.clientY);
         var mouseX = e.clientX - bbox.left;
         var mouseY = e.clientY - bbox.top;
+
+        // var xPercent = (mouseX / bbox.width) * 100;
+        // var yPercent = (mouseY / bbox.height) * 100;
+
+        // var mouseX = e.clientX;
+        // var mouseY = e.clientY;
 
         var xPercent = (mouseX / bbox.width) * 100;
         var yPercent = (mouseY / bbox.height) * 100;
@@ -60,11 +69,11 @@ const ExpandedPic = (props) => {
       }
     }
 
-    if(zoomed) {
-      zoom = 'zoomedPicture';
-    } else {
-      zoom = 'expandedPicture';
-    }
+    // if(zoomed) {
+    //   zoom = zoomedPicture;
+    // } else {
+    //   zoom = expandedPicture;
+    // }
 
     return(
       <div>
@@ -75,7 +84,7 @@ const ExpandedPic = (props) => {
       </div>
       <div className = 'expandedPictureContainer'>
         <button className = 'exit' onClick = {props.closeOut}>X</button>
-        <img className = {zoom} onMouseMove = {move} onClick = {zoomIn} src= {props.currentPic} alt="Big Picture of Clothing"></img>
+        <img className = {zoomed ? zoomedPicture: expandedPicture} onMouseMove = {move} onClick = {zoomIn} src= {props.currentPic} alt="Big Picture of Clothing"></img>
         <div className = 'thumbnailsIcons'>
           {props.styleObj.map((item, index) => {
             const isHighlighted = props.index === index ? true : false;
