@@ -13,37 +13,26 @@ class RelatedItems extends React.Component {
       selectedItemsList: []
     }
     this.getRelatedItemsIds = this.getRelatedItemsIds.bind(this);
-    this.getAllProductInfo = this.getAllProductInfo.bind(this);
+    // this.getAllProductInfo = this.getAllProductInfo.bind(this);
     this.addToOutfit = this.addToOutfit.bind(this);
     this.removeFromOutfit = this.removeFromOutfit.bind(this);
   }
 
   componentDidMount() {
     this.getRelatedItemsIds(this.props.id)
-    const storage = JSON.parse(localStorage.getItem('outfit'));
-    this.getAllProductInfo(this.props.id)
-      .then((results) => {
-        this.setState({
-          currentItem: results,
-          selectedItemsList: storage ? storage: []
-        })
-      })
-      .catch((err) => {
-        console.log(err);
+    const outfit = JSON.parse(localStorage.getItem('outfit'));
+    // selectedItemsList: outfit ? outfit: []
+      this.setState({
+        currentItem: this.props.currentItem,
+        selectedItemsList: outfit ? outfit: []
       })
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.id !== this.props.id) {
-      this.getRelatedItemsIds(this.props.id);
-      this.getAllProductInfo(this.props.id)
-        .then((results) => {
-          this.setState({
-            currentItem: results
-          })
-        })
-        .catch((err) => {
-          console.log(err);
+      this.getRelatedItemsIds(this.props.id)
+        this.setState({
+          currentItem: this.props.currentItem
         })
     }
   }
@@ -53,7 +42,7 @@ class RelatedItems extends React.Component {
       .then((response) => {
         var promises = [];
         for (var i = 0; i < response.data.length; i++) {
-          promises.push(this.getAllProductInfo(response.data[i]));
+          promises.push(axios.get(`getAll/${response.data[i]}`).then((res)=>res.data));
         }
         Promise.all(promises)
           .then((response) => {
@@ -67,41 +56,11 @@ class RelatedItems extends React.Component {
       })
   }
 
-  getAllProductInfo(id) {
-    return new Promise((resolve, reject) => {
-      axios.get('/get', {params: {endpoint: `products/${id}`}})
-        .then((product) => {
-          // eventually clean up data at the server side before sending to client
-          delete product.data['campus'];
-          delete product.data['created_at'];
-          delete product.data['description'];
-          delete product.data['slogan'];
-          delete product.data['updated_at'];
-          delete product.data['product_id'];
-
-          axios.get('/get', {params: {endpoint: `products/${id}/styles`}})
-            .then((styles) => {
-              // eventually clean up data at the server side before sending to client
-              styles.data.results.map(style=> {
-                delete style['skus'];
-              })
-
-              axios.get('/get', {params: {endpoint: `reviews/meta/?product_id=${id}`}})
-                .then((rating) => {
-                  var mergedList = Object.assign(product.data, styles.data)
-                  mergedList['rating'] = rating.data
-                  resolve(mergedList)
-                })
-            })
-        })
-        .catch((err) => {
-          reject(err);
-        })
-    })
-  }
-
   addToOutfit() {
-    var ids = [...this.state.selectedItemsList].map(item=>item.id);
+    var ids = [];
+    if (this.state.selectedItemsList.length) {
+      ids = [...this.state.selectedItemsList].map(item=>item.id);
+    }
     if (ids.indexOf(this.state.currentItem.id) === -1) {
       var updated = [this.state.currentItem, ...this.state.selectedItemsList]
       this.setState({
@@ -142,6 +101,7 @@ class RelatedItems extends React.Component {
 }
 
 RelatedItems.propTypes = {
+  currentItem: PropTypes.obj,
   id: PropTypes.number,
   changeProductId: PropTypes.func
 }

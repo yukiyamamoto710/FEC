@@ -18,7 +18,12 @@ describe('Outfit Card', () => {
 
   test('should remove the clicked item from a list of outfits', () => {
     render(<OutfitCard removeFromOutfit={removeFromOutfit} product={product}/>);
+    const before = screen.getAllByTestId("outfit-card");
+    const beforeLength = before.length
+    expect(beforeLength).toBe(1);
     fireEvent.click(screen.getByTestId("close"));
     expect(removeFromOutfit).toHaveBeenCalledWith(1);
+    const outfitlist = screen.getAllByTestId("outfit-card");
+    expect(outfitlist.length).toBe(beforeLength - 1);
   });
 })
