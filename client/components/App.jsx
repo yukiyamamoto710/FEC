@@ -84,6 +84,7 @@ class App extends React.Component {
           <Header />
           <Overview id = {this.state.targetId} rating = {this.state.productRating}/>
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId}/>
+          <QA id ={this.state.targetId}/>
           <Reviews id={this.state.targetId} productRating={this.state.productRating} />
         </div>
       );
@@ -98,8 +99,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* {this.renderPage()} */}
-        <QA id ={this.state.targetId}/>
+        {this.renderPage()}
       </div>
     );
   }
