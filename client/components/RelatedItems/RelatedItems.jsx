@@ -13,7 +13,6 @@ class RelatedItems extends React.Component {
       selectedItemsList: []
     }
     this.getRelatedItemsIds = this.getRelatedItemsIds.bind(this);
-    // this.getAllProductInfo = this.getAllProductInfo.bind(this);
     this.addToOutfit = this.addToOutfit.bind(this);
     this.removeFromOutfit = this.removeFromOutfit.bind(this);
   }
@@ -21,7 +20,6 @@ class RelatedItems extends React.Component {
   componentDidMount() {
     this.getRelatedItemsIds(this.props.id)
     const outfit = JSON.parse(localStorage.getItem('outfit'));
-    // selectedItemsList: outfit ? outfit: []
       this.setState({
         currentItem: this.props.currentItem,
         selectedItemsList: outfit ? outfit: []
@@ -59,7 +57,7 @@ class RelatedItems extends React.Component {
   addToOutfit() {
     var ids = [];
     if (this.state.selectedItemsList.length) {
-      ids = [...this.state.selectedItemsList].map(item=>item.id);
+      ids = this.state.selectedItemsList.map(item=>item.id);
     }
     if (ids.indexOf(this.state.currentItem.id) === -1) {
       var updated = [this.state.currentItem, ...this.state.selectedItemsList]

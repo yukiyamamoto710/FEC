@@ -8,7 +8,7 @@ const Outfits = (props) => {
   const [state, setState] = useState({idx: 0, displayed: []});
 
   useEffect(() => {
-    setState({idx: 0, displayed: [...selectedItemsList].slice(0, 3)})
+    setState({idx: 0, displayed: selectedItemsList.slice(0, 3)})
   }, [selectedItemsList])
 
   return (
@@ -16,7 +16,7 @@ const Outfits = (props) => {
       <h3 className="outfit">YOUR OUTFIT</h3>
       <ul className="carousel">
         <button className="slideLeft"
-          onClick={()=>setState({idx: state.idx-1, displayed: [...selectedItemsList].slice(state.idx-1, state.idx+2)})}
+          onClick={()=>setState({idx: state.idx-1, displayed: selectedItemsList.slice(state.idx-1, state.idx+2)})}
           hidden={state.idx === 0}
           data-testid="slideLeft">
             &lt;
@@ -29,7 +29,7 @@ const Outfits = (props) => {
           <OutfitCard key={product.id} product={product} removeFromOutfit={removeFromOutfit}/>
           )}
         <button className="slideRight"
-          onClick={()=>{setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})}}
+          onClick={()=>{setState({idx: state.idx+1, displayed: selectedItemsList.slice(state.idx+1, state.idx+4)})}}
           hidden={selectedItemsList.length < 3}
           disabled={state.idx === selectedItemsList.length-3}
           data-testid="slideRight">
