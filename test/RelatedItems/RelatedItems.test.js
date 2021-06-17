@@ -47,4 +47,14 @@ describe('RelatedItems component', () => {
     expect(screen.getByTestId("outfit-card")).toHaveTextContent("Summer Shoes");
   })
 
+  test('remove the clicked product from outfit list', async () => {
+    render(<RelatedItems id={25175} currentItem={currentItem} />);
+    await waitFor(() => screen.queryByTestId("add-button"));
+    fireEvent.click(screen.getByTestId("add-button"));
+    expect(screen.getByTestId("outfit-card")).toHaveTextContent("Summer Shoes");
+
+    fireEvent.click(screen.getByTestId("close"));
+    expect(screen.queryByTestId("outfit-card")).toBeNull();
+  })
+
 });

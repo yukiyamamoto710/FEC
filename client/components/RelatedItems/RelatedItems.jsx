@@ -29,17 +29,17 @@ class RelatedItems extends React.Component {
     }).catch((err)=>console.log(err))
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.id !== this.props.id) {
-      const related = Promise.resolve(getRelatedItems(this.props.id))
-      related.then((response) => {
-        this.setState({
-          currentItem: this.props.currentItem,
-          relatedItemsList: response
-        })
-      }).catch((err)=>console.log(err))
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.id !== this.props.id) {
+  //     const related = Promise.resolve(getRelatedItems(this.props.id))
+  //     related.then((response) => {
+  //       this.setState({
+  //         currentItem: this.props.currentItem,
+  //         relatedItemsList: response
+  //       })
+  //     }).catch((err)=>console.log(err))
+  //   }
+  // }
 
   addToOutfit() {
     var ids = [];
