@@ -77,14 +77,14 @@ const PopOutQA = (props)=>{
               onClick={
                 target==='answers'
                 ?
-                handleClickCheckReview(`/${id}/answers`,cancelAddReview)
+                ()=>{handleClickCheckReview(`/${id}/answers`,cancelAddReview, target)}
                 :
-                handleClickCheckReview(`?product_id=${id}`,cancelAddReview)
+                ()=>handleClickCheckReview(`?product_id=${id}`,cancelAddReview, target)
               }
             >
               Submit
             </button>
-            {target === 'answer'
+            {target === 'answers'
             ?(
               <div>
                 <input

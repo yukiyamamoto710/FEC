@@ -15,6 +15,8 @@ const QAbody = (props) => {
   const [answer, setAnswer] = useState([question.answers[key[0]]])
   const [questions, setQuestions] = useState(question)
 
+
+
   const clickMore = () =>{
     const num = answer.length + 2;
     const array = key.slice(0, num)
@@ -42,11 +44,11 @@ const QAbody = (props) => {
     setIsAddAanswer(true)
   }
 
-  const cancel = () => {
+  const cancelAanswer = () => {
     setIsAddAanswer(false)
   }
 
-  const add = (obj) => {
+  const addAanswer = (obj) => {
     // let arr = [...answer]
     // arr.unshift(obj)
     // setAnswer(arr)
@@ -61,8 +63,8 @@ const QAbody = (props) => {
           {isAddAanswer
           ?
             <PopOutQA
-              addUserReview={add}
-              cancelAddReview={cancel}
+              addUserReview={addAanswer}
+              cancelAddReview={cancelAanswer}
               target="answers"
               id={question.question_id}
             />

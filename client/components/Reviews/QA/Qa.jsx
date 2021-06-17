@@ -51,25 +51,33 @@ const QA = (props) => {
           className="QAcontainer"
         >
           <div>search</div>
-          {questions.map((i)=>{
-            return (
-              <div key={i.question_id}>
-                <QAbody question={i}/>
-              </div>
-            )
-          })}
+          <div className="Qabody">
+            {questions.map((i)=>{
+              return (
+                <div
+                  className="Qabody1"
+                  key={i.question_id}
+                >
+                  <QAbody question={i}/>
+                </div>
+              )
+            })}
+          </div>
           <ButtonQA
             getMoreReviews={getMoreReviews}
             addUserReview={addUserReview}
             isMoreReviews={isMore}
           />
         </div>
-        {/* <PopOutQA
-          addUserReview={addQuestion}
-          cancelAddReview={cancelAddQuestion}
-          target="questions"
-          id={id}
-        /> */}
+        {isPopOut
+          ?
+          <PopOutQA
+            addUserReview={addQuestion}
+            cancelAddReview={cancelAddQuestion}
+            target="questions"
+            id={id}
+          />
+          :null}
       </div>
     )
   } else {

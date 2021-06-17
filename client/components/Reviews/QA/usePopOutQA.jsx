@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import postQA from './postQA';
 
 export default function usePopOutQA(id, addUserReview) {
 
@@ -13,7 +14,7 @@ export default function usePopOutQA(id, addUserReview) {
     setBody('');
     setName('');
     setEmail('');
-  },[])
+  },[id])
 
   const handleChangeTarget = (event) => {
     const { id, value } = event.target;
@@ -30,10 +31,10 @@ export default function usePopOutQA(id, addUserReview) {
     }
   };
 
-  const handleClickCheckReview = (endPoint,cancelAddReview)=>{
+  const handleClickCheckReview = (endPoint, cancelAddReview, targetName)=>{
     let arr = [];
-    if(body.length === 0) {arr.push('Description')}
-    if(name.length === 0) {arr.push('name')}
+    if(body.length === 0) {arr.push('Description')};
+    if(name.length === 0) {arr.push('name')};
     if (!email.includes('@') || !email.includes('.')) {
       arr.push('Email');
     } else if (email.indexOf('@') >= email.indexOf('.') - 1) {
@@ -41,6 +42,7 @@ export default function usePopOutQA(id, addUserReview) {
     } else if (email.indexOf('@') === 0 || email.indexOf('.') === email.length-1) {
       arr.push('Email');
     }
+
     if (arr.length > 0) {
       setListWarning(arr)
     } else {
@@ -48,18 +50,21 @@ export default function usePopOutQA(id, addUserReview) {
       obj['name'] = name;
       obj['body'] = body;
       obj['email'] =email;
-      if(target==='answers'){
+      if(targetName === 'answers'){
         obj['photos']= photos;
       }else {
         obj['product_id']= id;
       }
       postQA(obj, endPoint)
-      addUserReview(obj)
+      // addUserReview(obj)
+      cancelAddReview()
     }
   }
+
   const warningcancel=()=>{
     setListWarning([]);
   }
+
   return {
     warningcancel,
     handleClickCheckReview,

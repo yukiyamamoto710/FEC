@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 export default function postQA(target, endPoint) {
-  axios.pot(`/qa/questions`, {
+  axios.post(`/qa/questions`, {
     body: target,
     params: {
-      endpoint: `/qa/questions${endPoint}`,
+      endpoint: `qa/questions${endPoint}`,
     },
   })
     .then(console.log)

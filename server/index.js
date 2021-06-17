@@ -78,7 +78,7 @@ app.put('/qa/report', (req, res) => {
 
 app.post('/qa/questions', (req, res) => {
   console.log(req.body)
-  api.hrapipost(req.body.params.endpoint, req.body, (err) => {
+  api.hrapipost(req.body.params.endpoint, req.body.body, (err) => {
     if (err) {
       res.status(404).send(err);
     } else {
