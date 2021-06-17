@@ -25,8 +25,8 @@ const Outfits = (props) => {
             <button data-testid="add-button" className="add-button" onClick={()=>addToOutfit()}>+</button>
             <p className="add-message">Add to Outfit</p>
         </li>
-        {!state.displayed.length ? null: state.displayed.map(product=>
-          <OutfitCard key={product.id} product={product} removeFromOutfit={removeFromOutfit}/>
+        {!state.displayed.length ? null: state.displayed.map((product, i)=>
+          <OutfitCard key={`${product.id}/${i}`} product={product} removeFromOutfit={removeFromOutfit}/>
           )}
         <button className="slideRight"
           onClick={()=>{setState({idx: state.idx+1, displayed: selectedItemsList.slice(state.idx+1, state.idx+4)})}}

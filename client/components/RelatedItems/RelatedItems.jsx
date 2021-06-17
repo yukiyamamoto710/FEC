@@ -99,9 +99,9 @@ class RelatedItems extends React.Component {
 }
 
 RelatedItems.propTypes = {
-  currentItem: PropTypes.obj,
   id: PropTypes.number,
-  changeProductId: PropTypes.func
+  changeProductId: PropTypes.func,
+  currentItem: PropTypes.object
 }
 
 export default RelatedItems;

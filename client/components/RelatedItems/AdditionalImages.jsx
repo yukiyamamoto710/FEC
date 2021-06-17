@@ -17,7 +17,7 @@ const AdditionalImages = ({images, changeMainImage}) => {
         data-testid="slideLeft-mini">
           &lt;
         </button>
-      {state.displayed.map((image, i)=><img data-testid={i} key={i} className="thumbnail" alt="n/a" src={image} onClick={toggleMainImage}/>)}
+      {state.displayed.map((image, i)=><img data-testid={i} key={`${image}/${i}`} className="thumbnail" alt="n/a" src={image} onClick={toggleMainImage}/>)}
       <button className="slideRight-mini"
           onClick={()=>setState({idx: state.idx+1, displayed: images.slice(state.idx+1, state.idx+5)})}
           disabled={images.length < 4 || state.idx === images.length-4}

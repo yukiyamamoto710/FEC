@@ -21,8 +21,8 @@ const RelatedProducts = (props) => {
           data-testid="slideLeft">
             &lt;
         </button>
-        {state.displayed.map(product=>
-          <RelatedProductCard key={product.id} product={product} id={id} changeProductId={changeProductId} currentItem={currentItem}/>
+        {state.displayed.map((product, i)=>
+          <RelatedProductCard key={`${product.id}/${i}`} product={product} id={id} changeProductId={changeProductId} currentItem={currentItem}/>
           )}
         <button className="slideRight"
           onClick={()=>setState({idx: state.idx+1, displayed: relatedItemsList.slice(state.idx+1, state.idx+5)})}

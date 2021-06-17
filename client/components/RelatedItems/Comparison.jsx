@@ -46,8 +46,8 @@ class Comparison extends React.Component {
                 </tr>
               </thead>
               {/* <tbody className="description-row"> */}
-                {featureList.map(feature=>
-                  <DescirptionRow key={feature} feature={feature} relatedProduct={product.features} currentItem={currentItem.features}/>
+                {featureList.map((feature, i)=>
+                  <DescirptionRow key={feature+i} feature={feature} relatedProduct={product.features} currentItem={currentItem.features}/>
                 )}
               {/* </tbody> */}
             </table>
