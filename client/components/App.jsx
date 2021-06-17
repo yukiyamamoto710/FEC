@@ -98,8 +98,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {this.renderPage()}
-        {/* <QA id ={this.state.targetId}/> */}
+        {/* {this.renderPage()} */}
+        <QA id ={this.state.targetId}/>
       </div>
     );
   }
