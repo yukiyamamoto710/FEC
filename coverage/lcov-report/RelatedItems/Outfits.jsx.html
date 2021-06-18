@@ -32,14 +32,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
@@ -111,42 +111,42 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -173,7 +173,7 @@ const Outfits = (props) =&gt; {
       &lt;h3 className="outfit"&gt;YOUR OUTFIT&lt;/h3&gt;
       &lt;ul className="carousel"&gt;
         &lt;button className="slideLeft"
-          onClick={()=&gt;setState({idx: state.idx-1, displayed: [...selectedItemsList].slice(state.idx-1, state.idx+2)})}
+          onClick={<span class="fstat-no" title="function not covered" >()=&gt;s</span>etState({idx: state.idx-1, displayed: [...selectedItemsList].slice(state.idx-1, state.idx+2)})}
           hidden={state.idx === 0}
           data-testid="slideLeft"&gt;
             &amp;lt;
@@ -186,7 +186,7 @@ const Outfits = (props) =&gt; {
           &lt;OutfitCard key={product.id} product={product} removeFromOutfit={removeFromOutfit}/&gt;
           )}
         &lt;button className="slideRight"
-          onClick={()=&gt;{setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})}}
+          onClick={<span class="fstat-no" title="function not covered" >()=&gt;{setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})}}</span>
           hidden={selectedItemsList.length &lt; 3}
           disabled={state.idx === selectedItemsList.length-3}
           data-testid="slideRight"&gt;
@@ -211,19 +211,7 @@ export default Outfits;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-<<<<<<< HEAD
-                at Thu Jun 17 2021 00:47:14 GMT-0700 (Pacific Daylight Time)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                at Wed Jun 16 2021 09:29:49 GMT-0700 (Pacific Daylight Time)
-=======
-                at Wed Jun 16 2021 10:06:11 GMT-0700 (Pacific Daylight Time)
->>>>>>> main
-=======
-                at Tue Jun 15 2021 17:33:15 GMT-0700 (Pacific Daylight Time)
->>>>>>> b18bda1c4e9fb6a2ce068ea46ac91a546ad51919
->>>>>>> main
+                at Thu Jun 17 2021 19:07:27 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

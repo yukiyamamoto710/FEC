@@ -173,3 +173,78 @@
   position: relative;
   bottom: 400px;
 }
+
+.QAmoney2{
+  width: 10%;
+  height: 10%;
+  top: 70%;
+  left: 55%;
+  position: absolute;
+  background-color: black;
+  z-index: 24;
+  clip-path: ellipse(37% 40% at 50% 50%);
+}
+
+.QAmonkey1{
+  width: 260px;
+  height: 260px;
+  position: relative;
+}
+.QAsearchBack{
+  width: 25px;
+  height: 25px;
+  background-color: rgb(102, 162, 182);
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.QAsearchTxt{
+  height: 20px;
+  border-color: white;
+  border-style: none;
+  border-bottom: 1px solid black;
+}
+
+.QAsearchGO2{
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: radial-gradient(white 25%, rgb(102, 162, 182) 25%,rgb(102, 162, 182) 100%);
+  clip-path: circle(50% at 50% 50%);
+}
+
+.QAheader1 {
+  display: flex;
+  border: none;
+  width: 80%;
+  padding-right: 20px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.QAmonkey3{
+  width: 45%;
+  height: 14%;
+  top: 69%;
+  left: 26%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  z-index: 24;
+  clip-path: ellipse(37% 40% at 50% 50%);
+}
+
+.QAmonkey4{
+  width: 50%;
+  height: 15%;
+  top: 70%;
+  left: 26%;
+  position: absolute;
+  background-color: black;
+  z-index: 24;
+  clip-path: ellipse(37% 40% at 50% 50%);
+}
+
+.QAmonkey5{
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
