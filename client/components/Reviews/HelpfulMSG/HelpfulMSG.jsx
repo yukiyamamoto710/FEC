@@ -10,6 +10,7 @@ const HelpfulMSG = (props) => {
     reported,
     reviewId,
   } = props;
+
   const [isClicked, setIsClicked] = useState(false);
   const [countYes, setCountYes] = useState(countHelpful);
   const [countNo, setCountNo] = useState(countNotHelpful);

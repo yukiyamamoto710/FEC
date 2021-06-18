@@ -16,6 +16,7 @@ app.listen(PORT, () => {
 app.use('/get', (req, res) => {
   api.hrapi(`${req.query.endpoint}`, (err, data) => {
     if (err) {
+      console.log(err)
       res.status(404).send(err);
     } else {
       res.status(200).send(data);
@@ -41,6 +42,39 @@ app.put('/reviews/helpful', (req, res) => {
       // console.log(data);
 
       res.status(200).send(data);
+    }
+  });
+});
+
+app.put('/qa/helpful', (req, res) => {
+  console.log(req.body)
+  api.hrapiput(req.body.params.endpoint, req.body, (err) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(201).send('NO CONTENT');
+    }
+  });
+});
+
+app.put('/qa/report', (req, res) => {
+  console.log(req.body)
+  api.hrapiput(req.body.params.endpoint, req.body, (err) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(201).send('NO CONTENT');
+    }
+  });
+});
+
+app.post('/qa/questions', (req, res) => {
+  console.log(req.body)
+  api.hrapipost(req.body.params.endpoint, req.body.body, (err) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(201).send('CREATED');
     }
   });
 });
