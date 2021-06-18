@@ -88,7 +88,6 @@ class PopOut extends React.Component {
       });
     } else {
       // POST
-      console.log();
       this.props.cancel();
       addReview(this.state);
     }
