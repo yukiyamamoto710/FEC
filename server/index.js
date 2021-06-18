@@ -63,7 +63,7 @@ app.use('/getAll/:id', (req, res) => {
   // check if the product/data is already saved in saveProducts obj
   const id = req.params.id;
   var data = {};
-  console.log(saveProducts);
+  //console.log(saveProducts);
   if (saveProducts[id]) {
     data = saveProducts[id];
     res.status(200).send(data);
