@@ -13,7 +13,7 @@ class Description extends React.Component {
       skuQuantSelected: 0,
       sku: 0,
       inCart: 0,
-      cart: []
+      cart: [],
     }
     this.changeSKU = this.changeSKU.bind(this);
     this.changeQuant = this.changeQuant.bind(this);

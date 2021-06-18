@@ -17,7 +17,7 @@ const ExpandedPic = (props) => {
 
     const changeThumbNail = (index)  => {
       setIndex(index)
-      zoomState(false);
+
       props.callback(index);
 
     }

@@ -294,12 +294,13 @@ h3 {
   padding-bottom: 15%;
   min-width: 40%;
 
+
 }
 
 .styles {
   position: relative;
   left: 2em;
-  z-index: -1;
+  z-index: 0;
 
 }
 
