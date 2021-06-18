@@ -97,7 +97,7 @@ app.use('/getAll/:id', (req, res) => {
   // check if the product/data is already saved in saveProducts obj
   const id = req.params.id;
   var data = {};
-  console.log(saveProducts);
+  // console.log(saveProducts);
   if (saveProducts[id]) {
     data = saveProducts[id];
     res.status(200).send(data);
@@ -124,4 +124,18 @@ app.use('/getAll/:id', (req, res) => {
       }
     })
   }
+})
+
+app.use('/getAllItems/:page',(req, res)=>{
+  console.log(req.params.page,'dass')
+  api.hrapi(`products/?count=12156`,(err, data)=>{
+    if(err){
+      console.log(err)
+      res.status(404).send(err);
+    } else {
+      console.log(data)
+      res.status(200).send(data);
+    }
+
+  })
 })
