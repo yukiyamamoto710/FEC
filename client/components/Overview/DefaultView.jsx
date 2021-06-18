@@ -99,8 +99,8 @@ class DefaultView extends React.Component {
       expand =
       <div className = 'bigPicture'>
         <img className ='Picture' onClick = {this.expandPic} src= {currentPic} alt=" Big Picture of Clothing"></img>
-        <img className = {right} onClick = {this.handleRight} src = 'right-arrow.svg' name = {this.state.index}></img>
-        <img className = {left} onClick = {this.handleLeft} src = 'left-arrow.svg' name = {this.state.index} alt = 'left-arrow'></img>
+        <img className = {right} onClick = {this.handleRight} src = 'small-right-arrow.svg' name = {this.state.index} alt = 'arrow'></img>
+        <img className = {left} onClick = {this.handleLeft} src = 'small-left-arrow.svg' name = {this.state.index} alt = 'left-arrow'></img>
         <img className = {up} onClick = {this.renderThumbnail} src = 'up-arrow.svg' name = {this.state.index}></img>
         <img className = {down} onClick = {this.renderThumbnail} src = 'down-arrow.svg' name = {this.state.index}></img>
       </div>

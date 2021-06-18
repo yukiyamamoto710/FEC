@@ -24,6 +24,7 @@
   width: 100px;
   height: 100px;
   margin: 10px;
+
 }
 .thumbnails {
   display: flex;
@@ -50,11 +51,11 @@
   flex-wrap: wrap;
   z-index: 3;
   position: absolute;
-  bottom: 31%;
+  bottom: -13em;
   min-width: 500px;
   max-width: 90%;
-  background-color: aliceblue;
-  justify-content: left;
+  background-color: rgb(0, 0, 0, 0.5);
+  justify-content: space-between;
 
 }
 
@@ -107,6 +108,7 @@
   max-height: 600px;
   min-height: 600px;
   min-width: 500px;
+
 }
 
 .Picture:hover {
@@ -135,7 +137,7 @@
   height: 100%;
   min-height: 500px;
   z-index: 1;
-  background-color: black;
+
   /* margin-bottom: 25px; */
   /* max-height: 800px;
   min-height: 00px; */
@@ -146,13 +148,16 @@
     -moz-transform: scale(3.5);
     -o-transform: scale(3.5);
     -ms-transform: scale(3.5); */
-    transform: scale(3);
+    transform: scale(2.5);
     position: absolute;
     overflow: auto;
     z-index: 5;
     top: 0;
     left: 0;
     transform-origin: center;
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
     /* --x: 0px;
     --y: 0px;
     background-position: var(--x) var(--y); */
@@ -194,8 +199,10 @@ h3 {
   position: absolute;
   left: 85%;
   margin-top: 100%;
-  border-radius: 100%;
-  background-color: white;
+  border-radius: 30%;
+  background-color: rgb(0, 0, 0, 0.5);
+  width: 30px;
+  height: 40px;
 }
 
 .leftArrow {
@@ -204,8 +211,10 @@ h3 {
   position: absolute;
   left: 10%;
   margin-top: 100%;
-  border-radius: 100%;
-  background-color: white;
+  border-radius: 30%;
+  background-color: rgb(0, 0, 0, 0.5);
+  width: 30px;
+  height: 40px;
 }
 
 .upArrow {
@@ -244,21 +253,34 @@ h3 {
   display: inline;
   z-index: 3;
   position: absolute;
-  left: 10%;
-  border-radius: 100%;
-  background-color: white;
+  left: 1%;
+  border-radius: 30%;
+  background-color: rgb(0, 0, 0, 0.5);
+  top: 50%;
+  width: 50px;
+  height: 80px;
+  color: black;
 }
 
 .smallRightArrow {
   display: inline;
-  z-index: 3;
-  position: absolute;
-  left: 85%;
-  border-radius: 100%;
-  background-color: white;
+    z-index: 3;
+    position: absolute;
+    left: 95%;
+    border-radius: 30%;
+    background-color: rgb(0, 0, 0, 0.5);
+    top: 50%;
+    width: 50px;
+    height: 80px;
+    color: black;
+}
+.smallRightArrow:hover, .rightArrow:hover{
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-
+.smallLeftArrow:hover, .leftArrow:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 
 .stylesBox {
@@ -277,6 +299,7 @@ h3 {
 .styles {
   position: relative;
   left: 2em;
+  z-index: -1;
 
 }
 

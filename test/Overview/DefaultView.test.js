@@ -41,5 +41,19 @@
       //?????? class is hidden. display: none. should not be visible
     });
 
+    it('should change thumbnail on click', () => {
+      //console.log((screen.getByTestId('stylesBox'));
+      const mock = jest.fn();
+      render(<DefaultView picture = {product.results[0].photos[0].url} styleObj = {product.results[0]} callback = {mock} />);
+      // fireEvent.click(screen.getByAltText("Big Picture of Clothing"));
+      // expect(mock).not.toHaveBeenCalled();
+      expect(screen.getByAltText("arrow")).not.toBeVisible();
+      fireEvent.click(screen.getByAltText("arrow"));
+      expect(mock).toHaveBeenCalled();
+      expect(screen.getAllByAltText("Picture of Clothing")).toBeVisible();
+      //expect(mock).toHaveBeenCalled();
+      });
+
+
 
 

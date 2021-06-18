@@ -17,7 +17,9 @@ const ExpandedPic = (props) => {
 
     const changeThumbNail = (index)  => {
       setIndex(index)
+      zoomState(false);
       props.callback(index);
+
     }
 
     const handleRight = () => {
@@ -49,7 +51,6 @@ const ExpandedPic = (props) => {
         //console.log(mover);
 
         var bbox = e.target.getBoundingClientRect();
-        console.log('this is x and y: ' , e.clientX, e.clientY);
         var mouseX = e.clientX - bbox.left;
         var mouseY = e.clientY - bbox.top;
 
@@ -77,11 +78,7 @@ const ExpandedPic = (props) => {
 
     return(
       <div>
-      <div className = 'bigPicture'>
-        <img className ='Picture' src= {props.currentPic} alt=" Picture of Clothing"></img>
-        <img src = 'right-arrow.svg' ></img>
-        <img src = 'left-arrow.svg' alt = 'left-arrow'></img>
-      </div>
+
       <div className = 'expandedPictureContainer'>
         <button className = 'exit' onClick = {props.closeOut}>X</button>
         <img className = {zoomed ? zoomedPicture: expandedPicture} onMouseMove = {move} onClick = {zoomIn} src= {props.currentPic} alt="Big Picture of Clothing"></img>
@@ -93,8 +90,8 @@ const ExpandedPic = (props) => {
             );
           })}
         </div>
-        <img className = {right} onClick = {handleRight} src = 'right-arrow.svg' name = {order}></img>
-        <img className = {left} onClick = {handleLeft} src = 'left-arrow.svg' name = {order}></img>
+        <img className = {right} onClick = {handleRight} src = 'small-right-arrow.svg' name = {order} alt = 'arrow'></img>
+        <img className = {left} onClick = {handleLeft} src = 'small-left-arrow.svg' name = {order}></img>
      </div>
     </div>
     )
