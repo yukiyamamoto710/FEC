@@ -131,6 +131,14 @@
 
 }
 
+.Picture[slide = 'right'] {
+
+}
+
+@keyframes slide {
+
+}
+
 .Picture:hover {
   cursor: zoom-in;
 }
@@ -500,7 +508,7 @@ h3 {
 
 .bigPicture:hover {
 
-  /* filter: brightness(110%); */
+  opacity: 0.8;
 }
 
 
@@ -508,4 +516,5 @@ h3 {
 .productName {
   font-size: 30px;
 }
+
 

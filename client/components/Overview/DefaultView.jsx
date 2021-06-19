@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
+
 import React from 'react';
 import Thumbnail from './Thumbnail.jsx';
 import ExpandedPic from './ExpandedPic.jsx';
+
 
 
 class DefaultView extends React.Component {
@@ -11,7 +13,8 @@ class DefaultView extends React.Component {
     this.state = {
       index: 0,
       expanded: false,
-      thumbnail: false
+      thumbnail: false,
+      slide: 'right'
     }
 
     this.changeThumbNail = this.changeThumbNail.bind(this);
@@ -56,6 +59,7 @@ class DefaultView extends React.Component {
     if(number < this.props.styleObj.photos.length - 1) {
         this.changeThumbNail(number + 1);
       }
+
   }
 
   handleLeft() {
@@ -93,7 +97,7 @@ class DefaultView extends React.Component {
 
     //probably have to set the variable expand to be its own jsx fragment instead of just changing the class
     if(this.state.expanded === true) {
-      //console.log(this.props.styleObj.photos);
+
       expand = <ExpandedPic currentPic = {currentPic} left = {left} right = {right} index = {this.state.index} styleObj = {this.props.styleObj.photos} callback = {this.changeThumbNail} closeOut = {this.closeOut}/>
     } else {
       expand =
@@ -103,6 +107,7 @@ class DefaultView extends React.Component {
         <img className = {left} onClick = {this.handleLeft} src = 'small-left-arrow.svg' name = {this.state.index} alt = 'left-arrow'></img>
         <img className = {up} onClick = {this.renderThumbnail} src = 'up-arrow.svg' name = {this.state.index}></img>
         <img className = {down} onClick = {this.renderThumbnail} src = 'down-arrow.svg' name = {this.state.index}></img>
+
       </div>
     }
 
@@ -110,14 +115,14 @@ class DefaultView extends React.Component {
       <>
       <div className = 'thumbnails'>
         {photoArray.map((item, index) => {
-          //need to refactor this later - when props index and regular index are the same this highights the wrong thing
+
           isHighlighted = this.props.index === index ? true : false;
           return(
             <Thumbnail index = {index} thumbnail = {item.thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {isHighlighted} highlightedThumb = 'highlightedThumb' noHighlight = 'thumbnailE'/>
           );
         })}
       </div>
-      {expand}
+        {expand}
       </>
     )
 

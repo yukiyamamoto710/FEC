@@ -38,3 +38,7 @@ button:hover {
   cursor: pointer;
   background-color: rgb(177, 174, 174, 0.5);
 }
+
+html {
+  scroll-behavior: smooth;
+}
