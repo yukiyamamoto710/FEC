@@ -4,7 +4,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import RelatedProductCard from '../../client/components/RelatedItems/RelatedProductCard.jsx';
-import product from './fixtures/product.json';
+import product from './fixtures/currentItem.json';
 import product2 from './fixtures/product2.json';
 import '@testing-library/jest-dom/extend-expect';
 
@@ -15,14 +15,14 @@ describe('Related Product Card', () => {
 
   test('should render related product', () => {
     render(<RelatedProductCard id={25811} product={product} changeProductId={changeProductId}/>);
-    expect(screen.getByTestId("category")).toHaveTextContent("Shirt");
-    expect(screen.getByTestId("name")).toHaveTextContent("Item1");
+    expect(screen.getByTestId("category")).toHaveTextContent("Kicks");
+    expect(screen.getByTestId("name")).toHaveTextContent("Summer Shoes");
   });
 
   test('should change the currently displayed product for the page', () => {
     render(<RelatedProductCard id={25811} product={product} changeProductId={changeProductId}/>);
     fireEvent.click(screen.getByTestId("card"));
-    expect(changeProductId).toHaveBeenCalledWith(1);
+    expect(changeProductId).toHaveBeenCalledWith(25175);
   });
 
   test('hovering the image should make additional images appear', () => {
