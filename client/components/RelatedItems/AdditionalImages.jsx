@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const AdditionalImages = ({images, changeMainImage}) => {
 
-  const [state, setState] = useState({idx: 0, displayed: [...images].slice(0, 4)});
+  const [state, setState] = useState({idx: 0, displayed: images.slice(0, 4)});
 
   const toggleMainImage = (e) => {
     changeMainImage(e.target.src);
@@ -12,14 +12,14 @@ const AdditionalImages = ({images, changeMainImage}) => {
   return (
     <div data-testid="additional-images" className="additional-images">
       <button className="slideLeft-mini"
-        onClick={()=>setState({idx: state.idx-1, displayed: [...images].slice(state.idx-1, state.idx+3)})}
+        onClick={()=>setState({idx: state.idx-1, displayed: images.slice(state.idx-1, state.idx+3)})}
         hidden={state.idx === 0}
         data-testid="slideLeft-mini">
           &lt;
         </button>
-      {state.displayed.map((image, i)=><img data-testid={i} key={i} className="thumbnail" alt="n/a" src={image} onClick={toggleMainImage}/>)}
+      {state.displayed.map((image, i)=><img data-testid={i} key={`${image}/${i}`} className="thumbnail" alt="n/a" src={image} onClick={toggleMainImage}/>)}
       <button className="slideRight-mini"
-          onClick={()=>setState({idx: state.idx+1, displayed: [...images].slice(state.idx+1, state.idx+5)})}
+          onClick={()=>setState({idx: state.idx+1, displayed: images.slice(state.idx+1, state.idx+5)})}
           disabled={images.length < 4 || state.idx === images.length-4}
           data-testid="slideRight-mini">
             &gt;

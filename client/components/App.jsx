@@ -4,7 +4,6 @@ import Header from './Header.jsx';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews1.jsx';
-// import QA from './QA/QA.jsx';
 import QA from './Reviews/QA/Qa.jsx';
 import Search from './Search/Search';
 import MonkeyQA from './Reviews/QA/MonkeyQA';
@@ -26,18 +25,16 @@ class App extends React.Component {
     this.changeProductId = this.changeProductId.bind(this);
     this.search = this.search.bind(this);
     this.submit = this.submit.bind(this);
-    // this.enter = this.enter.bind(this);
     this.idGet = this.idGet.bind(this);
   }
 
+
+
+
   componentDidMount(){
     var query = window.location.search
-    console.log('this is query', query);
     var queryId = query.slice(query.length - 5);
     var productId = !queryId ? 25167: Number(queryId);
-
-    console.log(queryId,'queryId')
-
     let data = sessionStorage.getItem('list');
     let data1 = [];
     let bool = sessionStorage.getItem('isSearch');
@@ -55,28 +52,12 @@ class App extends React.Component {
     if (data !== null) {
       data1 = data1.concat(JSON.parse(data))
     }
-    // console.log(data1,'s')
-
-    // let homepage = sessionStorage.getItem('isEnter');
-    // homepage = JSON.parse(homepage);
-    // console.log(typeof(homepage), homepage,'home')
-
-    // let listItems = sessionStorage.getItem('listCurrentItem');
-    // listItems = JSON.parse(listItems);
-
-    // let item = listItems.filter((i)=>{
-    //   return i.id === queryId
-    // })
-
     let listSearch = sessionStorage.getItem('listSearch');
     if(listSearch !== null){
       listSearch = JSON.parse(listSearch);
     } else {
       listSearch = [];
     }
-    // listSearch = JSON.parse(listSearch);
-    console.log(listSearch,'listSearch');
-
     axios.get(`/getAll/${productId}`)
       .then((response) => {
         this.setState({
@@ -86,12 +67,7 @@ class App extends React.Component {
           loaded: true,
           isSearch: bool,
           listSearch:listSearch,
-          // isEnter: homepage.isEnter,
         })
-        // sessionStorage.setItem(
-        //   'listCurrentItem',
-        //   JSON.stringify([...this.state.listCurrentItem,response.data])
-        // )
       })
       .catch((err) => {
         console.log(err);
@@ -100,17 +76,7 @@ class App extends React.Component {
     if(data1.length <= 2000) {
       axios.get(`/getAllItems/`)
         .then(res => {
-          // this.setState({
-          //   list: [...data1,res.data],
-          // })
-          console.log(this.state.list,'list')
-          // let data2 = data1.filter((i)=>{
-          //   //res.data ->array
-          //   // need to find a way to take out same id
-          //   return i.id !== res.data.id
-          // })
           let data2 = data1.concat(res.data)
-          console.log(data2,'wqe')
           sessionStorage.setItem('list',JSON.stringify(data2))
         })
         .catch(console.log)
@@ -139,23 +105,10 @@ class App extends React.Component {
         const myName = i.name.toLowerCase();
         return myName.includes(txt.toLowerCase())
       })
-      // console.log(arr1,'arr1')
-      // this.setState({
-      //   listSearch: arr1,
-      //   isSearch: true,
-      // })
       sessionStorage.setItem('listSearch',JSON.stringify(arr1));
       sessionStorage.setItem('isSearch',JSON.stringify({isSearch:true}));
     }
   }
-
-  // enter(){
-  //   sessionStorage.setItem('isEnter', JSON.stringify({isEnter:1}));
-  //   this.setState({
-  //     isEnter:1,
-  //   })
-  //   window.location.assign(`http://localhost:3000/?product_id=25167`)
-  // }
 
   idGet(event){
     const id = event.target.id;
@@ -165,8 +118,6 @@ class App extends React.Component {
   }
 
   renderPage() {
-    // console.log(this.state.isEnter,'asdasdasd')
-    // if(this.state.isEnter !== 0) {
       if (this.state.loaded) {
         if (this.state.isSearch === true) {
           return (
@@ -192,13 +143,6 @@ class App extends React.Component {
           </div>
         );
       }
-    // else {
-    //   return (
-    //     <div>
-    //       <MonkeyQA />
-    //       <button onClick={this.enter} >Enter</button>
-    //     </div>
-    //   )
     }
 
 

@@ -32,14 +32,34 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
+<<<<<<< HEAD
                 <span class='fraction'>5/5</span>
+=======
+<<<<<<< HEAD
+                <span class='fraction'>5/5</span>
+=======
+                <span class='fraction'>8/8</span>
+>>>>>>> main
+>>>>>>> main
             </div>
         
             
             <div class='fl pad1y space-right2'>
+<<<<<<< HEAD
                 <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
                 <span class='fraction'>1/4</span>
+=======
+<<<<<<< HEAD
+                <span class="strong">25% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/4</span>
+=======
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>4/4</span>
+>>>>>>> main
+>>>>>>> main
             </div>
         
             
@@ -111,6 +131,10 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
@@ -147,6 +171,47 @@
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
+<<<<<<< HEAD
+=======
+=======
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">19x</span>
+>>>>>>> main
+>>>>>>> main
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -165,7 +230,7 @@ const Outfits = (props) =&gt; {
   const [state, setState] = useState({idx: 0, displayed: []});
 &nbsp;
   useEffect(() =&gt; {
-    setState({idx: 0, displayed: [...selectedItemsList].slice(0, 3)})
+    setState({idx: 0, displayed: selectedItemsList.slice(0, 3)})
   }, [selectedItemsList])
 &nbsp;
   return (
@@ -173,20 +238,36 @@ const Outfits = (props) =&gt; {
       &lt;h3 className="outfit"&gt;YOUR OUTFIT&lt;/h3&gt;
       &lt;ul className="carousel"&gt;
         &lt;button className="slideLeft"
+<<<<<<< HEAD
           onClick={<span class="fstat-no" title="function not covered" >()=&gt;s</span>etState({idx: state.idx-1, displayed: [...selectedItemsList].slice(state.idx-1, state.idx+2)})}
+=======
+<<<<<<< HEAD
+          onClick={<span class="fstat-no" title="function not covered" >()=&gt;s</span>etState({idx: state.idx-1, displayed: [...selectedItemsList].slice(state.idx-1, state.idx+2)})}
+=======
+          onClick={()=&gt;setState({idx: state.idx-1, displayed: selectedItemsList.slice(state.idx-1, state.idx+2)})}
+>>>>>>> main
+>>>>>>> main
           hidden={state.idx === 0}
           data-testid="slideLeft"&gt;
             &amp;lt;
         &lt;/button&gt;
         &lt;li className="card empty"&gt;
-            &lt;button data-testid="add-button" className="add-button" onClick={<span class="fstat-no" title="function not covered" >()=&gt;a</span>ddToOutfit()}&gt;+&lt;/button&gt;
+            &lt;button data-testid="add-button" className="add-button" onClick={()=&gt;addToOutfit()}&gt;+&lt;/button&gt;
             &lt;p className="add-message"&gt;Add to Outfit&lt;/p&gt;
         &lt;/li&gt;
-        {!state.displayed.length ? null: state.displayed.map(product=&gt;
-          &lt;OutfitCard key={product.id} product={product} removeFromOutfit={removeFromOutfit}/&gt;
+        {!state.displayed.length ? null: state.displayed.map((product, i)=&gt;
+          &lt;OutfitCard key={`${product.id}/${i}`} product={product} removeFromOutfit={removeFromOutfit}/&gt;
           )}
         &lt;button className="slideRight"
+<<<<<<< HEAD
           onClick={<span class="fstat-no" title="function not covered" >()=&gt;{setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})}}</span>
+=======
+<<<<<<< HEAD
+          onClick={<span class="fstat-no" title="function not covered" >()=&gt;{setState({idx: state.idx+1, displayed: [...selectedItemsList].slice(state.idx+1, state.idx+4)})}}</span>
+=======
+          onClick={()=&gt;{setState({idx: state.idx+1, displayed: selectedItemsList.slice(state.idx+1, state.idx+4)})}}
+>>>>>>> main
+>>>>>>> main
           hidden={selectedItemsList.length &lt; 3}
           disabled={state.idx === selectedItemsList.length-3}
           data-testid="slideRight"&gt;
@@ -211,7 +292,39 @@ export default Outfits;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+<<<<<<< HEAD
                 at Thu Jun 17 2021 19:07:27 GMT-0700 (Pacific Daylight Time)
+=======
+<<<<<<< HEAD
+                at Wed Jun 16 2021 15:18:22 GMT-0700 (Pacific Daylight Time)
+=======
+<<<<<<< HEAD
+                at Thu Jun 17 2021 16:36:33 GMT-0700 (Pacific Daylight Time)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                at Tue Jun 15 2021 22:07:35 GMT-0700 (Pacific Daylight Time)
+=======
+                at Thu Jun 17 2021 00:47:14 GMT-0700 (Pacific Daylight Time)
+>>>>>>> 31815c266b0dccad353354e4a5efc006e0fe8a53
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                at Wed Jun 16 2021 09:29:49 GMT-0700 (Pacific Daylight Time)
+=======
+                at Wed Jun 16 2021 10:06:11 GMT-0700 (Pacific Daylight Time)
+>>>>>>> main
+=======
+                at Tue Jun 15 2021 17:33:15 GMT-0700 (Pacific Daylight Time)
+>>>>>>> b18bda1c4e9fb6a2ce068ea46ac91a546ad51919
+<<<<<<< HEAD
+>>>>>>> a2a0c38feaf9f4696116bd678e4cd4efdede8746
+=======
+>>>>>>> main
+>>>>>>> 31815c266b0dccad353354e4a5efc006e0fe8a53
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
             </div>
         </div>
         <script src="../prettify.js"></script>

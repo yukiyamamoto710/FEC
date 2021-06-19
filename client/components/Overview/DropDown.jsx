@@ -24,7 +24,7 @@ class DropDown extends React.Component {
   }
 
   componentDidUpdate (prevProps) {
-    if(this.props.name !== prevProps.name) {
+    if(this.props.changed !== prevProps.changed) {
       this.setState({name: this.props.name});
     }
 

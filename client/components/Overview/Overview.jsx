@@ -137,10 +137,13 @@ class Overview extends React.Component {
           </div>
          <DefaultView picture = {currentItem[this.state.index].photos[this.state.thumbIndex][this.state.urlName]} styleObj = {currentItem[this.state.index]} callback = {this.changeThumbnail} index = {this.state.thumbIndex}/>
          <Description descriptions = {this.state.description} style = {currentItem[this.state.index]} skus = {currentItem[this.state.index].skus} price = {price} salePrice = {salePrice} styleItem = {styleItem}/>
-         <div data-testid = 'stylesBox' className = 'stylesBox'>
-         {currentItem.map((item, index) => {
-           return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
-         })}
+         <div className = 'styles'>
+           <h3 className = 'headerStyles'>Styles</h3>
+           <div data-testid = 'stylesBox' className = 'stylesBox'>
+           {currentItem.map((item, index) => {
+             return <ProductImage image = {item.photos[0]} order = {index} price = {item} callback = {this.changePic} key = {item.style_id}/>
+           })}
+           </div>
          </div>
         </div>
        );
