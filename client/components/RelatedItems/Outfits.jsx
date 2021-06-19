@@ -3,7 +3,7 @@ import OutfitCard from './OutfitCard.jsx';
 import PropTypes from 'prop-types';
 
 const Outfits = (props) => {
-  const {selectedItemsList, addToOutfit, removeFromOutfit} = props;
+  const {selectedItemsList, addToOutfit, removeFromOutfit, changeProductId} = props;
 
   const [state, setState] = useState({idx: 0, displayed: []});
 
@@ -26,7 +26,7 @@ const Outfits = (props) => {
             <p className="add-message">Add to Outfit</p>
         </li>
         {!state.displayed.length ? null: state.displayed.map((product, i)=>
-          <OutfitCard key={`${product.id}/${i}`} product={product} removeFromOutfit={removeFromOutfit}/>
+          <OutfitCard key={`${product.id}/${i}`} product={product} removeFromOutfit={removeFromOutfit} changeProductId={changeProductId}/>
           )}
         <button className="slideRight"
           onClick={()=>{setState({idx: state.idx+1, displayed: selectedItemsList.slice(state.idx+1, state.idx+4)})}}

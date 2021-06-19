@@ -157,6 +157,7 @@
 .star:hover {
   color: rgb(102, 162, 182);
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* a table styling in Comparison component */
