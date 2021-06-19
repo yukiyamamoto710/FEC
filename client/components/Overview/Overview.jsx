@@ -109,7 +109,7 @@ class Overview extends React.Component {
   }
 
   scroll() {
-    console.log('clicked');
+
     window.scrollTo(0,document.body.scrollHeight - document.querySelector(".rating").scrollHeight);
   }
 
