@@ -13,7 +13,9 @@ class Description extends React.Component {
       skuQuantSelected: 0,
       sku: 0,
       inCart: 0,
-      cart: []
+      cart: [],
+      selectSize: 'Select Size',
+      Quantity: 'Quantity'
     }
     this.changeSKU = this.changeSKU.bind(this);
     this.changeQuant = this.changeQuant.bind(this);
@@ -54,8 +56,12 @@ class Description extends React.Component {
       styleSelected: '',
       skuSizeSelected: '',
       skuQuantSelected: 0,
-      sku: 0
+      sku: 0,
+      selectSize: 'Select Size',
+      Quantity: 'Quantity'
     })
+
+
   }
 
 
@@ -73,8 +79,8 @@ class Description extends React.Component {
          <br></br>
          <div className = 'price'>${this.props.price}</div>
          <span>{this.props.salePrice}</span>
-         <DropDown name = 'Select Size' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/>
-         <DropDown name = 'Quantity'  quant = {this.state.skuSizeSelected} callback = {this.changeQuant}/>
+         <DropDown name = {this.state.selectSize} style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU} changed = {this.state.cart}/>
+         <DropDown name = {this.state.Quantity}  quant = {this.state.skuSizeSelected} callback = {this.changeQuant} changed = {this.state.cart}/>
          <AddToCart className = 'addCart' style = {styleSelected} size = {skuSizeSelected} quantity = {skuQuantSelected} callback = {this.addItem} sku = {sku}/>
        </div>
        <div className = 'description'>

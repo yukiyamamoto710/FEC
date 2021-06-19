@@ -9,12 +9,17 @@ const ExpandedPic = (props) => {
 
     var left = order === 0 ? 'hidden' : 'smallLeftArrow';
     var right = order === props.styleObj.length - 1 ? 'hidden' : 'smallRightArrow';
-    var zoom;
+    const zoomedPicture = 'zoomedPicture';
+    const expandedPicture = 'expandedPicture';
+
+
 
 
     const changeThumbNail = (index)  => {
       setIndex(index)
+
       props.callback(index);
+
     }
 
     const handleRight = () => {
@@ -46,9 +51,14 @@ const ExpandedPic = (props) => {
         //console.log(mover);
 
         var bbox = e.target.getBoundingClientRect();
-        console.log('this is bbox' , bbox);
         var mouseX = e.clientX - bbox.left;
         var mouseY = e.clientY - bbox.top;
+
+        // var xPercent = (mouseX / bbox.width) * 100;
+        // var yPercent = (mouseY / bbox.height) * 100;
+
+        // var mouseX = e.clientX;
+        // var mouseY = e.clientY;
 
         var xPercent = (mouseX / bbox.width) * 100;
         var yPercent = (mouseY / bbox.height) * 100;
@@ -60,22 +70,18 @@ const ExpandedPic = (props) => {
       }
     }
 
-    if(zoomed) {
-      zoom = 'zoomedPicture';
-    } else {
-      zoom = 'expandedPicture';
-    }
+    // if(zoomed) {
+    //   zoom = zoomedPicture;
+    // } else {
+    //   zoom = expandedPicture;
+    // }
 
     return(
       <div>
-      <div className = 'bigPicture'>
-        <img className ='Picture' src= {props.currentPic} alt=" Picture of Clothing"></img>
-        <img src = 'right-arrow.svg' ></img>
-        <img src = 'left-arrow.svg' alt = 'left-arrow'></img>
-      </div>
+
       <div className = 'expandedPictureContainer'>
         <button className = 'exit' onClick = {props.closeOut}>X</button>
-        <img className = {zoom} onMouseMove = {move} onClick = {zoomIn} src= {props.currentPic} alt="Big Picture of Clothing"></img>
+        <img className = {zoomed ? zoomedPicture: expandedPicture} onMouseMove = {move} onClick = {zoomIn} src= {props.currentPic} alt="Big Picture of Clothing"></img>
         <div className = 'thumbnailsIcons'>
           {props.styleObj.map((item, index) => {
             const isHighlighted = props.index === index ? true : false;
@@ -84,8 +90,8 @@ const ExpandedPic = (props) => {
             );
           })}
         </div>
-        <img className = {right} onClick = {handleRight} src = 'right-arrow.svg' name = {order}></img>
-        <img className = {left} onClick = {handleLeft} src = 'left-arrow.svg' name = {order}></img>
+        <img className = {right} onClick = {handleRight} src = 'small-right-arrow.svg' name = {order} alt = 'arrow'></img>
+        <img className = {left} onClick = {handleLeft} src = 'small-left-arrow.svg' name = {order}></img>
      </div>
     </div>
     )

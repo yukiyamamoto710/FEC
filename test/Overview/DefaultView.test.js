@@ -7,7 +7,7 @@
  import Overview from '../../client/components/Overview/Overview.jsx';
  import Thumbnail from '../../client/components/Overview/Thumbnail.jsx';
  import DefaultView from '../../client/components/Overview/DefaultView.jsx'
- import product from '../RelatedItems/fixtures/product.json';
+ import product from '../RelatedItems/fixtures/styles.json';
  import product2 from '../RelatedItems/fixtures/product2.json';
  import '@testing-library/jest-dom/extend-expect';
 
@@ -40,6 +40,21 @@
       expect(screen.getByAltText("left-arrow")).not.toBeVisible();
       //?????? class is hidden. display: none. should not be visible
     });
+
+    it('should change thumbnail on click', () => {
+      //console.log((screen.getByTestId('stylesBox'));
+      const mock = jest.fn();
+      render(<DefaultView picture = {product.results[0].photos[0].url} styleObj = {product.results[0]} callback = {mock} />);
+      // fireEvent.click(screen.getByAltText("Big Picture of Clothing"));
+      // expect(mock).not.toHaveBeenCalled();
+      expect(screen.getByAltText("arrow")).toBeVisible();
+      fireEvent.click(screen.getByAltText("arrow"));
+      expect(mock).toHaveBeenCalled();
+      //need to have more thumbnail pictures for arrow to work?
+      //expect(screen.getAllByAltText("Picture of Clothing")).toBeVisible();
+      //expect(mock).toHaveBeenCalled();
+      });
+
 
 
 
