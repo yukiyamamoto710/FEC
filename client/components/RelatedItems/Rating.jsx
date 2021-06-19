@@ -1,5 +1,5 @@
 import React from 'react';
-import Stars from '../Reviews/star.jsx';
+import Stars from '../Reviews/Stars/Stars';
 import PropTypes from 'prop-types';
 
 const Rating = ({rating}) => {
@@ -10,7 +10,7 @@ const Rating = ({rating}) => {
 
   return (
     <div>
-     <Stars rate={ave} />
+     <Stars rate={ave} name={'name'} classNameForSize={'msgStar'}/>
     </div>
   )
 }

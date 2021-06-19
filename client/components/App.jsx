@@ -7,6 +7,7 @@ import Reviews from './Reviews/Reviews1.jsx';
 import QA from './Reviews/QA/Qa.jsx';
 import Search from './Search/Search';
 import MonkeyQA from './Reviews/QA/MonkeyQA';
+import { searchData } from './dataList.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,6 +48,8 @@ class App extends React.Component {
     }
     if (data !== null) {
       data1 = data1.concat(JSON.parse(data))
+    } else {
+      data1 = data1.concat(searchData)
     }
     let listSearch = sessionStorage.getItem('listSearch');
     if(listSearch !== null){

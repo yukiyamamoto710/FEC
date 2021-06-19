@@ -24,6 +24,6 @@ describe('Outfit Card', () => {
     fireEvent.click(screen.getByTestId("close"));
     expect(removeFromOutfit).toHaveBeenCalledWith(25175);
     const outfitlist = screen.getAllByTestId("outfit-card");
-    expect(outfitlist.length).toBe(beforeLength - 1);
+    expect(outfitlist.length).toBe(0);
   });
 })
