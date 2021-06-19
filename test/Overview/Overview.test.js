@@ -10,10 +10,10 @@
  import '@testing-library/jest-dom/extend-expect';
  import axios from 'axios';
  import fetchGet from '../../client/components/Overview/api/fetchGet.js';
- import getStyles from '/Users/evansding/Desktop/FEC Project 2/FEC/client/components/Overview/api/getStyles.js';
+ import getStyles from '../../client/components/Overview/api/getStyles.js';
 
  jest.mock('../../client/components/Overview/api/fetchGet.js');
- jest.mock('/Users/evansding/Desktop/FEC Project 2/FEC/client/components/Overview/api/getStyles.js');
+ jest.mock('../../client/components/Overview/api/getStyles.js');
 
 
 

@@ -9,8 +9,8 @@ describe('DropDown Selection', () => {
   var mock = jest.fn();
   test('should show Add to cart and invoke callback function when clicked', () => {
     render(<AddToCart style={response.data.results[0]} quantity = '8' callback = {mock}/>);
-    expect(screen.getByText("Add to Cart")).toBeVisible();
-    fireEvent.click(screen.getByText("Add to Cart"));
+    expect(screen.getByText("ADD TO CART")).toBeInTheDocument();
+    fireEvent.click(screen.getByText("ADD TO CART"));
     expect(mock).toHaveBeenCalled();
     })
 
