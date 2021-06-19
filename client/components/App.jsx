@@ -4,7 +4,6 @@ import Header from './Header.jsx';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews1.jsx';
-// import QA from './QA/QA.jsx';
 import QA from './Reviews/QA/Qa.jsx'
 
 class App extends React.Component {
