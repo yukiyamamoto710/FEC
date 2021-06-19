@@ -3,11 +3,11 @@ import React from 'react';
 const StarRating = (props) =>{
   const { per } = props;
   let bar = {
-    border: '1px solid green',
+    border: '1px solid rgb(102, 162, 182)',
     width:`${ per }%`,
     height:'9px',
     margin:'1px',
-    backgroundColor:'green'
+    backgroundColor:'rgb(102, 162, 182)'
   }
   if ( per === 0) {
     bar = {

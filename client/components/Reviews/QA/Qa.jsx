@@ -53,7 +53,7 @@ const QA = (props) => {
 
   if (isLoad) {
     return (
-      <div>
+      <div className="QA-wrapper">
         <h3>Question & Answer</h3>
         <div
           className="QAcontainer"

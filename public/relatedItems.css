@@ -71,7 +71,8 @@
 
 .slideLeft:hover,
 .slideRight:hover {
-  background-color: rgb(177, 174, 174, 0.5);
+  background-color: rgb(102, 162, 182, 0.5);
+  cursor: pointer;
 }
 
 /* Outfit component */

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const StarRatingBar = (props) => {
   const { per } = props;
   let bar = {
-    border: '5px solid green',
+    border: '5px solid rgb(102, 162, 182)',
     width: `${per}%`,
-    backgroundColor: 'green',
+    backgroundColor: 'rgb(102, 162, 182)',
   };
   if (per === 0) {
     bar = {
