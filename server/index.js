@@ -126,9 +126,9 @@ app.use('/getAll/:id', (req, res) => {
   }
 })
 
-app.use('/getAllItems/:page',(req, res)=>{
+app.use('/getAllItems',(req, res)=>{
   console.log(req.params.page,'dass')
-  api.hrapi(`products/?count=12156`,(err, data)=>{
+  api.hrapi(`products/?count=1000`,(err, data)=>{
     if(err){
       console.log(err)
       res.status(404).send(err);
