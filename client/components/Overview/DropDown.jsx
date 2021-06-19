@@ -37,7 +37,7 @@ class DropDown extends React.Component {
   }
 
   storeSize(size, quantity, style, price, sku) {
-    console.log('this is style in dropdown', style, quantity, sku);
+
     this.props.callback(size, style, sku);
     this.setState({name: size});
   }

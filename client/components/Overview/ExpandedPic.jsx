@@ -23,7 +23,7 @@ const ExpandedPic = (props) => {
     }
 
     const handleRight = () => {
-      console.log(order);
+
       var number = JSON.parse(event.target.name);
       if(number < props.styleObj.length - 1) {
           props.callback(number + 1);
