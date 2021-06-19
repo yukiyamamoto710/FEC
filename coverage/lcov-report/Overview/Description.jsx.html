@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">64.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>64/96</span>
+                <span class='fraction'>66/102</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">64.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>64/96</span>
+                <span class='fraction'>66/102</span>
             </div>
         
             
@@ -152,7 +152,15 @@
 <a name='L93'></a><a href='#L93'>93</a>
 <a name='L94'></a><a href='#L94'>94</a>
 <a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -211,6 +219,10 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -235,29 +247,10 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 31815c266b0dccad353354e4a5efc006e0fe8a53
->>>>>>> main
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
->>>>>>> a2a0c38feaf9f4696116bd678e4cd4efdede8746
-=======
->>>>>>> 31815c266b0dccad353354e4a5efc006e0fe8a53
->>>>>>> main
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -281,7 +274,9 @@ class Description extends React.Component {
       skuQuantSelected: 0,
       sku: 0,
       inCart: 0,
-      cart: []
+      cart: [],
+      selectSize: 'Select Size',
+      Quantity: 'Quantity'
     }
     this.changeSKU = this.changeSKU.bind(this);
     this.changeQuant = this.changeQuant.bind(this);
@@ -322,8 +317,12 @@ class Description extends React.Component {
 <span class="cstat-no" title="statement not covered" >      styleSelected: '',</span>
 <span class="cstat-no" title="statement not covered" >      skuSizeSelected: '',</span>
 <span class="cstat-no" title="statement not covered" >      skuQuantSelected: 0,</span>
-<span class="cstat-no" title="statement not covered" >      sku: 0</span>
+<span class="cstat-no" title="statement not covered" >      sku: 0,</span>
+<span class="cstat-no" title="statement not covered" >      selectSize: 'Select Size',</span>
+<span class="cstat-no" title="statement not covered" >      Quantity: 'Quantity'</span>
 <span class="cstat-no" title="statement not covered" >    })</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 &nbsp;
 &nbsp;
@@ -341,8 +340,8 @@ class Description extends React.Component {
          &lt;br&gt;&lt;/br&gt;
          &lt;div className = 'price'&gt;${this.props.price}&lt;/div&gt;
          &lt;span&gt;{this.props.salePrice}&lt;/span&gt;
-         &lt;DropDown name = 'Select Size' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/&gt;
-         &lt;DropDown name = 'Quantity'  quant = {this.state.skuSizeSelected} callback = {this.changeQuant}/&gt;
+         &lt;DropDown name = {this.state.selectSize} style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU} changed = {this.state.cart}/&gt;
+         &lt;DropDown name = {this.state.Quantity}  quant = {this.state.skuSizeSelected} callback = {this.changeQuant} changed = {this.state.cart}/&gt;
          &lt;AddToCart className = 'addCart' style = {styleSelected} size = {skuSizeSelected} quantity = {skuQuantSelected} callback = {this.addItem} sku = {sku}/&gt;
        &lt;/div&gt;
        &lt;div className = 'description'&gt;
@@ -368,19 +367,7 @@ export default Description;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-<<<<<<< HEAD
-                at Fri Jun 18 2021 12:05:29 GMT-0700 (Pacific Daylight Time)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                at Tue Jun 15 2021 22:07:35 GMT-0700 (Pacific Daylight Time)
-=======
-                at Wed Jun 16 2021 14:02:07 GMT-0700 (Pacific Daylight Time)
->>>>>>> a2a0c38feaf9f4696116bd678e4cd4efdede8746
-=======
-                at Thu Jun 17 2021 09:53:51 GMT-0700 (Pacific Daylight Time)
->>>>>>> 31815c266b0dccad353354e4a5efc006e0fe8a53
->>>>>>> main
+                at Sat Jun 19 2021 09:35:04 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

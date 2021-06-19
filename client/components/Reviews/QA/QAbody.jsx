@@ -19,9 +19,6 @@ const QAbody = (props) => {
   const [isAddAanswer,setIsAddAanswer] = useState(false);
   const [answer, setAnswer] = useState([...keyArray]);
   const [questions, setQuestions] = useState(question);
-  // useEffect(()=>{
-  //   setAnswer(question.answers[key[0]])
-  // },[question])
 
   const clickMore = () =>{
     const answerArray = [...answer];
@@ -47,6 +44,7 @@ const QAbody = (props) => {
     })
     return result
   }
+
   const handleClickReport =(id)=>{
     putReportQA("answers",id)
   }

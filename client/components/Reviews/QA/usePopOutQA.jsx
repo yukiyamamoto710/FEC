@@ -59,8 +59,7 @@ export default function usePopOutQA(id, addUserReview) {
       obj['answerer_name'] = name;
       obj['helpfulness'] = 0;
       obj['date'] = new Date().toISOString();
-      obj['id'] = Math.random() * 10000000
-      console.log(obj['date']);
+      obj['id'] = Math.random() * 10000000;
       addUserReview(obj)
     }
   }

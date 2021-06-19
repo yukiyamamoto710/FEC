@@ -16,7 +16,7 @@ app.listen(PORT, () => {
 app.use('/get', (req, res) => {
   api.hrapi(`${req.query.endpoint}`, (err, data) => {
     if (err) {
-      console.log(err)
+      // console.log(err)
       res.status(404).send(err);
     } else {
       res.status(200).send(data);
@@ -47,7 +47,7 @@ app.put('/reviews/helpful', (req, res) => {
 });
 
 app.put('/qa/helpful', (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   api.hrapiput(req.body.params.endpoint, req.body, (err) => {
     if (err) {
       res.status(404).send(err);
@@ -58,7 +58,7 @@ app.put('/qa/helpful', (req, res) => {
 });
 
 app.put('/qa/report', (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   api.hrapiput(req.body.params.endpoint, req.body, (err) => {
     if (err) {
       res.status(404).send(err);
@@ -69,7 +69,7 @@ app.put('/qa/report', (req, res) => {
 });
 
 app.post('/qa/questions', (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   api.hrapipost(req.body.params.endpoint, req.body.body, (err) => {
     if (err) {
       res.status(404).send(err);
@@ -94,10 +94,8 @@ app.post('/cart', (req, res) => {
 
 // getting all products information
 app.use('/getAll/:id', (req, res) => {
-  // check if the product/data is already saved in saveProducts obj
   const id = req.params.id;
   var data = {};
-  //console.log(saveProducts);
   if (saveProducts[id]) {
     data = saveProducts[id];
     res.status(200).send(data);
@@ -124,4 +122,18 @@ app.use('/getAll/:id', (req, res) => {
       }
     })
   }
+})
+
+app.use('/getAllItems',(req, res)=>{
+  // console.log(req.params.page,'dass')
+  api.hrapi(`products/?count=1000`,(err, data)=>{
+    if(err){
+      console.log(err)
+      res.status(404).send(err);
+    } else {
+      console.log(data)
+      res.status(200).send(data);
+    }
+
+  })
 })

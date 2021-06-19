@@ -2,7 +2,9 @@ import React, { useEffect,useState } from 'react';
 import axios from 'axios';
 import QAbody from './QAbody';
 import PopOutQA from './PopOutQA';
-import ButtonQA from './ButtonQA'
+import MonkeyQA from './MonkeyQA';
+import ButtonQA from './ButtonQA';
+import MonkeyQAone from './MonkeyQAone';
 
 const QA = (props) => {
   const { id } = props;
@@ -12,6 +14,8 @@ const QA = (props) => {
   const [isPopOut, setIsPopOut] = useState(false);
   const [isMore, setIsMore]=useState(true);
   const [isAddAanswer,setIsAddAanswer] = useState(false);
+  const [search, setSearch] = useState('');
+  const [isNoResult, setIsNoResult] = useState(false)
 
   useEffect(()=>{
     axios.get('/get', {
@@ -26,11 +30,13 @@ const QA = (props) => {
         setIsLoad(true);
       })
       .catch(console.log);
+      setSearch('');
   },[id])
 
   const addUserReview = () => {
     setIsPopOut(true)
   }
+
   const getMoreReviews = () => {
     let arr = [...questions];
     const num = arr.length;
@@ -51,6 +57,27 @@ const QA = (props) => {
     setAnswer(arr)
   }
 
+  const handleChangeText = (event) => {
+    setSearch(event.target.value)
+  }
+
+  const handleClickSearch = () =>{
+    if (search.length >= 3) {
+      const arr = [...listQuestions];
+      const result = arr.filter((i) => (
+        i.question_body.includes(search)
+      ))
+      if(result.length !== 0) {
+        setQuestions(result)
+      } else {
+        setIsNoResult(true)
+      }
+    }
+  }
+
+  const handleClickCancel = () => {
+    setIsNoResult(false)
+  }
   if (isLoad) {
     return (
       <div className="QA-wrapper">
@@ -58,6 +85,30 @@ const QA = (props) => {
         <div
           className="QAcontainer"
         >
+          <div className="QAheader1">
+            {!isNoResult
+              ?
+              <MonkeyQAone classSize={'QAmonkey5'}/>
+              :
+              <button
+                className="QAsearchBack"
+                onClick={handleClickCancel}
+              />
+            }
+            <input
+              className="QAsearchTxt"
+              type="text"
+              onChange={handleChangeText}
+              placeholder="search"/>
+            <button
+              className="QAsearchGO2"
+              onClick={handleClickSearch}
+            />
+          </div>
+          {isNoResult
+            ?
+              <MonkeyQA />
+            :null}
           <div className="Qabody">
             {questions.map((i)=>{
               return (
@@ -78,26 +129,24 @@ const QA = (props) => {
         </div>
         <div className="popoutQA">
           {isPopOut
-          ?
-          <PopOutQA
-            addUserReview={addQuestion}
-            cancelAddReview={cancelAddQuestion}
-            target="questions"
-            id={id}
-          />
-          :null}
+            ?
+            <PopOutQA
+              addUserReview={addQuestion}
+              cancelAddReview={cancelAddQuestion}
+              target="questions"
+              id={id}
+            />
+            :null}
         </div>
       </div>
     )
   } else {
     return (
-    <div>
-      <div>QA</div>
-      <div>Loading...</div>
-    </div>
-  )
+      <div>
+        <MonkeyQAone classSize={'QAmonkey1'} text="Loading"/>
+      </div>
+    )
   }
-
 }
 
 export default QA

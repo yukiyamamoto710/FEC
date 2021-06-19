@@ -4,7 +4,9 @@ import Header from './Header.jsx';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews1.jsx';
-import QA from './Reviews/QA/Qa.jsx'
+import QA from './Reviews/QA/Qa.jsx';
+import Search from './Search/Search';
+import MonkeyQA from './Reviews/QA/MonkeyQA';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,63 +14,131 @@ class App extends React.Component {
     this.state = {
       targetId: 25167,
       currentItem: {},
-      loaded: false
+      loaded: false,
+      list:[],
+      search: '',
+      isSearch: false,
+      listSearch:[],
+      listCurrentItem:[],
     };
     this.renderPage = this.renderPage.bind(this);
     this.changeProductId = this.changeProductId.bind(this);
-    // this.ratingGET = this. ratingGET.bind(this);
+    this.search = this.search.bind(this);
+    this.submit = this.submit.bind(this);
+    this.idGet = this.idGet.bind(this);
   }
-
-
-
 
   componentDidMount(){
     var query = window.location.search
-    console.log('this is query', query);
     var queryId = query.slice(query.length - 5);
     var productId = !queryId ? 25167: Number(queryId);
-
+    let data = sessionStorage.getItem('list');
+    let data1 = [];
+    let bool = sessionStorage.getItem('isSearch');
+    bool = JSON.parse(bool);
+    if(bool !== null){
+      if(bool.isSearch === false) {
+        bool = false
+      } else {
+        bool = true
+      }
+    }else {
+      bool = '0'
+    }
+    if (data !== null) {
+      data1 = data1.concat(JSON.parse(data))
+    }
+    let listSearch = sessionStorage.getItem('listSearch');
+    if(listSearch !== null){
+      listSearch = JSON.parse(listSearch);
+    } else {
+      listSearch = [];
+    }
     axios.get(`/getAll/${productId}`)
       .then((response) => {
         this.setState({
+          list:[...data1],
           targetId: !queryId ? 25167: Number(queryId),
           currentItem: response.data,
-          loaded: true
+          loaded: true,
+          isSearch: bool,
+          listSearch:listSearch,
         })
       })
       .catch((err) => {
         console.log(err);
       })
+
+    if(data1.length <= 2000) {
+      axios.get(`/getAllItems/`)
+        .then(res => {
+          let data2 = data1.concat(res.data)
+          sessionStorage.setItem('list',JSON.stringify(data2))
+        })
+        .catch(console.log)
+    }
   }
 
   changeProductId(id) {
     window.location.assign(`http://localhost:3000/?product_id=${id}`)
   }
 
-  renderPage() {
-    if (this.state.loaded) {
-      return (
-        <div>
-          <Header />
-          <Overview id = {this.state.targetId} item = {this.state.currentItem}/>
-          <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} currentItem={this.state.currentItem}/>
-          <QA id ={this.state.targetId}/>
-          <Reviews id={this.state.targetId} productRating={this.state.currentItem} />
-        </div>
-      )
-    } else {
-      return (
-        <div>
-          Page Loading ...
-        </div>
-      );
+  search(event){
+    let text = event.target.value
+    if(text.length >= 3) {
+      this.setState({
+        search: text,
+      })
     }
-    return (
-      <div>
-        Page Loading ...
-      </div>
-    );
   }
+
+  submit() {
+    const txt =this.state.search
+    if (txt.length >= 3) {
+      const arr = [...this.state.list];
+      const arr1 = arr.filter((i)=>{
+        const myName = i.name.toLowerCase();
+        return myName.includes(txt.toLowerCase())
+      })
+      sessionStorage.setItem('listSearch',JSON.stringify(arr1));
+      sessionStorage.setItem('isSearch',JSON.stringify({isSearch:true}));
+    }
+  }
+
+  idGet(event){
+    const id = event.target.id;
+    sessionStorage.setItem('isSearch',JSON.stringify({isSearch:false}));
+    window.location.assign(`http://localhost:3000/?product_id=${id}`)
+  }
+
+  renderPage() {
+      if (this.state.loaded) {
+        if (this.state.isSearch === true) {
+          return (
+            <div>
+              <Header search={this.search} submit={this.submit}/>
+              <Search listSearch={this.state.listSearch} idGet={this.idGet} txt={this.state.search}/>
+            </div>
+          )
+        } else{
+          return (
+          <div>
+            <Header search={this.search} submit={this.submit}/>
+            <Overview id = {this.state.targetId} item = {this.state.currentItem} rating = {this.state.currentItem.rating}/>
+            <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} currentItem={this.state.currentItem}/>
+            <QA id ={this.state.targetId}/>
+            <Reviews id={this.state.targetId} productRating={this.state.currentItem} />
+          </div>
+        )}
+      } else {
+        return (
+          <div>
+            Page Loading ...
+          </div>
+        );
+      }
+    }
+
 
   render() {
     return (
