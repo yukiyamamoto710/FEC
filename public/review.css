@@ -78,14 +78,22 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    border: 10px solid black;
+    border: 1px solid rgb(177, 174, 174);
     position: absolute;
-    background-color: #000000c7;;
+    background-color: rgb(177, 174, 174, 0.75);
+    box-shadow: 0px 0px 10px 1px grey;
     z-index: 90;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 10px;
+    animation: popup 0.25s;
+}
+
+@keyframes popup {
+  0% {
+    transform: translate(0%, 20%);
+  }
 }
 
 .topContainer {
@@ -287,6 +295,10 @@ transform: perspective(500px) rotateY(45deg); */
   padding: 5px;
   background-color: rgb(102, 162, 182);
   cursor: pointer;
+}
+
+.add_moreBTN:hover {
+  background-color: grey;
 }
 
 .add_moreBTNContainer {
