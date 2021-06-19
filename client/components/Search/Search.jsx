@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Message from '../Reviews/Message/Message';
-import MonkeyQA from './Reviews/QA/MonkeyQA';
+import MonkeyQA from '../Reviews/QA/MonkeyQA';
 
 const Search = (props) => {
   const { listSearch, idGet, txt } = props;
@@ -9,7 +9,7 @@ const Search = (props) => {
   const [templist, setTempList] = useState([]);
 
   useEffect(() => {
-    let categoryKey = ['All'];
+    let categoryKey = ['All', 'Price down','Price up'];
     let listArray = [];
     let searchList = listSearch.sort((a,b)=>{return a.id - b.id})
     for(let i = 0; i < searchList.length; i ++) {
@@ -21,11 +21,14 @@ const Search = (props) => {
           listArray.push(searchList[i])
         }
       }
+      if (i === searchList.length-1) {
+        listArray.push(searchList[i])
+      }
     }
     setList(listArray);
     setTempList(listArray);
     setCategory(categoryKey);
-  },[txt]);
+  },[listSearch.length]);
 
   const handleClickGategory = (event) => {
     const id = event.target.id;
@@ -33,6 +36,12 @@ const Search = (props) => {
 
     if (id === 'All') {
       setList(arr);
+    } else if(id === 'Price down'){
+      const arr2 = arr.sort((a,b)=>Number(a.default_price) - Number(b.default_price));
+      setList(arr2)
+    } else if(id === 'Price up'){
+      const arr3 = arr.sort((a,b)=>Number(b.default_price) - Number(a.default_price));
+      setList(arr3)
     } else {
       const arr1 = arr.filter((i)=>{
         return i.category === id;
@@ -40,7 +49,9 @@ const Search = (props) => {
       setList(arr1);
     }
   }
-  if(list.length === 0) {
+
+
+  if(list.length !== 0) {
     return (
       <div>
         <div>

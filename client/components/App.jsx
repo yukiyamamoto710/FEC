@@ -7,7 +7,7 @@ import Reviews from './Reviews/Reviews1.jsx';
 // import QA from './QA/QA.jsx';
 import QA from './Reviews/QA/Qa.jsx';
 import Search from './Search/Search';
-
+import MonkeyQA from './Reviews/QA/MonkeyQA';
 
 class App extends React.Component {
   constructor(props) {
@@ -171,7 +171,6 @@ class App extends React.Component {
         if (this.state.isSearch === true) {
           return (
             <div>
-              hi
               <Header search={this.search} submit={this.submit}/>
               <Search listSearch={this.state.listSearch} idGet={this.idGet} txt={this.state.search}/>
             </div>
