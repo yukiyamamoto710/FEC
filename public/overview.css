@@ -173,6 +173,7 @@ p {
 
 h3 {
   color: rgb(102, 162, 182);
+  text-transform: uppercase;
 }
 
 .rightArrow {
