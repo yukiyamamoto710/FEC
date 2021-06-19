@@ -474,10 +474,11 @@ transform: perspective(500px) rotateY(45deg); */
   flex-direction: column;
   width: 100%;
   height: 450px;
-  overflow: auto;
+  overflow: hidden;
 }
 .msgContainer {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
+  margin: 2% 0;
 }
 .msgSummary {
   font-size: 14px;
