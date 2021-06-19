@@ -1,4 +1,4 @@
-[
+const searchData = [
   {
       "id": 25167,
       "campus": "hr-sfo",
@@ -550,3 +550,5 @@
       "updated_at": "2021-06-02T16:53:33.577Z"
   }
 ]
+
+export { searchData };

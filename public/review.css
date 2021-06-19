@@ -25,11 +25,11 @@
     border: none;
     display: flex;
     justify-content: flex-start;
-    color: #560404;;
+    color: white;
     padding-top: 1px;
     padding-left: 15px;
     font-weight: bold;
-    background: linear-gradient(45deg, white, black);
+    background-color: rgb(105, 100, 100);
     clip-path: polygon(0% 0%, 26% 0%, 43% 45%, 100% 100%, 10% 44%, 0% 37%);
 }
 
@@ -40,8 +40,8 @@
   font-size: 20px;
   border-radius: 10px;
   padding: 1px;
-  color: #e5e5e5;
-  background: linear-gradient(to right, #b91b1b, transparent 75%);
+  color: black;
+  background: linear-gradient(to right, rgb(102, 162, 182), transparent 75%);
   padding-left: 10px;
   Z-index: 99;
 }
@@ -51,7 +51,7 @@
     height: 50px;
     position: absolute;
     z-index: 102;
-    background: linear-gradient(45deg, pink, red);
+    background-color:  rgb(102, 162, 182);
     clip-path: polygon(48% 61%, 30% 40%, -9% 103%, 7% 100%);
 }
 
@@ -61,7 +61,7 @@
     position: absolute;
     z-index: 102;
     border-radius: 10px;
-    background: linear-gradient(45deg, pink, red);
+    background-color:  rgb(102, 162, 182);
     clip-path: polygon(97% 98%, 85% 85%, 92% 57%,100% 46%);
 }
 .warningButtonPart2 {
@@ -70,7 +70,7 @@
     position: absolute;
     z-index: 100;
     border-radius: 10px;
-    background: linear-gradient(45deg, pink, red);
+    background-color:  rgb(102, 162, 182);
     clip-path: polygon(33% 36%, 46% 66%, 95% 0%,86% 0%);
 }
 

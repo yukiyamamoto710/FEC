@@ -28,7 +28,7 @@ exports[`matches snapShot 1`] = `
               data-testid="button0"
               id=" 1"
               label="emptyStar"
-              namew=""
+              name=""
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -41,7 +41,7 @@ exports[`matches snapShot 1`] = `
               data-testid="button1"
               id=" 2"
               label="emptyStar"
-              namew=""
+              name=""
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -54,7 +54,7 @@ exports[`matches snapShot 1`] = `
               data-testid="button2"
               id=" 3"
               label="emptyStar"
-              namew=""
+              name=""
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -67,7 +67,7 @@ exports[`matches snapShot 1`] = `
               data-testid="button3"
               id=" 4"
               label="emptyStar"
-              namew=""
+              name=""
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -80,7 +80,7 @@ exports[`matches snapShot 1`] = `
               data-testid="button4"
               id=" 5"
               label="emptyStar"
-              namew=""
+              name=""
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -121,8 +121,8 @@ exports[`matches snapShot 1`] = `
                 <div
                   style={
                     Object {
-                      "backgroundColor": "green",
-                      "border": "5px solid green",
+                      "backgroundColor": "rgb(102, 162, 182)",
+                      "border": "5px solid rgb(102, 162, 182)",
                       "width": "NaN%",
                     }
                   }
@@ -150,8 +150,8 @@ exports[`matches snapShot 1`] = `
                 <div
                   style={
                     Object {
-                      "backgroundColor": "green",
-                      "border": "5px solid green",
+                      "backgroundColor": "rgb(102, 162, 182)",
+                      "border": "5px solid rgb(102, 162, 182)",
                       "width": "NaN%",
                     }
                   }
@@ -179,8 +179,8 @@ exports[`matches snapShot 1`] = `
                 <div
                   style={
                     Object {
-                      "backgroundColor": "green",
-                      "border": "5px solid green",
+                      "backgroundColor": "rgb(102, 162, 182)",
+                      "border": "5px solid rgb(102, 162, 182)",
                       "width": "NaN%",
                     }
                   }
@@ -208,8 +208,8 @@ exports[`matches snapShot 1`] = `
                 <div
                   style={
                     Object {
-                      "backgroundColor": "green",
-                      "border": "5px solid green",
+                      "backgroundColor": "rgb(102, 162, 182)",
+                      "border": "5px solid rgb(102, 162, 182)",
                       "width": "NaN%",
                     }
                   }
@@ -237,8 +237,8 @@ exports[`matches snapShot 1`] = `
                 <div
                   style={
                     Object {
-                      "backgroundColor": "green",
-                      "border": "5px solid green",
+                      "backgroundColor": "rgb(102, 162, 182)",
+                      "border": "5px solid rgb(102, 162, 182)",
                       "width": "NaN%",
                     }
                   }
