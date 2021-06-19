@@ -4,7 +4,7 @@ import Header from './Header.jsx';
 import Overview from './Overview/Overview.jsx';
 import RelatedItems from './RelatedItems/RelatedItems.jsx';
 import Reviews from './Reviews/Reviews1.jsx';
-// import QA from './QA/QA.jsx';
+import QA from './Reviews/QA/Qa.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -52,8 +52,8 @@ class App extends React.Component {
           <Header />
           <Overview id = {this.state.targetId} item = {this.state.currentItem}/>
           <RelatedItems id={this.state.targetId} changeProductId={this.changeProductId} currentItem={this.state.currentItem}/>
-          {/* <QA id={this.state.targetId} questions={this.state.questions}/> */}
-          <Reviews id = { this.state.targetId}/>
+          <QA id ={this.state.targetId}/>
+          <Reviews id={this.state.targetId} productRating={this.state.currentItem} />
         </div>
       )
     } else {

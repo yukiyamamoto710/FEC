@@ -105,3 +105,71 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.QAcontainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  overflow: auto;
+  position: relative;
+}
+.QAheader {
+  display:flex;
+  font-size: 16px;
+  margin-top: 2px;
+  border-top: 1px solid black;
+  justify-content: space-between;
+}
+.QAbody {
+  display:flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.answerBody {
+  display: flex;
+  margin:10px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.QAanswerbutton {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  border-color: white;
+  border-bottom: 1px solid black;
+}
+
+.QAname {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.QAnameBody {
+  display: flex;
+  font-size: 12px;
+}
+
+.QAPopOut{
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 365px;
+}
+
+.Qabody {
+  width: 100%;
+  height: 250px;
+  overflow: auto;
+}
+.Qabody1 {
+  width: 90%;
+}
+
+.popoutQA {
+  position: relative;
+  bottom: 400px;
+}

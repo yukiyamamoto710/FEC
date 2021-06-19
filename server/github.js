@@ -33,6 +33,7 @@ const hrapipost = (input, body, callback) => {
       callback(null, datas);
     })
     .catch((err) => {
+      console.log(err)
       callback(err);
     });
 };
@@ -49,6 +50,7 @@ const hrapiput = (input, body, callback) => {
       callback(null, datas);
     })
     .catch((err) => {
+      console.log(err)
       callback(err);
     });
 };
