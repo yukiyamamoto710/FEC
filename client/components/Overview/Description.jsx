@@ -61,6 +61,8 @@ class Description extends React.Component {
       Quantity: 'Quantity'
     })
 
+    localStorage.setItem('item', JSON.stringify(copy));
+
 
   }
 
@@ -74,11 +76,15 @@ class Description extends React.Component {
       <>
        <div className = 'describe'>
          <div className = 'category'>{category}</div>
-         <h2 data-testid = 'header'>{name}</h2>
+         <h2 data-testid = 'header' className = 'productName'>{name}</h2>
          <div>{this.props.styleItem}</div>
          <br></br>
-         <div className = 'price'>${this.props.price}</div>
-         <span>{this.props.salePrice}</span>
+         <div className = 'price'>
+           <div>$</div>
+           <div>{this.props.price}</div>
+           <div>&nbsp;&nbsp;</div>
+           <span>{this.props.salePrice}</span>
+         </div>
          <DropDown name = {this.state.selectSize} style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU} changed = {this.state.cart}/>
          <DropDown name = {this.state.Quantity}  quant = {this.state.skuSizeSelected} callback = {this.changeQuant} changed = {this.state.cart}/>
          <AddToCart className = 'addCart' style = {styleSelected} size = {skuSizeSelected} quantity = {skuQuantSelected} callback = {this.addItem} sku = {sku}/>

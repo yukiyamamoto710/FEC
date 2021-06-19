@@ -12,6 +12,7 @@ div#app {
   color: white;
   height: 75px;
   margin-bottom: 50px;
+  border-radius: 15px;
 }
 
 .form-container {
@@ -31,4 +32,9 @@ div#app {
   background: none;
   border: none;
   color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(177, 174, 174, 0.5);
 }
