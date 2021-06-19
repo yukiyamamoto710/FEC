@@ -6,7 +6,8 @@ const getRelatedItems = (id) => {
     .then((response) => {
       var promises = [];
       for (var i = 0; i < response.data.length; i++) {
-        promises.push(axios.get(`getAll/${response.data[i]}`).then((res)=>res.data));
+        promises.push(axios.get(`getAll/${response.data[i]}`)
+          .then((res)=>res.data));
       }
       return Promise.all(promises)
     })
