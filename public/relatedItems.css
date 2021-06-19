@@ -75,17 +75,17 @@
 }
 
 /* Outfit component */
-.add-button {
+/* .add-button {
   border: 1px solid rgb(177, 174, 174, 0.5);
   font-size: 24px;
   padding: 10px 30px;
-}
+} */
 
-.add-button:hover {
+/* .add-button:hover {
   background-color: rgb(177, 174, 174, 0.5);
-}
+} */
 
-.add-button,
+.plus,
 .add-message {
   text-transform: uppercase;
   font-weight: bold;
@@ -95,6 +95,14 @@
   text-align: center;
   margin: auto;
   cursor: pointer;
+}
+
+.plus {
+  font-size: 42px;
+}
+
+.add-message {
+  font-size: 16px;
 }
 
 /* Comparison component */

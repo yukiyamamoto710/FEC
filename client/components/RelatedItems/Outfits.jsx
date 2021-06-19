@@ -21,8 +21,8 @@ const Outfits = (props) => {
           data-testid="slideLeft">
             &lt;
         </button>
-        <li className="card empty">
-            <button data-testid="add-button" className="add-button" onClick={()=>addToOutfit()}>+</button>
+        <li className="card empty add-button" data-testid="add-button" onClick={()=>addToOutfit()}>
+            <p className="plus">+</p>
             <p className="add-message">Add to Outfit</p>
         </li>
         {!state.displayed.length ? null: state.displayed.map((product, i)=>
