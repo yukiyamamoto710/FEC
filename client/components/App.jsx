@@ -28,9 +28,6 @@ class App extends React.Component {
     this.idGet = this.idGet.bind(this);
   }
 
-
-
-
   componentDidMount(){
     var query = window.location.search
     var queryId = query.slice(query.length - 5);
