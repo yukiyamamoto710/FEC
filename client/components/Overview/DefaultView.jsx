@@ -113,7 +113,7 @@ class DefaultView extends React.Component {
           //need to refactor this later - when props index and regular index are the same this highights the wrong thing
           isHighlighted = this.props.index === index ? true : false;
           return(
-            <Thumbnail index = {index} thumbnail = {item.thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {isHighlighted} highlightedThumb = 'highlightedThumb' noHighlight = 'thumbnail'/>
+            <Thumbnail index = {index} thumbnail = {item.thumbnail_url} callback = {this.changeThumbNail} key = {index} identifier = {isHighlighted} highlightedThumb = 'highlightedThumb' noHighlight = 'thumbnailE'/>
           );
         })}
       </div>
