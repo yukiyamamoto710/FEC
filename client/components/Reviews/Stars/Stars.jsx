@@ -24,7 +24,7 @@ const Stars = (props) => {
             tabIndex={0}
             role="button"
             label={checkStar(index, rate)}
-            namew={name}
+            name={name}
             id={`${name} ${index + 1}`}
             onClick={starClick}
           />
