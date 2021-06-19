@@ -24,7 +24,7 @@
   width: 100px;
   height: 100px;
   margin: 10px;
-  border-width: 5px;
+  border-width: 3px;
   border-style: solid;
   border-color: grey;
 
@@ -36,8 +36,8 @@
   flex-wrap: wrap;
   z-index: 2;
   position: absolute;
-  height: 500px;
-  top: 5%;
+  height: 450px;
+  top: 8%;
   padding-left: 3px;
 }
 .thumbnailE {
@@ -59,9 +59,9 @@
   bottom: -13em;
   min-width: 500px;
   max-width: 90%;
-  background-color: rgb(0, 0, 0, 0.5);
+  /* background-color: rgb(0, 0, 0, 0.5); */
   justify-content: space-between;
-  border-radius: 10%;
+  border-radius: 30px;
 
 
 }
@@ -84,6 +84,7 @@
   border-width: 2px;
   border-style: solid;
   border-color:rgb(102, 162, 182);
+  box-shadow: 0px 0px 10px 1px rgb(102, 162, 182);
   border-radius: 100%;
   border-radius: 10%;
 }
@@ -95,7 +96,8 @@
   margin: 5px;
   border-width: 2px;
   border-style: solid;
-  border-color: rgb(102, 162, 182);
+  border-color:rgb(102, 162, 182);
+  box-shadow: 0px 0px 10px 1px rgb(102, 162, 182);
   border-radius: 10%;
 }
 
@@ -111,7 +113,10 @@
   position: relative;
   border-radius: 10%;
   z-index: 1;
+  animation: slide 1s;
 }
+
+
 
 .Picture {
   /* display: inline;
@@ -122,7 +127,14 @@
   max-height: 600px;
   min-height: 600px;
   min-width: 500px;
-  border-radius: 10%;
+  border-radius: 20px;
+
+}
+
+.Picture[slide = 'right'] {
+}
+
+@keyframes slide {
 
 }
 
@@ -136,6 +148,7 @@
   z-index: 2;
   top: -10%;
   position: absolute;
+  border-radius: 30px;
 
   /* margin-bottom: 25px; */
   /* max-height: 800px;
@@ -159,10 +172,11 @@
 }
 
 .zoomedPicture {
-  /* -webkit-transform: scale(3.5);
+  /*
     -moz-transform: scale(3.5);
     -o-transform: scale(3.5);
     -ms-transform: scale(3.5); */
+    -webkit-transform: scale(2.5);
     transform: scale(2.5);
     position: absolute;
     overflow: auto;
@@ -176,17 +190,10 @@
     /* --x: 0px;
     --y: 0px;
     background-position: var(--x) var(--y); */
-    /* -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate; */
 
 
 }
 
-/* @-webkit-keyframes moveX {
-  from { left: 0; } to { left: 400px; }
-}
-@-webkit-keyframes moveY {
-  from { top: 0; } to { top: 200px; }
-} */
 
 .zoomedPicture:hover {
   cursor: zoom-out;
@@ -194,9 +201,17 @@
 
 .exit {
   z-index: 3;
-  background-color: white;
-  position: absolute;
-  top: -10%;
+    font-weight:700;
+    font-size: 30px;
+    position: absolute;
+    top: -8%;
+    background: none;
+    color:  white;
+    border: none;
+}
+
+.exit:hover {
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
 
@@ -237,15 +252,16 @@ h3 {
     display: inline;
     z-index: 1;
     position: absolute;
-    left: 3%;
+    left: 4.5%;
     margin-top: 4%;
     border-radius: 80%;
     border-width: 2px;
     border-style: solid;
-    border-color: white;
     height: 18px;
     width: 18px;
-    background-color: grey;
+    color: white;
+    border-color: grey;
+    background-color: rgba(255, 255, 255, 0.1);
 
 }
 
@@ -253,16 +269,21 @@ h3 {
     display: inline;
     z-index: 1;
     position: absolute;
-    left: 3%;
-    margin-top: 90%;
+    left: 4.5%;
+    margin-top: 100%;
     border-radius: 80%;
     border-width: 2px;
     border-style: solid;
-    border-color: white;
     height: 18px;
     width: 18px;
     color: white;
-    background-color: grey;
+    border-color: grey;
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.upArrow:hover, .downArrow:hover {
+  border-color: white;
 }
 
 .smallLeftArrow {
@@ -329,6 +350,8 @@ h3 {
 
 .price {
   display: flex;
+  margin-bottom: 10px;
+
 }
 
 .category {
@@ -468,7 +491,7 @@ h3 {
     background-color: rgb(102, 162, 182);
 }
 
-.thumbnailE:hover, .highlightedThumb:hover, .thumbnailIcon:hover, .addCart:hover, .picture:hover, .smallLeftArrow:hover, .smallRightArrow:hover,  .leftArrow:hover, .rightArrow:hover{
+.thumbnailE:hover, .highlightedThumb:hover, .thumbnailIcon:hover, .addCart:hover, .picture:hover, .smallLeftArrow:hover, .smallRightArrow:hover,  .leftArrow:hover, .rightArrow:hover, .dropbtn:hover, .show-content:hover, .upArrow:hover, .downArrow:hover{
   cursor: pointer;
 
 }
@@ -477,12 +500,19 @@ h3 {
 
   border-width: 5px;
   border-style: solid;
-  border-color: rgb(102, 162, 182);
+  border-color:rgb(102, 162, 182);
+  box-shadow: 0px 0px 10px 1px rgb(102, 162, 182);
 
 }
 
 .bigPicture:hover {
 
-  /* filter: brightness(110%); */
+  opacity: 0.8;
+}
+
+
+
+.productName {
+  font-size: 30px;
 }
 
