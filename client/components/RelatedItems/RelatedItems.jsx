@@ -78,7 +78,7 @@ class RelatedItems extends React.Component {
         { relatedItemsList.length !== 0 ?
         <div data-testid="relatedItems">
           <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId} currentItem={currentItem}/>
-          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit}/>
+          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit} changeProductId={changeProductId}/>
         </div> : null }
       </div>
     )

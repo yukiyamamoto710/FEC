@@ -36,7 +36,7 @@ class Comparison extends React.Component {
         <div data-testid="modal" className="modal">
           <div className="modal_content">
             <span data-testid="close-button" className="close" onClick={()=>this.props.togglePop()}>&times;</span>
-            <p>Comparing</p>
+            <p className="comparing">Comparing</p>
             <table>
               <thead>
                 <tr className="column">
