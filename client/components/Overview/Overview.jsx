@@ -31,7 +31,7 @@ class Overview extends React.Component {
   }
 
   componentDidMount() {
-    console.log('this is props item', this.props.item);
+    // console.log('this is props item', this.props.item);
     this.setState({
       stylesList: this.props.item,
       description: this.props.item
@@ -154,7 +154,7 @@ class Overview extends React.Component {
     //have to to map through the styles array we get back
     //console.log('this is STATE', this.state.stylesList);
     if(this.state.stylesList.length === 0) {
-      console.log(this.state.description);
+      // console.log(this.state.description);
       return (
        <div>LOADING</div>
       );

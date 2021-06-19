@@ -1,0 +1,45 @@
+.searchbody {
+  display: flex;
+  max-width: 1000px;
+  flex-direction: column;
+  margin: 5%;
+  font-size: 22px;
+}
+
+.searchCategory{
+  display: flex;
+}
+.searchButton {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  color: white;
+  font-size: 12px;
+  margin: 5px;
+  border-color: white;
+  border-radius: 30px;
+  padding: 5px;
+  background-color: rgb(102, 162, 182);
+}
+
+.searchCard {
+  display: inline-block;
+  border: 1px solid rgb(177, 174, 174, 0.5);
+  margin: 10px;
+  box-sizing: border-box;
+  max-width: 200px;
+  border-radius: 10%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.searchCardBody{
+  padding: 5%;
+  padding-top: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hi{
+  display:flex;
+}

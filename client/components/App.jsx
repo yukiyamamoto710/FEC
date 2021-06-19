@@ -39,7 +39,6 @@ class App extends React.Component {
     let data1 = [];
     let bool = sessionStorage.getItem('isSearch');
     bool = JSON.parse(bool);
-    console.log(bool,'ereasd')
     if(bool !== null){
       if(bool.isSearch === false) {
         bool = false
@@ -97,7 +96,6 @@ class App extends React.Component {
   }
 
   submit() {
-    console.log(this.state.list,'sdad')
     const txt =this.state.search
     if (txt.length >= 3) {
       const arr = [...this.state.list];
@@ -112,7 +110,6 @@ class App extends React.Component {
 
   idGet(event){
     const id = event.target.id;
-    console.log(id,'idsdada')
     sessionStorage.setItem('isSearch',JSON.stringify({isSearch:false}));
     window.location.assign(`http://localhost:3000/?product_id=${id}`)
   }

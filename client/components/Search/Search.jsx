@@ -50,32 +50,89 @@ const Search = (props) => {
     }
   }
 
+  let rowNum = Math.floor(list.length/4);
+  if (rowNum * 4 < list.length) {
+    rowNum = rowNum + 1;
+  }
+  let rowArray = [...Array(rowNum)];
+
+  let colNum = Math.floor(category.length/6);
+  if (colNum * 6 < category.length) {
+    colNum = colNum + 1;
+  }
+  let colArray = [...Array(colNum)];
 
   if(list.length !== 0) {
     return (
       <div>
-        <div>
+        <div className="searchbody">
           Category:
-          {category.map((i, index)=>{
+          {colArray.map((j,index)=>{
+            const arr = list.slice(index*6, index*6+6)
             return (
-              <div key={index} type="button" id={i} onClick={handleClickGategory}>
-                {i}
+              <div className="searchCategory" key={index}>
+                {category.map((i, index)=>{
+                  return (
+                    <div
+                      key={index}
+                      type="button"
+                      id={i}
+                      onClick={handleClickGategory}
+                      className="searchButton"
+                    >
+                      {i}
+                    </div>)
+                  })}
+              </div>
+            )})}
+        </div>
+        <div className="searchCardBody">
+            {rowArray.map((j,index)=>{
+              const arr = list.slice(index*4, index*4+4)
+              return (
+                <div className="hi" key={index}>
+                  {arr.map((i)=>{
+                  return(
+                    <div key={i.id} >
+                      <div className="searchCard">
+                        Name:<Message body={i.name} />
+                        Description:<Message body={i.description}/>
+                        Price:  ${i.default_price} USD
+                      <button
+                        id={i.id}
+                        className="searchButton"
+                        onClick={idGet}
+                      >
+                        Go!
+                      </button>
+                    </div>
+                  </div>
+                  )
+                 })}
+                </div>
+              )
+            })}
+
+          {/* {list.map((i)=>{
+            return (
+              <div key={i.id} >
+                <div className="searchCard">
+                    Name:<Message body={i.name} />
+                    Description:<Message body={i.description}/>
+                    Price:${i.default_price}USD
+                    <button
+                      id={i.id}
+                      className="searchButton"
+                      onClick={idGet}
+                    >
+                      Go!
+                    </button>
+                </div>
               </div>
             )
-          })}
+          })} */}
         </div>
-        {list.map((i)=>{
-          return (
-            <div key={i.id} >
-              <div>
-                  Name:<Message body={i.name} />
-                  Description:<Message body={i.description}/>
-                  Price:{i.default_price}
-                  <button id={i.id} onClick={idGet}>Go!</button>
-              </div>
-            </div>
-          )
-        })}
+
       </div>
     )
   } else {
