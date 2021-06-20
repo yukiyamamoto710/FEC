@@ -6,7 +6,7 @@ const RelatedProducts = (props) => {
   const {relatedItemsList, id, changeProductId, currentItem} = props;
 
   const [idx, setIndex] = useState(0);
-  const [displayed, setDisplay] = useState([])
+  const [displayed, setDisplay] = useState(relatedItemsList.slice(0, 4))
 
   useEffect(() => {
     setDisplay(relatedItemsList.slice(0, 4))
