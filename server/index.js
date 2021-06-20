@@ -34,6 +34,19 @@ app.post('/post/review', (req, res) => {
   });
 });
 
+app.put('/reviews/report', (req, res) => {
+  api.hrapiput(req.body.params.endpoint, req.body.body, (err,data) => {
+    if (err) {
+      console.log(err)
+      res.status(404).send(err);
+    } else {
+      console.log(data);
+
+      res.status(200).send(data);
+    }
+  });
+});
+
 app.put('/reviews/helpful', (req, res) => {
   api.hrapiput(req.body.params.endpoint, req.body.body, (err,data) => {
     if (err) {
