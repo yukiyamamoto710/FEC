@@ -71,7 +71,7 @@ const post = (input, quantity, sku, callback) => {
   return axios(option)
     .then((data) => {
       let datas = data.data
-      console.log(data);
+      // console.log(data);
       callback(null, datas)
     })
     .catch((err) => {

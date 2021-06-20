@@ -35,11 +35,12 @@ app.post('/post/review', (req, res) => {
 });
 
 app.put('/reviews/helpful', (req, res) => {
-  api.hrapiput(req.body.params.endpoint, req.body.body, (err) => {
+  api.hrapiput(req.body.params.endpoint, req.body.body, (err,data) => {
     if (err) {
+      console.log(err)
       res.status(404).send(err);
     } else {
-      // console.log(data);
+      console.log(data);
 
       res.status(200).send(data);
     }
@@ -48,7 +49,7 @@ app.put('/reviews/helpful', (req, res) => {
 
 app.put('/qa/helpful', (req, res) => {
   // console.log(req.body)
-  api.hrapiput(req.body.params.endpoint, req.body, (err) => {
+  api.hrapiput(req.body.params.endpoint, req.body, (err,data) => {
     if (err) {
       res.status(404).send(err);
     } else {
@@ -59,7 +60,7 @@ app.put('/qa/helpful', (req, res) => {
 
 app.put('/qa/report', (req, res) => {
   // console.log(req.body)
-  api.hrapiput(req.body.params.endpoint, req.body, (err) => {
+  api.hrapiput(req.body.params.endpoint, req.body, (err,data) => {
     if (err) {
       res.status(404).send(err);
     } else {
