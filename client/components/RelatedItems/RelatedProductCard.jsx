@@ -9,9 +9,9 @@ class RelatedProductCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mainImage: '', // url of the main image
-      seen: false, // whether a modal is displayed or not
-      display: false, // whether additional images are displayed or not
+      mainImage: '',
+      seen: false,
+      display: false,
       additionalImages: []
     }
     this.togglePop = this.togglePop.bind(this);
@@ -71,16 +71,34 @@ class RelatedProductCard extends React.Component {
       <li data-testid="card" className="card" onClick={this.changeProductId}>
         <div className="parent">
           {this.state.seen ?
-          <Comparison togglePop={this.togglePop} product={product} id={id} currentItem={currentItem}/> : null}
-          <div data-testid="related-product-card" onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
-            <span data-testid="star" className="star" onClick={this.togglePop}>&#9734;</span>
+          <Comparison
+            togglePop={this.togglePop}
+            product={product} id={id}
+            currentItem={currentItem}/>
+            : null}
+          <div data-testid="related-product-card"
+            onMouseOver={this.displayAdditionalImages}
+            onMouseLeave={this.hideAdditionalImages}>
+            <span data-testid="star" className="star"
+              onClick={this.togglePop}>
+                &#9734;
+            </span>
             <div className="related-product-img">
-            <img className="related-product-img" src={this.state.mainImage} alt={product.name}/></div>
-            {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
+            <img className="related-product-img"
+              src={this.state.mainImage}
+              alt={product.name}/></div>
+            {!this.state.display ? null:
+              <AdditionalImages
+                images={this.state.additionalImages}
+                changeMainImage={this.changeMainImage}/>}
           </div>
           <div className="product-info">
-            <div data-testid="category" className="product-category">{product.category}</div>
-            <div data-testid="name" className="product-name">{product.name}</div>
+            <div data-testid="category" className="product-category">
+              {product.category}
+            </div>
+            <div data-testid="name" className="product-name">
+              {product.name}
+            </div>
             <Price product={product}/>
             <Rating rating={product.ratings} />
           </div>
