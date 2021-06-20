@@ -11,8 +11,6 @@ Our Front-End Capstone - Project Catwalk. The client has a significantly outdate
 * [React](https://reactjs.org/)
 * [Express](http://expressjs.com/)
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 To get a local copy up and running follow these simple steps.
@@ -82,6 +80,7 @@ Distributed under the GG License. See `LICENSE` for more information. -->
 ## Contact
 
 Evans Ding - (https://www.linkedin.com/in/evans-ding-733031126) - evansding@gmail.com
+Yuki Yamamoto - (https://www.linkedin.com/in/yukiyamamoto1) - yukiyamamoto710@gmail.com
 
 Project Link: [https://github.com/gilded-gliders/FEC.git](https://github.com/gilded-gliders/FEC.git)
 

@@ -2,7 +2,6 @@ import React from 'react';
 import RelatedProducts from './RelatedProducts.jsx';
 import Outfits from './Outfits.jsx';
 import getRelatedItems from './getRelatedItems.jsx';
-import axios from 'axios';
 import PropTypes from 'prop-types';
 
 class RelatedItems extends React.Component {
@@ -19,7 +18,7 @@ class RelatedItems extends React.Component {
 
   componentDidMount() {
     const outfit = JSON.parse(localStorage.getItem('outfit'));
-    const related = Promise.resolve(getRelatedItems(this.props.id))
+    const related = getRelatedItems(this.props.id);
     related.then((response) => {
       this.setState({
         currentItem: this.props.currentItem,
@@ -28,18 +27,6 @@ class RelatedItems extends React.Component {
       })
     }).catch((err)=>console.log(err))
   }
-
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.id !== this.props.id) {
-  //     const related = Promise.resolve(getRelatedItems(this.props.id))
-  //     related.then((response) => {
-  //       this.setState({
-  //         currentItem: this.props.currentItem,
-  //         relatedItemsList: response
-  //       })
-  //     }).catch((err)=>console.log(err))
-  //   }
-  // }
 
   addToOutfit() {
     var ids = [];
@@ -51,7 +38,6 @@ class RelatedItems extends React.Component {
       this.setState({
         selectedItemsList: updated
       })
-      // update a local storage
       localStorage.setItem('outfit', JSON.stringify(updated));
     }
   }
@@ -66,7 +52,6 @@ class RelatedItems extends React.Component {
     this.setState({
       selectedItemsList: updated
     })
-    // update a local storage
     localStorage.setItem('outfit', JSON.stringify(updated));
   }
 
@@ -77,9 +62,19 @@ class RelatedItems extends React.Component {
       <div>
         { relatedItemsList.length !== 0 ?
         <div data-testid="relatedItems">
-          <RelatedProducts id={id} relatedItemsList={relatedItemsList} changeProductId={changeProductId} currentItem={currentItem}/>
-          <Outfits selectedItemsList={selectedItemsList} addToOutfit={this.addToOutfit} removeFromOutfit={this.removeFromOutfit} changeProductId={changeProductId}/>
-        </div> : null }
+          <RelatedProducts
+            id={id}
+            relatedItemsList={relatedItemsList}
+            changeProductId={changeProductId}
+            currentItem={currentItem}
+          />
+          <Outfits
+            selectedItemsList={selectedItemsList}
+            addToOutfit={this.addToOutfit}
+            removeFromOutfit={this.removeFromOutfit}
+            changeProductId={changeProductId}
+          />
+        </div>: null }
       </div>
     )
   }

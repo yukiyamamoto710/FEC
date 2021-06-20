@@ -1,4 +1,17 @@
 TN:
+<<<<<<< HEAD
+SF:client/components/RelatedItems/AdditionalImages.jsx
+FN:4,AdditionalImages
+FN:8,toggleMainImage
+FN:15,onClick
+FN:22,onClick
+FNF:4
+FNH:4
+FNDA:6,AdditionalImages
+FNDA:4,toggleMainImage
+FNDA:1,onClick
+FNDA:1,onClick
+=======
 SF:client/components/Overview/AddToCart.jsx
 FN:4,AddToCart
 FN:6,handleClick
@@ -64,11 +77,43 @@ FNDA:1,changeThumbNail
 FNDA:1,handleRight
 FNDA:1,handleLeft
 FNDA:0,renderThumbnail
+<<<<<<< HEAD
+FNDA:5,render
+>>>>>>> main
+=======
 FNDA:6,render
+>>>>>>> main
 DA:1,1
 DA:2,1
 DA:3,1
 DA:4,1
+<<<<<<< HEAD
+DA:5,6
+DA:6,6
+DA:7,6
+DA:8,6
+DA:9,4
+DA:10,4
+DA:11,6
+DA:12,6
+DA:13,6
+DA:14,6
+DA:15,6
+DA:16,6
+DA:17,6
+DA:18,6
+DA:19,6
+DA:20,6
+DA:21,6
+DA:22,6
+DA:23,6
+DA:24,6
+DA:25,6
+DA:26,6
+DA:27,6
+DA:28,6
+DA:29,6
+=======
 DA:5,1
 DA:6,1
 DA:7,1
@@ -94,6 +139,7 @@ DA:26,1
 DA:27,1
 DA:28,1
 DA:29,1
+>>>>>>> main
 DA:30,1
 DA:31,1
 DA:32,1
@@ -101,6 +147,18 @@ DA:33,1
 DA:34,1
 DA:35,1
 DA:36,1
+<<<<<<< HEAD
+LF:36
+LH:36
+BRDA:4,0,0,6
+BRDA:23,1,0,5
+BRDA:8,2,0,4
+BRDA:15,3,0,1
+BRDA:20,4,0,23
+BRDA:22,5,0,1
+BRF:6
+BRH:6
+=======
 DA:37,1
 DA:38,1
 DA:39,1
@@ -208,12 +266,21 @@ BRDA:78,8,0,1
 BRDA:79,9,0,0
 BRDA:88,10,0,0
 BRDA:95,11,0,1
+<<<<<<< HEAD
+BRDA:98,12,0,4
+BRDA:112,13,0,30
+BRDA:114,14,0,0
+BRF:15
+BRH:11
+>>>>>>> main
+=======
 BRDA:98,12,0,5
 BRDA:112,13,0,36
 BRDA:114,14,0,1
 BRDA:114,15,0,35
 BRF:16
 BRH:13
+>>>>>>> main
 end_of_record
 TN:
 SF:client/components/Overview/Description.jsx
@@ -518,6 +585,15 @@ BRF:13
 BRH:9
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:client/components/RelatedItems/OutfitCard.jsx
+FN:6,OutfitCard
+FN:10,onClick
+FNF:2
+FNH:1
+FNDA:12,OutfitCard
+FNDA:0,onClick
+=======
 SF:client/components/Overview/DropDownSelection.jsx
 FN:5,DropDownSelection
 FN:12,handleClick
@@ -526,16 +602,48 @@ FNF:3
 FNH:3
 FNDA:8,DropDownSelection
 FNDA:1,handleClick
+<<<<<<< HEAD
+FNDA:43,render
+>>>>>>> main
+=======
 FNDA:16,render
+>>>>>>> main
 DA:1,1
 DA:2,1
 DA:3,1
 DA:4,1
 DA:5,1
+<<<<<<< HEAD
+<<<<<<< HEAD
+DA:6,1
+DA:7,12
+DA:8,12
+DA:9,12
+DA:10,12
+DA:11,12
+DA:12,12
+DA:13,12
+DA:14,12
+DA:15,12
+DA:16,12
+DA:17,12
+DA:18,12
+DA:19,12
+DA:20,12
+DA:21,12
+DA:22,1
+DA:23,1
+=======
+DA:6,22
+DA:7,22
+DA:8,22
+DA:9,22
+=======
 DA:6,8
 DA:7,8
 DA:8,8
 DA:9,8
+>>>>>>> main
 DA:10,1
 DA:11,1
 DA:12,1
@@ -550,17 +658,144 @@ DA:20,1
 DA:21,0
 DA:22,0
 DA:23,0
+>>>>>>> main
 DA:24,1
 DA:25,1
 DA:26,1
 DA:27,1
 DA:28,1
+<<<<<<< HEAD
+<<<<<<< HEAD
+LF:28
+LH:28
+BRDA:6,0,0,12
+BRF:1
+BRH:1
+end_of_record
+TN:
+SF:client/components/RelatedItems/Outfits.jsx
+FN:5,Outfits
+FN:19,onClick
+FN:25,onClick
+FN:32,onClick
+FNF:4
+FNH:1
+FNDA:7,Outfits
+FNDA:0,onClick
+FNDA:0,onClick
+FNDA:0,onClick
+DA:1,1
+DA:2,1
+DA:3,1
+DA:4,1
+DA:5,1
+DA:6,7
+DA:7,7
+DA:8,7
+DA:9,7
+DA:10,7
+DA:11,3
+DA:12,7
+DA:13,7
+DA:14,7
+DA:15,7
+DA:16,7
+DA:17,7
+DA:18,7
+DA:19,7
+DA:20,7
+DA:21,7
+DA:22,7
+DA:23,7
+DA:24,7
+DA:25,7
+DA:26,7
+DA:27,7
+DA:28,7
+DA:29,7
+DA:30,7
+DA:31,7
+DA:32,7
+DA:33,7
+DA:34,7
+DA:35,7
+DA:36,7
+DA:37,7
+DA:38,7
+DA:39,7
+DA:40,7
+DA:41,7
+DA:42,1
+DA:43,1
+DA:44,1
+DA:45,1
+DA:46,1
+DA:47,1
+DA:48,1
+DA:49,1
+LF:49
+LH:49
+BRDA:5,0,0,7
+BRDA:28,1,0,3
+BRDA:28,2,0,3
+BRDA:10,3,0,3
+BRDA:28,4,0,8
+BRF:5
+BRH:5
+end_of_record
+TN:
+SF:client/components/RelatedItems/Price.jsx
+FN:3,Price
+FNF:1
+FNH:1
+FNDA:25,Price
+DA:1,1
+DA:2,1
+DA:3,1
+DA:4,25
+DA:5,1
+DA:6,1
+DA:7,1
+DA:8,1
+DA:9,1
+DA:10,1
+DA:11,24
+DA:12,24
+DA:13,24
+DA:14,24
+DA:15,24
+DA:16,25
+DA:17,1
+DA:18,1
+LF:18
+LH:18
+BRDA:3,0,0,25
+BRDA:4,1,0,24
+BRDA:4,2,0,1
+BRF:3
+BRH:3
+end_of_record
+TN:
+SF:client/components/RelatedItems/Rating.jsx
+FN:5,Rating
+FNF:1
+FNH:1
+FNDA:53,Rating
+=======
+DA:29,43
+DA:30,43
+DA:31,43
+DA:32,43
+DA:33,43
+DA:34,43
+=======
 DA:29,16
 DA:30,16
 DA:31,16
 DA:32,16
 DA:33,16
 DA:34,16
+>>>>>>> main
 DA:35,1
 DA:36,1
 DA:37,1
@@ -594,10 +829,63 @@ FNDA:0,handleRight
 FNDA:0,handleLeft
 FNDA:1,zoomIn
 FNDA:0,move
+>>>>>>> main
 DA:1,1
 DA:2,1
 DA:3,1
 DA:4,1
+<<<<<<< HEAD
+<<<<<<< HEAD
+DA:5,1
+DA:6,53
+DA:7,53
+DA:8,53
+DA:9,53
+DA:10,53
+DA:11,53
+DA:12,53
+DA:13,53
+DA:14,53
+DA:15,53
+DA:16,53
+DA:17,1
+DA:18,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:22,1
+LF:22
+LH:22
+BRDA:5,0,0,53
+BRF:1
+BRH:1
+end_of_record
+TN:
+SF:client/components/RelatedItems/RelatedItems.jsx
+FN:8,RelatedItems
+FN:22,componentDidMount
+FN:37,componentDidUpdate
+FN:52,getRelatedItemsIds
+FN:87,getAllProductInfo
+FN:132,addToOutfit
+FN:144,removeFromOutfit
+FN:158,render
+FNF:8
+FNH:5
+FNDA:1,RelatedItems
+FNDA:1,componentDidMount
+FNDA:0,componentDidUpdate
+FNDA:1,getRelatedItemsIds
+FNDA:1,getAllProductInfo
+FNDA:0,addToOutfit
+FNDA:0,removeFromOutfit
+FNDA:1,render
+DA:1,1
+DA:2,1
+DA:3,1
+DA:4,1
+=======
+>>>>>>> main
 DA:5,1
 DA:6,1
 DA:7,1
@@ -612,11 +900,60 @@ DA:15,1
 DA:16,1
 DA:17,1
 DA:18,1
+<<<<<<< HEAD
+DA:19,1
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+DA:26,1
+DA:27,0
+DA:28,0
+=======
+DA:5,4
+DA:6,4
+DA:7,4
+DA:8,4
+DA:9,4
+DA:10,4
+DA:11,4
+DA:12,4
+DA:13,4
+DA:14,4
+DA:15,4
+DA:16,4
+DA:17,4
+DA:18,4
+=======
+>>>>>>> main
 DA:19,0
 DA:20,0
 DA:21,0
 DA:22,0
 DA:23,0
+<<<<<<< HEAD
+DA:24,4
+DA:25,4
+DA:26,1
+DA:27,1
+DA:28,1
+>>>>>>> main
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,1
+<<<<<<< HEAD
+DA:33,0
+DA:34,0
+DA:35,1
+DA:36,1
+DA:37,1
+=======
+DA:33,4
+DA:34,4
+=======
 DA:24,1
 DA:25,1
 DA:26,0
@@ -628,15 +965,37 @@ DA:31,0
 DA:32,0
 DA:33,1
 DA:34,1
+>>>>>>> main
 DA:35,0
 DA:36,0
 DA:37,0
+>>>>>>> main
 DA:38,0
 DA:39,0
 DA:40,0
 DA:41,0
+<<<<<<< HEAD
+<<<<<<< HEAD
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,1
+DA:52,1
+DA:53,1
+DA:54,1
+=======
+DA:42,4
+DA:43,4
+=======
 DA:42,1
 DA:43,1
+>>>>>>> main
 DA:44,1
 DA:45,1
 DA:46,1
@@ -648,6 +1007,7 @@ DA:51,0
 DA:52,0
 DA:53,0
 DA:54,0
+>>>>>>> main
 DA:55,0
 DA:56,0
 DA:57,0
@@ -659,6 +1019,132 @@ DA:62,0
 DA:63,0
 DA:64,0
 DA:65,0
+<<<<<<< HEAD
+DA:66,1
+DA:67,0
+DA:68,0
+DA:69,1
+DA:70,1
+DA:71,1
+DA:72,1
+DA:73,1
+DA:74,1
+DA:75,1
+DA:76,1
+DA:77,1
+DA:78,1
+DA:79,1
+DA:80,1
+DA:81,1
+DA:82,1
+DA:83,1
+DA:84,1
+DA:85,1
+DA:86,1
+DA:87,1
+DA:88,1
+DA:89,1
+DA:90,1
+DA:91,0
+DA:92,0
+DA:93,1
+DA:94,0
+DA:95,0
+DA:96,1
+DA:97,1
+DA:98,1
+DA:99,1
+DA:100,1
+DA:101,1
+DA:102,1
+DA:103,1
+DA:104,1
+DA:105,1
+DA:106,1
+DA:107,1
+DA:108,1
+DA:109,1
+DA:110,1
+DA:111,1
+DA:112,1
+DA:113,1
+DA:114,1
+DA:115,1
+DA:116,1
+DA:117,1
+DA:118,1
+DA:119,1
+DA:120,1
+DA:121,1
+DA:122,1
+DA:123,1
+DA:124,1
+DA:125,1
+DA:126,1
+DA:127,1
+DA:128,1
+DA:129,1
+DA:130,1
+DA:131,1
+DA:132,1
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,1
+DA:144,1
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,1
+DA:158,1
+DA:159,1
+DA:160,1
+DA:161,1
+DA:162,1
+DA:163,1
+DA:164,0
+DA:165,0
+DA:166,1
+DA:167,1
+DA:168,1
+DA:169,1
+DA:170,1
+DA:171,1
+DA:172,1
+DA:173,1
+DA:174,1
+DA:175,1
+DA:176,1
+DA:177,1
+DA:178,1
+LF:178
+LH:117
+BRDA:8,0,0,1
+BRDA:22,1,0,1
+BRDA:52,2,0,1
+BRDA:87,3,0,1
+BRDA:88,4,0,1
+BRDA:158,5,0,1
+BRDA:163,6,0,0
+BRF:7
+BRH:6
+=======
 DA:66,0
 DA:67,0
 DA:68,0
@@ -701,6 +1187,21 @@ LF:103
 LH:60
 BRDA:4,0,0,1
 BRDA:10,1,0,0
+<<<<<<< HEAD
+BRDA:11,2,0,3
+BRDA:11,3,0,1
+BRDA:84,4,0,1
+BRDA:84,5,0,3
+BRDA:25,6,0,1
+BRDA:28,7,0,0
+BRDA:43,8,0,1
+BRDA:86,9,0,9
+BRDA:87,10,0,1
+BRDA:87,11,0,8
+BRF:12
+BRH:10
+>>>>>>> main
+=======
 BRDA:11,2,0,0
 BRDA:84,3,0,0
 BRDA:43,4,0,1
@@ -709,6 +1210,7 @@ BRDA:87,6,0,1
 BRDA:87,7,0,5
 BRF:8
 BRH:5
+>>>>>>> main
 end_of_record
 TN:
 SF:client/components/Overview/Overview.jsx
@@ -721,6 +1223,29 @@ FN:111,scroll
 FN:116,renderItems
 FN:153,render
 FNF:8
+<<<<<<< HEAD
+<<<<<<< HEAD
+FNH:2
+FNDA:15,RelatedProductCard
+FNDA:0,componentDidMount
+FNDA:0,togglePop
+FNDA:0,displayAdditionalImages
+FNDA:0,hideAdditionalImages
+FNDA:0,changeMainImage
+FNDA:0,changeProductId
+FNDA:13,render
+=======
+FNH:0
+FNDA:0,Overview
+FNDA:0,componentDidMount
+FNDA:0,componentDidUpdate
+FNDA:0,changePic
+FNDA:0,changeThumbnail
+FNDA:0,scroll
+FNDA:0,renderItems
+FNDA:0,render
+>>>>>>> main
+=======
 FNH:5
 FNDA:1,Overview
 FNDA:1,componentDidMount
@@ -730,6 +1255,7 @@ FNDA:0,changeThumbnail
 FNDA:0,scroll
 FNDA:1,renderItems
 FNDA:2,render
+>>>>>>> main
 DA:1,1
 DA:2,1
 DA:3,1
@@ -739,6 +1265,23 @@ DA:6,1
 DA:7,1
 DA:8,1
 DA:9,1
+<<<<<<< HEAD
+DA:10,15
+DA:11,15
+DA:12,15
+DA:13,15
+DA:14,15
+DA:15,15
+DA:16,15
+DA:17,15
+DA:18,15
+DA:19,15
+DA:20,15
+DA:21,15
+DA:22,15
+DA:23,1
+DA:24,1
+=======
 DA:10,1
 DA:11,1
 DA:12,1
@@ -746,6 +1289,29 @@ DA:13,1
 DA:14,1
 DA:15,1
 DA:16,1
+<<<<<<< HEAD
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+>>>>>>> main
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+<<<<<<< HEAD
+DA:29,1
+DA:30,1
+=======
+DA:29,0
+DA:30,0
+>>>>>>> main
+DA:31,0
+=======
 DA:17,1
 DA:18,1
 DA:19,1
@@ -761,6 +1327,7 @@ DA:28,1
 DA:29,1
 DA:30,1
 DA:31,1
+>>>>>>> main
 DA:32,1
 DA:33,1
 DA:34,1
@@ -792,6 +1359,32 @@ DA:59,1
 DA:60,1
 DA:61,1
 DA:62,1
+<<<<<<< HEAD
+DA:63,13
+DA:64,13
+DA:65,13
+DA:66,13
+DA:67,13
+DA:68,13
+DA:69,13
+DA:70,13
+DA:71,13
+DA:72,13
+DA:73,13
+DA:74,13
+DA:75,13
+DA:76,13
+DA:77,13
+DA:78,13
+DA:79,13
+DA:80,13
+DA:81,13
+DA:82,13
+DA:83,13
+DA:84,1
+DA:85,1
+DA:86,1
+=======
 DA:63,1
 DA:64,1
 DA:65,1
@@ -815,7 +1408,12 @@ DA:82,0
 DA:83,0
 DA:84,0
 DA:85,0
+<<<<<<< HEAD
+DA:86,0
+>>>>>>> main
+=======
 DA:86,1
+>>>>>>> main
 DA:87,1
 DA:88,1
 DA:89,1
@@ -824,6 +1422,17 @@ DA:91,1
 DA:92,1
 DA:93,1
 DA:94,1
+<<<<<<< HEAD
+DA:95,1
+LF:95
+LH:69
+BRDA:9,0,0,15
+BRDA:62,1,0,13
+BRDA:67,2,0,0
+BRDA:72,3,0,0
+BRF:4
+BRH:2
+=======
 DA:95,0
 DA:96,0
 DA:97,0
@@ -913,6 +1522,12 @@ DA:180,1
 DA:181,1
 DA:182,1
 LF:182
+<<<<<<< HEAD
+LH:55
+BRF:0
+BRH:0
+>>>>>>> main
+=======
 LH:155
 BRDA:16,0,0,1
 BRDA:33,1,0,1
@@ -925,6 +1540,7 @@ BRDA:153,7,0,2
 BRDA:156,8,0,1
 BRF:9
 BRH:7
+>>>>>>> main
 end_of_record
 TN:
 SF:client/components/Overview/ProductImage.jsx
@@ -985,15 +1601,68 @@ FN:5,Thumbnail
 FN:23,handleClick
 FN:28,render
 FNF:3
+<<<<<<< HEAD
+FNH:1
+FNDA:5,RelatedProducts
+FNDA:0,onClick
+FNDA:0,onClick
+=======
 FNH:3
 FNDA:30,Thumbnail
 FNDA:1,handleClick
+<<<<<<< HEAD
+FNDA:39,render
+>>>>>>> main
+=======
 FNDA:42,render
+>>>>>>> main
 DA:1,1
 DA:2,1
 DA:3,1
 DA:4,1
 DA:5,1
+<<<<<<< HEAD
+<<<<<<< HEAD
+DA:6,5
+DA:7,5
+DA:8,5
+DA:9,5
+DA:10,5
+DA:11,2
+DA:12,5
+DA:13,5
+DA:14,5
+DA:15,5
+DA:16,5
+DA:17,5
+DA:18,5
+DA:19,5
+DA:20,5
+DA:21,5
+DA:22,5
+DA:23,5
+DA:24,5
+DA:25,5
+DA:26,5
+DA:27,5
+DA:28,5
+DA:29,5
+DA:30,5
+DA:31,5
+DA:32,5
+DA:33,5
+DA:34,5
+DA:35,5
+DA:36,5
+=======
+DA:6,26
+DA:7,26
+DA:8,26
+DA:9,26
+DA:10,26
+DA:11,26
+DA:12,26
+=======
 DA:6,30
 DA:7,30
 DA:8,30
@@ -1001,6 +1670,7 @@ DA:9,30
 DA:10,30
 DA:11,30
 DA:12,30
+>>>>>>> main
 DA:13,1
 DA:14,1
 DA:15,1
@@ -1025,6 +1695,7 @@ DA:33,42
 DA:34,42
 DA:35,1
 DA:36,1
+>>>>>>> main
 DA:37,1
 DA:38,1
 DA:39,1
@@ -1036,19 +1707,39 @@ DA:44,1
 DA:45,1
 LF:45
 LH:45
+<<<<<<< HEAD
+<<<<<<< HEAD
+BRDA:5,0,0,5
+BRDA:29,1,0,4
+BRDA:10,2,0,2
+BRDA:24,3,0,8
+BRF:4
+BRH:4
+=======
+BRDA:5,0,0,26
+=======
 BRDA:5,0,0,30
+>>>>>>> main
 BRDA:23,1,0,1
 BRDA:28,2,0,42
 BRDA:29,3,0,2
 BRDA:29,4,0,40
 BRF:5
 BRH:5
+>>>>>>> main
 end_of_record
 TN:
 SF:client/components/Overview/api/fetchGet.js
 FN:4,fetchGet
 FNF:1
 FNH:0
+<<<<<<< HEAD
+FNDA:0,Stars
+DA:1,1
+DA:2,1
+DA:3,1
+DA:4,0
+=======
 FNDA:0,fetchGet
 DA:1,1
 DA:2,1
@@ -1859,6 +2550,7 @@ DA:1,1
 DA:2,1
 DA:3,1
 DA:4,1
+>>>>>>> main
 DA:5,0
 DA:6,0
 DA:7,0
@@ -1871,6 +2563,19 @@ DA:13,0
 DA:14,0
 DA:15,0
 DA:16,0
+<<<<<<< HEAD
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+=======
 DA:17,1
 DA:18,1
 LF:18
@@ -3531,6 +4236,27 @@ DA:6,1
 DA:7,1
 DA:8,1
 DA:9,1
+<<<<<<< HEAD
+DA:10,5
+DA:11,5
+DA:12,5
+DA:13,5
+DA:14,5
+DA:15,5
+DA:16,5
+DA:17,5
+DA:18,5
+DA:19,5
+DA:20,5
+DA:21,5
+DA:22,5
+DA:23,5
+DA:24,5
+DA:25,5
+DA:26,5
+DA:27,5
+>>>>>>> main
+=======
 DA:10,3
 DA:11,3
 DA:12,3
@@ -3549,6 +4275,7 @@ DA:24,3
 DA:25,3
 DA:26,3
 DA:27,3
+>>>>>>> main
 DA:28,0
 DA:29,0
 DA:30,0
@@ -3573,6 +4300,14 @@ DA:48,0
 DA:49,0
 DA:50,0
 DA:51,0
+<<<<<<< HEAD
+DA:52,1
+DA:53,1
+LF:53
+LH:5
+BRF:0
+BRH:0
+=======
 DA:52,0
 DA:53,0
 DA:54,0
@@ -4179,4 +4914,5 @@ LH:12
 BRDA:3,0,0,1
 BRF:1
 BRH:1
+>>>>>>> main
 end_of_record

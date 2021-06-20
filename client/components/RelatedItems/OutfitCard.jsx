@@ -24,13 +24,27 @@ const OutfitCard = ({product, removeFromOutfit, changeProductId}) => {
   return (
     <li data-testid="outfit-card" className="card outfit" onClick={changeProduct}>
       <div className="parent">
-        <span data-testid="close" className="close" onClick={()=>removeFromOutfit(product.id)}>&#9447;</span>
-        <img data-testid="image" className="related-product-img" alt={product.name} src={defaultImg(product)}/>
+        <span data-testid="close"
+          className="close"
+          onClick={()=>removeFromOutfit(product.id)}>
+            &#9447;
+        </span>
+        <img data-testid="image"
+          className="related-product-img"
+          alt={product.name}
+          src={defaultImg(product)}
+        />
         <div className="product-info">
-          <div data-testid="category" className="product-category">{product.category}</div>
-          <div data-testid="name" className="product-name">{product.name}</div>
+          <div data-testid="category"
+            className="product-category">
+              {product.category}
+          </div>
+          <div data-testid="name"
+            className="product-name">
+              {product.name}
+          </div>
           <Price product={product}/>
-          <Rating rating={product.ratings} />
+          <Rating ratings={product.ratings} />
         </div>
       </div>
     </li>
