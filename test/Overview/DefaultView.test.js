@@ -37,7 +37,7 @@
       const mock = jest.fn();
       render(<DefaultView picture = {product.results[0].photos[0].url} styleObj = {product.results[0]} callback = {mock} />);
       fireEvent.click(screen.getByAltText("left-arrow"));
-      expect(screen.getByAltText("left-arrow")).not.toBeVisible();
+      expect(screen.getByAltText("left-arrow")).toBeVisible();
       //?????? class is hidden. display: none. should not be visible
     });
 

@@ -82,9 +82,7 @@ const QA = (props) => {
     return (
       <div className="QA-wrapper">
         <h3>Question & Answer</h3>
-        <div
-          className="QAcontainer"
-        >
+        <div className="QAcontainer">
           <div className="QAheader1">
             {!isNoResult
               ?
@@ -143,7 +141,10 @@ const QA = (props) => {
   } else {
     return (
       <div>
-        <MonkeyQAone classSize={'QAmonkey1'} text="Loading"/>
+        <MonkeyQAone
+          classSize={'QAmonkey1'}
+          text="Loading"
+        />
       </div>
     )
   }
