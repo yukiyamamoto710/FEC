@@ -52,9 +52,18 @@ const QA = (props) => {
   }
 
   const addQuestion = (obj) => {
-    let arr = [...questions]
+    let arr = [...listQuestions]
+    obj.asker_name = obj.name;
+    obj.question_body = obj.body;
+    obj.question_date = obj.date;
+    obj.question_helpfulness = obj.helpfulness;
+    obj.question_id = obj.id;
+    obj.reported = false;
+    obj.answers = [];
     arr.unshift(obj)
-    setAnswer(arr)
+
+    setQuestions(arr)
+    setIsPopOut(false)
   }
 
   const handleChangeText = (event) => {

@@ -82,6 +82,7 @@ Distributed under the GG License. See `LICENSE` for more information. -->
 ## Contact
 
 Evans Ding - (https://www.linkedin.com/in/evans-ding-733031126) - evansding@gmail.com
+Kenneth Wang - (https://www.linkedin.com/in/wang-kenneth-27b124209/) - kennethwang0427@gmail.com
 
 Project Link: [https://github.com/gilded-gliders/FEC.git](https://github.com/gilded-gliders/FEC.git)
 
