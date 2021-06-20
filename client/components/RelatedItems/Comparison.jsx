@@ -11,6 +11,7 @@ class Comparison extends React.Component {
     this.combineAllFeatures = this.combineAllFeatures.bind(this);
   }
 
+  // performance wise - I need to fetch data for currently displayed product at a different place
   componentDidMount() {
      this.setState({
        currentItem: this.props.currentItem
@@ -20,6 +21,7 @@ class Comparison extends React.Component {
   combineAllFeatures() {
     var allFeatureObjs = this.props.product.features.concat(this.state.currentItem.features);
     var allFeatures = allFeatureObjs.map(obj=>obj.feature);
+    // filter out the duplicate features
     var featureList = [...new Set(allFeatures)];
     this.setState({
       featureList: featureList
@@ -33,12 +35,7 @@ class Comparison extends React.Component {
       return (
         <div data-testid="modal" className="modal">
           <div className="modal_content">
-            <span
-              data-testid="close-button"
-              className="close"
-              onClick={()=>this.props.togglePop()}>
-                &times;
-            </span>
+            <span data-testid="close-button" className="close" onClick={()=>this.props.togglePop()}>&times;</span>
             <p className="comparing">Comparing</p>
             <table>
               <thead>
@@ -49,12 +46,7 @@ class Comparison extends React.Component {
                 </tr>
               </thead>
                 {featureList.map((feature, i)=>
-                  <DescirptionRow
-                    key={feature+i}
-                    feature={feature}
-                    relatedProduct={product.features}
-                    currentItem={currentItem.features}
-                  />
+                  <DescirptionRow key={feature+i} feature={feature} relatedProduct={product.features} currentItem={currentItem.features}/>
                 )}
             </table>
           </div>
