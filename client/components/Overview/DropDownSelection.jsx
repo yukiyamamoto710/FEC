@@ -27,7 +27,7 @@ class DropDownSelection extends React.Component{
 
   render() {
     return(
-      <option className = 'selection' value = {this.props.size} onClick = {this.handleClick}>{this.props.size}
+      <option data-testid = 'options' className = 'selection' value = {this.props.size} onClick = {this.handleClick}>{this.props.size}
 
       </option>
     );

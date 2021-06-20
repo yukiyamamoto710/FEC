@@ -7,42 +7,48 @@ import {
   render,
   cleanup,
   fireEvent,
-  screen,
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PopOut from './PopOut';
-
-const data = {
-  characteristics: {
-    Size: {
-      id: 86429,
-      value: '3.0000000000000000',
-    },
-    Width: {
-      id: 86430,
-      value: '1.00000000000000000000',
-    },
-    Comfort: {
-      id: 86431,
-      value: '2.0000000000000000',
-    },
-    Quality: {
-      id: 86432,
-      value: '3.0000000000000000',
-    },
-  },
-  product_id: '25748',
-  ratings: {
-    1: '1',
-  },
-  recommended: {
-    false: '1',
-  },
-};
+import { testData1 } from '../RatingTestData';
+import { msg } from '../data';
 
 afterEach(cleanup);
+
 it('render correctly', () => {
-  render(<PopOut data={data} />);
-  const a = screen.getByTestId('popout');
-  expect(a).toBeInTheDocument();
+  const { getByTestId } = render(<PopOut data={testData1} />);
+  expect(getByTestId('popout')).toBeInTheDocument();
+});
+
+it('render correctly', () => {
+  const { getByTestId } = render(<PopOut data={testData1} />);
+  fireEvent.click(getByTestId('submitBtn'));
+  expect(getByTestId('WarningContainer')).toBeInTheDocument();
+});
+
+it('render correctly', () => {
+  const { getByTestId } = render(<PopOut data={testData1} />);
+  fireEvent.click(getByTestId('recommendNo'));
+  expect(getByTestId('recommendNo').classList.contains('clickedButton')).toBe(true);
+});
+
+it('render correctly', () => {
+  const { getByTestId, queryByText } = render(<PopOut data={testData1} />);
+  fireEvent.change(getByTestId('formText1'), { target: { value: 'd' } });
+  fireEvent.change(getByTestId('body'), { target: { value: 'd' } });
+  expect(queryByText(msg[1])).toBeInTheDocument();
+});
+
+it('should get default addUserReview and cancelAddReview', () => {
+  expect(PopOut.defaultProps.addUserReview()).toBeDefined();
+  expect(PopOut.defaultProps.cancelAddReview()).toBeDefined();
+});
+
+it('matches snapShot', () => {
+  const tree = renderer.create(
+    <PopOut
+      data={testData1}
+    />,
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
 });

@@ -21,17 +21,14 @@ class Thumbnail extends React.Component {
   // }
 
   handleClick () {
-    //console.log(event.target.name);
+    //console.log('clicked from thumbnail', this.props.index, this.props.identifier)
     this.props.callback(this.props.index);
-    this.setState({clicked: true});
   }
   render() {
-    const clicked = this.props.identifier ? 'highlightedThumb' : 'thumbnail'
-    // if(this.state.clicked) {
-    //   clicked =
-    // }
+    const clicked = this.props.identifier ? this.props.highlightedThumb : this.props.noHighlight;
+
     return(
-      <>{<img className = {clicked} onClick = {this.handleClick} name = {this.props.index} src= {this.props.thumbnail} alt="Picture of Clothing"></img>}</>
+      <>{<img className = {clicked} onClick = {this.handleClick} name = {this.props.index} src= {this.props.thumbnail} alt="Thumbnail"></img>}</>
     );
   }
 

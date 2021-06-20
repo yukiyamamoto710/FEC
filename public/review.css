@@ -1,16 +1,19 @@
 .warningContainer {
-  height: 40%;
-  width: 40%;
+  height: auto;
+  width: 70%;
   position: absolute;
   border-radius: 10px;
-  background: linear-gradient(135deg, black, transparent);
-  color: #f1c3c3;
+  background-color: white;
   Z-index: 98;
-  margin: 10%;
-  padding: 2%;
+  top: 10%;
+  overflow: hidden;
+  left: 10%;
+  border: 5px solid black;
+  padding: 6%;
   align-items: left;
   font-size: 25px;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .warningButton {
@@ -22,23 +25,23 @@
     border: none;
     display: flex;
     justify-content: flex-start;
-    color: #560404;;
+    color: white;
     padding-top: 1px;
     padding-left: 15px;
     font-weight: bold;
-    background: linear-gradient(45deg, white, black);
+    background-color: rgb(105, 100, 100);
     clip-path: polygon(0% 0%, 26% 0%, 43% 45%, 100% 100%, 10% 44%, 0% 37%);
 }
 
  .warningItems {
-  margin: 4%;
+  margin: 2px;
   justify-content: left;
   margin-left: 10%;
   font-size: 20px;
   border-radius: 10px;
   padding: 1px;
-  color: white;
-  background: linear-gradient(to right, #b91b1b, transparent);
+  color: black;
+  background: linear-gradient(to right, rgb(102, 162, 182), transparent 75%);
   padding-left: 10px;
   Z-index: 99;
 }
@@ -48,7 +51,7 @@
     height: 50px;
     position: absolute;
     z-index: 102;
-    background: linear-gradient(45deg, pink, red);
+    background-color:  rgb(102, 162, 182);
     clip-path: polygon(48% 61%, 30% 40%, -9% 103%, 7% 100%);
 }
 
@@ -58,7 +61,7 @@
     position: absolute;
     z-index: 102;
     border-radius: 10px;
-    background: linear-gradient(45deg, pink, red);
+    background-color:  rgb(102, 162, 182);
     clip-path: polygon(97% 98%, 85% 85%, 92% 57%,100% 46%);
 }
 .warningButtonPart2 {
@@ -67,39 +70,46 @@
     position: absolute;
     z-index: 100;
     border-radius: 10px;
-    background: linear-gradient(45deg, pink, red);
+    background-color:  rgb(102, 162, 182);
     clip-path: polygon(33% 36%, 46% 66%, 95% 0%,86% 0%);
 }
 
 .popOutContainer {
-    height: 85%;
-    width: 85%;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
-    /* border: 10px solid black; */
+    border: 1px solid rgb(177, 174, 174);
     position: absolute;
-    background-color: #ffffffab;
+    background-color: rgb(102, 162, 182, 0.95);
+    box-shadow: 0px 0px 10px 1px grey;
     z-index: 90;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     border-radius: 10px;
+    animation: popup 0.25s;
+}
+
+@keyframes popup {
+  0% {
+    transform: translate(0%, 20%);
+  }
 }
 
 .topContainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
-    height: 10%;
 }
 
 .formButton {
     color: #ff000000;
-    font-size: 14px;
+    font-size: 5px;
     border-radius: 120px;
-    border: 1px solid rgb(240, 0, 0);
-    background-color: #f100007a;
-    width: 50px;
-    height: 50px;
+    border: 1px solid rgb(5 5 5);
+    background-color: rgb(5 5 5);
+    width: 20px;
+    height: 20px;
     margin: 10px;
     z-index: 95;
     clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
@@ -108,10 +118,8 @@
 .firstContainer {
     overflow: auto;
     width: 100%;
-    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -119,20 +127,21 @@
     display: flex;
     overflow: auto;
     width: 100%;
-    height: 20%;
-    justify-content:space-around
+    height: 45%;
+    justify-content:space-around;
+    margin-top: 5px;
 }
 
 .topSmallContainer{
-    border: 3px solid #000000;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
+    border: 1px solid rgb(177, 174, 174);
+    border-radius: 10px;
+    padding: 4px;
     font-size: 14px;
-    font-weight: bold;
     color: rgb(0, 0, 0);
-    width: 20%;
+    width: 130px;
     background-color: #ffffff;
+    margin-top: 5px;
+    margin-left: 2px;
 }
 .buttonBase{
   display: flex;
@@ -192,10 +201,11 @@
 
 .midSmallContainer {
   display: flex;
-  overflow: auto;
-  width: 95%;
-  /* border: 5px solid #0c0c0c; */
-  border-radius: 15px;
+  width: 100%;
+  height: 120%;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 15px
 }
 
 .tagContainer {
@@ -207,9 +217,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  border: 2px solid black;
-  border-radius: 20px;
-  padding: 2px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 12px;
   /* border: none; */
   /* border: 5px solid rgb(255, 0, 0); */
   background-color: #ffffff;
@@ -218,47 +229,54 @@
 .textcontainer{
   overflow: auto;
   width: 80%;
+  padding: 1%;
 }
 
 .formTextContainer {
-  width: 95%;
-  margin: 2.5%;
+  display: flex;
+  /* margin-bottom: 20px; */
+  border: 1px solid grey;
   border-radius: 10px;
-  padding-left: 10px;
+  padding: 2px;
+  height: 36px;
+  /* border: 5px solid rgb(255, 0, 0); */
+  background-color: #ffffff;
+  position: relative;
+  margin: 1px;
 }
 
 .formText {
-  width: 95%;
-  border-radius: 10px;
-  padding-left: 10px;
-  background-color: #ffffff;
+  width: 90%;
+  font-size: 12px;
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  padding-left: 20px;
 }
 .block {
-  height: 20px;
+  height: 12px;
   width: 100%;
 }
 
 .formMSG {
   font-size: 10px;
-  padding-left: 20px;
-  color:rgb(0, 0, 0);
+  padding-left: 30px;
+  color: rgb(0 0 0);;
+  margin-top: 5px;
 }
 
 .textarea {
   resize: none;
   overflow: auto;
-  width: 90%;
-  border: 2px solid black;
+  width: 98%;
+  border: 1px solid grey;
   border-radius: 10px;
-  padding: 5px;
-  margin-left: 20px;
-  background-color: #ffffff;;
+  padding: 1%;
 }
 
 .btnContainer {
   display:flex;
   justify-content: center;
-  margin-top: 5px;
 }
 
 /* .a:hover {
@@ -269,17 +287,557 @@
 transform: perspective(500px) rotateY(45deg); */
 
 .add_moreBTN {
-  background-color: white;
-  width: 120px;
-  padding: 5px;
-  font-size: 12px;
+  width: 140px;
+  color: white;
+  font-size: 11px;
   margin: 5px;
-  font-weight: bold;
+  border-color: white;
+  margin-top: 1em;
+  border-radius: 30px;
+  padding: 5px;
+  background-color: rgb(102, 162, 182);
+  cursor: pointer;
+}
+
+.add_moreBTN:hover {
+  background-color: grey;
 }
 
 .add_moreBTNContainer {
+  position: relative;
   display: flex;
-  justify-content: left;
+  justify-content: flex-end;
   height: 50px;
   padding: 10px;
+}
+
+.rating {
+  font-size: 12px;
+  width: 45%;
+}
+.ratingHead {
+  display:flex;
+  font-size: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratingStar{
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+ .emptyStar {
+  background-color: rgb(230, 217, 217);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .fullStar {
+  background-color: rgb(5, 5, 5);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .qOneStar {
+  background:linear-gradient(
+    to right,
+    rgb(5, 5, 5) 0%,
+    rgb(5, 5, 5) 25%,
+    rgb(230, 217, 217) 50%,
+    rgb(230, 217, 217) 100%,
+  );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .qTwoStar {
+  background:linear-gradient(
+    to right,
+    rgb(5, 5, 5) 0%,
+    rgb(5, 5, 5)  50%,
+    rgb(230, 217, 217) 75%,
+    rgb(230, 217, 217) 100%
+    );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+ .qThreeStar {
+  background:linear-gradient(
+    to right,
+    rgb(5, 5, 5) 0%,
+    rgb(5, 5, 5) 75%,
+    rgb(230, 217, 217) 100%
+    );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.starButton {
+  width: 25px;
+  height: 30px;
+  background-color: rgba(228, 18, 18, 0);
+  color: #ffffff00;
+  border: none;
+  position: absolute;
+  z-index: 50;
+}
+
+.starListContainer {
+  margin: 10px;
+  width: 90%
+}
+
+.starListBase {
+  display: flex;
+  margin-top: 10px;
+}
+
+.starListText {
+  display: flex;
+  font-size: 12px;
+  align-items: flex-end;
+  border-style: none;
+  border-bottom:1px solid black;
+  background-color: white;
+  margin-right: 10px;
+  padding:1px;
+  width: 30%;
+}
+
+.starListText:hover {
+  display: flex;
+  font-size: 12px;
+  border-style: none;
+  border-bottom:1px solid rgb(247, 0, 0);
+  background-color: white;
+  color:red;
+  margin-right: 10px;
+  padding:1px;
+  width: 30%;
+}
+
+.starRatingBarBase {
+  border: 1px solid rgb(177, 174, 174, 0.5);
+  display:flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 10px;
+  margin: 5px;
+  background-color: rgb(177, 174, 174, 0.5);
+  border-radius: 5px;
+  position: relative;
+}
+
+.charaContainer {
+  font-size: 12px;
+  margin:10px;
+  width: 90%;
+}
+
+.charaBar {
+  display: flex;
+  width: 100%;
+  height: 15px;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.charaSmallBar {
+  width: 20%;
+  height: 12px;
+  background-color:rgb(177, 174, 174, 0.5);
+  border:1px solid white;
+  border-radius: 5px;
+}
+
+.charaText {
+  font-size: 10px;
+  width: 25%;
+  position: absolute;
+}
+
+.charaBarPoint {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(102, 162, 182);;
+  margin: 2px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.reviewListHeader {
+  display: flex;
+  font-size: 12px;
+}
+
+.reviewListSort {
+  border-style: none;
+  outline: 0px;
+}
+
+.msgStar {
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+
+.msgHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 5px
+}
+.msgListBase {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+.msgContainer {
+  border-bottom: 1px solid black;
+  margin: 2% 0;
+}
+.msgSummary {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.photoContainer{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.photos {
+  display: block flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.photos:active {
+  display: block flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.msgResponseContainer {
+  background-color: bisque;
+  width: 95%;
+  padding-left: 10px;
+
+}
+
+.msgResponse {
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.msgBody {
+  font-size: 12px;
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap:break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.msgBody1 {
+  width: 200px;
+  font-size: 12px;
+  /* overflow:auto; */
+  word-wrap:break-word;
+  padding-left: 10px;
+  /* -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; */
+}
+
+.helpfulButton {
+  border-style: none;
+  background-color: white;
+  font-size: 12px;
+  margin:2px;
+}
+
+.popOut {
+  position: absolute;
+  bottom: 80%;
+  left:-40%;
+  width: 135%;
+  height: 470px;
+}
+
+.formStar {
+  width: 25px;
+  height: 25px;
+}
+
+.reviewContainer {
+  display:flex;
+}
+
+.barTextContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.barText {
+  font-size: 10px;
+}
+
+.reviewListBase {
+  display:flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.noReview0 {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+.noReview1 {
+  width: 100%;
+  height: 20%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.noReview2 {
+  width: 80%;
+  height: 70%;
+  top: 35%;
+  left: 10%;
+  clip-path: ellipse(45% 40% at 50% 50%);
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  z-index: 22;
+}
+
+.noReview3 {
+  width: 60%;
+  height: 60%;
+  top: 10%;
+  left: 20%;
+  position: absolute;
+  clip-path: ellipse(50% 44% at 50% 50%);
+  background-color: rgb(100, 40, 0);
+  z-index: 22;
+}
+
+.noReview4 {
+  width: 30%;
+  height: 30%;
+  top: 30%;
+  left: 70%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  z-index: 20;
+  clip-path: ellipse(40% 50% at 50% 50%);
+}
+
+.noReview5 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 75%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 21;
+}
+.noReview6 {
+  width: 30%;
+  height: 30%;
+  top: 30%;
+  left: 0%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  z-index: 20;
+  clip-path: ellipse(40% 50% at 50% 50%);
+}
+
+.noReview7 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 5%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 21;
+}
+
+.noReview8 {
+  width: 70%;
+  height: 60%;
+  top: 40%;
+  left: 15%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(44% 40% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview9 {
+  width: 30%;
+  height: 30%;
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 23;
+}
+.noReview10 {
+  width: 30%;
+  height: 30%;
+  top: 25%;
+  left: 45%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(40% 50% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview11 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 30%;
+  position: absolute;
+  background-color: white;
+  clip-path: ellipse(45% 50% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview12 {
+  width: 20%;
+  height: 20%;
+  top: 35%;
+  left: 50%;
+  position: absolute;
+  background-color: white;
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 23;
+}
+
+.noReview13 {
+  width: 15%;
+  height: 15%;
+  top: 40%;
+  left: 55%;
+  position: absolute;
+  background-color: black;
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview14 {
+  width: 15%;
+  height: 15%;
+  top: 40%;
+  left: 35%;
+  position: absolute;
+  background-color: black;
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview15 {
+  width: 45%;
+  height: 20%;
+  top: 65%;
+  left: 30%;
+  position: absolute;
+  background-color: red;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  z-index: 24;
+}
+.noReview16 {
+  width: 10%;
+  height: 10%;
+  top: 57%;
+  left: 40%;
+  position: absolute;
+  background: linear-gradient(to top,rgb(215 135 85)50%,rgb(100, 40, 0));
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview17 {
+  width: 10%;
+  height: 10%;
+  top: 57%;
+  left: 50%;
+  position: absolute;
+  background: linear-gradient(to top,rgb(215 135 85)50%,rgb(100, 40, 0));
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 24;
+}
+
+.noReview18 {
+  width: 5%;
+  height: 5%;
+  top: 59%;
+  left: 43%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 25;
+}
+
+.noReview19 {
+  width: 5%;
+  height: 5%;
+  top: 59%;
+  left: 53%;
+  position: absolute;
+  background-color: rgb(215 135 85);
+  clip-path: ellipse(45% 35% at 50% 50%);
+  z-index: 25;
+}
+
+.noReview20 {
+  width: 5%;
+  height: 5%;
+  top: 19%;
+  left: 25%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  clip-path: polygon(0 0, 34% 100%, 100% 100%);
+  z-index: 25;
+}
+
+.noReview21 {
+  width: 5%;
+  height: 5%;
+  top: 22%;
+  left: 22%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  clip-path: polygon(0 0, 34% 100%, 100% 100%);
+  z-index: 25;
+}
+
+.noReview22 {
+  width: 7%;
+  height: 10%;
+  top: 14%;
+  left: 26%;
+  position: absolute;
+  background-color: rgb(100, 40, 0);
+  clip-path: polygon(0 0, 34% 100%, 100% 100%);
+  z-index: 25;
+}
+
+.QA-wrapper {
+  margin-top: 70px;
+  width: 100%;
 }

@@ -18,7 +18,7 @@ const AddToCart = (props) => {
     )
   }
   return (
-    <button onClick = {handleClick}>Add to Cart</button>
+    <button className = {props.className} onClick = {handleClick}>ADD TO CART</button>
   )
 }
 

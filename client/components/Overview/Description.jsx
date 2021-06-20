@@ -2,6 +2,7 @@
 import React from 'react';
 import DropDown from './DropDown.jsx';
 import AddToCart from './AddToCart.jsx';
+import axios from 'axios';
 
 class Description extends React.Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class Description extends React.Component {
       skuQuantSelected: 0,
       sku: 0,
       inCart: 0,
-      cart: []
+      cart: [],
+      selectSize: 'Select Size',
+      Quantity: 'Quantity'
     }
     this.changeSKU = this.changeSKU.bind(this);
     this.changeQuant = this.changeQuant.bind(this);
@@ -38,14 +41,29 @@ class Description extends React.Component {
     var number = this.state.inCart + 1;
     var copy = this.state.cart.slice();
     copy.push(obj);
+
+    axios.post('/cart', obj)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
     this.setState({
       inCart: number,
       cart: copy,
       styleSelected: '',
       skuSizeSelected: '',
       skuQuantSelected: 0,
-      sku: 0
+      sku: 0,
+      selectSize: 'Select Size',
+      Quantity: 'Quantity'
     })
+
+    localStorage.setItem('item', JSON.stringify(copy));
+
+
   }
 
 
@@ -58,13 +76,17 @@ class Description extends React.Component {
       <>
        <div className = 'describe'>
          <div className = 'category'>{category}</div>
-         <h2>{name}</h2>
+         <h2 data-testid = 'header' className = 'productName'>{name}</h2>
          <div>{this.props.styleItem}</div>
          <br></br>
-         <div className = 'price'>${this.props.price}</div>
-         <span>{this.props.salePrice}</span>
-         <DropDown name = 'Select Size' style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU}/>
-         <DropDown name = 'Quantity'  quant = {this.state.skuSizeSelected} callback = {this.changeQuant}/>
+         <div className = 'price'>
+           <div>$</div>
+           <div>{this.props.price}</div>
+           <div>&nbsp;&nbsp;</div>
+           <span>{this.props.salePrice}</span>
+         </div>
+         <DropDown name = {this.state.selectSize} style = {this.props.style} skus = {this.props.skus} callback = {this.changeSKU} changed = {this.state.cart}/>
+         <DropDown name = {this.state.Quantity}  quant = {this.state.skuSizeSelected} callback = {this.changeQuant} changed = {this.state.cart}/>
          <AddToCart className = 'addCart' style = {styleSelected} size = {skuSizeSelected} quantity = {skuQuantSelected} callback = {this.addItem} sku = {sku}/>
        </div>
        <div className = 'description'>

@@ -11,7 +11,6 @@ class Comparison extends React.Component {
     this.combineAllFeatures = this.combineAllFeatures.bind(this);
   }
 
-  // performance wise - I need to fetch data for currently displayed product at a different place
   componentDidMount() {
      this.setState({
        currentItem: this.props.currentItem
@@ -21,7 +20,6 @@ class Comparison extends React.Component {
   combineAllFeatures() {
     var allFeatureObjs = this.props.product.features.concat(this.state.currentItem.features);
     var allFeatures = allFeatureObjs.map(obj=>obj.feature);
-    // filter out the duplicate features
     var featureList = [...new Set(allFeatures)];
     this.setState({
       featureList: featureList
@@ -35,8 +33,13 @@ class Comparison extends React.Component {
       return (
         <div data-testid="modal" className="modal">
           <div className="modal_content">
-            <span data-testid="close-button" className="close" onClick={()=>this.props.togglePop()}>&times;</span>
-            <p>Comparing</p>
+            <span
+              data-testid="close-button"
+              className="close"
+              onClick={()=>this.props.togglePop()}>
+                &times;
+            </span>
+            <p className="comparing">Comparing</p>
             <table>
               <thead>
                 <tr className="column">
@@ -45,20 +48,23 @@ class Comparison extends React.Component {
                   <th className="col-3">{currentItem.name}</th>
                 </tr>
               </thead>
-              <tbody className="description-row">
-                {featureList.map(feature=>
-                  <DescirptionRow key={feature} feature={feature} relatedProduct={product.features} currentItem={currentItem.features}/>
+                {featureList.map((feature, i)=>
+                  <DescirptionRow
+                    key={feature+i}
+                    feature={feature}
+                    relatedProduct={product.features}
+                    currentItem={currentItem.features}
+                  />
                 )}
-              </tbody>
             </table>
           </div>
         </div>
       )
     } else {
       return (
-        <div className="modal">
-        <div className="modal_content">
-        </div>
+        <div data-testid="modal" className="modal">
+          <div className="modal_content">
+          </div>
         </div>
       )
     }

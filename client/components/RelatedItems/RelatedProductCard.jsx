@@ -9,9 +9,9 @@ class RelatedProductCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mainImage: '', // url of the main image
-      seen: false, // whether a modal is displayed or not
-      display: false, // whether additional images are displayed or not
+      mainImage: '',
+      seen: false,
+      display: false,
       additionalImages: []
     }
     this.togglePop = this.togglePop.bind(this);
@@ -22,8 +22,14 @@ class RelatedProductCard extends React.Component {
   }
 
   componentDidMount() {
+    var defaultIdx = 0;
+    for (var i = 0; i < this.props.product.results.length; i++) {
+      if (this.props.product.results[i]['default?']) {
+        defaultIdx = i;
+      }
+    }
     this.setState({
-      mainImage: this.props.product.results[0].photos[0].url
+      mainImage: this.props.product.results[defaultIdx].photos[0].url
     })
   }
 
@@ -65,15 +71,39 @@ class RelatedProductCard extends React.Component {
       <li data-testid="card" className="card" onClick={this.changeProductId}>
         <div className="parent">
           {this.state.seen ?
-          <Comparison togglePop={this.togglePop} product={product} id={id} currentItem={currentItem}/> : null}
-          <div data-testid="related-product-card" onMouseOver={this.displayAdditionalImages} onMouseLeave={this.hideAdditionalImages}>
-            <span data-testid="star" className="star" onClick={this.togglePop}>&#9734;</span>
-            <img className="related-product-img" src={this.state.mainImage} />
-            {!this.state.display ? null: <AdditionalImages images={this.state.additionalImages} changeMainImage={this.changeMainImage}/>}
+          <Comparison
+            togglePop={this.togglePop}
+            product={product} id={id}
+            currentItem={currentItem}
+          /> : null}
+          <div data-testid="related-product-card"
+            onMouseOver={this.displayAdditionalImages}
+            onMouseLeave={this.hideAdditionalImages}>
+            <span data-testid="star"
+              className="star"
+              onClick={this.togglePop}>
+                &#9734;
+            </span>
+            <div className="related-product-img">
+            <img className="related-product-img"
+              src={this.state.mainImage}
+              alt={product.name}
+            />
+            </div>
+            {!this.state.display ? null:
+            <AdditionalImages
+              images={this.state.additionalImages}
+              changeMainImage={this.changeMainImage}/>}
           </div>
           <div className="product-info">
-            <div data-testid="product-category" className="product-category">{product.category}</div>
-            <div data-testid="product-name" className="product-name">{product.name}</div>
+            <div data-testid="category"
+              className="product-category">
+                {product.category}
+            </div>
+            <div data-testid="name"
+              className="product-name">
+                {product.name}
+            </div>
             <Price product={product}/>
             <Rating ratings={product.ratings} />
           </div>

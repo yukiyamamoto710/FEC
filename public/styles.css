@@ -1,7 +1,7 @@
 div#app {
   max-width: 1000px;
   margin: auto;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -12,6 +12,7 @@ div#app {
   color: white;
   height: 75px;
   margin-bottom: 50px;
+  border-radius: 15px;
 }
 
 .form-container {
@@ -31,4 +32,13 @@ div#app {
   background: none;
   border: none;
   color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(177, 174, 174, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
 }

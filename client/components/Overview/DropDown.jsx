@@ -24,7 +24,7 @@ class DropDown extends React.Component {
   }
 
   componentDidUpdate (prevProps) {
-    if(this.props.name !== prevProps.name) {
+    if(this.props.changed !== prevProps.changed) {
       this.setState({name: this.props.name});
     }
 
@@ -37,7 +37,7 @@ class DropDown extends React.Component {
   }
 
   storeSize(size, quantity, style, price, sku) {
-    console.log('this is style in dropdown', style, quantity, sku);
+
     this.props.callback(size, style, sku);
     this.setState({name: size});
   }
@@ -59,7 +59,7 @@ class DropDown extends React.Component {
 
     return(
       <div className = 'dropdown'>
-        <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
+        <button data-testid = 'dropdown' onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
           <div className = {name}>
             {objKeys.map((item, index) => {
               return(
@@ -80,7 +80,7 @@ class DropDown extends React.Component {
     }
     return(
       <div className = 'dropdown'>
-        <button onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
+        <button data-testid = 'dropdown' onClick = {this.handleClick} className = 'dropbtn'>{this.state.name}
           <div className = {name}>
             {selectArray.map((item, index) => {
               return(
