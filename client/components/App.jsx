@@ -66,20 +66,20 @@ class App extends React.Component {
           loaded: true,
           isSearch: bool,
           listSearch:listSearch,
+        },()=>{
+          if(data1.length <= 2000) {
+            axios.get(`/getAllItems/`)
+              .then(res => {
+                let data2 = data1.concat(res.data)
+                sessionStorage.setItem('list',JSON.stringify(data2))
+              })
+              .catch(console.log)
+          }
         })
       })
       .catch((err) => {
         console.log(err);
       })
-
-    if(data1.length <= 2000) {
-      axios.get(`/getAllItems/`)
-        .then(res => {
-          let data2 = data1.concat(res.data)
-          sessionStorage.setItem('list',JSON.stringify(data2))
-        })
-        .catch(console.log)
-    }
   }
 
   changeProductId(id) {
