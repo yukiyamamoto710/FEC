@@ -47,14 +47,16 @@ To get a local copy up and running follow these simple steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Click on the items on the screen to fetch specific items from the Atelier api.
+- Click on the items on the screen to fetch specific items from the Atelier api.
+- Add the current item to your outfit list.
+- Compare features between the current item and the clicked related item.
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 - Using React Router to update our links and create a homepage in addition to the product page.
+- Create a Cart/Checkout page using React Router.
 
 
 
@@ -83,6 +85,7 @@ Distributed under the GG License. See `LICENSE` for more information. -->
 
 Evans Ding - (https://www.linkedin.com/in/evans-ding-733031126) - evansding@gmail.com
 Kenneth Wang - (https://www.linkedin.com/in/wang-kenneth-27b124209/) - kennethwang0427@gmail.com
+Yuki Yamamoto - (https://www.linkedin.com/in/yukiyamamoto1) - yukiyamamoto710@gmail.com
 
 Project Link: [https://github.com/gilded-gliders/FEC.git](https://github.com/gilded-gliders/FEC.git)
 
