@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 const Outfits = (props) => {
   const {selectedItemsList, addToOutfit, removeFromOutfit, changeProductId} = props;
 
-  const [state, setState] = useState({idx: 0, displayed: []});
+  const [idx, setIndex] = useState(0);
+  const [displayed, setDisplay] = useState(selectedItemsList.slice(0, 4))
 
   useEffect(() => {
-    setState({idx: 0, displayed: selectedItemsList.slice(0, 3)})
+    setDisplay(selectedItemsList.slice(0, 4))
   }, [selectedItemsList])
 
   return (
@@ -16,22 +17,32 @@ const Outfits = (props) => {
       <h3 className="outfit">YOUR OUTFIT</h3>
       <ul className="carousel">
         <button className="slideLeft"
-          onClick={()=>setState({idx: state.idx-1, displayed: selectedItemsList.slice(state.idx-1, state.idx+2)})}
-          hidden={state.idx === 0}
+          onClick={() => {
+            setIndex(idx-1)
+            setDisplay(selectedItemsList.slice(idx-1, idx+2))}}
+          hidden={idx === 0}
           data-testid="slideLeft">
             &lt;
         </button>
-        <li className="card empty add-button" data-testid="add-button" onClick={()=>addToOutfit()}>
+        <li className="card empty add-button" data-testid="add-button"
+          onClick={()=>addToOutfit()}>
             <p className="plus">+</p>
             <p className="add-message">Add to Outfit</p>
         </li>
-        {!state.displayed.length ? null: state.displayed.map((product, i)=>
-          <OutfitCard key={`${product.id}/${i}`} product={product} removeFromOutfit={removeFromOutfit} changeProductId={changeProductId}/>
+        {!displayed.length ? null:
+          displayed.map((product, i)=>
+            <OutfitCard
+              key={`${product.id}/${i}`}
+              product={product}
+              removeFromOutfit={removeFromOutfit}
+              changeProductId={changeProductId}/>
           )}
         <button className="slideRight"
-          onClick={()=>{setState({idx: state.idx+1, displayed: selectedItemsList.slice(state.idx+1, state.idx+4)})}}
+          onClick={()=> {
+            setIndex(idx+1)
+            setDisplay(selectedItemsList.slice(idx+1, idx+4))}}
           hidden={selectedItemsList.length < 3}
-          disabled={state.idx === selectedItemsList.length-3}
+          disabled={idx === selectedItemsList.length-3}
           data-testid="slideRight">
             &gt;
         </button>
@@ -43,7 +54,8 @@ const Outfits = (props) => {
 Outfits.propTypes = {
   selectedItemsList: PropTypes.array,
   addToOutfit: PropTypes.func,
-  removeFromOutfit: PropTypes.func
+  removeFromOutfit: PropTypes.func,
+  changeProductId: PropTypes.func
 }
 
 export default Outfits;
