@@ -22,14 +22,15 @@ class RelatedProductCard extends React.Component {
   }
 
   componentDidMount() {
+    const { product } = this.props;
     var defaultIdx = 0;
-    for (var i = 0; i < this.props.product.results.length; i++) {
-      if (this.props.product.results[i]['default?']) {
+    for (var i = 0; i < product.results.length; i++) {
+      if (product.results[i]['default?']) {
         defaultIdx = i;
       }
     }
     this.setState({
-      mainImage: this.props.product.results[defaultIdx].photos[0].url
+      mainImage: product.results[defaultIdx].photos[0].url
     })
   }
 
@@ -40,7 +41,8 @@ class RelatedProductCard extends React.Component {
   }
 
   displayAdditionalImages() {
-    var photosArr = this.props.product.results.map(style=>style.photos[0].thumbnail_url);
+    const { product } = this.props;
+    var photosArr = product.results.map(style=>style.photos[0].thumbnail_url);
     this.setState({
       display: true,
       additionalImages: photosArr
