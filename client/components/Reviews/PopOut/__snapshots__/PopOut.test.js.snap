@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapShot 1`] = `
+<div
+  className="popOut"
+  data-testid="popout"
+>
+  <div
+    className="popOutContainer"
+  >
+    <div
+      className="topContainer"
+    >
+      <div
+        className="topSmallContainer"
+      >
+        <div>
+          Recommend
+        </div>
+        <div
+          className="buttonBase"
+        >
+          <button
+            className="clickedButton"
+            data-testid="recommendYes"
+            id="recommend"
+            onClick={[Function]}
+            type="button"
+            value="true"
+          >
+            YES
+          </button>
+          <button
+            className="unclickedButton"
+            data-testid="recommendNo"
+            id="recommend"
+            onClick={[Function]}
+            type="button"
+            value={false}
+          >
+            No
+          </button>
+        </div>
+      </div>
+      <button
+        className="formButton"
+        onClick={[Function]}
+        type="button"
+      >
+        X
+      </button>
+    </div>
+    <div
+      className="firstContainer"
+    >
+      <div
+        className="firstTopContainer"
+      >
+        <div
+          className="topSmallContainer"
+          data-testid="formStarCK"
+        >
+          <div>
+            Stars
+          </div>
+          <div
+            className="ratingHead"
+            data-testid="stars"
+          >
+            <div>
+              <div
+                className="formStar emptyStar"
+                data-testid="button0"
+                id="Stars 1"
+                label="emptyStar"
+                name="Stars"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              />
+            </div>
+            <div>
+              <div
+                className="formStar emptyStar"
+                data-testid="button1"
+                id="Stars 2"
+                label="emptyStar"
+                name="Stars"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              />
+            </div>
+            <div>
+              <div
+                className="formStar emptyStar"
+                data-testid="button2"
+                id="Stars 3"
+                label="emptyStar"
+                name="Stars"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              />
+            </div>
+            <div>
+              <div
+                className="formStar emptyStar"
+                data-testid="button3"
+                id="Stars 4"
+                label="emptyStar"
+                name="Stars"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              />
+            </div>
+            <div>
+              <div
+                className="formStar emptyStar"
+                data-testid="button4"
+                id="Stars 5"
+                label="emptyStar"
+                name="Stars"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              />
+            </div>
+          </div>
+          <div
+            className="formText"
+            data-testid="formStarCKText"
+          />
+        </div>
+      </div>
+      <div
+        className="midSmallContainer"
+      >
+        <div
+          className="tagContainer"
+        >
+          <div
+            className="tag"
+          >
+            Name :
+          </div>
+          <div
+            className="tag"
+          >
+            Email :
+          </div>
+          <div
+            className="tag"
+          >
+            Title :
+          </div>
+          <div
+            className="tag"
+          >
+            Description :
+          </div>
+          <div
+            className="tag"
+          >
+            Count :
+            0
+          </div>
+        </div>
+        <div
+          className="textcontainer"
+        >
+          <div
+            className="formTextContainer"
+          >
+            <div>
+              <input
+                className="formText"
+                data-testid="formText0"
+                id="name"
+                maxLength="60"
+                onChange={[Function]}
+                placeholder="Example: jackson11!"
+                type="text"
+              />
+              <div
+                className="block"
+              />
+            </div>
+          </div>
+          <div
+            className="formTextContainer"
+          >
+            <div>
+              <input
+                className="formText"
+                data-testid="formText1"
+                id="email"
+                maxLength="60"
+                onChange={[Function]}
+                placeholder="jackson11@email.com"
+                type="text"
+              />
+              <div
+                className="formMSG"
+              >
+                For authentication reasons, you will not be emailed
+              </div>
+            </div>
+          </div>
+          <div
+            className="formTextContainer"
+          >
+            <div>
+              <input
+                className="formText"
+                data-testid="formText2"
+                id="summary"
+                maxLength="60"
+                onChange={[Function]}
+                placeholder="Example: Best purchase ever!"
+                type="text"
+              />
+              <div
+                className="block"
+              />
+            </div>
+          </div>
+          <textarea
+            className="textarea"
+            data-testid="body"
+            id="body"
+            maxLength="1000"
+            onChange={[Function]}
+            placeholder="Why did you like the product or not? and need a counter min 50 max 1000"
+            rows="5"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="btnContainer"
+    >
+      <button
+        className="clickedButton"
+        data-testid="submitBtn"
+        onClick={[Function]}
+        type="button"
+      >
+        Submit
+      </button>
+      <input
+        className="clickedButton"
+        id="photos"
+        onChange={[Function]}
+        type="file"
+      />
+      <input
+        className="clickedButton"
+        id="photos"
+        onChange={[Function]}
+        type="file"
+      />
+    </div>
+  </div>
+</div>
+`;

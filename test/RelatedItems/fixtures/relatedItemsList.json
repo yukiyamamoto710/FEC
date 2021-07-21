@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "name": "Item1",
+    "category": "Shirt",
+    "default_price": "756.00",
+    "product_id": "26094",
+    "results": [
+      {
+        "style_id": 148757,
+        "name": "Plum",
+        "original_price": "756.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+          }
+        ]
+      }
+    ],
+    "ratings": {
+      "1": "2",
+      "2": "6",
+      "3": "3",
+      "4": "3",
+      "5": "6"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Item2",
+    "category": "Pants",
+    "default_price": "500.00",
+    "product_id": "26094",
+    "results": [
+      {
+        "style_id": 148757,
+        "name": "Plum",
+        "original_price": "500.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+          }
+        ]
+      }
+    ],
+    "ratings": {
+      "1": "2",
+      "2": "6",
+      "3": "3",
+      "4": "3",
+      "5": "6"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Item3",
+    "category": "T-Shirt",
+    "default_price": "400.00",
+    "product_id": "26094",
+    "results": [
+      {
+        "style_id": 148757,
+        "name": "Plum",
+        "original_price": "756.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+          }
+        ]
+      }
+    ],
+    "ratings": {
+      "1": "2",
+      "2": "6",
+      "3": "3",
+      "4": "3",
+      "5": "6"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Item4",
+    "category": "Sweater",
+    "default_price": "300.00",
+    "product_id": "26094",
+    "results": [
+      {
+        "style_id": 148757,
+        "name": "Plum",
+        "original_price": "756.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+          }
+        ]
+      }
+    ],
+    "ratings": {
+      "1": "2",
+      "2": "6",
+      "3": "3",
+      "4": "3",
+      "5": "6"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Item5",
+    "category": "Sweater",
+    "default_price": "300.00",
+    "product_id": "26094",
+    "results": [
+      {
+        "style_id": 148757,
+        "name": "Plum",
+        "original_price": "756.00",
+        "sale_price": null,
+        "default?": true,
+        "photos": [
+          {
+            "thumbnail_url": "https://images.unsplash.com/photo-1548369735-f548cbe6a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
+            "url": "https://images.unsplash.com/photo-1515110371136-7e393289662c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1656&q=80"
+          }
+        ]
+      }
+    ],
+    "ratings": {
+      "1": "2",
+      "2": "6",
+      "3": "3",
+      "4": "3",
+      "5": "6"
+    }
+  }
+]

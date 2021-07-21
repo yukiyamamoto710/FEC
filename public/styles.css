@@ -1,0 +1,44 @@
+div#app {
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1000px;
+  background-color: rgb(102, 162, 182);
+  color: white;
+  height: 75px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid;
+  color: white;
+}
+
+.search {
+  margin-right: 5px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(177, 174, 174, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
