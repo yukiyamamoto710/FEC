@@ -1,5 +1,3 @@
-# Forest
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -101,9 +99,5 @@ Project Link: [https://github.com/gilded-gliders/FEC.git](https://github.com/gil
 * [Font Awesome](https://fontawesome.com)
 
 
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
