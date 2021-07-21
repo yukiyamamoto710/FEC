@@ -6,10 +6,10 @@ const Outfits = (props) => {
   const {selectedItemsList, addToOutfit, removeFromOutfit, changeProductId} = props;
 
   const [idx, setIndex] = useState(0);
-  const [displayed, setDisplay] = useState(selectedItemsList.slice(0, 4))
+  const [displayed, setDisplay] = useState(selectedItemsList.slice(0, 3))
 
   useEffect(() => {
-    setDisplay(selectedItemsList.slice(0, 4))
+    setDisplay(selectedItemsList.slice(0, 3))
   }, [selectedItemsList])
 
   return (
