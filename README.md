@@ -1,9 +1,9 @@
-# FEC
+# Forest
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Our Front-End Capstone - Project Catwalk. The client has a significantly outdated web-portal and tasked us with completely redesigning the web portal and modernizing the site.
+A web application that displays product details where a user can see related items of the current product, save products, and/or post questions and reviews.
 
 
 ### Built With
@@ -84,7 +84,9 @@ Distributed under the GG License. See `LICENSE` for more information. -->
 ## Contact
 
 Evans Ding - (https://www.linkedin.com/in/evans-ding-733031126) - evansding@gmail.com
+
 Kenneth Wang - (https://www.linkedin.com/in/wang-kenneth-27b124209/) - kennethwang0427@gmail.com
+
 Yuki Yamamoto - (https://www.linkedin.com/in/yukiyamamoto1) - yukiyamamoto710@gmail.com
 
 Project Link: [https://github.com/gilded-gliders/FEC.git](https://github.com/gilded-gliders/FEC.git)
