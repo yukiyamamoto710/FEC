@@ -2,13 +2,16 @@
 ## About The Project
 
 A web application that displays product details where a user can see related items of the current product, save products, and/or post questions and reviews.
+I built the related items section of a retail website where users can compare features and add items to their outfit list
 
+#### Related Items / Outfits
+![Related Items](https://media.giphy.com/media/itybba1rDeDpPJDZRo/giphy.gif)
+![Outfits](https://media.giphy.com/media/nALbfK7hcI6s8xTuNx/giphy.gif)
 
 ### Built With
 
 * [React](https://reactjs.org/)
 * [Express](http://expressjs.com/)
-
 
 
 <!-- GETTING STARTED -->
